@@ -206,15 +206,9 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:8px;line-height:1.55
   #sticky{display:none}
 }
 
-/* rodapé do ecossistema J. C. Dias, o mesmo do cela211 */
-.site-foot{text-align:center;padding:44px 24px 40px;border-top:1px solid rgba(156,150,143,.2);background:var(--preto)}
-.site-foot .flogo{width:112px;margin:0 auto 16px;display:block;opacity:.9}
-.site-foot .ftag{color:var(--cinza);font-size:17px;line-height:1.45;margin:0 auto 20px;max-width:420px;font-family:var(--corpo)}
-.site-foot .flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px;margin-bottom:18px}
-.site-foot .flinks a{color:var(--vermelho);text-decoration:none;font-family:var(--head);
-  text-transform:uppercase;letter-spacing:.1em;font-size:14px}
-.site-foot .flinks a:hover{text-decoration:underline;text-underline-offset:4px}
-.site-foot .fcop{color:var(--cinza-esc);font-size:14px;letter-spacing:.02em;margin:0}
+
+/* área do checkout em 1 clique da Hotmart */
+.checkout-1click{max-width:470px;margin:28px auto 0}
 </style>
 </head>
 <body>
@@ -437,7 +431,9 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:8px;line-height:1.55
 
     <p class="preco">R$47</p>
 
-    <a href="#" class="cta" data-cta="oferta">Quero conhecer a história de Ashir</a>
+    <div class="checkout-1click" id="comprar">
+      <div id="hotmart-sales-funnel"></div>
+    </div>
     <p class="micro">Ebook + audiobook &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; Pagamento único</p>
 
     <button class="recusa" data-recusa type="button">Não, obrigado. Quero continuar sem esta história.</button>
@@ -464,7 +460,7 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:8px;line-height:1.55
       <p class="preco">R$47</p>
       <p class="fraco" style="margin-top:10px;font-size:16px">Pagamento único. Acesso imediato.</p>
 
-      <a href="#" class="cta" data-cta="final">Quero conhecer a história de Ashir</a>
+      <a href="#comprar" class="cta" data-rolar>Quero conhecer a história de Ashir</a>
       <p class="micro">Ebook + audiobook &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; Pagamento único</p>
 
       <button class="recusa" data-recusa type="button">Não, obrigado. Quero continuar sem esta história.</button>
@@ -472,22 +468,9 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:8px;line-height:1.55
   </div>
 </section>
 
-<footer class="site-foot">
-  <picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp">
-    <img class="flogo" src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture>
-  <p class="ftag">Histórias sobre reconstrução, esperança e propósito.</p>
-  <div class="flinks">
-    <a href="../privacidade/">Política de Privacidade</a>
-    <a href="../termos/">Termos de Uso</a>
-    <a href="https://wa.me/447713877218" target="_blank" rel="noopener">Falar no WhatsApp</a>
-    <a href="mailto:jc@jcdias.com">Suporte</a>
-  </div>
-  <p class="fcop">Copyright &copy; 2026 &middot; J. C. Dias &middot; Todos os direitos reservados.</p>
-</footer>
-
 <div id="sticky">
   <span class="txt">De Volta Para o Nada<br><b>R$47</b></span>
-  <a href="#" data-cta="sticky">Ler</a>
+  <a href="#comprar" data-rolar>Ler</a>
 </div>
 
 <script>
@@ -597,17 +580,13 @@ document.getElementById('cta-vsl').addEventListener('click', function(){
   player.scrollIntoView({behavior:'smooth', block:'center'});
 });
 
-/* ---------- CTAs ---------- */
-document.querySelectorAll('[data-cta]').forEach(function(el){
+/* ---------- CTAs: rolam até o widget de 1 clique da Hotmart ---------- */
+document.querySelectorAll('[data-rolar]').forEach(function(el){
   el.addEventListener('click', function(e){
     e.preventDefault();
-    evento('DVPN_CTA_Click', {cta: el.dataset.cta});
-    evento('DVPN_Upsell_Accept');
-    if(window.fbq) fbq('track','InitiateCheckout',{content_ids:[PRODUTO.id],
-      content_name:PRODUTO.nome,value:PRODUTO.valor,currency:PRODUTO.moeda,
-      funnel:FUNNEL,step:'dvpn',cta:el.dataset.cta});
-    if(!CHECKOUT){ console.warn('checkout ainda não configurado'); return; }
-    window.location.href = comParametros1Clique(CHECKOUT);
+    evento('DVPN_CTA_Click', {cta: el.className.indexOf('cta') > -1 ? 'final' : 'sticky'});
+    var alvo = document.getElementById('comprar');
+    if(alvo) alvo.scrollIntoView({behavior:'smooth', block:'center'});
   });
 });
 
@@ -669,6 +648,16 @@ if('IntersectionObserver' in window){
   document.getElementById('rotulos').classList.add('riscado');
   document.getElementById('pessoas').classList.add('vis');
 }
+</script>
+
+<!-- HOTMART - Sales Funnel Widget -->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>
+  checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+  /* O widget só exibe o botão de compra para quem chega vindo de uma compra
+     em andamento na Hotmart. Acessado direto, ele mostra o aviso da própria
+     Hotmart. É o comportamento correto: no funil real a pessoa sempre chega
+     de uma compra. */
 </script>
 </body>
 </html>
