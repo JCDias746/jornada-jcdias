@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quando Morri por Dentro | J. C. Dias</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --preto:#0D0C0B;
+  --carvao:#11100E;
+  --bloco:#181512;
+  --creme:#F4EFE7;
+  --creme2:#B8AEA2;
+  --dourado:#B78B4A;
+  --dourado-claro:#C3A064;
+  --cobre:#C45432;
+  --cobre-esc:#A8452A;
+  --head:'Oswald',Impact,sans-serif;
+  --corpo:'EB Garamond',Georgia,serif;
+  --pad:24px;
+  --gap:44px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--carvao);color:var(--creme);
+  font-family:var(--corpo);font-size:21px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+
+.wrap{max-width:660px;margin:0 auto;padding:0 var(--pad)}
+section{padding:var(--gap) 0}
+.bloco{background:var(--bloco)}
+.fundo-preto{background:var(--preto)}
+
+/* tipografia */
+.olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--dourado);line-height:1.5;margin-bottom:22px}
+h1{font-family:var(--corpo);font-weight:600;font-size:clamp(38px,8.4vw,50px);line-height:1.16}
+h2{font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(31px,7vw,39px);line-height:1.12;letter-spacing:.01em}
+p{margin-top:13px;color:var(--creme2)}
+/* linhas curtas seguidas respiram menos entre si */
+p.fraco{line-height:1.36}
+p.fraco + p.fraco{margin-top:3px}
+p + p.fraco{margin-top:11px}
+.oferta .linhas p + p,.oferta .nao p + p{margin-top:0}
+p.forte{color:var(--creme)}
+.grande{
+  font-family:var(--corpo);font-weight:600;color:var(--creme);
+  font-size:clamp(28px,6.4vw,36px);line-height:1.3;
+}
+
+/* hero */
+header{position:relative;min-height:74vh;display:flex;align-items:flex-end;
+  padding:72px 0 40px;overflow:hidden}
+header .bg{position:absolute;inset:0;z-index:0}
+header .bg img{width:100%;height:100%;object-fit:cover;object-position:70% 30%}
+header .bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(13,12,11,.74) 0%,rgba(13,12,11,.70) 42%,rgba(17,16,14,.96) 100%);
+}
+header .wrap{position:relative;z-index:1}
+.marca-topo img{width:100%;height:auto;display:block}
+
+/* vsl */
+.vsl{margin:0 auto;max-width:660px;padding:0 var(--pad)}
+.player{
+  position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;
+  border-radius:12px;border:1px solid rgba(183,139,74,.34);
+  background:#000;cursor:pointer;
+}
+.player img{width:100%;height:100%;object-fit:cover}
+.player::after{
+  content:"";position:absolute;inset:0;background:rgba(13,12,11,.28);
+  transition:background .3s ease;pointer-events:none;
+}
+.player:hover::after{background:rgba(13,12,11,.12)}
+.play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:66px;height:66px;border-radius:50%;
+  background:rgba(13,12,11,.55);border:1.5px solid var(--dourado-claro);
+  display:flex;align-items:center;justify-content:center;z-index:2;
+  transition:transform .3s ease;
+}
+.player:hover .play{transform:translate(-50%,-50%) scale(1.06)}
+.play::before{
+  content:"";width:0;height:0;margin-left:4px;
+  border-left:17px solid var(--creme);
+  border-top:11px solid transparent;border-bottom:11px solid transparent;
+}
+.vsl-nota{
+  font-family:var(--corpo);font-size:20px;color:var(--creme2);
+  text-align:center;margin-top:16px;
+}
+.player iframe,.player video{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* capa e livro */
+.capa{max-width:228px;margin:0 auto;filter:drop-shadow(0 24px 46px rgba(0,0,0,.62))}
+.capa img{border-radius:2px}
+.titulo{font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(28px,6.6vw,37px);line-height:1.1;text-align:center;margin-top:34px}
+.subtitulo{font-family:var(--corpo);font-weight:500;font-size:clamp(21px,4.8vw,25px);
+  color:var(--dourado-claro);text-align:center;margin-top:11px}
+
+/* elementos da jornada */
+.jornada{margin-top:36px}
+.item{padding:19px 0;border-top:1px solid rgba(183,139,74,.24)}
+.item:last-child{border-bottom:1px solid rgba(183,139,74,.24)}
+.item h3{font-family:var(--head);font-weight:500;font-size:19px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--dourado-claro)}
+.item p{margin-top:6px;font-size:20px;line-height:1.38}
+
+/* imagem larga */
+.faixa{margin:0;position:relative}
+.faixa img{width:100%}
+.faixa.suave{opacity:.86}
+
+/* cálice */
+.calice{max-width:180px;margin:0 auto 30px}
+
+/* oferta */
+.oferta{text-align:center}
+.formatos{
+  display:flex;justify-content:center;gap:30px;margin-top:30px;flex-wrap:wrap;
+}
+.formato{display:flex;align-items:center;gap:9px;
+  font-family:var(--head);font-weight:400;font-size:15.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--creme)}
+.formato svg{width:19px;height:19px;flex:0 0 auto;stroke:var(--dourado-claro);
+  fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.preco{font-family:var(--head);font-weight:600;font-size:55px;line-height:1;margin-top:26px}
+.pagamento{font-family:var(--head);font-weight:400;font-size:14.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--creme2);margin-top:10px}
+
+/* cta */
+.cta{
+  display:block;width:100%;min-height:62px;
+  background:var(--cobre);color:#fff;border:0;border-radius:9px;
+  font-family:var(--head);font-weight:500;font-size:19px;letter-spacing:.04em;
+  text-transform:uppercase;text-align:center;text-decoration:none;
+  padding:20px 16px;margin-top:32px;cursor:pointer;transition:background .25s ease;
+}
+.cta:active{background:var(--cobre-esc)}
+.micro{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--creme2);text-align:center;margin-top:15px}
+.recusa{
+  display:block;width:100%;background:none;border:0;cursor:pointer;
+  font-family:var(--corpo);font-size:19px;line-height:1.45;
+  color:#8B8175;text-align:center;margin-top:30px;padding:12px;
+  text-decoration:underline;text-underline-offset:4px;
+}
+.recusa:hover{color:var(--creme2)}
+
+/* linha da jornada */
+.linha-jornada{
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  margin-top:34px;flex-wrap:wrap;
+}
+.linha-jornada span{font-family:var(--head);font-weight:500;font-size:14.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--creme2)}
+.linha-jornada span.agora{color:var(--dourado-claro)}
+.linha-jornada i{display:block;width:38px;height:1px;background:rgba(183,139,74,.5)}
+
+/* sticky */
+#sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:rgba(24,21,18,.97);border-top:1px solid rgba(183,139,74,.3);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:11px 16px calc(11px + env(safe-area-inset-bottom));
+  transform:translateY(115%);transition:transform .45s ease;
+}
+#sticky.on{transform:translateY(0)}
+#sticky .txt{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--creme);line-height:1.35}
+#sticky .txt b{color:var(--dourado-claro);font-weight:600}
+#sticky a{
+  flex:0 0 auto;background:var(--cobre);color:#fff;text-decoration:none;
+  font-family:var(--head);font-weight:500;font-size:15.5px;letter-spacing:.08em;
+  text-transform:uppercase;padding:13px 20px;border-radius:7px;
+}
+
+footer{padding:30px 0 110px;text-align:center;border-top:1px solid rgba(183,139,74,.2)}
+footer p{font-size:15.5px;color:#8B8175;margin-top:9px;line-height:1.55}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.rv.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+@media (min-width:760px){
+  :root{--pad:32px;--gap:64px}
+  body{font-size:21.5px}
+  .capa{max-width:310px}
+  .cta{max-width:470px;margin-left:auto;margin-right:auto}
+  .calice{max-width:220px}
+  footer{padding-bottom:60px}
+  #sticky{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header id="hero">
+  <div class="bg">
+    <picture>
+      <source srcset="../assets/img/qmpd-hero.webp" type="image/webp">
+      <img src="../assets/img/qmpd-hero.jpg" alt="" width="1400" height="743" fetchpriority="high">
+    </picture>
+  </div>
+
+  <div class="wrap">
+    <div class="marca-topo" style="max-width:120px;margin:0 0 30px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
+
+    <p class="olho">Você acabou de olhar para aquilo que ainda dói.</p>
+    <h1>Agora eu quero te convidar para uma travessia.</h1>
+    <p class="forte">Eu não sei exatamente o que aconteceu com você.</p>
+    <p class="forte">Mas sei o que acontece quando uma dor começa a ocupar espaço demais dentro da gente.</p>
+  </div>
+</header>
+
+<!-- ============ VSL ============ -->
+<section id="secao-vsl" style="padding-top:52px;display:none">
+  <div class="vsl">
+    <div class="player" id="player" role="button" tabindex="0" aria-label="Assistir">
+      <picture>
+        <source srcset="../assets/img/qmpd-vsl-thumb.webp" type="image/webp">
+        <img src="../assets/img/qmpd-vsl-thumb.jpg" alt="" width="1200" height="675">
+      </picture>
+      <span class="play" aria-hidden="true"></span>
+    </div>
+    <p class="vsl-nota">O que havia dentro do cálice?</p>
+  </div>
+</section>
+
+<!-- ============ O LIVRO ============ -->
+<section>
+  <div class="wrap rv">
+    <figure class="capa">
+      <picture>
+        <source srcset="../assets/img/capa-qmpd.webp" type="image/webp">
+        <img src="../assets/img/capa-qmpd.jpg" alt="Capa do livro Quando Morri por Dentro, de J. C. Dias" width="620" height="930" loading="lazy">
+      </picture>
+    </figure>
+
+    <p class="titulo">Quando Morri por Dentro</p>
+    <p class="subtitulo">A Jornada até o Cálice Escondido</p>
+
+    <p style="text-align:center;margin-top:26px">Uma história simbólica construída a partir de uma experiência real.</p>
+
+    <div class="jornada">
+      <div class="item">
+        <h3>O Caminho</h3>
+        <p>Uma jornada para dentro.</p>
+      </div>
+      <div class="item">
+        <h3>Os Mestres</h3>
+        <p>Pessoas que aparecem quando o personagem mais precisa.</p>
+      </div>
+      <div class="item">
+        <h3>As Sombras</h3>
+        <p>Medo, culpa, orgulho, desejo e aquilo que tentamos esconder.</p>
+      </div>
+      <div class="item">
+        <h3>O Perdão</h3>
+        <p>Dos outros e de si mesmo.</p>
+      </div>
+      <div class="item">
+        <h3>O Cálice</h3>
+        <p>Aquilo que ele procura durante toda a jornada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ A NOITE ESCURA ============ -->
+<section class="fundo-preto">
+  <div class="wrap rv">
+    <p class="grande">Existe um momento em que não sobra mais para onde fugir.</p>
+  </div>
+</section>
+
+<!-- ============ DEUS ESTÁ ME OUVINDO ============ -->
+<section class="fundo-preto" style="padding-top:0">
+  <figure class="faixa suave rv">
+    <picture>
+      <source srcset="../assets/img/qmpd-luz.webp" type="image/webp">
+      <img src="../assets/img/qmpd-luz.jpg" alt="Luz entrando por uma janela" width="1080" height="783" loading="lazy">
+    </picture>
+  </figure>
+  <div class="wrap rv" style="margin-top:52px">
+    <p class="grande" style="text-align:center">“Deus está me ouvindo?”</p>
+  </div>
+</section>
+
+<!-- ============ O CÁLICE ============ -->
+<section class="fundo-preto" style="padding-top:96px;padding-bottom:110px">
+  <div class="wrap rv" style="text-align:center">
+    <figure class="calice">
+      <picture>
+        <source srcset="../assets/img/qmpd-calice.webp" type="image/webp">
+        <img src="../assets/img/qmpd-calice.jpg" alt="Um cálice simples" width="440" height="320" loading="lazy">
+      </picture>
+    </figure>
+
+    <h2>O que havia dentro do cálice?</h2>
+    <p style="margin-top:26px">Ele atravessou a estrada inteira procurando por essa resposta.</p>
+    <p class="forte">Você só descobre chegando até o final.</p>
+  </div>
+</section>
+
+<!-- ============ A OFERTA ============ -->
+<section class="bloco">
+  <div class="wrap rv oferta">
+    <h2>Continue a jornada</h2>
+
+    <div class="formatos">
+      <span class="formato">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/></svg>
+        Ebook
+      </span>
+      <span class="formato">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14h3v5H5.5A1.5 1.5 0 0 1 4 17.5z"/><path d="M20 14h-3v5h1.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg>
+        Audiobook
+      </span>
+    </div>
+
+    <p class="preco">R$47</p>
+    <p class="pagamento">Pagamento único</p>
+
+    <a href="#" class="cta" data-cta="oferta">Sim, quero continuar a jornada</a>
+    <p class="micro">Ebook + Audiobook &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; Pagamento único</p>
+
+    <button class="recusa" data-recusa type="button">Não, obrigado. Quero continuar apenas com Recomeçar com Propósito.</button>
+  </div>
+</section>
+
+<!-- ============ POR QUE AGORA ============ -->
+<section>
+  <div class="wrap rv">
+    <h2>Por que esta história vem agora?</h2>
+    <p>Recomeçar com Propósito inicia a decisão de seguir em frente.</p>
+    <p>Quando Morri por Dentro entra naquilo que ainda carregamos durante o caminho.</p>
+
+    <div class="linha-jornada">
+      <span>Recomeçar com Propósito</span>
+      <i></i>
+      <span class="agora">Quando Morri por Dentro</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="fundo-preto">
+  <div class="wrap rv" style="text-align:center">
+    <p class="grande">Você chegou até a próxima porta.</p>
+
+    <figure class="capa" style="margin-top:44px;max-width:190px">
+      <picture>
+        <source srcset="../assets/img/capa-qmpd.webp" type="image/webp">
+        <img src="../assets/img/capa-qmpd.jpg" alt="Capa do livro Quando Morri por Dentro" width="620" height="930" loading="lazy">
+      </picture>
+    </figure>
+
+    <p class="titulo" style="font-size:clamp(22px,5.2vw,28px);margin-top:26px">Quando Morri por Dentro</p>
+    <p class="pagamento" style="margin-top:14px">Ebook + Audiobook</p>
+    <p class="preco" style="margin-top:8px">R$47</p>
+
+    <a href="#" class="cta" data-cta="final">Sim, quero continuar a jornada</a>
+    <p class="micro">Ebook + Audiobook &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; Pagamento único</p>
+
+    <button class="recusa" data-recusa type="button">Não, obrigado. Quero continuar apenas com Recomeçar com Propósito.</button>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Quando Morri por Dentro. Ebook e audiobook digitais.</p>
+  </div>
+</footer>
+
+<div id="sticky">
+  <span class="txt">QMPD · Ebook + Audiobook<br><b>R$47</b></span>
+  <a href="#" data-cta="sticky">Continuar</a>
+</div>
+
+<script>
+/* ---- CONFIGURAÇÃO: só estas quatro linhas mudam ---- */
+var PIXEL_ID  = '2122287675194601';                 // dataset Funil de Vendas V1 - Brasil
+var CHECKOUT  = '';                 // PENDENTE: checkout 1-CLICK do QMPD ebook + audiobook, R$47
+var VSL_EMBED = '';                 // PENDENTE: URL de embed da VSL (YouTube, Vimeo, Panda, .mp4)
+var ROTA_RECUSA = '/qmpd-ebook';    // PROVISÓRIO: slug do downsell ainda não definido
+/* --------------------------------------------------- */
+
+var FUNNEL = 'rcp_interativo';
+var PRODUTO = { id:'qmpd_ebook_audio', nome:'Quando Morri por Dentro', valor:47, moeda:'BRL' };
+
+/* Meta Pixel */
+(function(){
+  if(!PIXEL_ID) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID);
+  fbq('track','PageView');
+  fbq('track','ViewContent',{content_ids:[PRODUTO.id],content_name:PRODUTO.nome,
+    value:PRODUTO.valor,currency:PRODUTO.moeda,funnel:FUNNEL,step:'qmpd'});
+})();
+
+function evento(nome, dados){
+  var carga = Object.assign({funnel:FUNNEL, step:'qmpd'}, dados||{});
+  if(window.fbq) fbq('trackCustom', nome, carga);
+  if(window.dataLayer) window.dataLayer.push(Object.assign({event:nome}, carga));
+}
+
+function comParametros(url){
+  var atuais = new URLSearchParams(window.location.search);
+  atuais.set('funnel', FUNNEL);
+  var d = new URL(url, window.location.href);
+  atuais.forEach(function(v,k){ if(!d.searchParams.has(k)) d.searchParams.set(k,v); });
+  return d.toString();
+}
+
+/* ---------- 1-CLICK ----------
+   O checkout de 1 clique reaproveita o cartão da compra anterior. Ele precisa receber
+   o identificador da transação que a plataforma devolve no retorno do checkout anterior.
+   Esta página já repassa TODOS os parâmetros da URL adiante, então basta que o retorno
+   do checkout anterior traga o identificador na URL. Os nomes abaixo cobrem os mais comuns.
+   Se a sua plataforma usar outro nome, acrescente na lista. */
+var CHAVES_1CLICK = ['transaction','transaction_id','hottok','tid','order_id','purchase_id','sck','src'];
+
+function comParametros1Clique(url){
+  var atuais = new URLSearchParams(window.location.search);
+  atuais.set('funnel', FUNNEL);
+  var d = new URL(url, window.location.href);
+  atuais.forEach(function(v,k){ if(!d.searchParams.has(k)) d.searchParams.set(k,v); });
+  /* guarda a transação para as etapas seguintes, caso a pessoa recarregue a página */
+  try{
+    CHAVES_1CLICK.forEach(function(k){
+      var v = atuais.get(k);
+      if(v) sessionStorage.setItem('jcd_' + k, v);
+      else if(sessionStorage.getItem('jcd_' + k)) d.searchParams.set(k, sessionStorage.getItem('jcd_' + k));
+    });
+  }catch(e){}
+  return d.toString();
+}
+
+/* ---------- VSL: o vídeo só carrega quando a pessoa clica ---------- */
+/* sem vídeo publicado, o bloco inteiro não existe: nada de player quebrado */
+var secaoVsl = document.getElementById('secao-vsl');
+if(VSL_EMBED) secaoVsl.style.display = '';
+
+var player = document.getElementById('player');
+var vslAberta = false;
+
+function abrirVSL(){
+  if(vslAberta || !VSL_EMBED) return;
+  vslAberta = true;
+  evento('QMPD_VSL_Start');
+  player.innerHTML = '';
+  player.style.cursor = 'default';
+
+  if(/\.(mp4|webm|mov)(\?|$)/i.test(VSL_EMBED)){
+    var v = document.createElement('video');
+    v.src = VSL_EMBED; v.controls = true; v.playsInline = true; v.preload = 'metadata';
+    player.appendChild(v);
+    /* marcos de audiência do vídeo nativo */
+    var marcos = {25:false,50:false,75:false};
+    v.addEventListener('timeupdate', function(){
+      if(!v.duration) return;
+      var pct = v.currentTime / v.duration * 100;
+      [25,50,75].forEach(function(m){
+        if(!marcos[m] && pct >= m){ marcos[m] = true; evento('QMPD_VSL_'+m); }
+      });
+    });
+    v.addEventListener('ended', function(){ evento('QMPD_VSL_Complete'); mostrarSticky(); });
+    v.play().catch(function(){});
+  } else {
+    var f = document.createElement('iframe');
+    f.src = VSL_EMBED + (VSL_EMBED.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
+    f.allow = 'autoplay; fullscreen; picture-in-picture';
+    f.allowFullscreen = true;
+    player.appendChild(f);
+    /* 25/50/75/Complete de player externo dependem da API da plataforma.
+       Assim que a VSL estiver definida, ligar os marcos aqui. */
+  }
+  mostrarSticky();
+}
+player.addEventListener('click', abrirVSL);
+player.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); abrirVSL(); } });
+
+/* ---------- CTAs ---------- */
+document.querySelectorAll('[data-cta]').forEach(function(el){
+  el.addEventListener('click', function(e){
+    e.preventDefault();
+    if(window.fbq) fbq('track','InitiateCheckout',{content_ids:[PRODUTO.id],
+      content_name:PRODUTO.nome,value:PRODUTO.valor,currency:PRODUTO.moeda,
+      funnel:FUNNEL,step:'qmpd',cta:el.dataset.cta});
+    if(!CHECKOUT){ console.warn('checkout ainda não configurado'); return; }
+    window.location.href = comParametros1Clique(CHECKOUT);
+  });
+});
+
+/* ---------- recusa: vai direto, sem modal, sem "tem certeza" ---------- */
+document.querySelectorAll('[data-recusa]').forEach(function(el){
+  el.addEventListener('click', function(){
+    evento('QMPD_Upsell_Declined');
+    window.location.href = comParametros(ROTA_RECUSA);
+  });
+});
+
+/* ---------- sticky: só depois da VSL ---------- */
+var sticky = document.getElementById('sticky');
+function mostrarSticky(){ sticky.classList.add('on'); }
+/* o sticky aparece depois do hero quando não há VSL, ou depois dela quando houver */
+if('IntersectionObserver' in window){
+  var refSticky = VSL_EMBED ? document.querySelector('.vsl') : document.getElementById('hero');
+  new IntersectionObserver(function(e){
+    var r = e[0].boundingClientRect;
+    if(!e[0].isIntersecting && r.bottom < 0) mostrarSticky();
+  },{threshold:0}).observe(refSticky);
+}
+
+/* ---------- fade-in ---------- */
+if('IntersectionObserver' in window){
+  var obs = new IntersectionObserver(function(ent){
+    ent.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('vis'); obs.unobserve(en.target); } });
+  },{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
+} else {
+  document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('vis'); });
+}
+</script>
+</body>
+</html>

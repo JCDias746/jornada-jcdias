@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A escolha | J. C. Dias</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>function semFoto(img){var c=img.closest('.obj');if(c)c.classList.add('sem-foto');var f=img.closest('.foto');if(f)f.remove();}</script>
+
+<style>
+:root{
+  --escuro:#141413;
+  --escuro2:#171614;
+  --papel:#E8E1D6;
+  --areia:#B7A187;
+  --poeira:#756555;
+  --claro:#F1EDE6;
+  --tinta:#23211F;
+  --vermelho:#A44336;
+  --azul:#697A80;
+  --head:'Oswald',Impact,sans-serif;
+  --corpo:'Inter',system-ui,sans-serif;
+
+  --fundo:#141413;
+  --texto:#F1EDE6;
+  --texto2:#9A9287;
+  --acento:#A44336;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--fundo);color:var(--texto);
+  font-family:var(--corpo);font-size:21px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  min-height:100svh;display:flex;flex-direction:column;overflow-x:hidden;
+  transition:background 700ms ease,color 700ms ease;
+}
+img{max-width:100%;height:auto;display:block}
+
+/* as atmosferas da rota */
+body[data-tom="noite"]  {--fundo:#141413;--texto:#F1EDE6;--texto2:#9A9287;--acento:#A44336}
+body[data-tom="preto"]  {--fundo:#0A0A09;--texto:#F1EDE6;--texto2:#8A8378;--acento:#A44336}
+body[data-tom="papel"]  {--fundo:#E8E1D6;--texto:#23211F;--texto2:#6B6357;--acento:#A44336}
+body[data-tom="areia"]  {--fundo:#C6B197;--texto:#241F19;--texto2:#5C503F;--acento:#8E3628}
+body[data-tom="frio"]   {--fundo:#4A5A61;--texto:#EDF0F1;--texto2:#B6C2C6;--acento:#C0574A}
+body[data-tom="mar"]    {--fundo:#8D9698;--texto:#1D2123;--texto2:#454D50;--acento:#9E4234}
+body[data-tom="concreto"]{--fundo:#2B2C2C;--texto:#E6E7E6;--texto2:#9AA0A0;--acento:#B34D3E}
+
+/* topo */
+.topo{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 22px 0;max-width:680px;margin:0 auto;width:100%;min-height:46px;
+}
+.marca{display:block;width:96px;flex:0 0 auto;opacity:.92}
+.marca img{width:100%;height:auto;display:block}
+/* a logo dourada tem contraste suficiente nos dois extremos de fundo */
+
+/* progresso: uma linha que avança, sem número, sem percentual */
+.trilha{max-width:680px;margin:14px auto 0;padding:0 22px;width:100%;
+  display:flex;align-items:center;gap:12px;opacity:0;transition:opacity .5s ease}
+.trilha.on{opacity:1}
+.trilha span{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--texto2);flex:0 0 auto;transition:color 700ms ease}
+.trilha .barra{flex:1;height:1px;background:currentColor;color:var(--texto2);opacity:.35;position:relative}
+.trilha .barra i{position:absolute;left:0;top:-1px;height:3px;width:0;
+  background:var(--acento);transition:width 700ms ease}
+
+/* palco */
+main{flex:1;display:flex;align-items:center;
+  max-width:680px;margin:0 auto;width:100%;padding:26px 22px 30px}
+.cena{width:100%;display:none;animation:entra 520ms ease both}
+.cena.on{display:block}
+@keyframes entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .cena.on{animation:none}
+  body,.trilha .barra i{transition:none}
+}
+
+/* tipografia */
+.olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--acento);margin-bottom:20px;line-height:1.6;
+  transition:color 700ms ease}
+h1{font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(38px,9.4vw,60px);line-height:1.06;letter-spacing:.005em}
+h2{font-family:var(--head);font-weight:500;text-transform:uppercase;
+  font-size:clamp(30px,6.8vw,37px);line-height:1.14}
+p{margin-top:15px;color:var(--texto2);transition:color 700ms ease}
+p.forte{color:var(--texto)}
+.enorme{font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(40px,13vw,84px);line-height:1;letter-spacing:.005em}
+.vermelho{color:var(--acento)}
+.risco{display:block;width:74px;height:3px;background:var(--acento);margin-top:26px}
+
+/* revelações que entram em tempos diferentes */
+.tarda{transition:opacity 900ms ease,transform 900ms ease}
+.tarda:not(.vis){opacity:0 !important;transform:translateY(8px);pointer-events:none}
+.tarda.vis{opacity:1;transform:none}
+
+/* cards dos objetos */
+.objetos{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:26px}
+.obj{
+  text-align:left;background:rgba(35,33,31,.045);
+  border:1px solid rgba(35,33,31,.20);border-radius:3px;
+  padding:0 0 14px;cursor:pointer;overflow:hidden;
+  transition:border-color .25s ease,background .25s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.obj:hover{border-color:var(--acento)}
+.obj:focus-visible{outline:2px solid var(--acento);outline-offset:2px}
+.obj.sel{border-color:var(--acento);background:rgba(164,67,54,.07)}
+.obj .foto{
+  width:100%;aspect-ratio:4/3;background:rgba(35,33,31,.07);
+  border-bottom:1px solid rgba(35,33,31,.13);position:relative;overflow:hidden;
+}
+.obj .foto img{width:100%;height:100%;object-fit:cover}
+.obj.sem-foto{padding:0 0 20px;background:rgba(35,33,31,.03)}
+.obj.sem-foto b{padding-top:22px}
+.obj.sem-foto .marca-sel{position:absolute;right:10px;top:10px}
+.obj.sem-foto{position:relative}
+.obj b{display:block;font-family:var(--head);font-weight:500;font-size:15.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--tinta);
+  padding:13px 13px 0}
+.obj span{display:block;font-size:17px;line-height:1.42;color:#6B6357;padding:5px 13px 0}
+.obj .marca-sel{
+  position:absolute;right:8px;top:8px;width:20px;height:20px;border-radius:50%;
+  background:var(--acento);opacity:0;transform:scale(.6);
+  transition:opacity .25s ease,transform .25s ease;
+}
+.obj .marca-sel::after{content:"";position:absolute;left:6px;top:7px;
+  width:8px;height:4px;border-left:1.6px solid #fff;border-bottom:1.6px solid #fff;
+  transform:rotate(-45deg)}
+.obj.sel .marca-sel{opacity:1;transform:scale(1)}
+
+/* opções tipográficas */
+.linhas-op{margin-top:24px;border-top:1px solid currentColor}
+.linha-op{
+  display:block;width:100%;text-align:left;background:none;border:0;cursor:pointer;
+  border-bottom:1px solid currentColor;
+  font-family:var(--head);font-weight:500;font-size:clamp(21px,5.2vw,26px);
+  letter-spacing:.07em;text-transform:uppercase;color:var(--texto);
+  padding:21px 34px 21px 2px;position:relative;
+  transition:color .22s ease,padding-left .22s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.linhas-op{border-color:rgba(128,128,128,.34)}
+.linha-op{border-color:rgba(128,128,128,.34)}
+.linha-op:hover{color:var(--acento);padding-left:10px}
+.linha-op:focus-visible{outline:2px solid var(--acento);outline-offset:-2px}
+.linha-op.sel{color:var(--acento)}
+.linha-op::after{
+  content:"";position:absolute;right:6px;top:50%;margin-top:-4px;
+  width:11px;height:7px;border-left:2px solid var(--acento);border-bottom:2px solid var(--acento);
+  transform:rotate(-45deg) scale(.5);opacity:0;transition:opacity .25s ease,transform .25s ease;
+}
+.linha-op.sel::after{opacity:1;transform:rotate(-45deg) scale(1)}
+
+/* bússola */
+.bussola{width:min(216px,62vw);margin:0 auto 34px;display:block}
+.bussola .agulha{transform-origin:100px 100px;transition:transform 3400ms cubic-bezier(.2,.9,.25,1)}
+
+/* rota */
+.rota{margin:8px 0 6px;padding:22px 0}
+.rota .par{display:flex;align-items:flex-start;gap:16px;min-height:52px}
+.rota .trilho{flex:0 0 12px;display:flex;flex-direction:column;align-items:center;align-self:stretch}
+.rota .ponto{width:9px;height:9px;border-radius:50%;border:1.5px solid currentColor;
+  flex:0 0 auto;margin-top:7px;background:transparent;transition:background .4s ease,border-color .4s ease}
+.rota .fio{flex:1;width:1.5px;background:rgba(128,128,128,.3);position:relative;overflow:hidden}
+.rota .fio i{position:absolute;left:0;top:0;width:100%;height:0;background:var(--vermelho);
+  transition:height 620ms ease}
+.rota .lugar{font-family:var(--head);font-weight:500;font-size:clamp(21px,5.2vw,28px);
+  letter-spacing:.13em;text-transform:uppercase;padding-bottom:16px;
+  opacity:.28;transition:opacity .5s ease}
+.rota .par.aceso .lugar{opacity:1}
+.rota .par.aceso .ponto{background:var(--vermelho);border-color:var(--vermelho)}
+
+/* palavras que caem uma a uma */
+.perdas{min-height:210px;display:flex;flex-direction:column;justify-content:center;
+  align-items:flex-start;gap:0}
+.perda{
+  font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(36px,10.4vw,67px);line-height:1.06;letter-spacing:.01em;
+  opacity:0;transform:translateY(10px);transition:opacity 380ms ease,transform 380ms ease;
+  position:absolute;
+}
+.perda.vis{opacity:1;transform:none}
+.perdas-palco{position:relative;min-height:210px}
+
+/* imagens */
+.cena figure{margin:0 0 26px;border-radius:2px;overflow:hidden}
+.cena figure.fim{margin:26px 0 0}
+.cena figure.capa{max-width:214px;margin:26px auto 0;
+  filter:drop-shadow(0 22px 42px rgba(0,0,0,.6))}
+.cena figure.retrato{max-width:190px;margin:0 auto 26px;border-radius:2px;overflow:hidden;
+  filter:grayscale(.25)}
+
+/* botões */
+.btn{
+  display:block;width:100%;max-width:430px;margin:32px auto 0;min-height:56px;
+  background:var(--acento);color:#fff;border:0;border-radius:7px;
+  font-family:var(--head);font-weight:500;font-size:19px;letter-spacing:.04em;
+  text-transform:uppercase;text-align:center;text-decoration:none;
+  padding:18px 16px;cursor:pointer;
+}
+.btn.vazado{
+  background:transparent;color:var(--texto);border:1px solid currentColor;
+  max-width:250px;min-height:54px;padding:15px;font-size:17px;opacity:.85;
+}
+.btn.vazado:hover{opacity:1;border-color:var(--acento);color:var(--acento)}
+
+footer{padding:20px 22px calc(20px + env(safe-area-inset-bottom));text-align:center;
+  opacity:0;pointer-events:none;transition:opacity .5s ease}
+footer.on{opacity:1;pointer-events:auto}
+footer a,footer span{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--texto2);text-decoration:none;margin:0 9px;
+  transition:color 700ms ease}
+
+@media (min-width:760px){
+  body{font-size:21.5px}
+  main{padding:44px 32px 44px;max-width:800px}
+  .topo,.trilha{max-width:800px}
+  .objetos{gap:14px}
+}
+</style>
+</head>
+<body data-tom="noite">
+
+<div class="topo">
+  <span class="marca"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></span>
+</div>
+
+<div class="trilha" id="trilha" aria-hidden="true">
+  <span>A jornada</span>
+  <div class="barra"><i id="barra"></i></div>
+</div>
+
+<main>
+
+  <!-- 1. ABERTURA -->
+  <section class="cena on" data-cena="abertura" data-tom="noite">
+    <figure>
+      <picture>
+        <source srcset="../assets/img/dvpn-deserto.webp" type="image/webp">
+        <img src="../assets/img/dvpn-deserto.jpg" alt="" width="1080" height="486" fetchpriority="high" style="opacity:.62">
+      </picture>
+    </figure>
+
+    <p class="olho">Uma última experiência antes de continuar</p>
+    <h1>Imagine que amanhã você precise partir.</h1>
+
+    <p class="forte">Não uma viagem.</p>
+    <p class="forte">Não uma mudança planejada.</p>
+    <p class="forte">Partir sem saber quando, ou se, poderá voltar.</p>
+
+    <p>Você terá alguns segundos para fazer algumas escolhas. Não existem respostas certas.</p>
+
+    <button class="btn" data-avanca>Começar</button>
+  </section>
+
+  <!-- 2. PRIMEIRA ESCOLHA -->
+  <section class="cena" data-cena="objetos" data-tom="papel" data-passo="1" data-chave="dvpn_choice_item">
+    <h2>Você só pode levar uma coisa.</h2>
+    <p>Sua casa ficará. Seu dinheiro talvez não tenha valor. Você não sabe para onde está indo.</p>
+    <p class="forte">O que você levaria?</p>
+
+    <div class="objetos">
+      <button class="obj" data-op="foto">
+        <span class="foto"><picture><source srcset="../assets/img/obj-fotografia.webp" type="image/webp"><img src="../assets/img/obj-fotografia.jpg" alt="" width="720" height="540" loading="lazy" onerror="semFoto(this)"></picture><i class="marca-sel"></i></span>
+        <b>Uma fotografia</b>
+        <span>Para lembrar quem você ama.</span>
+      </button>
+      <button class="obj" data-op="bussola">
+        <span class="foto"><picture><source srcset="../assets/img/obj-bussola.webp" type="image/webp"><img src="../assets/img/obj-bussola.jpg" alt="" width="720" height="540" loading="lazy" onerror="semFoto(this)"></picture><i class="marca-sel"></i></span>
+        <b>Uma bússola</b>
+        <span>Para tentar encontrar um caminho.</span>
+      </button>
+      <button class="obj" data-op="documento">
+        <span class="foto"><picture><source srcset="../assets/img/obj-documento.webp" type="image/webp"><img src="../assets/img/obj-documento.jpg" alt="" width="720" height="540" loading="lazy" onerror="semFoto(this)"></picture><i class="marca-sel"></i></span>
+        <b>Um documento</b>
+        <span>Para provar quem você é.</span>
+      </button>
+      <button class="obj" data-op="nada">
+        <span class="foto"><picture><source srcset="../assets/img/obj-nada.webp" type="image/webp"><img src="../assets/img/obj-nada.jpg" alt="" width="720" height="540" loading="lazy" onerror="semFoto(this)"></picture><i class="marca-sel"></i></span>
+        <b>Nada</b>
+        <span>Porque talvez não haja tempo.</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- 3. A QUEBRA -->
+  <section class="cena" data-cena="quebra" data-tom="preto">
+    <p class="forte" id="q-1">Você conseguiu escolher.</p>
+
+    <h1 class="tarda" id="q-2" style="margin-top:26px">Ashir não pôde escolher.</h1>
+
+    <div class="tarda" id="q-3" style="margin-top:32px">
+      <p>Ele tinha apenas dez anos quando o mundo que conhecia desapareceu.</p>
+      <p>Não houve mala.</p>
+      <p>Não houve planejamento.</p>
+      <p>Não houve despedida.</p>
+      <p class="forte" style="margin-top:24px">Houve apenas uma ordem:</p>
+      <p class="enorme vermelho" style="margin-top:12px">“Vá.”</p>
+      <button class="btn vazado" data-avanca>Continuar</button>
+    </div>
+  </section>
+
+  <!-- 4. CONTEXTO MÍNIMO -->
+  <section class="cena" data-cena="correu" data-tom="areia">
+    <h2>Ele correu carregando sua irmã.</h2>
+    <p>Quando finalmente parou, percebeu que ela já não estava viva.</p>
+    <p>Ele havia carregado o corpo dela durante a fuga sem perceber.</p>
+    <p>No dia seguinte, cavou uma cova com as próprias mãos.</p>
+    <p>Mais tarde voltou para sua aldeia.</p>
+    <p>E encontrou seus pais mortos.</p>
+    <p class="forte" style="margin-top:28px;font-size:clamp(22px,5.4vw,28px);line-height:1.3">E foi então que ele começou a caminhar.</p>
+    <button class="btn vazado" data-avanca>Continuar</button>
+  </section>
+
+  <!-- 7. A BÚSSOLA -->
+  <section class="cena" data-cena="bussola" data-tom="preto">
+    <svg class="bussola" viewBox="0 0 200 200" role="img" aria-label="Uma bússola">
+      <circle cx="100" cy="100" r="94" fill="none" stroke="#5A5045" stroke-width="1.2"/>
+      <circle cx="100" cy="100" r="86" fill="#161513" stroke="#7A6C5B" stroke-width="2.4"/>
+      <circle cx="100" cy="100" r="72" fill="none" stroke="#3E382F" stroke-width="1"/>
+      <g stroke="#8B7C68" stroke-width="1" stroke-linecap="round">
+        <line x1="100" y1="18" x2="100" y2="30"/><line x1="100" y1="170" x2="100" y2="182"/>
+        <line x1="18" y1="100" x2="30" y2="100"/><line x1="170" y1="100" x2="182" y2="100"/>
+        <line x1="42" y1="42" x2="49" y2="49"/><line x1="151" y1="151" x2="158" y2="158"/>
+        <line x1="158" y1="42" x2="151" y2="49"/><line x1="49" y1="151" x2="42" y2="158"/>
+      </g>
+      <g fill="#9A8B76" font-family="Oswald, sans-serif" font-size="13" font-weight="500" text-anchor="middle">
+        <text x="100" y="48">N</text><text x="100" y="159">S</text>
+        <text x="153" y="105">L</text><text x="48" y="105">O</text>
+      </g>
+      <g class="agulha" id="agulha">
+        <polygon points="100,42 108,100 100,110 92,100" fill="#A44336"/>
+        <polygon points="100,158 92,100 100,90 108,100" fill="#CFC4B4"/>
+      </g>
+      <circle cx="100" cy="100" r="5.5" fill="#161513" stroke="#8B7C68" stroke-width="1.6"/>
+    </svg>
+
+    <p class="forte">Anos depois, alguém colocou uma bússola na mão dele.</p>
+    <p>Ashir não sabia exatamente para onde ela o levaria.</p>
+
+    <h2 class="tarda" id="b-1" style="margin-top:30px">Ela não apontava para casa.</h2>
+    <h2 class="tarda vermelho" id="b-2" style="margin-top:14px">Mas apontava para algum lugar.</h2>
+
+    <button class="btn vazado tarda" id="b-3" data-avanca>Seguir</button>
+  </section>
+
+  <!-- 8. A ROTA -->
+  <section class="cena" data-cena="rota" data-tom="areia">
+    <div class="rota" id="rota">
+      <div class="par"><div class="trilho"><i class="ponto"></i><div class="fio"><i></i></div></div><div class="lugar">Darfur</div></div>
+      <div class="par"><div class="trilho"><i class="ponto"></i><div class="fio"><i></i></div></div><div class="lugar">Sudão</div></div>
+      <div class="par"><div class="trilho"><i class="ponto"></i><div class="fio"><i></i></div></div><div class="lugar">Líbia</div></div>
+      <div class="par"><div class="trilho"><i class="ponto"></i><div class="fio"><i></i></div></div><div class="lugar">Argélia</div></div>
+      <div class="par"><div class="trilho"><i class="ponto"></i><div class="fio"><i></i></div></div><div class="lugar">França</div></div>
+      <div class="par"><div class="trilho"><i class="ponto"></i></div><div class="lugar">Reino Unido</div></div>
+    </div>
+
+    <div class="tarda" id="r-1">
+      <p class="forte">Ele atravessou países procurando uma coisa muito simples.</p>
+    </div>
+    <div class="tarda" id="r-2">
+      <h2 style="margin-top:16px">Um lugar onde pudesse viver.</h2>
+      <p style="margin-top:22px">No caminho, perdeu quase tudo.</p>
+      <p>Foi explorado.</p>
+      <p>Usado.</p>
+      <p>Tratado como invisível.</p>
+      <p>Chamado por nomes que não eram o dele.</p>
+      <p class="forte">E continuou.</p>
+      <button class="btn vazado" data-avanca>Continuar</button>
+    </div>
+  </section>
+
+  <!-- 5. SEGUNDA ESCOLHA -->
+  <section class="cena" data-cena="continuar" data-tom="papel" data-passo="2" data-chave="dvpn_choice_continue">
+    <h2>Quando você não tem mais para onde voltar, o que acredita que faria alguém continuar?</h2>
+    <div class="linhas-op">
+      <button class="linha-op" data-op="esperanca">Esperança</button>
+      <button class="linha-op" data-op="fe">Fé</button>
+      <button class="linha-op" data-op="sobrevivencia">Instinto de sobrevivência</button>
+      <button class="linha-op" data-op="amor">A lembrança de quem ama</button>
+      <button class="linha-op" data-op="naosei">Eu não sei</button>
+    </div>
+  </section>
+
+  <!-- 6. ESPELHO -->
+  <section class="cena" data-cena="talvez" data-tom="noite">
+    <h1>Talvez.</h1>
+    <h1 class="tarda" id="t-2" style="margin-top:18px">Talvez tudo isso junto.</h1>
+
+    <div class="tarda" id="t-3" style="margin-top:34px">
+      <p class="forte" id="frase-pessoal" style="font-size:clamp(21px,5vw,26px);line-height:1.4"></p>
+      <p style="margin-top:26px">Ashir continuou muitas vezes sem saber exatamente por quê.</p>
+      <p>Em determinado momento, ele nem sabia para onde estava indo.</p>
+      <p class="forte">Só sabia que seguir em frente significava:</p>
+      <p class="enorme vermelho" style="margin-top:12px;font-size:clamp(31px,8.6vw,54px)">“Não aqui.”</p>
+      <button class="btn vazado" data-avanca>Continuar</button>
+    </div>
+  </section>
+
+  <!-- AS PERDAS -->
+  <section class="cena" data-cena="perdas" data-tom="preto">
+    <h2>Ashir perdeu quase tudo.</h2>
+
+    <div class="perdas-palco" id="palco">
+      <p class="perda" data-i="0">Casa</p>
+      <p class="perda" data-i="1">Família</p>
+      <p class="perda" data-i="2">Infância</p>
+      <p class="perda" data-i="3">Documentos</p>
+      <p class="perda" data-i="4">Nome</p>
+    </div>
+
+    <div class="tarda" id="p-1">
+      <p class="forte">E, em vários momentos, quase perdeu a si mesmo.</p>
+    </div>
+    <h1 class="tarda vermelho" id="p-2" style="margin-top:26px">Mas continuou.</h1>
+    <button class="btn vazado tarda" id="p-3" data-avanca>Continuar</button>
+  </section>
+
+  <!-- 9. A REVELAÇÃO E O ENCONTRO -->
+  <section class="cena" data-cena="prisao" data-tom="preto">
+    <p class="enorme tarda" id="pr-1">Eu conheci Ashir em uma prisão.</p>
+
+    <div class="tarda" id="pr-2" style="margin-top:34px">
+      <figure class="retrato">
+        <picture>
+          <source srcset="../assets/img/autor.webp" type="image/webp">
+          <img src="../assets/img/autor.jpg" alt="J. C. Dias" width="900" height="917" loading="lazy">
+        </picture>
+      </figure>
+
+      <p>Eu também estava cumprindo uma sentença.</p>
+      <p>Ele já estava preso havia cinco anos.</p>
+      <p>Ashir não me contou sua história de uma vez. Foi contando aos poucos.</p>
+      <p class="forte">Até que comecei a compreender o caminho que aquele homem havia percorrido para chegar àquela cela.</p>
+      <button class="btn vazado" data-avanca>Continuar</button>
+    </div>
+  </section>
+
+  <!-- 10. O FECHO -->
+  <section class="cena" data-cena="sai" data-tom="preto">
+    <p class="enorme" style="color:var(--texto2)">Eu saí daquela prisão.</p>
+    <p class="enorme tarda" id="s-1" style="margin-top:24px">A história dele não podia ficar lá.</p>
+    <i class="risco tarda" id="s-2" aria-hidden="true"></i>
+
+    <div class="tarda" id="s-3">
+      <figure class="capa">
+        <picture>
+          <source srcset="../assets/img/capa-dvpn.webp" type="image/webp">
+          <img src="../assets/img/capa-dvpn.jpg" alt="Capa do livro De Volta Para o Nada, de J. C. Dias" width="620" height="930" loading="lazy">
+        </picture>
+      </figure>
+
+      <p class="forte" style="text-align:center;margin-top:26px">Uma história real.</p>
+      <p style="text-align:center">Contada porque alguém precisava ouvir.</p>
+
+      <a href="#" class="btn" id="ir-dvpn">Conhecer a história de Ashir</a>
+    </div>
+  </section>
+
+</main>
+
+<footer id="rodape">
+  <a href="/privacidade">Privacidade</a>
+  <a href="/termos">Termos</a>
+</footer>
+
+<script>
+/* ---- CONFIGURAÇÃO ---- */
+var PIXEL_ID  = '2122287675194601';          // dataset Funil de Vendas V1 - Brasil
+var ROTA_DVPN = '/dvpn';     // Upsell 2, De Volta Para o Nada
+var FUNNEL    = 'rcp_interativo';
+/* ---------------------- */
+
+var CHAVE = 'dvpn_journey_v2';
+var cenas = Array.prototype.slice.call(document.querySelectorAll('.cena'));
+var ordem = cenas.map(function(c){ return c.dataset.cena; });
+var totalPassos = cenas.filter(function(c){ return c.dataset.passo; }).length;
+var atual = 0;
+var respostas = {};
+var timers = [];
+
+/* uma frase muda conforme a resposta sobre o que faz alguém continuar */
+var FRASES = {
+  esperanca:    'Talvez esperança seja justamente continuar quando ainda não existe nenhuma prova de que as coisas vão melhorar.',
+  fe:           'Talvez fé seja continuar mesmo quando todas as evidências parecem apontar para o contrário.',
+  sobrevivencia:'Às vezes continuar não parece coragem. Parece apenas o corpo recusando-se a parar.',
+  amor:         'Talvez algumas pessoas continuem porque carregam dentro delas quem já não pode caminhar ao seu lado.',
+  naosei:       'Talvez algumas histórias sejam grandes demais para caber numa explicação simples.'
+};
+
+/* ---------- tracking: só progresso, nunca a resposta escolhida ---------- */
+(function(){
+  if(!PIXEL_ID) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID); fbq('track','PageView');
+})();
+
+function evento(nome){
+  var carga = {funnel:FUNNEL, step:'ashir'};
+  if(window.fbq) fbq('trackCustom', nome, carga);
+  if(window.dataLayer) window.dataLayer.push(Object.assign({event:nome}, carga));
+}
+
+/* ---------- estado ---------- */
+function salvar(){
+  try{ localStorage.setItem(CHAVE, JSON.stringify({
+    dvpn_journey_step: ordem[atual], respostas: respostas })); }catch(e){}
+}
+function recuperar(){
+  if(new URLSearchParams(location.search).get('reset') === '1') return;
+  try{
+    var d = JSON.parse(localStorage.getItem(CHAVE) || 'null');
+    if(!d) return;
+    respostas = d.respostas || {};
+    var i = ordem.indexOf(d.dvpn_journey_step);
+    if(i > 0) atual = i;
+    Object.keys(respostas).forEach(function(ch){
+      var cena = document.querySelector('[data-chave="'+ch+'"]');
+      if(!cena) return;
+      var alvo = cena.querySelector('[data-op="'+respostas[ch]+'"]');
+      if(alvo) alvo.classList.add('sel');
+    });
+  }catch(e){}
+}
+
+/* ---------- navegação ---------- */
+function limparTimers(){ timers.forEach(clearTimeout); timers = []; }
+function depois(ms, fn){ timers.push(setTimeout(fn, ms)); }
+function revelar(id, ms){ depois(ms, function(){ var e = document.getElementById(id); if(e) e.classList.add('vis'); }); }
+
+function mostrar(i){
+  limparTimers();
+  cenas.forEach(function(c){ c.classList.remove('on'); });
+  document.querySelectorAll('.tarda').forEach(function(e){ e.classList.remove('vis'); });
+  atual = i;
+  var cena = cenas[atual];
+  cena.classList.add('on');
+  document.body.dataset.tom = cena.dataset.tom || 'noite';
+  window.scrollTo(0,0);
+  desenharTrilha();
+  document.getElementById('rodape').classList.toggle('on', cena.dataset.cena === 'sai');
+  salvar();
+  aoEntrar(cena);
+}
+function avancar(){ if(atual < cenas.length-1) mostrar(atual+1); }
+
+/* ---------- trilha de progresso ---------- */
+function desenharTrilha(){
+  var t = document.getElementById('trilha');
+  var visivel = ordem[atual] !== 'abertura' && ordem[atual] !== 'sai';
+  t.classList.toggle('on', visivel);
+  document.getElementById('barra').style.width = Math.round(atual / (cenas.length-1) * 100) + '%';
+}
+
+/* ---------- a coreografia de cada cena ---------- */
+function aoEntrar(cena){
+  var nome = cena.dataset.cena;
+
+  if(nome === 'abertura') evento('DVPN_Journey_Start');
+
+  if(nome === 'quebra'){
+    evento('DVPN_Ashir_Reveal');
+    revelar('q-2', 800);
+    revelar('q-3', 1750);
+  }
+
+  if(nome === 'talvez'){
+    var f = document.getElementById('frase-pessoal');
+    var escolha = respostas.dvpn_choice_continue;
+    f.textContent = FRASES[escolha] || '';
+    f.style.display = FRASES[escolha] ? 'block' : 'none';
+    revelar('t-2', 700);
+    revelar('t-3', 1600);
+  }
+
+  if(nome === 'bussola'){
+    evento('DVPN_Compass_View');
+    var ag = document.getElementById('agulha');
+    ag.style.transform = 'rotate(0deg)';
+    depois(180, function(){ ag.style.transform = 'rotate(742deg)'; });
+    revelar('b-1', 1900);
+    revelar('b-2', 2900);
+    revelar('b-3', 3500);
+  }
+
+  if(nome === 'rota'){
+    evento('DVPN_Route_View');
+    var pares = cena.querySelectorAll('.par');
+    var tons = ['areia','areia','areia','mar','frio','concreto'];
+    pares.forEach(function(par, i){
+      depois(220 + i*480, function(){
+        par.classList.add('aceso');
+        document.body.dataset.tom = tons[i] || 'concreto';
+        var fio = par.querySelector('.fio i');
+        if(fio) fio.style.height = '100%';
+      });
+    });
+    revelar('r-1', 220 + pares.length*480 + 250);
+    revelar('r-2', 220 + pares.length*480 + 1000);
+  }
+
+  if(nome === 'perdas'){
+    var palavras = cena.querySelectorAll('.perda');
+    palavras.forEach(function(p, i){
+      depois(300 + i*700, function(){ palavras.forEach(function(o){ o.classList.remove('vis'); }); });
+      depois(300 + i*700 + 330, function(){ p.classList.add('vis'); });
+    });
+    var fim = 300 + palavras.length*700;
+    depois(fim, function(){ palavras.forEach(function(o){ o.classList.remove('vis'); }); });
+    revelar('p-1', fim + 200);
+    revelar('p-2', fim + 1150);
+    revelar('p-3', fim + 1750);
+  }
+
+  if(nome === 'prisao'){
+    evento('DVPN_Prison_Reveal');
+    revelar('pr-1', 700);
+    revelar('pr-2', 1900);
+  }
+
+  if(nome === 'sai'){
+    evento('DVPN_Book_Reveal');
+    evento('DVPN_Journey_Complete');
+    revelar('s-1', 1100);
+    revelar('s-2', 1800);
+    revelar('s-3', 2300);
+  }
+}
+
+/* ---------- escolhas ---------- */
+function registrar(cena, valor){
+  respostas[cena.dataset.chave] = valor;
+  salvar();
+  if(cena.dataset.chave === 'dvpn_choice_item') evento('DVPN_Item_Choice');
+  if(cena.dataset.chave === 'dvpn_choice_continue') evento('DVPN_Continue_Choice');
+  if(cena.dataset.chave === 'dvpn_choice_limit') evento('DVPN_Limit_Choice');
+}
+
+document.querySelectorAll('.obj').forEach(function(b){
+  b.addEventListener('click', function(){
+    var cena = b.closest('.cena');
+    cena.querySelectorAll('.obj').forEach(function(o){ o.classList.remove('sel'); });
+    b.classList.add('sel');
+    registrar(cena, b.dataset.op);
+    depois(560, avancar);
+  });
+});
+
+document.querySelectorAll('.linha-op').forEach(function(b){
+  b.addEventListener('click', function(){
+    var cena = b.closest('.cena');
+    cena.querySelectorAll('.linha-op').forEach(function(o){ o.classList.remove('sel'); });
+    b.classList.add('sel');
+    registrar(cena, b.dataset.op);
+    depois(560, avancar);
+  });
+});
+
+document.querySelectorAll('[data-avanca]').forEach(function(b){
+  b.addEventListener('click', function(e){ e.preventDefault(); avancar(); });
+});
+
+/* ---------- saída para o upsell ---------- */
+document.getElementById('ir-dvpn').addEventListener('click', function(e){
+  e.preventDefault();
+  evento('DVPN_Offer_Click');
+  var atuais = new URLSearchParams(window.location.search);
+  atuais.set('funnel', FUNNEL);
+  var d = new URL(ROTA_DVPN, window.location.href);
+  atuais.forEach(function(v,k){ if(!d.searchParams.has(k)) d.searchParams.set(k,v); });
+  try{ localStorage.removeItem(CHAVE); }catch(err){}
+  window.location.href = d.toString();
+});
+
+recuperar();
+var pedida = new URLSearchParams(location.search).get('tela');
+if(pedida && ordem.indexOf(pedida) > -1) atual = ordem.indexOf(pedida);
+mostrar(atual);
+</script>
+</body>
+</html>

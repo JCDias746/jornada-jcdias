@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Obrigado | J. C. Dias</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --fundo:#11110F;
+  --claro:#F3EFE8;
+  --cinza:#AAA198;
+  --cinza-esc:#6B655D;
+  --bronze:#9B7B50;
+  --bronze-esc:#836740;
+  --head:'Oswald',Impact,sans-serif;
+  --corpo:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--fundo);color:var(--claro);
+  font-family:var(--corpo);font-size:21px;line-height:1.66;
+  -webkit-font-smoothing:antialiased;
+  min-height:100dvh;display:flex;flex-direction:column;
+}
+main{flex:1;max-width:660px;margin:0 auto;width:100%;padding:9vh 24px 40px}
+.marca-topo img{width:100%;height:auto;display:block}
+
+.olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--bronze);margin-bottom:26px}
+h1{font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(49px,15vw,93px);line-height:.94;letter-spacing:.005em}
+h2{font-family:var(--head);font-weight:500;text-transform:uppercase;
+  font-size:clamp(29px,6.6vw,35px);line-height:1.18}
+p{margin-top:16px;color:var(--cinza)}
+p.forte{color:var(--claro)}
+
+/* cada bloco é uma respiração */
+.bloco{margin-top:82px}
+.bloco:first-of-type{margin-top:0}
+.linha-bronze{display:block;width:56px;height:2px;background:var(--bronze);margin:34px 0}
+
+/* formulário */
+form{margin-top:30px}
+.campo{margin-top:14px}
+label{display:block;font-family:var(--head);font-weight:400;font-size:14.5px;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--cinza-esc);margin-bottom:8px}
+input{
+  width:100%;min-height:56px;
+  background:#191816;color:var(--claro);
+  border:1px solid rgba(155,123,80,.32);border-radius:7px;
+  padding:16px 17px;font-family:var(--corpo);font-size:20px;
+}
+input::placeholder{color:#5E584F}
+input:focus{outline:none;border-color:var(--bronze)}
+input.erro{border-color:#A44336}
+
+.cta{
+  display:block;width:100%;max-width:460px;margin:26px auto 0;min-height:62px;
+  background:var(--bronze);color:#15130F;border:0;border-radius:7px;
+  font-family:var(--head);font-weight:600;font-size:19px;letter-spacing:.04em;
+  text-transform:uppercase;text-align:center;padding:20px 16px;cursor:pointer;
+  transition:background .25s ease;
+}
+.cta:active{background:var(--bronze-esc)}
+.cta[disabled]{opacity:.55;cursor:default}
+.micro{font-size:17px;color:var(--cinza-esc);text-align:center;margin-top:16px;line-height:1.5}
+.aviso{display:none;margin-top:18px;font-size:17px;color:#C4685A;text-align:center}
+.aviso.on{display:block}
+
+/* confirmação, substitui o formulário */
+.feito{display:none}
+.feito.on{display:block;animation:sobe 700ms ease both}
+@keyframes sobe{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.feito .grande{font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(32px,8.4vw,50px);line-height:1.06;color:var(--claro)}
+.feito .continue{font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(29px,7.4vw,43px);line-height:1;color:var(--bronze);margin-top:6px}
+
+.assinatura{font-family:var(--head);font-weight:400;font-size:14.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--cinza-esc);margin-top:56px}
+
+footer{padding:40px 24px calc(34px + env(safe-area-inset-bottom));text-align:center}
+footer p{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.13em;
+  text-transform:uppercase;color:#4E4941}
+
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.rv.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .feito.on{animation:none}
+}
+
+@media (min-width:760px){
+  body{font-size:21.5px}
+  main{padding:16vh 32px 60px;max-width:700px}
+  .bloco{margin-top:100px}
+}
+</style>
+</head>
+<body>
+
+<main>
+
+  <!-- 1. AGRADECIMENTO -->
+  <section class="bloco">
+    <div class="marca-topo" style="max-width:130px;margin:0 0 40px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
+
+    <p class="olho">Você chegou até aqui.</p>
+    <h1>Obrigado.</h1>
+
+    <p class="forte" style="margin-top:28px">De verdade.</p>
+    <p>Escrever é colocar partes da própria vida no papel sem saber exatamente quem vai estar do outro lado.</p>
+    <p class="forte">Agora eu sei que você está.</p>
+
+    <p style="margin-top:26px">E por isso eu queria terminar esta jornada de uma forma diferente.</p>
+    <p>Sem outra oferta.</p>
+    <p>Sem outro livro.</p>
+    <p>Sem tentar te convencer de mais nada.</p>
+    <p class="forte">Só com um convite.</p>
+  </section>
+
+  <!-- 2. A PONTE -->
+  <section class="bloco rv">
+    <i class="linha-bronze" aria-hidden="true"></i>
+    <h2>Talvez esta jornada termine aqui por enquanto.</h2>
+
+    <p style="margin-top:24px">Mas aquilo que nasceu dessas páginas ainda não terminou para mim.</p>
+    <p>Existem coisas que eu quero construir depois dos livros.</p>
+    <p>Conversas que não cabem numa página.</p>
+    <p>Experiências que ainda não estão prontas.</p>
+    <p class="forte" style="margin-top:24px">E quando essa próxima etapa existir, eu quero falar primeiro com quem chegou até aqui.</p>
+  </section>
+
+  <!-- 3. LISTA PRIORITÁRIA -->
+  <section class="bloco rv" id="lista">
+    <i class="linha-bronze" aria-hidden="true"></i>
+    <h2 id="convite">Se quiser continuar comigo…</h2>
+
+    <div id="formulario">
+      <p style="margin-top:22px">Deixe seu nome e email abaixo.</p>
+      <p class="forte">Quando a próxima porta abrir, eu aviso você primeiro.</p>
+
+      <p style="margin-top:20px">Sem compromisso.</p>
+      <p>Sem cobrança.</p>
+      <p>Sem uma nova oferta agora.</p>
+
+      <form id="form" novalidate>
+        <div class="campo">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" autocomplete="given-name" placeholder="Como posso te chamar">
+        </div>
+        <div class="campo">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="seu@email.com">
+        </div>
+
+        <button type="submit" class="cta" id="enviar">Quero continuar esta jornada</button>
+        <p class="micro">Sem compromisso. Nenhuma nova cobrança. Apenas um convite quando chegar a hora.</p>
+        <p class="aviso" id="aviso"></p>
+      </form>
+    </div>
+
+    <!-- 4. CONFIRMAÇÃO, no lugar do formulário -->
+    <div class="feito" id="feito">
+      <p class="grande" style="margin-top:26px">Está feito.</p>
+      <p style="margin-top:22px">Quando a próxima etapa estiver pronta, você vai saber.</p>
+      <p style="margin-top:22px">Por enquanto:</p>
+      <p class="continue">continue.</p>
+    </div>
+
+    <p class="assinatura">J. C. Dias</p>
+  </section>
+
+</main>
+
+<script>
+/* ---- CONFIGURAÇÃO ---- */
+var PIXEL_ID = '2122287675194601';    // dataset Funil de Vendas V1 - Brasil
+var ENDPOINT = '';    // PENDENTE: URL que recebe nome e email (Mailchimp, ActiveCampaign, Formspree, etc.)
+/* ---------------------- */
+
+var FUNNEL = 'rcp_interativo';
+
+(function(){
+  if(!PIXEL_ID) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID);
+  fbq('track','PageView');
+})();
+
+/* nenhum Purchase é disparado aqui, e nada pessoal vai para o Meta */
+function evento(nome){
+  var carga = {funnel:FUNNEL, step:'final'};
+  if(window.fbq) fbq('trackCustom', nome, carga);
+  if(window.dataLayer) window.dataLayer.push(Object.assign({event:nome}, carga));
+}
+
+evento('Final_Journey_View');
+
+var form = document.getElementById('form');
+var nome = document.getElementById('nome');
+var email = document.getElementById('email');
+var aviso = document.getElementById('aviso');
+var botao = document.getElementById('enviar');
+
+function mostrarConfirmacao(){
+  document.getElementById('formulario').style.display = 'none';
+  document.getElementById('convite').style.display = 'none';
+  document.getElementById('feito').classList.add('on');
+  evento('Final_Waitlist_Success');
+}
+
+/* permite ver a tela de confirmação sem cadastrar ninguém: ?demo=1 */
+if(new URLSearchParams(location.search).get('demo') === '1') mostrarConfirmacao();
+
+function valido(e){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e.trim()); }
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  aviso.classList.remove('on');
+  nome.classList.remove('erro'); email.classList.remove('erro');
+
+  if(!nome.value.trim()){
+    nome.classList.add('erro'); aviso.textContent = 'Escreva seu nome.'; aviso.classList.add('on'); nome.focus(); return;
+  }
+  if(!valido(email.value)){
+    email.classList.add('erro'); aviso.textContent = 'Confira o email.'; aviso.classList.add('on'); email.focus(); return;
+  }
+
+  evento('Final_Waitlist_Submit');
+
+  if(!ENDPOINT){
+    aviso.textContent = 'Formulário ainda não conectado. Falta preencher o ENDPOINT no código.';
+    aviso.classList.add('on');
+    console.warn('ENDPOINT da lista não configurado. Nenhum cadastro foi enviado.');
+    return;
+  }
+
+  botao.disabled = true;
+  botao.textContent = 'Enviando…';
+
+  fetch(ENDPOINT, {
+    method: 'POST',
+    headers: {'Content-Type':'application/json', 'Accept':'application/json'},
+    body: JSON.stringify({ nome: nome.value.trim(), email: email.value.trim(), origem: FUNNEL })
+  }).then(function(r){
+    if(!r.ok) throw new Error(r.status);
+    mostrarConfirmacao();
+  }).catch(function(){
+    botao.disabled = false;
+    botao.textContent = 'Quero continuar esta jornada';
+    aviso.textContent = 'Não consegui enviar agora. Tente novamente em instantes.';
+    aviso.classList.add('on');
+  });
+});
+
+if('IntersectionObserver' in window){
+  var obs = new IntersectionObserver(function(ent){
+    ent.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('vis'); obs.unobserve(en.target); } });
+  },{rootMargin:'0px 0px -10% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
+
+  var obsForm = new IntersectionObserver(function(e){
+    if(e[0].isIntersecting){ evento('Final_Waitlist_Form_View'); obsForm.disconnect(); }
+  },{threshold:.3});
+  obsForm.observe(document.getElementById('lista'));
+} else {
+  document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('vis'); });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Antes de continuar | J. C. Dias</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --creme:#F4EFE7;
+  --bege:#EAE1D3;
+  --charcoal:#25211E;
+  --cinza:#6A625A;
+  --terracota:#B9563C;
+  --dourado:#A67C45;
+  --escuro:#11100E;
+  --dourado-claro:#C3A064;
+  --head:'Oswald',Impact,sans-serif;
+  --corpo:'EB Garamond',Georgia,serif;
+
+  /* estes três mudam conforme a pessoa caminha para dentro */
+  --fundo:#F4EFE7;
+  --tinta:#25211E;
+  --tinta2:#6A625A;
+  --cartao:#FCFAF6;
+  --borda:rgba(166,124,69,.34);
+  --acento:#B9563C;
+  --btn-tinta:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--fundo);
+  color:var(--tinta);
+  font-family:var(--corpo);
+  font-size:21px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  transition:background 900ms ease,color 900ms ease;
+  min-height:100dvh;
+  display:flex;flex-direction:column;
+}
+
+/* as quatro atmosferas da caminhada */
+body[data-tom="luz"]     {--fundo:#F4EFE7;--tinta:#25211E;--tinta2:#6A625A;--cartao:#FCFAF6;--borda:rgba(166,124,69,.34);--acento:#B9563C;--btn-tinta:#fff}
+body[data-tom="sombra"]  {--fundo:#EAE1D3;--tinta:#25211E;--tinta2:#6A625A;--cartao:#F6F1E7;--borda:rgba(166,124,69,.40);--acento:#B9563C;--btn-tinta:#fff}
+body[data-tom="silencio"]{--fundo:#3A332C;--tinta:#F1E9DC;--tinta2:#B6A992;--cartao:#463E35;--borda:rgba(195,160,100,.34);--acento:#C3A064;--btn-tinta:#231E18}
+body[data-tom="noite"]   {--fundo:#11100E;--tinta:#F4EFE7;--tinta2:#9E9384;--cartao:#1C1A17;--borda:rgba(195,160,100,.30);--acento:#C3A064;--btn-tinta:#11100E}
+
+/* topo */
+.topo{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:20px 24px 0;max-width:660px;margin:0 auto;width:100%;
+  min-height:52px;
+}
+.marca{display:block;width:96px;flex:0 0 auto;opacity:.92}
+.marca img{width:100%;height:auto;display:block}
+/* a logo dourada tem contraste suficiente nos dois extremos de fundo */
+
+/* progresso */
+.progresso{
+  display:flex;align-items:center;justify-content:center;gap:0;
+  max-width:660px;margin:16px auto 0;padding:0 24px;width:100%;
+  opacity:0;transition:opacity .5s ease;
+}
+.progresso.on{opacity:1}
+.progresso i{
+  width:7px;height:7px;border-radius:50%;flex:0 0 auto;
+  border:1px solid var(--borda);background:transparent;
+  transition:background .4s ease,border-color .4s ease;
+}
+.progresso i.feito{background:var(--acento);border-color:var(--acento)}
+.progresso i.atual{background:var(--acento);border-color:var(--acento);box-shadow:0 0 0 4px color-mix(in srgb,var(--acento) 18%,transparent)}
+.progresso s{
+  display:block;height:1px;width:26px;background:var(--borda);
+  text-decoration:none;transition:background .4s ease;
+}
+.progresso s.feito{background:var(--acento)}
+
+/* palco */
+main{
+  flex:1;display:flex;align-items:center;
+  max-width:660px;margin:0 auto;width:100%;padding:24px 24px 22px;
+}
+.tela{width:100%;display:none;animation:entra 460ms ease both}
+.tela.on{display:block}
+@keyframes entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .tela.on{animation:none}
+  body{transition:none}
+}
+
+/* tipografia */
+.olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--dourado);margin-bottom:22px}
+h1{font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(36px,8.4vw,48px);line-height:1.1}
+.pergunta{
+  font-family:var(--corpo);font-weight:600;
+  font-size:clamp(30px,6.8vw,36px);line-height:1.26;
+}
+p{margin-top:18px;color:var(--tinta2);transition:color 900ms ease}
+p.forte{color:var(--tinta)}
+.reflexao{
+  font-family:var(--corpo);font-weight:500;
+  font-size:clamp(26px,5.9vw,32px);line-height:1.4;color:var(--tinta);
+}
+.reflexao + .reflexao{margin-top:22px}
+
+/* cartões de resposta */
+.opcoes{margin-top:24px;display:flex;flex-direction:column;gap:9px}
+.op{
+  position:relative;width:100%;text-align:left;
+  min-height:58px;padding:16px 46px 16px 18px;
+  background:var(--cartao);color:var(--tinta);
+  border:1px solid var(--borda);border-radius:12px;
+  font-family:var(--corpo);font-size:20px;line-height:1.36;
+  cursor:pointer;transition:border-color .25s ease,background .25s ease,transform .12s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.op:hover{border-color:var(--acento)}
+.op:active{transform:scale(.995)}
+.op:focus-visible{outline:2px solid var(--acento);outline-offset:2px}
+.op.sel{border-color:var(--acento);background:color-mix(in srgb,var(--acento) 9%,var(--cartao))}
+.op .tick{
+  position:absolute;right:18px;top:50%;margin-top:-7px;
+  width:14px;height:9px;border-left:2px solid var(--acento);border-bottom:2px solid var(--acento);
+  transform:rotate(-45deg) scale(.4);opacity:0;transition:opacity .25s ease,transform .25s ease;
+}
+.op.sel .tick{opacity:1;transform:rotate(-45deg) scale(1)}
+
+/* botões */
+.btn{
+  display:block;width:100%;min-height:58px;
+  background:var(--acento);color:var(--btn-tinta);border:0;border-radius:9px;
+  font-family:var(--head);font-weight:500;font-size:19px;letter-spacing:.04em;
+  text-transform:uppercase;text-align:center;text-decoration:none;
+  padding:18px;margin-top:30px;cursor:pointer;
+}
+.btn.discreto{
+  background:transparent;color:var(--tinta);border:1px solid var(--borda);
+  min-height:54px;padding:15px;font-size:17px;max-width:250px;margin-left:auto;margin-right:auto;
+}
+/* transição para o QMPD */
+.frame{margin:6px 0 30px;border-radius:4px;overflow:hidden;opacity:.9}
+.capa-qmpd{max-width:172px;margin:32px auto 0;
+  filter:drop-shadow(0 16px 30px rgba(0,0,0,.5))}
+.capa-qmpd img{border-radius:2px}
+.titulo-livro{
+  font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(27px,6.2vw,32px);line-height:1.12;letter-spacing:.02em;
+  color:var(--dourado-claro);text-align:center;margin-top:26px;
+}
+img{max-width:100%;height:auto;display:block}
+
+/* rodapé */
+footer{
+  padding:18px 24px calc(18px + env(safe-area-inset-bottom));text-align:center;
+}
+footer p, footer a{
+  font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--tinta2);text-decoration:none;
+  transition:color 900ms ease;
+}
+footer p{margin-top:0}
+footer .links{display:flex;gap:18px;justify-content:center;margin-bottom:8px;flex-wrap:wrap}
+
+@media (min-width:700px){
+  body{font-size:21.5px}
+  main{padding:52px 32px 60px}
+  .topo{padding-top:26px}
+}
+</style>
+</head>
+<body data-tom="luz">
+
+<div class="topo">
+  <span class="marca"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></span>
+</div>
+
+<div class="progresso" id="progresso" aria-hidden="true"></div>
+
+<main>
+
+  <!-- ABERTURA -->
+  <section class="tela on" data-tela="abertura" data-tom="luz">
+    <p class="olho">Antes de continuar</p>
+    <h1>Cada pessoa chega até aqui carregando uma história diferente.</h1>
+    <p>Você acabou de escolher começar um recomeço.</p>
+    <p>Quero fazer algumas perguntas simples antes de seguir.</p>
+    <p>Não existem respostas certas. Escolha apenas aquilo que mais se aproxima do que você sente hoje.</p>
+    <button class="btn" data-avanca>Começar</button>
+  </section>
+
+  <!-- PERGUNTA 1 -->
+  <section class="tela" data-tela="q1" data-tom="luz" data-passo="1" data-chave="pain_primary">
+    <p class="pergunta">Quando você pensa no que mais pesa hoje, o que vem primeiro?</p>
+    <div class="opcoes">
+      <button class="op" data-op="1"><span>Algo aconteceu comigo e eu ainda não consegui deixar para trás.</span><i class="tick"></i></button>
+      <button class="op" data-op="2"><span>Eu tomei decisões que ainda me fazem sentir culpa.</span><i class="tick"></i></button>
+      <button class="op" data-op="3"><span>Perdi alguma coisa ou alguém importante.</span><i class="tick"></i></button>
+      <button class="op" data-op="4"><span>Minha vida mudou e eu ainda não sei quem sou depois disso.</span><i class="tick"></i></button>
+      <button class="op" data-op="5"><span>Por fora parece que está tudo normal, mas por dentro não está.</span><i class="tick"></i></button>
+      <button class="op" data-op="6"><span>Eu nem sei explicar exatamente. Só sei que alguma coisa não está bem.</span><i class="tick"></i></button>
+    </div>
+  </section>
+
+  <!-- PERGUNTA 2 -->
+  <section class="tela" data-tela="q2" data-tom="sombra" data-passo="2" data-chave="pain_effect">
+    <p class="pergunta">E o que mais dói nisso?</p>
+    <div class="opcoes">
+      <button class="op" data-op="1"><span>Não conseguir esquecer o que aconteceu.</span><i class="tick"></i></button>
+      <button class="op" data-op="2"><span>Pensar que eu poderia ter feito diferente.</span><i class="tick"></i></button>
+      <button class="op" data-op="3"><span>Sentir que ninguém realmente entende.</span><i class="tick"></i></button>
+      <button class="op" data-op="4"><span>Ter perdido a confiança em mim.</span><i class="tick"></i></button>
+      <button class="op" data-op="5"><span>Não saber como começar de novo.</span><i class="tick"></i></button>
+      <button class="op" data-op="6"><span>Ter medo de que minha vida continue assim.</span><i class="tick"></i></button>
+    </div>
+  </section>
+
+  <!-- PRIMEIRA REFLEXÃO -->
+  <section class="tela" data-tela="reflexao" data-tom="sombra">
+    <p class="reflexao">Às vezes, a parte mais difícil não é aquilo que aconteceu.</p>
+    <p class="reflexao">É aquilo que começamos a acreditar sobre nós mesmos depois.</p>
+    <button class="btn discreto" data-avanca>Continuar</button>
+  </section>
+
+  <!-- PERGUNTA 5 -->
+  <section class="tela" data-tela="q3" data-tom="silencio" data-passo="3" data-chave="desired_state">
+    <p class="pergunta">O que você mais gostaria de encontrar agora?</p>
+    <div class="opcoes">
+      <button class="op" data-op="paz"><span>Paz com o passado</span><i class="tick"></i></button>
+      <button class="op" data-op="coragem"><span>Coragem</span><i class="tick"></i></button>
+      <button class="op" data-op="direcao"><span>Direção</span><i class="tick"></i></button>
+      <button class="op" data-op="proposito"><span>Propósito</span><i class="tick"></i></button>
+      <button class="op" data-op="perdao"><span>Perdão</span><i class="tick"></i></button>
+      <button class="op" data-op="esperanca"><span>Esperança</span><i class="tick"></i></button>
+    </div>
+  </section>
+
+  <!-- ESPELHO -->
+  <section class="tela" data-tela="espelho" data-tom="silencio">
+    <p class="reflexao">Obrigado por responder.</p>
+    <p class="forte" style="margin-top:26px">Pelo que você compartilhou, parece que existe uma parte da sua história que ainda pede uma resposta.</p>
+    <p class="forte">Talvez não seja possível apagar o que aconteceu.</p>
+    <p class="forte">Mas talvez seja possível mudar aquilo que acontece dentro de você por causa disso.</p>
+
+    <p class="reflexao" id="frase-pessoal" style="margin-top:34px"></p>
+
+    <p class="forte" style="margin-top:30px">Quero te contar uma coisa que aconteceu comigo.</p>
+    <button class="btn" data-avanca>Continuar</button>
+  </section>
+
+  <!-- TRANSIÇÃO PARA QMPD -->
+  <section class="tela" data-tela="transicao" data-tom="noite">
+    <figure class="frame">
+      <picture>
+        <source srcset="../assets/img/corredor-qmpd.webp" type="image/webp">
+        <img src="../assets/img/corredor-qmpd.jpg" alt="" width="900" height="623" loading="lazy">
+      </picture>
+    </figure>
+
+    <p class="reflexao">Eu não sei exatamente o que aconteceu com você.</p>
+    <p class="reflexao">E não vou fingir que sei.</p>
+
+    <p style="margin-top:28px">Mas conheço a sensação de olhar para a própria vida e perguntar:</p>
+    <p class="reflexao" style="margin-top:12px">“Como foi que tudo chegou até aqui?”</p>
+
+    <p style="margin-top:28px">Foi desse lugar que nasceu uma história.</p>
+
+    <figure class="capa-qmpd">
+      <picture>
+        <source srcset="../assets/img/capa-qmpd.webp" type="image/webp">
+        <img src="../assets/img/capa-qmpd.jpg" alt="Capa do livro Quando Morri por Dentro, de J. C. Dias" width="620" height="930" loading="lazy">
+      </picture>
+    </figure>
+    <p class="titulo-livro">Quando Morri por Dentro</p>
+
+    <a href="#" class="btn" id="ir-qmpd">Ouvir minha história</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="links">
+    <a href="/privacidade">Privacidade</a>
+    <a href="/termos">Termos</a>
+  </div>
+</footer>
+
+<script>
+/* ---- CONFIGURAÇÃO ---- */
+var PIXEL_ID   = '2122287675194601';               // dataset Funil de Vendas V1 - Brasil
+var ROTA_QMPD  = '/qmpd';          // próxima etapa: Upsell 1 com a VSL
+var FUNNEL     = 'rcp_interativo';
+/* ---------------------- */
+
+var CHAVE = 'jcd_labirinto_v2';
+var telas = Array.prototype.slice.call(document.querySelectorAll('.tela'));
+var ordem = telas.map(function(t){ return t.dataset.tela; });
+var passos = telas.filter(function(t){ return t.dataset.passo; });
+var atual = 0;
+var respostas = {};
+
+/* frases da personalização leve. Uma frase, nada mais. */
+var FRASES = {
+  paz:      'Durante muito tempo, eu também achei que só conseguiria seguir em frente quando fizesse as pazes com tudo que havia acontecido.',
+  coragem:  'Houve um momento em que eu também não precisava de mais respostas. Precisava encontrar coragem para continuar.',
+  direcao:  'Eu também cheguei a um ponto em que não sabia para onde minha vida estava indo.',
+  proposito:'Quando tudo caiu, uma das perguntas que mais me perseguiu foi: “Para quê continuar?”',
+  perdao:   'Uma das coisas mais difíceis que precisei aprender foi que algumas vezes o perdão mais difícil é aquele que devemos a nós mesmos.',
+  esperanca:'Houve dias em que esperança parecia apenas uma palavra que funcionava para outras pessoas.'
+};
+
+/* ---------- tracking ---------- */
+(function(){
+  if(!PIXEL_ID) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID);
+  fbq('track','PageView');
+})();
+
+/* Só IDs neutros vão para o Meta. O texto livre nunca sai daqui. */
+function evento(nome, dados){
+  var carga = Object.assign({funnel:FUNNEL, step:'labirinto'}, dados||{});
+  if(window.fbq) fbq('trackCustom', nome, carga);
+  if(window.dataLayer) window.dataLayer.push(Object.assign({event:nome}, carga));
+}
+
+/* ---------- estado salvo ---------- */
+function salvar(){
+  try{
+    localStorage.setItem(CHAVE, JSON.stringify({ current_step: ordem[atual], respostas: respostas }));
+  }catch(e){}
+}
+function recuperar(){
+  if(new URLSearchParams(location.search).get('reset') === '1') return;
+  try{
+    var d = JSON.parse(localStorage.getItem(CHAVE) || 'null');
+    if(!d) return;
+    respostas = d.respostas || {};
+    var i = ordem.indexOf(d.current_step);
+    if(i > 0) atual = i;
+    Object.keys(respostas).forEach(function(chave){
+      var tela = document.querySelector('[data-chave="'+chave+'"]');
+      if(!tela) return;
+      var alvo = tela.querySelector('[data-op="'+respostas[chave]+'"]');
+      if(alvo) alvo.classList.add('sel');
+    });
+  }catch(e){}
+}
+
+/* ---------- navegação ---------- */
+function mostrar(i){
+  telas.forEach(function(t){ t.classList.remove('on'); });
+  atual = i;
+  var tela = telas[atual];
+  tela.classList.add('on');
+  document.body.dataset.tom = tela.dataset.tom || 'luz';
+  window.scrollTo(0,0);
+  desenharProgresso();
+  salvar();
+  aoEntrar(tela);
+}
+
+function avancar(){ if(atual < telas.length-1) mostrar(atual+1); }
+
+/* ---------- progresso ---------- */
+var elProgresso = document.getElementById('progresso');
+(function montarProgresso(){
+  passos.forEach(function(_,i){
+    if(i) elProgresso.appendChild(document.createElement('s'));
+    elProgresso.appendChild(document.createElement('i'));
+  });
+})();
+function desenharProgresso(){
+  var passo = telas[atual].dataset.passo;
+  elProgresso.classList.toggle('on', !!passo);
+  if(!passo) return;
+  var n = parseInt(passo,10);
+  var bolas = elProgresso.querySelectorAll('i');
+  var linhas = elProgresso.querySelectorAll('s');
+  bolas.forEach(function(b,i){
+    b.classList.toggle('feito', i < n-1);
+    b.classList.toggle('atual', i === n-1);
+  });
+  linhas.forEach(function(l,i){ l.classList.toggle('feito', i < n-1); });
+}
+
+/* ---------- o que acontece ao entrar em cada tela ---------- */
+function aoEntrar(tela){
+  var nome = tela.dataset.tela;
+
+  if(nome === 'q1') evento('JourneyQuestion1');
+  if(nome === 'q2') evento('JourneyQuestion2');
+  if(nome === 'reflexao') evento('JourneyReflection');
+  if(nome === 'q3') evento('JourneyDesiredState');
+
+  if(nome === 'espelho'){
+    var escolha = respostas.desired_state;
+    var el = document.getElementById('frase-pessoal');
+    el.textContent = FRASES[escolha] || '';
+    el.style.display = FRASES[escolha] ? 'block' : 'none';
+    evento('JourneyComplete', escolha ? {desired_state: escolha} : {});
+  }
+
+  if(nome === 'transicao'){
+    evento('QMPD_VSL_View');
+  }
+}
+
+/* ---------- cartões de resposta ---------- */
+document.querySelectorAll('.op').forEach(function(op){
+  op.addEventListener('click', function(){
+    var tela = op.closest('.tela');
+    tela.querySelectorAll('.op').forEach(function(o){ o.classList.remove('sel'); });
+    op.classList.add('sel');
+    respostas[tela.dataset.chave] = op.dataset.op;
+    salvar();
+    evento('JourneyAnswer', { question: tela.dataset.chave, option: tela.dataset.chave + '_option_' + op.dataset.op });
+    setTimeout(avancar, 520);
+  });
+});
+
+/* ---------- botões de avanço ---------- */
+document.querySelectorAll('[data-avanca]').forEach(function(b){
+  b.addEventListener('click', function(e){ e.preventDefault(); avancar(); });
+});
+
+/* ---------- saída para o upsell ---------- */
+document.getElementById('ir-qmpd').addEventListener('click', function(e){
+  e.preventDefault();
+  var atuais = new URLSearchParams(window.location.search);
+  atuais.set('funnel', FUNNEL);
+  var d = new URL(ROTA_QMPD, window.location.href);
+  atuais.forEach(function(v,k){ if(!d.searchParams.has(k)) d.searchParams.set(k,v); });
+  try{ localStorage.removeItem(CHAVE); }catch(err){}
+  window.location.href = d.toString();
+});
+
+/* ---------- início ---------- */
+recuperar();
+var pedida = new URLSearchParams(location.search).get('tela');
+if(pedida && ordem.indexOf(pedida) > -1) atual = ordem.indexOf(pedida);
+mostrar(atual);
+evento('PostPurchaseJourneyStart');
+</script>
+</body>
+</html>

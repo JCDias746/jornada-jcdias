@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Compra confirmada | J. C. Dias</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --fundo:#F3EFE8;
+  --tinta:#25211E;
+  --cinza:#8D857C;
+  --bronze:#9B7B50;
+  --bronze-esc:#836740;
+  --head:'Oswald',Impact,sans-serif;
+  --corpo:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--fundo);color:var(--tinta);
+  font-family:var(--corpo);font-size:21px;line-height:1.64;
+  -webkit-font-smoothing:antialiased;
+  min-height:100dvh;display:flex;flex-direction:column;
+}
+img{max-width:100%;height:auto;display:block}
+main{flex:1;max-width:640px;margin:0 auto;width:100%;padding:7vh 24px 34px}
+.marca-topo img{width:100%;height:auto;display:block}
+
+.olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--bronze);margin-bottom:20px}
+h1{font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(47px,14vw,82px);line-height:.96}
+h2{font-family:var(--head);font-weight:500;text-transform:uppercase;
+  font-size:clamp(29px,6.6vw,35px);line-height:1.18}
+p{margin-top:15px;color:var(--cinza)}
+p.forte{color:var(--tinta)}
+
+.linha-bronze{display:block;width:52px;height:2px;background:var(--bronze);margin:38px 0}
+
+.retrato{max-width:150px;margin:0 0 26px;border-radius:2px;overflow:hidden}
+
+.perfil{font-family:var(--head);font-weight:500;font-size:clamp(21px,5vw,25px);
+  letter-spacing:.1em;color:var(--bronze);margin-top:22px}
+
+.cta{
+  display:block;width:100%;max-width:460px;margin:28px auto 0;min-height:62px;
+  background:var(--tinta);color:var(--fundo);border:0;border-radius:8px;
+  font-family:var(--head);font-weight:600;font-size:19px;letter-spacing:.04em;
+  text-transform:uppercase;text-align:center;text-decoration:none;
+  padding:20px 16px;cursor:pointer;transition:background .25s ease;
+  display:flex;align-items:center;justify-content:center;gap:11px;
+}
+.cta:active{background:#3A342F}
+.cta svg{width:19px;height:19px;flex:0 0 auto;stroke:currentColor;fill:none;stroke-width:1.6}
+.micro{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--cinza);text-align:center;margin-top:14px}
+
+.fecho{margin-top:54px}
+.fecho p{font-family:var(--corpo);font-weight:500;font-size:clamp(21px,5vw,25px);
+  color:var(--tinta);line-height:1.4}
+.assinatura{font-family:var(--head);font-weight:400;font-size:14.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--cinza);margin-top:22px}
+
+footer{padding:34px 24px calc(30px + env(safe-area-inset-bottom));text-align:center}
+footer p{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.13em;
+  text-transform:uppercase;color:#A9A199}
+
+.rv{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+.rv.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+@media (min-width:760px){
+  body{font-size:21.5px}
+  main{padding:13vh 32px 50px;max-width:680px}
+  .retrato{max-width:170px}
+}
+</style>
+</head>
+<body>
+
+<main>
+
+  <!-- 1. CONFIRMAÇÃO -->
+  <section>
+    <div class="marca-topo" style="max-width:130px;margin:0 0 36px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
+
+    <p class="olho">Compra confirmada</p>
+    <h1>Obrigado.</h1>
+
+    <p class="forte" style="margin-top:26px">Sua compra foi confirmada.</p>
+    <p>Você receberá no email utilizado na compra as informações de acesso ao conteúdo adquirido.</p>
+    <p class="forte" style="margin-top:22px">Agora, antes de ir, quero te fazer um último convite.</p>
+  </section>
+
+  <!-- 2. INSTAGRAM -->
+  <section class="rv">
+    <i class="linha-bronze" aria-hidden="true"></i>
+
+    <figure class="retrato">
+      <picture>
+        <source srcset="../assets/img/autor.webp" type="image/webp">
+        <img src="../assets/img/autor.jpg" alt="J. C. Dias" width="900" height="917" loading="lazy">
+      </picture>
+    </figure>
+
+    <h2>Continue essa jornada comigo no Instagram.</h2>
+    <p style="margin-top:20px">É lá que eu compartilho novos textos, reflexões, bastidores dos livros e aquilo que estou construindo depois deles.</p>
+
+    <p class="perfil" id="perfil">@INSTAGRAM_OFICIAL</p>
+
+    <a href="#" class="cta" id="ir-instagram" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+      Me seguir no Instagram
+    </a>
+    <p class="micro">Abrir Instagram</p>
+  </section>
+
+  <!-- 3. FECHAMENTO -->
+  <section class="fecho rv">
+    <p>Nos encontramos por lá.</p>
+    <p class="assinatura">J. C. Dias</p>
+  </section>
+
+</main>
+
+<script>
+/* ---- CONFIGURAÇÃO: só estas duas linhas mudam ---- */
+var PIXEL_ID  = '2122287675194601';    // dataset Funil de Vendas V1 - Brasil
+var INSTAGRAM = '';    // PENDENTE: perfil oficial, só o @ sem arroba. Exemplo: jcdias.autor
+/* -------------------------------------------------- */
+
+var FUNNEL = 'rcp_interativo';
+
+(function(){
+  if(!PIXEL_ID) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID);
+  fbq('track','PageView');
+})();
+
+/* nenhum Purchase é disparado aqui. O checkout já cuida disso. */
+function evento(nome){
+  var carga = {funnel:FUNNEL, step:'obrigado'};
+  if(window.fbq) fbq('trackCustom', nome, carga);
+  if(window.dataLayer) window.dataLayer.push(Object.assign({event:nome}, carga));
+}
+
+evento('ThankYou_Page_View');
+
+var botao = document.getElementById('ir-instagram');
+if(INSTAGRAM){
+  var perfil = INSTAGRAM.replace('@','').trim();
+  document.getElementById('perfil').textContent = '@' + perfil;
+  botao.href = 'https://instagram.com/' + perfil;
+} else {
+  console.warn('perfil do Instagram ainda não configurado');
+}
+
+botao.addEventListener('click', function(e){
+  if(!INSTAGRAM){ e.preventDefault(); return; }
+  evento('ThankYou_Instagram_Click');
+});
+
+if('IntersectionObserver' in window){
+  var obs = new IntersectionObserver(function(ent){
+    ent.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('vis'); obs.unobserve(en.target); } });
+  },{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
+} else {
+  document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('vis'); });
+}
+</script>
+</body>
+</html>
