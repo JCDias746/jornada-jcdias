@@ -1,2 +1,3 @@
 User-agent: *
+Allow: /assets/tmp-ads/
 Disallow: /
