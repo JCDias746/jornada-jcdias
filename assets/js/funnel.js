@@ -12,16 +12,16 @@ const CONFIG = {
   // Confirmados pelo JC em 2026-08-21. Os marcados PENDENTE aguardam definicao.
   dominio: 'https://jornada.jcdias.com',
   routes: {
-    rcp:         '/recomecar/',
-    labirinto:   '/labirinto/',
-    qmpd:        '/qmpd/',
-    qmpdEbook:   '/qmpd-ebook/',
-    historia:    '/ashir/',
-    dvpn:        '/dvpn/',
-    dvpnEbook:   '/dvpn-ebook/',
-    caverna:     '/caverna/',
-    jornada:     '/final/',
-    obrigado:    '/obrigado/'
+    rcp:         '../recomecar/',
+    labirinto:   '../labirinto/',
+    qmpd:        '../qmpd/',
+    qmpdEbook:   '../qmpd-ebook/',
+    historia:    '../ashir/',
+    dvpn:        '../dvpn/',
+    dvpnEbook:   '../dvpn-ebook/',
+    caverna:     '../caverna/',
+    jornada:     '../final/',
+    obrigado:    '../obrigado/'
   },
 
 
