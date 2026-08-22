@@ -65,6 +65,32 @@ p{margin-top:12px}
   font-size:clamp(26px,6vw,33px);line-height:1.3}
 .luzt{color:var(--luz)}
 
+
+/* a ponte: escuridão e silêncio antes de a caverna aparecer */
+.ponte{
+  position:relative;background:#080807;
+  padding:52px 0 0;min-height:92vh;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.ponte .wrap{position:relative;z-index:2;padding-bottom:64px}
+.ponte-olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--bronze);margin-bottom:26px}
+.ponte-h1{font-family:var(--corpo);font-weight:600;
+  font-size:clamp(30px,7.6vw,44px);line-height:1.2;color:var(--claro);text-transform:none}
+.ponte-p{margin-top:16px;color:var(--cinza);font-size:21px;line-height:1.5}
+.ponte-p.forte{color:var(--claro)}
+.ponte-fecho{
+  font-family:var(--head);font-weight:600;text-transform:uppercase;
+  font-size:clamp(24px,6.2vw,34px);line-height:1.12;color:var(--luz);
+  margin-top:44px;
+}
+/* a primeira luz, que prepara a caverna logo abaixo */
+.ponte-luz{
+  position:relative;z-index:1;height:120px;
+  background:radial-gradient(70% 100% at 50% 100%, rgba(213,184,121,.30) 0%, rgba(213,184,121,.09) 42%, rgba(8,8,7,0) 72%);
+}
+@media (min-width:760px){ .ponte{padding-top:70px} .ponte .wrap{padding-bottom:80px} }
+
 /* faixa de exclusividade: informativa, sem countdown e sem escassez inventada */
 .faixa-exclusiva{
   position:relative;z-index:3;background:var(--luz);color:#15130F;
@@ -227,6 +253,27 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:9px;line-height:1.55
 </head>
 <body>
 
+<!-- 0. A PONTE -->
+<section class="ponte">
+  <div class="wrap">
+    <div class="marca-topo" style="max-width:130px;margin:0 0 46px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
+
+    <p class="ponte-olho">Você chegou até aqui.</p>
+    <h1 class="ponte-h1">Antes de terminar esta jornada, existe uma última porta que eu quero abrir para você.</h1>
+
+    <p class="ponte-p">Você passou por histórias de queda, recomeço, perda, sobrevivência e reconstrução.</p>
+    <p class="ponte-p">Mas existe uma parte dessa jornada que vai além das histórias.</p>
+    <p class="ponte-p forte">É aquilo que ficou depois delas.</p>
+
+    <p class="ponte-p" style="margin-top:30px">O que eu aprendi quando não havia mais espaço para fugir de mim mesmo.</p>
+    <p class="ponte-p">O que comecei a construir no fundo do poço.</p>
+
+    <p class="ponte-fecho">Isso se tornou A Caverna Interior.</p>
+  </div>
+
+  <div class="ponte-luz" aria-hidden="true"></div>
+</section>
+
 <div class="faixa-exclusiva">
   <span>Ainda não disponível ao público</span>
 </div>
@@ -241,16 +288,13 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:9px;line-height:1.55
   </div>
 
   <div class="wrap">
-    <div class="marca-topo" style="max-width:130px;margin:0 0 32px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
-
     <p class="olho">Acesso antecipado &nbsp;·&nbsp; Exclusivo para quem chegou até aqui</p>
     <h1>Os outros livros contam partes da minha jornada.<br>Este é o livro em que eu te mostro como consegui voltar.</h1>
 
     <p class="titulo-livro" style="margin-top:34px">A Caverna Interior</p>
     <p class="subtitulo">O método que aprendi no fundo do poço para reconstruir a mente, a alma e a vida.</p>
 
-    <p style="margin-top:30px">Você chegou até aqui comigo.</p>
-    <p>Por isso, antes de abrir este livro para o público, quero permitir que você entre primeiro.</p>
+    <p style="margin-top:30px">Por isso, antes de abrir este livro para o público, quero permitir que você entre primeiro.</p>
     <p class="fraco">Mas este não é simplesmente o meu próximo livro.</p>
     <p>É o livro em que a história finalmente se transforma em método.</p>
 
