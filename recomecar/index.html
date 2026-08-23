@@ -160,14 +160,47 @@ ul.itens li::before{
 .site-foot .flinks a:hover{text-decoration:underline;text-underline-offset:4px}
 .site-foot .fcop{color:#8a806c;font-size:14px;letter-spacing:.02em;margin:0}
 @media (max-width:699px){ .site-foot{padding-bottom:96px} }
+
+/* progressao de tom: escuridao no comeco, luz no fim */
+.tom1{background:#17120E}
+.tom2{background:#241D17}
+.tom1,.tom2{--charcoal:#F2ECE2;--cinza:#A99C8B;--terracota:#DD9366;--dourado:#C9A063;
+  color:var(--charcoal)}
+.tom1 h1,.tom1 h2,.tom1 p,.tom2 h1,.tom2 h2,.tom2 p{color:inherit}
+.tom1 p.lead,.tom2 p.lead,.tom1 .pensa,.tom2 .pensa,
+.tom1 .preco-nota,.tom2 .preco-nota,.tom1 .garantias,.tom2 .garantias{color:var(--cinza)}
+.tom1 .sub,.tom2 .sub{color:var(--terracota)}
+.tom1 .selo,.tom2 .selo{color:var(--dourado)}
+.tom1 .cta,.tom2 .cta{background:#C0573A}
+.tom1 .cta:active,.tom2 .cta:active{background:#A8492F}
+.tom3{background:var(--bege)}
+.tom4{background:#F4EFE7}
+.tom5{background:#FBF8F4}
+.luz-entra{height:96px;background:linear-gradient(180deg,#241D17 0%,#5C4B39 42%,#A08A6C 70%,#EAE1D3 100%)}
+.tom2 .frase{color:var(--charcoal)}
+
+/* pensamento interno do leitor: visivel, discreto, primeira pessoa */
+.pensa{
+  font-family:var(--corpo);font-size:17.5px;line-height:1.52;
+  color:var(--cinza);text-align:center;
+  max-width:430px;margin:40px auto 34px;padding:0 10px;
+}
+.pensa::before{
+  content:"";display:block;width:30px;height:1px;
+  background:var(--dourado);opacity:.65;margin:0 auto 18px;
+}
+
+/* linha de valor na oferta */
+.valor{font-family:var(--corpo);font-size:19.5px;line-height:1.45;
+  color:var(--cinza);max-width:430px;margin:20px auto 0}
 </style>
 </head>
 <body>
 
 <!-- ============ 1. HERO, A PRISÃO ============ -->
-<header id="hero">
+<header id="hero" class="tom1">
   <div class="wrap">
-    <div class="marca-topo" style="max-width:140px;margin:0 0 34px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
+    <div class="marca-topo" style="max-width:140px;margin:0 0 34px"><picture><source srcset="../assets/img/logo-jcdias-creme.webp" type="image/webp"><img src="../assets/img/logo-jcdias-creme.png" alt="J. C. Dias" width="480" height="110"></picture></div>
 
     <p class="selo">Uma história real</p>
 
@@ -182,6 +215,8 @@ ul.itens li::before{
     <p class="lead">Mas ainda podia decidir quem eu me tornaria depois daquilo.</p>
 
     <p>Foi dessa decisão que este livro nasceu.</p>
+
+    <p class="pensa">Talvez eu precise ler isso até o fim.</p>
 
     <figure class="fig capa">
       <picture>
@@ -201,10 +236,12 @@ ul.itens li::before{
 </header>
 
 <!-- ============ 2. NÃO ERA TEORIA ============ -->
-<section class="bege">
+<section class="tom2">
   <div class="wrap rv">
     <h2>Eu não aprendi sobre recomeço em um curso.</h2>
     <p class="sub">Aprendi quando precisei fazer isso dentro de uma cela.</p>
+
+    <p>Fiquei onze meses e duas semanas preso. Escrevi quatro livros lá dentro. Este é um deles.</p>
 
     <p>A prisão retirou minha liberdade, minha rotina e a imagem que eu tinha construído de mim mesmo.</p>
 
@@ -218,11 +255,15 @@ ul.itens li::before{
     <p class="frase">“Se eu não posso mudar o que fiz, o que ainda posso mudar?”</p>
 
     <p style="margin-top:26px">A resposta começou a aparecer devagar: eu ainda podia mudar aquilo que faria com o resto da minha vida.</p>
+
+    <p class="pensa">E se eu estiver fazendo a pergunta errada sobre o meu próprio passado?</p>
   </div>
 </section>
 
+<div class="luz-entra" aria-hidden="true"></div>
+
 <!-- ============ 3. O LIVRO ============ -->
-<section>
+<section class="tom3">
   <div class="wrap rv">
     <h2>Recomeçar com Propósito</h2>
 
@@ -238,11 +279,13 @@ ul.itens li::before{
       <li>Disciplina quando motivação já não existe.</li>
       <li>Fé, propósito e o que fazer com aquilo que ainda restou.</li>
     </ul>
+
+    <p class="pensa">Eu preciso descobrir como essa história termina.</p>
   </div>
 </section>
 
 <!-- ============ 4. A OFERTA ============ -->
-<section class="bege">
+<section class="tom4">
   <div class="wrap rv">
     <div class="oferta">
       <h2>Leia a história que nasceu dentro da prisão.</h2>
@@ -256,6 +299,7 @@ ul.itens li::before{
       </ul>
 
       <p class="preco" style="margin-top:28px">R$27</p>
+      <p class="valor">Você não está comprando uma fórmula. Está entrando numa história real.</p>
       <a href="#" class="cta" data-cta="oferta">Quero recomeçar com propósito</a>
       <p class="garantias">Compra segura &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; 7 dias de garantia</p>
     </div>
@@ -263,7 +307,7 @@ ul.itens li::before{
 </section>
 
 <!-- ============ 5. FECHAMENTO ============ -->
-<section>
+<section class="tom5">
   <div class="wrap rv">
     <h2>Eu não consegui mudar o capítulo que me levou até a prisão.</h2>
     <p class="sub">Mas ainda podia decidir como escreveria o próximo.</p>
@@ -273,6 +317,8 @@ ul.itens li::before{
 
     <p style="margin-top:22px">Recomeçar com Propósito nasceu no momento em que precisei descobrir que recomeçar não era voltar para a vida que eu tinha.</p>
     <p class="frase">Era construir outra.</p>
+
+    <p class="pensa">Qual parte da minha história ainda está decidindo por mim?</p>
 
     <figure class="fig capa">
       <picture>
