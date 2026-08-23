@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recomeçar com Propósito | J. C. Dias</title>
-<meta name="description" content="Existem coisas que você não consegue apagar. Mas ainda pode decidir quem vai se tornar depois delas. Uma história real sobre recomeçar.">
+<meta name="description" content="Eu fui preso. E foi dentro da prisão que comecei a escrever sobre como reconstruir uma vida que já não podia voltar a ser como antes.">
 <link rel="canonical" href="https://jornada.jcdias.com/recomecar">
-<meta property="og:title" content="Recomeçar com Propósito">
-<meta property="og:description" content="Existem coisas que você não consegue apagar. Mas ainda pode decidir quem vai se tornar depois delas.">
+<meta property="og:title" content="Eu fui preso. E foi ali que este livro nasceu.">
+<meta property="og:description" content="Recomeçar com Propósito é a história de como comecei a reconstruir minha vida quando voltar atrás já não era uma opção.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jornada.jcdias.com/recomecar">
 <meta property="og:image" content="https://jornada.jcdias.com/assets/img/capa-rcp.jpg">
@@ -30,7 +30,7 @@
   --head:'Oswald',Impact,sans-serif;
   --corpo:'EB Garamond',Georgia,serif;
   --pad:24px;
-  --gap-secao:42px;
+  --gap-secao:46px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
@@ -53,64 +53,34 @@ header#hero{padding:28px 0 var(--gap-secao)}
 /* tipografia */
 .selo{
   font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--dourado);margin-bottom:26px;
+  text-transform:uppercase;color:var(--dourado);margin-bottom:24px;
 }
-h1,h2{font-family:var(--head);font-weight:600;text-transform:uppercase;line-height:1.1;letter-spacing:.005em}
-h1{font-size:clamp(38px,9vw,52px)}
-h2{font-size:clamp(31px,7.4vw,41px)}
+h1,h2{font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.005em}
+h1{line-height:1.0}
+h2{line-height:1.16}
+h1{font-size:clamp(54px,15vw,86px)}
+h2{font-size:clamp(29px,6.9vw,38px)}
 .sub{
   font-family:var(--corpo);font-size:clamp(24px,5.4vw,29px);line-height:1.34;
   font-weight:500;color:var(--terracota);margin-top:18px;
 }
 .sub-escuro{color:var(--charcoal)}
 p{margin-top:13px}
-/* linhas curtas seguidas sao uma ideia so: respiram menos entre si */
-p.lead{line-height:1.36}
+p.lead{line-height:1.36;color:var(--cinza)}
 p.lead + p.lead{margin-top:3px}
 p + p.lead{margin-top:11px}
-.oferta .linhas p + p,.oferta .nao p + p{margin-top:0}
-p.lead{color:var(--cinza)}
-.pequeno{font-size:19px;color:var(--cinza);line-height:1.5}
 .frase{
   font-family:var(--corpo);font-weight:600;
   font-size:clamp(26px,6vw,32px);line-height:1.32;margin-top:30px;
 }
 
 /* figuras */
-.fig{margin:24px 0}
+.fig{margin:30px 0 24px}
 .fig.vazio{display:none}
-.retrato-autor.vazio{display:none}
 .fig img{border-radius:3px}
 .capa{max-width:215px;margin-left:auto;margin-right:auto;
   filter:drop-shadow(0 18px 34px rgba(37,33,30,.26))}
 .capa img{border-radius:2px}
-.luz{max-width:330px;margin-left:auto;margin-right:auto}
-.luz img{border-radius:2px}
-
-/* mockup digital em css, sem imagem extra */
-.devices{
-  position:relative;display:flex;justify-content:center;align-items:flex-end;
-  margin:34px 0 8px;padding-bottom:14px;
-}
-.devices .tablet{
-  width:min(230px,60%);padding:9px 9px 26px;background:#1c1917;
-  border-radius:16px;box-shadow:0 20px 40px rgba(37,33,30,.3);
-  position:relative;
-}
-.devices .tablet::after{
-  content:"";position:absolute;left:50%;bottom:9px;transform:translateX(-50%);
-  width:34px;height:3px;border-radius:2px;background:#5a524b;
-}
-.devices .fone{
-  width:min(112px,30%);padding:6px 6px 15px;background:#1c1917;
-  border-radius:14px;box-shadow:0 16px 30px rgba(37,33,30,.34);
-  margin-left:-30px;margin-bottom:-14px;position:relative;z-index:2;
-}
-.devices .fone::after{
-  content:"";position:absolute;left:50%;bottom:5px;transform:translateX(-50%);
-  width:26px;height:3px;border-radius:2px;background:#5a524b;
-}
-.devices img{border-radius:5px;width:100%}
 
 /* preço e cta */
 .preco{font-family:var(--head);font-weight:600;font-size:47px;line-height:1;margin-top:8px}
@@ -125,72 +95,35 @@ p.lead{color:var(--cinza)}
   transition:background .25s ease;
 }
 .cta:active{background:var(--terracota-esc)}
-.cta-menor{max-width:360px;margin-left:auto;margin-right:auto;min-height:56px;padding:16px;font-size:17px}
 .garantias{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.03em;
-  text-transform:uppercase;color:var(--cinza);margin-top:16px;text-align:center;white-space:nowrap}
+  text-transform:uppercase;color:var(--cinza);margin-top:16px;text-align:center}
 
-/* dor */
-.dor-linhas{margin-top:28px}
-.dor-linha{padding:13px 0;border-top:1px solid rgba(166,124,69,.3)}
-.dor-linha:last-child{border-bottom:1px solid rgba(166,124,69,.3)}
-.dor-rot{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--cinza)}
-.dor-fala{font-size:clamp(27px,6.4vw,35px);font-weight:600;line-height:1.25;margin-top:6px}
-.dor-fala.forte{color:var(--terracota)}
-
-/* pilares */
-.pilar{padding:14px 0;border-top:1px solid rgba(166,124,69,.28)}
-.pilar:last-child{border-bottom:1px solid rgba(166,124,69,.28)}
-.pilar h3{font-family:var(--head);font-weight:500;font-size:20px;letter-spacing:.06em;
-  text-transform:uppercase;color:var(--charcoal)}
-.pilar p{margin-top:6px;color:var(--cinza);font-size:20px;line-height:1.38}
-
-/* lista para quem é */
-ul.check{list-style:none;margin-top:30px}
-ul.check li{position:relative;padding:9px 0 9px 34px;font-size:21px;line-height:1.34}
+/* lista do que tem dentro do livro */
+ul.check{list-style:none;margin-top:26px}
+ul.check li{position:relative;padding:11px 0 11px 34px;font-size:20.5px;line-height:1.36;color:var(--cinza)}
 ul.check li+li{border-top:1px solid rgba(166,124,69,.2)}
 ul.check li::before{
-  content:"";position:absolute;left:4px;top:19px;
+  content:"";position:absolute;left:4px;top:21px;
+  width:10px;height:6px;border-left:2px solid var(--terracota);
+  border-bottom:2px solid var(--terracota);transform:rotate(-45deg);
+}
+.rot{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--cinza);margin-top:34px}
+
+/* oferta */
+.oferta{text-align:center}
+.oferta h2{margin-bottom:22px}
+.oferta .nome{font-family:var(--head);font-weight:500;font-size:clamp(23px,5.4vw,28px);
+  text-transform:uppercase;letter-spacing:.04em}
+ul.itens{list-style:none;margin:22px auto 0;display:inline-block;text-align:left}
+ul.itens li{position:relative;padding:8px 0 8px 32px;font-size:21px;color:var(--charcoal)}
+ul.itens li::before{
+  content:"";position:absolute;left:3px;top:18px;
   width:10px;height:6px;border-left:2px solid var(--terracota);
   border-bottom:2px solid var(--terracota);transform:rotate(-45deg);
 }
 
-/* oferta */
-.oferta{text-align:center}
-.oferta h2{margin-bottom:6px}
-.formatos{display:flex;justify-content:center;gap:28px;margin-top:26px;flex-wrap:wrap}
-.formato{display:flex;align-items:center;gap:8px;
-  font-family:var(--head);font-weight:400;font-size:14.5px;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--charcoal)}
-.formato svg{width:18px;height:18px;flex:0 0 auto;stroke:var(--dourado);
-  fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.oferta .linhas{margin-top:18px;color:var(--cinza);font-size:21px;line-height:1.42}
-.oferta .nao{margin-top:20px;font-size:21px;color:var(--cinza)}
-
-/* garantia */
-.selo-dias{
-  width:96px;height:96px;margin:0 auto 26px;border-radius:50%;
-  border:1.5px solid var(--dourado);display:flex;flex-direction:column;
-  align-items:center;justify-content:center;color:var(--dourado);
-  font-family:var(--head);font-weight:500;letter-spacing:.08em;
-}
-.selo-dias b{font-size:32px;line-height:1;font-weight:600}
-.selo-dias span{font-size:14px;letter-spacing:.17em;margin-top:4px}
-
-/* autor, versão curta */
-.autor-curto{display:flex;gap:20px;align-items:flex-start}
-.retrato-autor{flex:0 0 116px;border-radius:3px;overflow:hidden;margin:5px 0 0}
-.retrato-autor img{width:100%;height:auto;display:block}
-.autor-curto h2{font-size:clamp(23px,5.6vw,30px)}
-.autor-curto p{margin-top:12px;font-size:19px;line-height:1.42}
-.autor-curto p.forte{color:var(--charcoal);font-weight:500}
-@media (min-width:520px){ .retrato-autor{flex-basis:150px} }
-
-/* rodapé
-footer{padding:32px 0 112px;text-align:center;border-top:1px solid rgba(166,124,69,.25)}
-footer p{font-size:15.5px;color:var(--cinza);margin-top:10px;line-height:1.55}
-
-/* sticky */
+/* rodapé */
 #sticky{
   position:fixed;left:0;right:0;bottom:0;z-index:50;
   background:var(--terracota);color:#fff;text-decoration:none;
@@ -209,11 +142,11 @@ footer p{font-size:15.5px;color:var(--cinza);margin-top:10px;line-height:1.55}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
 @media (min-width:700px){
-  :root{--pad:32px;--gap-secao:62px}
+  :root{--pad:32px;--gap-secao:66px}
   body{font-size:21.5px}
-  .capa{max-width:340px}
+  h1{font-size:clamp(72px,8vw,96px)}
+  .capa{max-width:320px}
   .cta{max-width:460px;margin-left:auto;margin-right:auto}
-  footer{padding-bottom:60px}
   #sticky{display:none}
 }
 
@@ -226,26 +159,28 @@ footer p{font-size:15.5px;color:var(--cinza);margin-top:10px;line-height:1.55}
   text-transform:uppercase;letter-spacing:.1em;font-size:14px}
 .site-foot .flinks a:hover{text-decoration:underline;text-underline-offset:4px}
 .site-foot .fcop{color:#8a806c;font-size:14px;letter-spacing:.02em;margin:0}
+@media (max-width:699px){ .site-foot{padding-bottom:96px} }
 </style>
 </head>
 <body>
 
-<!-- ============ HERO ============ -->
+<!-- ============ 1. HERO, A PRISÃO ============ -->
 <header id="hero">
   <div class="wrap">
     <div class="marca-topo" style="max-width:140px;margin:0 0 34px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
 
-    <p class="selo">Uma história real sobre recomeçar</p>
+    <p class="selo">Uma história real</p>
 
-    <h1>Existem coisas que você não consegue apagar.</h1>
-    <p class="sub">Mas ainda pode decidir quem vai se tornar depois delas.</p>
+    <h1>Eu fui preso.</h1>
+    <p class="sub">E foi dentro da prisão que eu precisei aprender a reconstruir uma vida que já não podia voltar a ser como antes.</p>
 
-    <p class="lead">Talvez você carregue uma culpa que ninguém vê.</p>
-    <p class="lead">Uma vergonha que continua voltando.</p>
-    <p class="lead">Uma queda que mudou a maneira como você se enxerga.</p>
-    <p class="lead">Ou simplesmente a sensação de que, por mais que tente seguir em frente, uma parte sua ainda ficou presa no que aconteceu.</p>
+    <p>Eu não escrevi Recomeçar com Propósito para ensinar alguém a viver.</p>
+    <p>Escrevi porque, depois de perder a liberdade e ver minha vida desmoronar, eu precisava descobrir como continuar.</p>
 
-    <p>Recomeçar com Propósito é para quem chegou a um ponto da vida em que sabe que não pode mudar o passado, mas também sabe que não quer continuar sendo definido por ele.</p>
+    <p class="lead">Eu não podia apagar o que tinha acontecido.</p>
+    <p class="lead">Mas ainda podia decidir quem eu me tornaria depois daquilo.</p>
+
+    <p>Foi dessa decisão que este livro nasceu.</p>
 
     <figure class="fig capa">
       <picture>
@@ -259,225 +194,98 @@ footer p{font-size:15.5px;color:var(--cinza);margin-top:10px;line-height:1.55}
       <p class="preco">R$27</p>
     </div>
 
-    <a href="#" class="cta" data-cta="hero">Quero começar meu recomeço</a>
+    <a href="#" class="cta" data-cta="hero">Quero ler agora</a>
     <p class="garantias">Compra segura &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; 7 dias de garantia</p>
   </div>
 </header>
 
-<!-- ============ A DOR ============ -->
-<section>
-  <div class="wrap rv">
-    <h2>O pior não é ter errado.</h2>
-    <p class="sub sub-escuro">É começar a acreditar que você é o erro.</p>
-
-    <div class="dor-linhas">
-      <div class="dor-linha">
-        <p class="dor-rot">A culpa diz</p>
-        <p class="dor-fala">“Você errou.”</p>
-      </div>
-      <div class="dor-linha">
-        <p class="dor-rot">A vergonha vai além</p>
-        <p class="dor-fala forte">“Você é o erro.”</p>
-      </div>
-    </div>
-
-    <p>E quando você começa a acreditar nisso, algo muda.</p>
-    <p class="lead">Você perde confiança.</p>
-    <p class="lead">Se esconde.</p>
-    <p class="lead">Repete mentalmente o que aconteceu.</p>
-    <p class="lead">Se pergunta como chegou até ali.</p>
-    <p>E, pouco a pouco, o passado deixa de ser apenas uma lembrança.</p>
-    <p class="frase">Ele vira uma prisão.</p>
-    <p>Foi exatamente assim comigo.</p>
-  </div>
-</section>
-
-<!-- ============ O PONTO DE VIRADA ============ -->
+<!-- ============ 2. NÃO ERA TEORIA ============ -->
 <section class="bege">
   <div class="wrap rv">
-    <h2>Até que uma pergunta mudou tudo.</h2>
+    <h2>Eu não aprendi sobre recomeço em um curso.</h2>
+    <p class="sub">Aprendi quando precisei fazer isso dentro de uma cela.</p>
 
-    <p>Eu não podia mudar o que tinha feito.</p>
-    <p class="lead">Não podia apagar as consequências.</p>
-    <p class="lead">Não podia voltar no tempo.</p>
+    <p>A prisão retirou minha liberdade, minha rotina e a imagem que eu tinha construído de mim mesmo.</p>
 
-    <p class="frase">Mas ainda podia decidir o que me tornaria depois daquilo.</p>
+    <p class="lead">Vieram vergonha.</p>
+    <p class="lead">Culpa.</p>
+    <p class="lead">Medo.</p>
+    <p class="lead">Silêncio.</p>
 
-    <figure class="fig luz">
-      <picture>
-        <source srcset="../assets/img/virada.webp" type="image/webp">
-        <img src="../assets/img/virada.jpg" alt="Luz entrando em um ambiente escuro" width="425" height="538" loading="lazy" onerror="semImagem(this)">
-      </picture>
-    </figure>
+    <p>E uma pergunta que eu não conseguia mais evitar:</p>
 
-    <p>Foi quando comecei a entender que liberdade não começa quando tudo ao redor muda.</p>
-    <p>Ela começa quando você para de fugir de si mesmo.</p>
+    <p class="frase">“Se eu não posso mudar o que fiz, o que ainda posso mudar?”</p>
 
-    <a href="#" class="cta cta-menor" data-cta="virada">Quero ler agora, R$27</a>
+    <p style="margin-top:26px">A resposta começou a aparecer devagar: eu ainda podia mudar aquilo que faria com o resto da minha vida.</p>
   </div>
 </section>
 
-<!-- ============ O LIVRO ============ -->
+<!-- ============ 3. O LIVRO ============ -->
 <section>
   <div class="wrap rv">
-    <h2 style="text-align:center">Recomeçar com Propósito</h2>
+    <h2>Recomeçar com Propósito</h2>
 
-    <p>Este livro nasceu dentro de uma prisão.</p>
-    <p>Entre vergonha, medo, culpa, solidão e a sensação de que tudo havia terminado.</p>
-    <p>Mas foi justamente naquele lugar que comecei a perceber que recomeçar não significa fingir que o passado nunca existiu.</p>
-    <p>Significa descobrir quem você ainda pode se tornar apesar dele.</p>
+    <p style="margin-top:20px">Este livro nasceu durante uma das fases mais difíceis da minha vida.</p>
+    <p>É uma história sobre queda, culpa, identidade, perdão, disciplina e reconstrução.</p>
+    <p>Mas, acima de tudo, é sobre uma decisão: não permitir que o pior capítulo da sua história escreva sozinho todos os próximos.</p>
 
-    <p style="margin-top:38px">Ao longo desta leitura, você vai caminhar por temas como:</p>
-
-    <div style="margin-top:26px">
-      <div class="pilar">
-        <h3>Vergonha e culpa</h3>
-        <p>Quando aquilo que você fez começa a definir aquilo que acredita ser.</p>
-      </div>
-      <div class="pilar">
-        <h3>O peso do passado</h3>
-        <p>E o difícil processo de parar de se punir pelo que já não pode mudar.</p>
-      </div>
-      <div class="pilar">
-        <h3>Reconstrução</h3>
-        <p>Como começar de dentro para fora, mesmo quando a realidade ainda não mudou.</p>
-      </div>
-      <div class="pilar">
-        <h3>Dor e propósito</h3>
-        <p>Como uma queda pode se transformar em direção, sem negar aquilo que doeu.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PARA QUEM É ============ -->
-<section>
-  <div class="wrap rv">
-    <h2>Talvez este livro seja para você se...</h2>
-
+    <p class="rot">Dentro do livro</p>
     <ul class="check">
-      <li>existe algo no passado que ainda pesa;</li>
-      <li>você se culpa por decisões que já não pode mudar;</li>
-      <li>sente vergonha de alguma parte da sua história;</li>
-      <li>perdeu confiança em si mesmo;</li>
-      <li>está cansado de repetir os mesmos ciclos;</li>
-      <li>sabe que precisa reconstruir alguma área da sua vida;</li>
-      <li>sente que segue vivendo por fora, mas ainda está preso por dentro;</li>
-      <li>quer encontrar uma nova direção para aquilo que aconteceu.</li>
+      <li>O peso de carregar aquilo que já não pode ser mudado.</li>
+      <li>A diferença entre ter cometido um erro e passar a acreditar que você é o erro.</li>
+      <li>O processo de reconstruir a identidade depois da queda.</li>
+      <li>Disciplina quando motivação já não existe.</li>
+      <li>Fé, propósito e o que fazer com aquilo que ainda restou.</li>
     </ul>
-
-    <p style="margin-top:34px">O próprio livro parte da percepção de que existem pessoas “soltas por fora” e ainda aprisionadas internamente pelo medo, culpa, julgamento e passado.</p>
   </div>
 </section>
 
-<!-- ============ A OFERTA ============ -->
+<!-- ============ 4. A OFERTA ============ -->
 <section class="bege">
   <div class="wrap rv">
-    <h2 style="text-align:center">Você não precisa apagar sua história.</h2>
-    <p class="sub" style="text-align:center">Precisa decidir o que fará com ela.</p>
-
-    <div class="devices" role="img" aria-label="Recomeçar com Propósito aberto em um tablet e em um celular">
-      <div class="tablet">
-        <picture>
-          <source srcset="../assets/img/capa-rcp.webp" type="image/webp">
-          <img src="../assets/img/capa-rcp.jpg" alt="" width="760" height="1140" loading="lazy">
-        </picture>
-      </div>
-      <div class="fone">
-        <picture>
-          <source srcset="../assets/img/capa-rcp.webp" type="image/webp">
-          <img src="../assets/img/capa-rcp.jpg" alt="" width="760" height="1140" loading="lazy">
-        </picture>
-      </div>
-    </div>
-
     <div class="oferta">
-      <h2 style="font-size:clamp(24px,5.4vw,29px)">Recomeçar com Propósito</h2>
+      <h2>Leia a história que nasceu dentro da prisão.</h2>
 
-      <div class="formatos">
-        <span class="formato">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/></svg>
-          Ebook
-        </span>
-        <span class="formato">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14h3v5H5.5A1.5 1.5 0 0 1 4 17.5z"/><path d="M20 14h-3v5h1.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg>
-          Audiobook
-        </span>
-      </div>
+      <p class="nome">Recomeçar com Propósito</p>
 
-      <div class="linhas">
-        <p style="margin:0">Ebook e audiobook completos.</p>
-        <p style="margin:0">Leia pelo celular, tablet ou computador.</p>
-        <p style="margin:0">Acesso liberado após a confirmação da compra.</p>
-      </div>
+      <ul class="itens">
+        <li>Ebook completo</li>
+        <li>Audiobook completo</li>
+        <li>Acesso imediato</li>
+      </ul>
 
-      <div class="nao">
-        <p style="margin:0">Sem aulas.</p>
-        <p style="margin:0">Sem calendário.</p>
-        <p style="margin:0">Sem promessa de fórmula mágica.</p>
-      </div>
-
-      <p style="margin-top:24px">Uma história real e as reflexões que nasceram dela.</p>
-
-      <p class="preco" style="margin-top:30px">R$27</p>
-      <a href="#" class="cta" data-cta="oferta">Quero ler agora</a>
+      <p class="preco" style="margin-top:28px">R$27</p>
+      <a href="#" class="cta" data-cta="oferta">Quero ler esta história</a>
       <p class="garantias">Compra segura &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; 7 dias de garantia</p>
     </div>
   </div>
 </section>
 
-<!-- ============ O AUTOR ============ -->
+<!-- ============ 5. FECHAMENTO ============ -->
 <section>
-  <div class="wrap rv autor-curto">
-    <figure class="retrato-autor">
-      <picture>
-        <source srcset="../assets/img/autor.webp" type="image/webp">
-        <img src="../assets/img/autor.jpg" alt="J. C. Dias" width="900" height="917" loading="lazy" onerror="semImagem(this)">
-      </picture>
-    </figure>
+  <div class="wrap rv">
+    <h2>Eu não consegui mudar o capítulo que me levou até a prisão.</h2>
+    <p class="sub">Mas ainda podia decidir como escreveria o próximo.</p>
 
-    <div>
-      <h2>Este livro não nasceu no topo.</h2>
-      <p class="forte">Nasceu quando tudo parecia ter desmoronado.</p>
-      <p>Dentro de uma cela, comecei a perceber que propósito não era apenas conquistar. Era transformar aquilo que vivi em algo que pudesse servir a outra pessoa.</p>
-    </div>
-  </div>
-</section>
+    <p>Talvez você nunca tenha entrado em uma cela.</p>
+    <p>Mas talvez exista alguma parte da sua história que ainda mantenha você preso.</p>
 
-<!-- ============ GARANTIA ============ -->
-<section class="bege">
-  <div class="wrap rv" style="text-align:center">
-    <div class="selo-dias"><b>7</b><span>Dias</span></div>
+    <p style="margin-top:22px">Recomeçar com Propósito nasceu no momento em que precisei descobrir que recomeçar não era voltar para a vida que eu tinha.</p>
+    <p class="frase">Era construir outra.</p>
 
-    <h2>Você tem 7 dias para decidir.</h2>
-
-    <p class="lead" style="margin-top:26px">Leia.</p>
-    <p class="lead">Reflita.</p>
-    <p class="lead">Veja se esta história conversa com o momento que você está vivendo.</p>
-
-    <p>Se perceber que o livro não é para você, utilize o período de garantia oferecido pela plataforma.</p>
-  </div>
-</section>
-
-<!-- ============ CTA FINAL ============ -->
-<section>
-  <div class="wrap rv" style="text-align:center">
-    <h2>Você não pode reescrever o capítulo que já passou.</h2>
-    <p class="sub">Mas ainda pode decidir como começa o próximo.</p>
-
-    <figure class="fig capa" style="margin-top:44px">
+    <figure class="fig capa">
       <picture>
         <source srcset="../assets/img/capa-rcp.webp" type="image/webp">
         <img src="../assets/img/capa-rcp.jpg" alt="Capa do livro Recomeçar com Propósito" width="760" height="1140" loading="lazy" onerror="semImagem(this)">
       </picture>
     </figure>
 
-    <h2 style="font-size:clamp(24px,5.4vw,29px)">Recomeçar com Propósito</h2>
-    <p class="preco-nota" style="margin-top:14px">Ebook + audiobook</p>
-    <p class="preco">R$27</p>
-    <p class="preco-nota" style="margin-top:12px;margin-bottom:0">Acesso imediato</p>
+    <div style="text-align:center">
+      <p class="preco-nota">Ebook + audiobook, acesso imediato</p>
+      <p class="preco">R$27</p>
+    </div>
 
-    <a href="#" class="cta" data-cta="final">Quero começar agora</a>
+    <a href="#" class="cta" data-cta="fecho">Quero ler agora</a>
     <p class="garantias">Compra segura &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; 7 dias de garantia</p>
   </div>
 </section>
@@ -495,7 +303,7 @@ footer p{font-size:15.5px;color:var(--cinza);margin-top:10px;line-height:1.55}
   <p class="fcop">Copyright &copy; 2026 &middot; J. C. Dias &middot; Todos os direitos reservados.</p>
 </footer>
 
-<a href="#" id="sticky" data-cta="sticky">Recomeçar com Propósito <b>· R$27</b></a>
+<a href="#" id="sticky" data-cta="sticky">Quero ler agora <b>· R$27</b></a>
 
 <script>
 /* ---- CONFIGURAÇÃO: trocar apenas estas duas linhas ---- */
