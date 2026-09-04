@@ -103,13 +103,13 @@ p{margin-top:12px}
 }
 
 /* hero */
-header{position:relative;min-height:auto;display:flex;align-items:flex-end;
-  padding:48px 0 38px;overflow:hidden;background:#0A0A09}
+header{position:relative;min-height:92vh;display:flex;align-items:stretch;
+  padding:42px 0 40px;overflow:hidden;background:#0A0A09}
 header .bg{position:absolute;inset:0;z-index:0}
-header .bg img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+header .bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 header .bg::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(10,10,9,.62) 0%,rgba(10,10,9,.74) 26%,rgba(12,12,10,.90) 46%,rgba(17,17,15,.97) 74%,rgba(17,17,15,1) 100%)}
-header .wrap{position:relative;z-index:1}
+  background:linear-gradient(180deg,rgba(10,10,9,.42) 0%,rgba(10,10,9,.5) 30%,rgba(12,12,10,.78) 60%,rgba(17,17,15,.96) 88%,rgba(17,17,15,1) 100%)}
+header .wrap{position:relative;z-index:1;display:flex;flex-direction:column;width:100%}
 .marca-topo img{width:100%;height:auto;display:block}
 
 /* capa e figuras */
@@ -139,6 +139,12 @@ figure.autor img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .pendulo .agora{font-family:var(--head);font-weight:600;font-size:clamp(22px,6vw,32px);
   letter-spacing:.1em;text-transform:uppercase;color:var(--bronze)}
 .pendulo .traco{flex:1;max-width:56px;height:1px;background:rgba(155,123,80,.5)}
+
+/* grade das 8 ferramentas (só nomes, escaneável) */
+.tools8{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+.tools8 .t{display:flex;gap:9px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(155,123,80,.28)}
+.tools8 .t .n{font-family:var(--head);font-weight:500;font-size:13px;color:var(--bronze);flex:0 0 auto}
+.tools8 .t .nm{font-family:var(--head);font-weight:500;font-size:15.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--bronze);line-height:1.15}
 
 /* ferramentas */
 .ferramentas{margin-top:24px}
@@ -250,28 +256,7 @@ footer a{color:var(--cinza)}
 </head>
 <body>
 
-<!-- 0. ABERTURA (história, tráfego frio) -->
-<section class="ponte">
-  <div class="wrap">
-    <div class="marca-topo" style="max-width:130px;margin:0 0 46px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
-
-    <p class="ponte-olho">A Caverna Interior &nbsp;·&nbsp; um livro de J. C. Dias</p>
-    <h1 class="ponte-h1">Por fora, talvez ainda esteja tudo de pé. Por dentro, você sabe que alguma coisa precisa ser reconstruída.</h1>
-
-    <p class="ponte-p forte">Eu precisei perder a liberdade, o cargo, o dinheiro e até o meu nome para descobrir um método de reconstrução.</p>
-    <p class="ponte-p">Você não precisa entrar numa cela para aprender.</p>
-
-    <p class="ponte-fecho">Esse método virou este livro.</p>
-  </div>
-
-  <div class="ponte-luz" aria-hidden="true"></div>
-</section>
-
-<div class="faixa-exclusiva">
-  <span>Edição digital &nbsp;·&nbsp; Acesso imediato após a compra</span>
-</div>
-
-<!-- 1. HERO -->
+<!-- HERO (imagem + mínimo texto) -->
 <header id="hero">
   <div class="bg">
     <picture>
@@ -281,20 +266,19 @@ footer a{color:var(--cinza)}
   </div>
 
   <div class="wrap">
-    <p class="olho">Memória real &nbsp;+&nbsp; método prático</p>
-    <h1>Você não precisa de motivação para recomeçar. Precisa de um método que funcione no fundo do poço.</h1>
+    <div class="marca-topo" style="max-width:116px;margin:0 0 auto"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
 
-    <p class="titulo-livro" style="margin-top:34px">A Caverna Interior</p>
-    <p class="subtitulo">O método que aprendi no fundo do poço para reconstruir a mente, a alma e a vida.</p>
+    <p class="olho">A Caverna Interior &nbsp;·&nbsp; J. C. Dias</p>
+    <h1>Por fora, tudo de pé.<br>Por dentro, algo precisa ser reconstruído.</h1>
 
-    <figure class="capa">
+    <figure class="capa" style="max-width:168px;margin:26px 0 0">
       <picture>
         <source srcset="../assets/img/capa-caverna.webp" type="image/webp">
         <img src="../assets/img/capa-caverna.jpg" alt="Capa do livro A Caverna Interior, de J. C. Dias" width="620" height="930">
       </picture>
     </figure>
 
-    <a href="#oferta" class="cta" data-rolar style="margin-top:34px">Quero começar minha reconstrução <small>Ebook digital · R$67</small></a>
+    <a href="#oferta" class="cta" data-rolar style="margin:24px 0 0">Quero começar <small>Ebook + 4 bônus · R$67</small></a>
   </div>
 </header>
 
@@ -307,8 +291,6 @@ footer a{color:var(--cinza)}
     <ul class="passos">
       <li>uma dívida que não deixa você dormir;</li>
       <li>um casamento que virou silêncio;</li>
-      <li>um luto que não passa;</li>
-      <li>uma vergonha que ninguém vê;</li>
       <li>uma carreira que já não faz sentido;</li>
       <li>um vazio no meio de uma vida que, por fora, parece organizada.</li>
     </ul>
@@ -322,10 +304,8 @@ footer a{color:var(--cinza)}
     <p class="olho">A queda</p>
     <h2>Eu sei como é chegar ao fundo</h2>
     <p style="margin-top:22px">Uma manhã bastou. Um acidente, e tudo o que me definia foi tirado: o nome, a liberdade, o chão.</p>
-    <p style="margin-top:18px">Na primeira noite na cela, a morte sentou do meu lado como uma velha conhecida. E eu quase disse sim.</p>
-    <p style="margin-top:18px">Foi a voz da minha filha que me segurou. Do outro lado do mundo, ela me disse: "Dad, I love you. Don't give up."</p>
-    <p style="margin-top:18px">Ali, no chão daquela cela, eu respondi: eu vou ficar.</p>
-    <p class="frase" style="margin-top:30px">Foi naquela noite que a reconstrução começou.</p>
+    <p style="margin-top:18px">Na primeira noite na cela, eu quase desisti. Foi a voz da minha filha que me segurou: "Dad, I love you. Don't give up."</p>
+    <p class="frase" style="margin-top:26px">Eu respondi: eu vou ficar. E foi ali que a reconstrução começou.</p>
   </div>
 </section>
 
@@ -345,20 +325,20 @@ footer a{color:var(--cinza)}
       </div>
     </div>
 
-    <p style="margin-top:26px">A dor joga você no passado e no futuro. Mas o passado é memória, o futuro é hipótese, e o presente é o único lugar onde dá para agir. No livro, chamo isso de Armadilha do Pêndulo.</p>
-    <p class="frase" style="margin-top:24px">Este não é um método para controlar a vida. É um mapa para se reconstruir dentro dela.</p>
+    <p style="margin-top:24px">Passado é memória. Futuro é hipótese. Só o presente aceita uma decisão.</p>
+    <p class="frase" style="margin-top:22px">Não é um método para controlar a vida. É um mapa para se reconstruir dentro dela.</p>
 
     <p style="margin-top:30px">Da queda vieram as oito ferramentas que me tiraram do escuro:</p>
 
-    <div class="ferramentas">
-      <div class="ferr"><span class="num">01</span><div><h3>Foco no agora</h3><p>Reconhecer o pêndulo e retornar ao território em que ainda existe ação possível.</p></div></div>
-      <div class="ferr"><span class="num">02</span><div><h3>Gratidão</h3><p>Não agradecer pelo sofrimento, mas aprender a perceber o que ainda permanece dentro da circunstância.</p></div></div>
-      <div class="ferr"><span class="num">03</span><div><h3>Rotina</h3><p>Criar estrutura quando a mente já não consegue depender de motivação.</p></div></div>
-      <div class="ferr"><span class="num">04</span><div><h3>Disciplina</h3><p>Continuar fazendo aquilo que precisa ser feito mesmo quando o sentimento não acompanha.</p></div></div>
-      <div class="ferr"><span class="num">05</span><div><h3>Propósito</h3><p>Encontrar a conexão entre aquilo que doeu e aquilo que ainda pode servir a alguém.</p></div></div>
-      <div class="ferr"><span class="num">06</span><div><h3>Ambiente</h3><p>Proteger pessoas, espaços e, principalmente, o próprio tempo.</p></div></div>
-      <div class="ferr"><span class="num">07</span><div><h3>Fé</h3><p>Continuar caminhando sem exigir garantia de que o chão estará lá.</p></div></div>
-      <div class="ferr"><span class="num">08</span><div><h3>Manifestação e rendição</h3><p>Trabalhar aquilo que pode ser influenciado e aprender a entregar aquilo que não pode ser controlado.</p></div></div>
+    <div class="tools8">
+      <div class="t"><span class="n">01</span><span class="nm">Foco no agora</span></div>
+      <div class="t"><span class="n">02</span><span class="nm">Gratidão</span></div>
+      <div class="t"><span class="n">03</span><span class="nm">Rotina</span></div>
+      <div class="t"><span class="n">04</span><span class="nm">Disciplina</span></div>
+      <div class="t"><span class="n">05</span><span class="nm">Propósito</span></div>
+      <div class="t"><span class="n">06</span><span class="nm">Ambiente</span></div>
+      <div class="t"><span class="n">07</span><span class="nm">Fé</span></div>
+      <div class="t"><span class="n">08</span><span class="nm">Rendição</span></div>
     </div>
   </div>
 </section>
