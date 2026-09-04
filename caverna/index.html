@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>A Caverna Interior | J. C. Dias</title>
-<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="O método que aprendi no fundo do poço para reconstruir a mente, a alma e a vida. Um livro de J. C. Dias: 8 ferramentas nascidas de uma queda real.">
+<meta property="og:title" content="A Caverna Interior | J. C. Dias">
+<meta property="og:description" content="O método que aprendi no fundo do poço para reconstruir a mente, a alma e a vida.">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://jornada.jcdias.com/assets/img/capa-caverna.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +59,6 @@ h2{font-family:var(--head);font-weight:500;text-transform:uppercase;
 h3{font-family:var(--head);font-weight:500;font-size:17px;letter-spacing:.13em;
   text-transform:uppercase}
 p{margin-top:12px}
-/* linhas curtas seguidas respiram menos entre si */
 .oferta .condicoes p + p{margin-top:0}
 .titulo-livro{font-family:var(--head);font-weight:600;text-transform:uppercase;
   font-size:clamp(30px,7.4vw,45px);line-height:1.02;letter-spacing:.01em;color:var(--luz)}
@@ -64,7 +67,6 @@ p{margin-top:12px}
 .frase{font-family:var(--corpo);font-weight:600;
   font-size:clamp(26px,6vw,33px);line-height:1.3}
 .luzt{color:var(--luz)}
-
 
 /* a ponte: escuridão e silêncio antes de a caverna aparecer */
 .ponte{
@@ -84,14 +86,13 @@ p{margin-top:12px}
   font-size:clamp(24px,6.2vw,34px);line-height:1.12;color:var(--luz);
   margin-top:44px;
 }
-/* a primeira luz, que prepara a caverna logo abaixo */
 .ponte-luz{
   position:relative;z-index:1;height:120px;
   background:radial-gradient(70% 100% at 50% 100%, rgba(213,184,121,.30) 0%, rgba(213,184,121,.09) 42%, rgba(8,8,7,0) 72%);
 }
 @media (min-width:760px){ .ponte{padding-top:70px} .ponte .wrap{padding-bottom:80px} }
 
-/* faixa de exclusividade: informativa, sem countdown e sem escassez inventada */
+/* faixa informativa */
 .faixa-exclusiva{
   position:relative;z-index:3;background:var(--luz);color:#15130F;
   text-align:center;padding:12px 18px calc(12px + env(safe-area-inset-top));
@@ -110,26 +111,6 @@ header .bg::after{content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(10,10,9,.62) 0%,rgba(10,10,9,.74) 26%,rgba(12,12,10,.90) 46%,rgba(17,17,15,.97) 74%,rgba(17,17,15,1) 100%)}
 header .wrap{position:relative;z-index:1}
 .marca-topo img{width:100%;height:auto;display:block}
-
-/* vsl */
-.vsl{max-width:660px;margin:0 auto;padding:0 var(--pad)}
-.player{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;
-  border-radius:10px;border:1px solid rgba(213,184,121,.24);background:#000;cursor:pointer}
-.player img{width:100%;height:100%;object-fit:cover}
-.player::after{content:"";position:absolute;inset:0;background:rgba(10,10,9,.28);
-  transition:background .3s ease;pointer-events:none}
-.player:hover::after{background:rgba(10,10,9,.12)}
-.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  width:64px;height:64px;border-radius:50%;background:rgba(10,10,9,.5);
-  border:1.5px solid var(--luz);display:flex;align-items:center;justify-content:center;
-  z-index:2;transition:transform .3s ease}
-.player:hover .play{transform:translate(-50%,-50%) scale(1.06)}
-.play::before{content:"";width:0;height:0;margin-left:4px;
-  border-left:16px solid var(--claro);border-top:10px solid transparent;border-bottom:10px solid transparent}
-.player iframe,.player video{position:absolute;inset:0;width:100%;height:100%;border:0}
-.cta-vsl{display:block;text-align:center;margin:24px auto 0;
-  font-family:var(--head);font-weight:500;font-size:15.5px;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--luz);background:none;border:0;cursor:pointer;padding:10px}
 
 /* capa e figuras */
 figure.capa{max-width:184px;margin:26px auto 0;filter:drop-shadow(0 24px 44px rgba(0,0,0,.72))}
@@ -167,49 +148,49 @@ figure.larga.fim{margin:30px 0 0}
 .papel .ferr h3{color:var(--bronze)}
 .ferr p{margin-top:6px;font-size:20px;line-height:1.38}
 
-/* lista do raio de sol */
+/* lista */
 ul.passos{list-style:none;margin-top:26px}
 ul.passos li{position:relative;padding:9px 0 9px 26px;line-height:1.36}
 ul.passos li+li{border-top:1px solid rgba(155,123,80,.2)}
 ul.passos li::before{content:"";position:absolute;left:2px;top:22px;
   width:7px;height:7px;border-radius:50%;background:var(--luz)}
 
-/* os fatos que sustentam a exclusividade */
-.exclusivo{margin-top:36px}
-.exclusivo div{padding:15px 0;border-top:1px solid rgba(213,184,121,.26)}
-.exclusivo div:last-child{border-bottom:1px solid rgba(213,184,121,.26)}
-.exclusivo b{display:block;font-family:var(--head);font-weight:500;font-size:17px;
-  letter-spacing:.06em;text-transform:uppercase;color:var(--luz)}
-.exclusivo span{display:block;margin-top:6px;font-size:19px;line-height:1.45;color:var(--cinza)}
+/* stack de bônus */
+.stack{margin-top:26px}
+.stack .item{display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(155,123,80,.26)}
+.stack .item:last-child{border-bottom:1px solid rgba(155,123,80,.26)}
+.stack .check{flex:0 0 24px;color:var(--luz);font-family:var(--head);font-weight:600;font-size:20px;line-height:1.4}
+.papel .stack .check{color:var(--bronze)}
+.stack .item b{display:block;font-family:var(--head);font-weight:500;font-size:19px;
+  letter-spacing:.04em;text-transform:uppercase;color:var(--escuro-txt)}
+.stack .item span{display:block;margin-top:5px;font-size:19px;line-height:1.4;color:var(--cinza-esc)}
+.stack .item .tag{display:inline-block;margin-top:7px;font-family:var(--head);font-weight:500;
+  font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze)}
+
+/* garantia */
+.garantia{border:1px solid rgba(155,123,80,.4);border-radius:10px;padding:26px 22px;margin-top:8px;text-align:center}
+.garantia .selo{font-family:var(--head);font-weight:600;font-size:15px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--luz);margin-bottom:12px}
 
 /* oferta */
 .oferta{text-align:center}
 .oferta .formato{font-size:21.5px;color:var(--cinza-esc);margin-top:10px}
-.selo-antecipado{display:inline-block;margin-top:18px;
-  font-family:var(--head);font-weight:500;font-size:14px;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--bronze);
-  border:1px solid rgba(155,123,80,.5);border-radius:20px;padding:6px 15px}
-.preco{font-family:var(--head);font-weight:600;font-size:59px;line-height:1;margin-top:24px}
+.preco{font-family:var(--head);font-weight:600;font-size:59px;line-height:1;margin-top:20px}
 .pagamento{font-family:var(--head);font-weight:400;font-size:14.5px;letter-spacing:.11em;
   text-transform:uppercase;color:var(--cinza-esc);margin-top:10px}
 .carvao .pagamento,.pedra .pagamento{color:var(--cinza)}
 
 .cta{
-  display:block;width:100%;max-width:460px;margin:30px auto 0;min-height:62px;
-  background:var(--luz);color:#1A1813;border:0;border-radius:7px;
+  display:block;width:100%;max-width:460px;margin:26px auto 0;min-height:62px;
+  background:linear-gradient(180deg,#e6c98a,#c8a24f);color:#1A1813;border:0;border-radius:7px;
   font-family:var(--head);font-weight:600;font-size:19px;letter-spacing:.04em;
   text-transform:uppercase;text-align:center;text-decoration:none;
-  padding:20px 16px;cursor:pointer;transition:background .25s ease;
-}
-.cta:active{background:#C0A468}
+  padding:20px 16px;cursor:pointer;transition:filter .2s ease}
+.cta:hover{filter:brightness(1.05)}
+.cta small{display:block;font-weight:400;font-size:13.5px;letter-spacing:.04em;opacity:.8;margin-top:3px}
 .micro{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.03em;
   text-transform:uppercase;color:var(--cinza);margin-top:14px;text-align:center}
 .papel .micro{color:var(--cinza-esc)}
-.recusa{display:block;width:100%;background:none;border:0;cursor:pointer;
-  font-family:var(--corpo);font-size:20px;line-height:1.45;color:var(--cinza-esc);
-  text-align:center;margin-top:34px;padding:12px;
-  text-decoration:underline;text-underline-offset:4px}
-.carvao .recusa,.pedra .recusa{color:#7B746B}
 
 /* sticky */
 #sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;
@@ -221,12 +202,13 @@ ul.passos li::before{content:"";position:absolute;left:2px;top:22px;
 #sticky .txt{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.05em;
   text-transform:uppercase;color:var(--claro);line-height:1.35}
 #sticky .txt b{color:var(--luz);font-weight:600}
-#sticky a{flex:0 0 auto;background:var(--luz);color:#1A1813;text-decoration:none;
+#sticky a{flex:0 0 auto;background:linear-gradient(180deg,#e6c98a,#c8a24f);color:#1A1813;text-decoration:none;
   font-family:var(--head);font-weight:600;font-size:15.5px;letter-spacing:.1em;
   text-transform:uppercase;padding:13px 26px;border-radius:6px}
 
 footer{padding:28px 0 106px;text-align:center;border-top:1px solid rgba(155,123,80,.18)}
 footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:9px;line-height:1.55}
+footer a{color:var(--cinza)}
 
 .rv{opacity:0;transform:translateY(16px);transition:opacity .75s ease,transform .75s ease}
 .rv.vis{opacity:1;transform:none}
@@ -239,37 +221,32 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:9px;line-height:1.55
   footer{padding-bottom:56px}
   #sticky{display:none}
 }
-
-
-/* área do checkout em 1 clique da Hotmart */
-.checkout-1click{max-width:470px;margin:28px auto 0}
 </style>
 </head>
 <body>
 
-<!-- 0. A PONTE -->
+<!-- 0. ABERTURA (história, tráfego frio) -->
 <section class="ponte">
   <div class="wrap">
     <div class="marca-topo" style="max-width:130px;margin:0 0 46px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
 
-    <p class="ponte-olho">Você chegou até aqui.</p>
-    <h1 class="ponte-h1">Antes de terminar esta jornada, existe uma última porta que eu quero abrir para você.</h1>
+    <p class="ponte-olho">O método que nasceu no fundo do poço</p>
+    <h1 class="ponte-h1">Eu tinha vinte anos de carreira. Uma manhã bastou para uma cela tirar até o meu nome.</h1>
 
-    <p class="ponte-p">Você passou por histórias de queda, recomeço, perda, sobrevivência e reconstrução.</p>
-    <p class="ponte-p">Mas existe uma parte dessa jornada que vai além das histórias.</p>
-    <p class="ponte-p forte">É aquilo que ficou depois delas.</p>
+    <p class="ponte-p">Perdi a liberdade, o título, as certezas, o chão sob os pés.</p>
+    <p class="ponte-p forte">E foi ali, no lugar onde não havia mais espaço para fugir de mim mesmo, que eu comecei a construir uma coisa.</p>
 
-    <p class="ponte-p" style="margin-top:30px">O que eu aprendi quando não havia mais espaço para fugir de mim mesmo.</p>
-    <p class="ponte-p">O que comecei a construir no fundo do poço.</p>
+    <p class="ponte-p" style="margin-top:30px">Não uma história. Um método.</p>
+    <p class="ponte-p">Um jeito de reconstruir a mente, a alma e a vida quando tudo desaba.</p>
 
-    <p class="ponte-fecho">Isso se tornou A Caverna Interior.</p>
+    <p class="ponte-fecho">Esse método virou este livro.</p>
   </div>
 
   <div class="ponte-luz" aria-hidden="true"></div>
 </section>
 
 <div class="faixa-exclusiva">
-  <span>Ainda não disponível ao público</span>
+  <span>Edição digital &nbsp;·&nbsp; Acesso imediato após a compra</span>
 </div>
 
 <!-- 1. HERO -->
@@ -282,14 +259,13 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:9px;line-height:1.55
   </div>
 
   <div class="wrap">
-    <p class="olho">Acesso antecipado &nbsp;·&nbsp; Exclusivo para quem chegou até aqui</p>
-    <h1>Os outros livros contam partes da minha jornada.<br>Este é o livro em que eu te mostro como consegui voltar.</h1>
+    <p class="olho">Memória real &nbsp;+&nbsp; método prático</p>
+    <h1>Da queda ao método:<br>como se reconstruir quando tudo desaba.</h1>
 
     <p class="titulo-livro" style="margin-top:34px">A Caverna Interior</p>
     <p class="subtitulo">O método que aprendi no fundo do poço para reconstruir a mente, a alma e a vida.</p>
 
-    <p style="margin-top:30px">Por isso, antes de abrir este livro para o público, quero permitir que você entre primeiro.</p>
-    <p class="fraco">Mas este não é simplesmente o meu próximo livro.</p>
+    <p style="margin-top:30px">Este não é apenas mais um livro de história.</p>
     <p>É o livro em que a história finalmente se transforma em método.</p>
 
     <figure class="capa">
@@ -298,22 +274,10 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:9px;line-height:1.55
         <img src="../assets/img/capa-caverna.jpg" alt="Capa do livro A Caverna Interior, de J. C. Dias" width="620" height="930">
       </picture>
     </figure>
+
+    <a href="#oferta" class="cta" data-rolar style="margin-top:34px">Quero começar minha reconstrução <small>Ebook digital · R$67</small></a>
   </div>
 </header>
-
-<!-- 2. VSL -->
-<section class="carvao" id="secao-vsl" style="padding-top:46px;display:none">
-  <div class="vsl">
-    <div class="player" id="player" role="button" tabindex="0" aria-label="Assistir">
-      <picture>
-        <source srcset="../assets/img/caverna-luz.webp" type="image/webp">
-        <img src="../assets/img/caverna-luz.jpg" alt="" width="1100" height="592">
-      </picture>
-      <span class="play" aria-hidden="true"></span>
-    </div>
-    <button class="cta-vsl" id="cta-vsl" type="button">Assista antes de decidir</button>
-  </div>
-</section>
 
 <!-- 3. ESTE LIVRO É DIFERENTE -->
 <section class="carvao">
@@ -429,22 +393,7 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:9px;line-height:1.55
   </div>
 </section>
 
-<!-- 10. ACESSO ANTECIPADO -->
-<section class="carvao">
-  <div class="wrap rv">
-    <h2>Agora vem a parte que torna esta oferta diferente.</h2>
-    <p style="margin-top:24px">A Caverna Interior ainda não foi disponibilizado ao público.</p>
-    <p>Se você chegou até este ponto da jornada, quero permitir que tenha acesso antes da publicação oficial.</p>
-
-    <div class="exclusivo">
-      <div><b>Não está à venda em nenhum outro lugar</b><span>Nem em loja, nem em site, nem em plataforma.</span></div>
-      <div><b>Esta página não existe fora desta jornada</b><span>Ela não é anunciada e não aparece em busca.</span></div>
-      <div><b>Você lê antes da publicação</b><span>Não depois de todo mundo. Antes.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- 11. A OFERTA -->
+<!-- 10. A OFERTA + STACK -->
 <section class="papel" id="oferta">
   <div class="wrap rv oferta">
     <figure class="capa" style="margin-top:0">
@@ -454,23 +403,30 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:9px;line-height:1.55
       </picture>
     </figure>
 
-    <h2 style="margin-top:30px">A Caverna Interior</h2>
-    <p class="formato">Ebook digital completo</p>
-    <span class="selo-antecipado">Acesso antecipado &nbsp;·&nbsp; Fora do catálogo</span>
+    <h2 style="margin-top:30px">O que você recebe hoje</h2>
+
+    <div class="stack" style="text-align:left">
+      <div class="item"><span class="check">&#10003;</span><div><b>A Caverna Interior</b><span>O livro completo com o método das 8 ferramentas.</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>Guia de Emergência 72 Horas</b><span>Os primeiros passos para quem está no fundo agora.</span><span class="tag">Bônus incluso</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>Manual do Perdão em 7 Passos</b><span>Para soltar o peso que trava a reconstrução.</span><span class="tag">Bônus incluso</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>Mapa da Identidade</b><span>Reconstruir quem você é, por baixo do que caiu.</span><span class="tag">Bônus incluso</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>Diário de Reconstrução</b><span>Onde você aplica o método no seu dia, uma manhã de cada vez.</span><span class="tag">Bônus incluso</span></div></div>
+    </div>
 
     <p class="preco">R$67</p>
-    <p class="pagamento">Pagamento único</p>
+    <p class="pagamento">Pagamento único &nbsp;·&nbsp; Acesso imediato</p>
 
-    <div class="checkout-1click" id="comprar">
-      <div id="hotmart-sales-funnel"></div>
+    <a href="#" class="cta" data-buy>Quero o livro e os bônus <small>Acesso na hora, no seu celular</small></a>
+    <p class="micro">Ebook digital + 4 bônus &nbsp;·&nbsp; Pix ou cartão &nbsp;·&nbsp; Compra segura pela Hotmart</p>
+
+    <div class="garantia" style="margin-top:34px">
+      <p class="selo">7 dias de garantia</p>
+      <p style="margin-top:0">Leia o livro. Se ele não falar com você, é só pedir dentro de 7 dias e devolvemos 100% do valor. Sem burocracia, sem perguntas.</p>
     </div>
-    <p class="micro">Ebook digital completo &nbsp;·&nbsp; Pagamento único &nbsp;·&nbsp; Acesso antecipado</p>
-
-    <button class="recusa" data-recusa type="button">Não, obrigado. Prefiro encerrar minha jornada aqui.</button>
   </div>
 </section>
 
-<!-- 13. FECHAMENTO -->
+<!-- 11. FECHAMENTO -->
 <section class="carvao" style="padding-top:0">
   <div class="wrap rv" style="text-align:center">
     <p class="titulo-livro" style="font-size:clamp(32px,9vw,56px);line-height:1.04">A caverna não é castigo.<br>É convite.</p>
@@ -486,33 +442,35 @@ footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:9px;line-height:1.55
     </figure>
 
     <h2 style="margin-top:26px;font-size:clamp(24px,5.6vw,29px)">A Caverna Interior</h2>
-    <p class="fraco" style="margin-top:8px">Ebook digital completo</p>
+    <p class="fraco" style="margin-top:8px">Ebook digital completo + 4 bônus</p>
     <p class="preco">R$67</p>
-    <p class="pagamento">Pagamento único &nbsp;·&nbsp; Acesso antecipado</p>
-    <p class="fraco" style="margin-top:18px;font-size:19px">Enquanto o livro não for publicado, esta é a única porta.</p>
+    <p class="pagamento">Pagamento único &nbsp;·&nbsp; Acesso imediato</p>
 
-    <a href="#comprar" class="cta" data-rolar>Quero entrar na caverna</a>
-    <p class="micro">Ebook digital completo &nbsp;·&nbsp; Pagamento único &nbsp;·&nbsp; Acesso antecipado</p>
-
-    <button class="recusa" data-recusa type="button">Não, obrigado. Prefiro encerrar minha jornada aqui.</button>
+    <a href="#" class="cta" data-buy>Quero começar minha reconstrução</a>
+    <p class="micro">Pix ou cartão &nbsp;·&nbsp; 7 dias de garantia</p>
   </div>
 </section>
 
+<footer>
+  <div class="wrap">
+    <p>Histórias sobre reconstrução, esperança e propósito.</p>
+    <p><a href="../privacidade/">Política de Privacidade</a> &nbsp;·&nbsp; <a href="../termos/">Termos de Uso</a></p>
+    <p>Copyright &copy; 2026 &middot; J. C. Dias &middot; Todos os direitos reservados.</p>
+  </div>
+</footer>
+
 <div id="sticky">
   <span class="txt">A Caverna Interior<br><b>R$67</b></span>
-  <a href="#comprar" data-rolar>Entrar</a>
+  <a href="#" data-buy>Comprar</a>
 </div>
 
 <script>
-/* ---- CONFIGURAÇÃO: só estas quatro linhas mudam ---- */
-var PIXEL_ID    = '2122287675194601';            // dataset Funil de Vendas V1 - Brasil
-var CHECKOUT    = '';            // PENDENTE: checkout 1-CLICK de A Caverna Interior, R$67
-var VSL_EMBED   = '';            // PENDENTE: URL de embed da VSL
-var ROTA_ACEITE = '../final/';      // encerramento da jornada, para quem comprou
-var ROTA_RECUSA = '../obrigado/';   // página universal de obrigado
-/* --------------------------------------------------- */
+/* ---- CONFIGURAÇÃO ---- */
+var PIXEL_ID = '2122287675194601';   // dataset Funil de Vendas V1 - Brasil
+var CHECKOUT = '';                   // PENDENTE: link de checkout normal da Caverna R$67 (pay.hotmart.com/...)
+/* --------------------- */
 
-var FUNNEL = 'rcp_interativo';
+var FUNNEL = 'caverna';
 var PRODUTO = { id:'caverna_ebook', nome:'A Caverna Interior', valor:67, moeda:'BRL' };
 
 (function(){
@@ -531,7 +489,6 @@ var PRODUTO = { id:'caverna_ebook', nome:'A Caverna Interior', valor:67, moeda:'
 function evento(nome, dados){
   var carga = Object.assign({funnel:FUNNEL, step:'caverna'}, dados||{});
   if(window.fbq) fbq('trackCustom', nome, carga);
-  if(window.dataLayer) window.dataLayer.push(Object.assign({event:nome}, carga));
 }
 function comParametros(url){
   var atuais = new URLSearchParams(window.location.search);
@@ -541,94 +498,29 @@ function comParametros(url){
   return d.toString();
 }
 
-/* ---------- 1-CLICK ----------
-   O checkout de 1 clique reaproveita o cartão da compra anterior. Ele precisa receber
-   o identificador da transação que a plataforma devolve no retorno do checkout anterior.
-   Esta página já repassa TODOS os parâmetros da URL adiante, então basta que o retorno
-   do checkout anterior traga o identificador na URL. Os nomes abaixo cobrem os mais comuns.
-   Se a sua plataforma usar outro nome, acrescente na lista. */
-var CHAVES_1CLICK = ['transaction','transaction_id','hottok','tid','order_id','purchase_id','sck','src'];
-
-function comParametros1Clique(url){
-  var atuais = new URLSearchParams(window.location.search);
-  atuais.set('funnel', FUNNEL);
-  var d = new URL(url, window.location.href);
-  atuais.forEach(function(v,k){ if(!d.searchParams.has(k)) d.searchParams.set(k,v); });
-  /* guarda a transação para as etapas seguintes, caso a pessoa recarregue a página */
-  try{
-    CHAVES_1CLICK.forEach(function(k){
-      var v = atuais.get(k);
-      if(v) sessionStorage.setItem('jcd_' + k, v);
-      else if(sessionStorage.getItem('jcd_' + k)) d.searchParams.set(k, sessionStorage.getItem('jcd_' + k));
-    });
-  }catch(e){}
-  return d.toString();
+/* ---------- botões de compra ----------
+   [data-buy]  = vai direto para o checkout (dispara InitiateCheckout)
+   [data-rolar]= rola até a oferta                                        */
+function irParaCheckout(origem){
+  if(window.fbq) fbq('track','InitiateCheckout',{content_ids:[PRODUTO.id],content_name:PRODUTO.nome,
+    value:PRODUTO.valor,currency:PRODUTO.moeda});
+  evento('Caverna_CTA_Click',{cta:origem||'oferta'});
+  if(CHECKOUT){ window.location.href = comParametros(CHECKOUT); }
+  else { var alvo=document.getElementById('oferta'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'center'}); }
 }
-
-evento('Caverna_Offer_View');
-
-/* ---------- VSL: o vídeo só carrega no clique ---------- */
-/* sem vídeo publicado, o bloco inteiro não existe: nada de player quebrado */
-var secaoVsl = document.getElementById('secao-vsl');
-if(VSL_EMBED) secaoVsl.style.display = '';
-
-var player = document.getElementById('player');
-var aberta = false;
-function abrirVSL(){
-  if(aberta || !VSL_EMBED) return;
-  aberta = true;
-  evento('Caverna_VSL_Start');
-  player.innerHTML = '';
-  player.style.cursor = 'default';
-
-  if(/\.(mp4|webm|mov)(\?|$)/i.test(VSL_EMBED)){
-    var v = document.createElement('video');
-    v.src = VSL_EMBED; v.controls = true; v.playsInline = true; v.preload = 'metadata';
-    player.appendChild(v);
-    var marcos = {25:false,50:false,75:false};
-    v.addEventListener('timeupdate', function(){
-      if(!v.duration) return;
-      var pct = v.currentTime / v.duration * 100;
-      [25,50,75].forEach(function(m){ if(!marcos[m] && pct >= m){ marcos[m]=true; evento('Caverna_VSL_'+m); } });
-    });
-    v.addEventListener('ended', function(){ evento('Caverna_VSL_Complete'); });
-    v.play().catch(function(){});
-  } else {
-    var f = document.createElement('iframe');
-    f.src = VSL_EMBED + (VSL_EMBED.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
-    f.allow = 'autoplay; fullscreen; picture-in-picture';
-    f.allowFullscreen = true;
-    player.appendChild(f);
-    /* 25/50/75/Complete de player externo dependem da API da plataforma.
-       Assim que a VSL estiver definida, ligar os marcos aqui. */
-  }
-}
-player.addEventListener('click', abrirVSL);
-player.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); abrirVSL(); } });
-document.getElementById('cta-vsl').addEventListener('click', function(){
-  abrirVSL();
-  player.scrollIntoView({behavior:'smooth', block:'center'});
+document.querySelectorAll('[data-buy]').forEach(function(el){
+  if(CHECKOUT){ el.setAttribute('href', CHECKOUT); }
+  el.addEventListener('click', function(e){ e.preventDefault(); irParaCheckout(el.closest('#sticky')?'sticky':'oferta'); });
 });
-
-/* ---------- CTAs: rolam até o widget de 1 clique da Hotmart ---------- */
 document.querySelectorAll('[data-rolar]').forEach(function(el){
   el.addEventListener('click', function(e){
     e.preventDefault();
-    evento('Caverna_CTA_Click', {cta: el.className.indexOf('cta') > -1 ? 'final' : 'sticky'});
-    var alvo = document.getElementById('comprar');
-    if(alvo) alvo.scrollIntoView({behavior:'smooth', block:'center'});
+    evento('Caverna_CTA_Scroll');
+    var alvo=document.getElementById('oferta'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'center'});
   });
 });
 
-/* ---------- recusa: encerra a jornada, sem modal ---------- */
-document.querySelectorAll('[data-recusa]').forEach(function(el){
-  el.addEventListener('click', function(){
-    evento('Caverna_Upsell_Declined');
-    window.location.href = comParametros(ROTA_RECUSA);
-  });
-});
-
-/* ---------- observadores ---------- */
+/* ---------- reveal + sticky + evento de método ---------- */
 if('IntersectionObserver' in window){
   var obs = new IntersectionObserver(function(ent){
     ent.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('vis'); obs.unobserve(en.target); } });
@@ -640,26 +532,15 @@ if('IntersectionObserver' in window){
   },{threshold:.25});
   obsMetodo.observe(document.getElementById('metodo'));
 
-  /* o sticky só aparece depois que a oferta já foi apresentada uma vez */
   var vistaOferta = false;
   new IntersectionObserver(function(e){
     var en = e[0];
-    if(en.isIntersecting){ if(!vistaOferta){ vistaOferta = true; evento('Caverna_Offer_Section_View'); } return; }
+    if(en.isIntersecting){ if(!vistaOferta){ vistaOferta = true; evento('Caverna_Offer_View'); } return; }
     if(vistaOferta && en.boundingClientRect.bottom < 0) document.getElementById('sticky').classList.add('on');
   },{threshold:0}).observe(document.getElementById('oferta'));
 } else {
   document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('vis'); });
 }
-</script>
-
-<!-- HOTMART - Sales Funnel Widget -->
-<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
-<script>
-  checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
-  /* O widget só exibe o botão de compra para quem chega vindo de uma compra
-     em andamento na Hotmart. Acessado direto, ele mostra o aviso da própria
-     Hotmart. É o comportamento correto: no funil real a pessoa sempre chega
-     de uma compra. */
 </script>
 </body>
 </html>
