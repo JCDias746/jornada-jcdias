@@ -29,7 +29,7 @@
   --head:'Oswald',Impact,sans-serif;
   --corpo:'EB Garamond',Georgia,serif;
   --pad:24px;
-  --gap:44px;
+  --gap:34px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
@@ -71,10 +71,10 @@ p{margin-top:12px}
 /* a ponte: escuridão e silêncio antes de a caverna aparecer */
 .ponte{
   position:relative;background:#080807;
-  padding:52px 0 0;min-height:92vh;
+  padding:44px 0 0;min-height:auto;
   display:flex;flex-direction:column;justify-content:center;
 }
-.ponte .wrap{position:relative;z-index:2;padding-bottom:64px}
+.ponte .wrap{position:relative;z-index:2;padding-bottom:28px}
 .ponte-olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--bronze);margin-bottom:26px}
 .ponte-h1{font-family:var(--corpo);font-weight:600;
@@ -103,8 +103,8 @@ p{margin-top:12px}
 }
 
 /* hero */
-header{position:relative;min-height:72vh;display:flex;align-items:flex-end;
-  padding:66px 0 38px;overflow:hidden;background:#0A0A09}
+header{position:relative;min-height:auto;display:flex;align-items:flex-end;
+  padding:48px 0 38px;overflow:hidden;background:#0A0A09}
 header .bg{position:absolute;inset:0;z-index:0}
 header .bg img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
 header .bg::after{content:"";position:absolute;inset:0;
@@ -188,8 +188,8 @@ ul.passos li::before{content:"";position:absolute;left:2px;top:22px;
 .papel .faq details .fa{color:var(--cinza-esc)}
 
 /* depoimentos */
-.depoimentos{margin-top:26px;display:flex;flex-direction:column;gap:18px}
-.depoimentos figure{border:1px solid rgba(155,123,80,.32);border-radius:12px;overflow:hidden;background:#fff;filter:drop-shadow(0 14px 30px rgba(33,31,27,.14))}
+.depoimentos{margin-top:26px;display:flex;flex-direction:column;gap:16px;align-items:center}
+.depoimentos figure{width:100%;max-width:340px;border:1px solid rgba(155,123,80,.32);border-radius:12px;overflow:hidden;background:#000;filter:drop-shadow(0 14px 30px rgba(33,31,27,.14))}
 .depoimentos img{width:100%;display:block}
 .zap{display:inline-flex;align-items:center;gap:9px;margin-top:22px;
   font-family:var(--head);font-weight:500;font-size:15px;letter-spacing:.05em;text-transform:uppercase;
@@ -240,7 +240,7 @@ footer a{color:var(--cinza)}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
 @media (min-width:760px){
-  :root{--pad:32px;--gap:64px}
+  :root{--pad:32px;--gap:46px}
   body{font-size:21.5px}
   figure.capa{max-width:250px}
   footer{padding-bottom:56px}
@@ -329,8 +329,8 @@ footer a{color:var(--cinza)}
   </div>
 </section>
 
-<!-- 4. O MÉTODO (intro) -->
-<section class="papel">
+<!-- 4. O MÉTODO + AS 8 FERRAMENTAS -->
+<section class="papel" id="metodo">
   <div class="wrap rv">
     <p class="olho">O método</p>
     <h2>Da queda nasceu um método</h2>
@@ -346,16 +346,9 @@ footer a{color:var(--cinza)}
     </div>
 
     <p style="margin-top:26px">A dor joga você no passado e no futuro. Mas o passado é memória, o futuro é hipótese, e o presente é o único lugar onde dá para agir. No livro, chamo isso de Armadilha do Pêndulo.</p>
-    <p style="margin-top:18px">A partir daí entram as oito ferramentas que me tiraram do escuro.</p>
-    <p class="frase" style="margin-top:26px">Este não é um método para controlar a vida. É um mapa para se reconstruir dentro dela.</p>
-  </div>
-</section>
+    <p class="frase" style="margin-top:24px">Este não é um método para controlar a vida. É um mapa para se reconstruir dentro dela.</p>
 
-<!-- 7. AS 8 FERRAMENTAS -->
-<section class="papel" id="metodo">
-  <div class="wrap rv">
-    <p class="olho">A estrutura do livro</p>
-    <h2>As oito ferramentas</h2>
+    <p style="margin-top:30px">Da queda vieram as oito ferramentas que me tiraram do escuro:</p>
 
     <div class="ferramentas">
       <div class="ferr"><span class="num">01</span><div><h3>Foco no agora</h3><p>Reconhecer o pêndulo e retornar ao território em que ainda existe ação possível.</p></div></div>
@@ -389,54 +382,6 @@ footer a{color:var(--cinza)}
   </div>
 </section>
 
-<!-- 8a. O QUE MUDA -->
-<section class="pedra" id="depois">
-  <div class="wrap rv">
-    <p class="olho">O que muda em você</p>
-    <h2>Depois deste livro, você começa a</h2>
-    <ul class="passos">
-      <li>voltar a viver no presente, em vez de no passado ou no medo do futuro;</li>
-      <li>reconstruir quem você é, e não só o que você tem;</li>
-      <li>criar estrutura nos dias em que a motivação some;</li>
-      <li>enxergar quem sempre te sustentou, e nunca apareceu;</li>
-      <li>reorganizar dinheiro, família e fé ao mesmo tempo;</li>
-      <li>voltar diferente das crises, e não só sobreviver a elas.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- 8b. PARA QUEM É -->
-<section class="papel" id="paraquem">
-  <div class="wrap rv">
-    <p class="olho">Para quem é</p>
-    <h2>Este livro fala com você se</h2>
-    <ul class="passos">
-      <li>você sente que caiu, ou que está caindo, e não sabe por onde começar a levantar;</li>
-      <li>você já tentou motivação e frase pronta, e nada segurou de pé;</li>
-      <li>você quer um método prático, não só mais uma história bonita;</li>
-      <li>você tem fé, e acredita que ninguém está perdido demais para recomeçar;</li>
-      <li>por fora está tudo em pé, mas por dentro você sabe que precisa se reconstruir.</li>
-    </ul>
-    <p class="fraco" style="margin-top:26px">Se você procura uma fórmula mágica que resolve tudo sem esforço, este livro não é para você. Ele é um mapa, e o caminho quem anda é você.</p>
-  </div>
-</section>
-
-<!-- 9. ORIGEM REAL -->
-<section class="pedra">
-  <div class="wrap rv">
-    <p class="olho">Origem</p>
-
-    <figure class="larga">
-      <picture>
-        <source srcset="../assets/img/caverna-manuscritos.webp" type="image/webp">
-        <img src="../assets/img/caverna-manuscritos.jpg" alt="Folhas manuscritas escritas à caneta dentro da cela" width="1100" height="557" loading="lazy">
-      </picture>
-    </figure>
-
-    <p class="frase" style="margin-top:26px">Este livro não nasceu numa sala de aula. Parte dele foi escrita à mão, dentro da cela, enquanto a reconstrução ainda acontecia.</p>
-  </div>
-</section>
-
 <!-- 9b. O AUTOR -->
 <section class="carvao" id="autor">
   <div class="wrap rv">
@@ -450,9 +395,8 @@ footer a{color:var(--cinza)}
       </picture>
     </figure>
 
-    <p style="margin-top:26px">J. C. Dias é diretor de operações, autor e estrategista. Construiu uma carreira de mais de vinte anos em posições de liderança, no Brasil e no Reino Unido, com dois diplomas de engenharia.</p>
-    <p>Depois de um acidente, passou 11 meses e 2 semanas privado da liberdade, longe da família. Foi ali, despido de tudo o que um dia o definiu, que ele começou a escrever, à mão, o método que virou este livro.</p>
-    <p class="frase" style="margin-top:26px">Ninguém me ensinou a recomeçar. Eu aprendi no fundo do poço, e foi isso que resolvi te entregar.</p>
+    <p style="margin-top:26px">J. C. Dias é diretor de operações, com mais de vinte anos de liderança no Brasil e no Reino Unido. Depois de um acidente, passou 11 meses e 2 semanas preso, longe da família, e escreveu à mão o método que virou este livro.</p>
+    <p class="frase" style="margin-top:22px">Ninguém me ensinou a recomeçar. Eu aprendi no fundo do poço.</p>
   </div>
 </section>
 
@@ -465,7 +409,6 @@ footer a{color:var(--cinza)}
     <div class="depoimentos">
       <figure><img src="../assets/depoimentos/zap-1.webp" alt="Mensagem de um leitor no WhatsApp" width="470" height="823" loading="lazy"></figure>
       <figure><img src="../assets/depoimentos/zap-2.webp" alt="Mensagem de uma leitora no WhatsApp" width="470" height="806" loading="lazy"></figure>
-      <figure><img src="../assets/depoimentos/zap-3.webp" alt="Mensagem de um leitor no WhatsApp" width="470" height="827" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -490,16 +433,8 @@ footer a{color:var(--cinza)}
         <p class="fa">Tem fé, mas não é um sermão. A fé é uma das oito ferramentas, ao lado de coisas práticas como rotina, disciplina e ambiente. Fala com quem tem fé e com quem só precisa de um chão para recomeçar.</p>
       </details>
       <details>
-        <summary>Funciona pra mim, se o meu problema é outro?</summary>
-        <p class="fa">O método nasceu de uma queda extrema, mas as ferramentas servem para qualquer caverna: um luto, um divórcio, uma demissão, uma depressão, uma fase em que tudo parece pesado demais.</p>
-      </details>
-      <details>
         <summary>E se eu não gostar?</summary>
         <p class="fa">Você tem 7 dias de garantia. Se o livro não falar com você, é só pedir e devolvemos 100% do valor. Sem burocracia, sem perguntas.</p>
-      </details>
-      <details>
-        <summary>O pagamento é seguro?</summary>
-        <p class="fa">Sim. A compra é processada pela Hotmart, uma das maiores plataformas do Brasil, com Pix ou cartão.</p>
       </details>
     </div>
 
@@ -546,23 +481,10 @@ footer a{color:var(--cinza)}
   <div class="wrap rv" style="text-align:center">
     <p class="titulo-livro" style="font-size:clamp(32px,9vw,56px);line-height:1.04">A caverna não é castigo.<br>É convite.</p>
 
-    <p style="margin-top:30px">Talvez você não tenha escolhido entrar.</p>
-    <p>Mas ainda pode decidir o que vai carregar quando sair.</p>
+    <p style="margin-top:30px">Talvez você não tenha escolhido entrar. Mas ainda pode decidir o que vai carregar quando sair.</p>
     <p class="frase" style="margin-top:22px">Não se trata só de sair da caverna. É voltar dela diferente.</p>
 
-    <figure class="capa" style="margin-top:46px;max-width:174px">
-      <picture>
-        <source srcset="../assets/img/capa-caverna.webp" type="image/webp">
-        <img src="../assets/img/capa-caverna.jpg" alt="Capa do livro A Caverna Interior" width="620" height="930" loading="lazy">
-      </picture>
-    </figure>
-
-    <h2 style="margin-top:26px;font-size:clamp(24px,5.6vw,29px)">A Caverna Interior</h2>
-    <p class="fraco" style="margin-top:8px">Ebook digital completo + 4 bônus</p>
-    <p class="preco">R$67</p>
-    <p class="pagamento">Pagamento único &nbsp;·&nbsp; Acesso imediato</p>
-
-    <a href="#" class="cta" data-buy>Quero começar minha reconstrução</a>
+    <a href="#" class="cta" data-buy style="margin-top:36px">Quero começar minha reconstrução <small>Ebook + 4 bônus · R$67</small></a>
     <p class="micro">Pix ou cartão &nbsp;·&nbsp; 7 dias de garantia</p>
   </div>
 </section>
