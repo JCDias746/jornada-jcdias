@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Recomeçar com Propósito | J. C. Dias</title>
-<meta name="description" content="O livro que nasceu numa cela e fala com quem precisa recomeçar. Uma travessia curta e honesta, da queda de volta ao propósito. Ebook por R$17.">
-<meta property="og:title" content="Por onde se recomeça quando tudo desaba?">
-<meta property="og:description" content="O livro que nasceu numa cela e fala com quem precisa recomeçar. Ebook por R$17, acesso imediato.">
+<meta name="description" content="Um livro escrito à mão dentro de uma prisão, por quem perdeu tudo e voltou. Para quem precisa recomeçar. Ebook por R$27, acesso imediato.">
+<meta property="og:title" content="Este livro foi escrito na prisão. Fala com quem precisa recomeçar.">
+<meta property="og:description" content="Perdi tudo numa madrugada e reconstruí a vida do fundo de uma cela. Escrevi este livro para você não atravessar isso sozinho.">
 <meta property="og:type" content="book">
 <meta property="og:image" content="https://jornada.jcdias.com/assets/img/capa-rcp.jpg">
 
@@ -59,24 +59,19 @@ h2{font-family:var(--head);font-weight:500;text-transform:uppercase;
 h3{font-family:var(--head);font-weight:500;font-size:17px;letter-spacing:.13em;
   text-transform:uppercase}
 p{margin-top:12px}
-.oferta .condicoes p + p{margin-top:0}
 .titulo-livro{font-family:var(--head);font-weight:600;text-transform:uppercase;
   font-size:clamp(30px,7.4vw,45px);line-height:1.02;letter-spacing:.01em;color:var(--luz)}
-.subtitulo{font-family:var(--corpo);font-weight:500;font-size:clamp(21px,4.8vw,25px);
-  line-height:1.38;color:var(--claro);margin-top:12px}
 .frase{font-family:var(--corpo);font-weight:600;
   font-size:clamp(26px,6vw,33px);line-height:1.3}
 .luzt{color:var(--luz)}
 
-/* faixa informativa */
-.faixa-exclusiva{
-  position:relative;z-index:3;background:var(--luz);color:#15130F;
-  text-align:center;padding:12px 18px calc(12px + env(safe-area-inset-top));
-}
-.faixa-exclusiva span{
-  font-family:var(--head);font-weight:600;font-size:14px;letter-spacing:.13em;
-  text-transform:uppercase;
-}
+/* selo escrito na prisao */
+.selo-prisao{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;
+  font-family:var(--head);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--luz);border:1px solid rgba(213,184,121,.55);border-radius:24px;padding:8px 15px;margin-bottom:20px}
+.selo-prisao::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--luz)}
+.sublinha{font-family:var(--corpo);font-weight:500;font-size:clamp(19px,4.4vw,22px);
+  line-height:1.42;color:var(--claro);margin-top:16px}
 
 /* hero */
 header{position:relative;min-height:92vh;display:flex;align-items:stretch;
@@ -84,7 +79,7 @@ header{position:relative;min-height:92vh;display:flex;align-items:stretch;
 header .bg{position:absolute;inset:0;z-index:0}
 header .bg img{width:100%;height:100%;object-fit:cover;object-position:center 32%}
 header .bg::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(10,10,9,.40) 0%,rgba(10,10,9,.48) 28%,rgba(12,12,10,.76) 58%,rgba(17,17,15,.96) 88%,rgba(17,17,15,1) 100%)}
+  background:linear-gradient(180deg,rgba(10,10,9,.42) 0%,rgba(10,10,9,.5) 28%,rgba(12,12,10,.78) 58%,rgba(17,17,15,.96) 88%,rgba(17,17,15,1) 100%)}
 header .wrap{position:relative;z-index:1;display:flex;flex-direction:column;width:100%}
 .marca-topo img{width:100%;height:auto;display:block}
 
@@ -127,6 +122,16 @@ ul.passos li::before{content:"";position:absolute;left:2px;top:22px;
   text-transform:uppercase;color:var(--escuro-txt)}
 .bump span{display:block;margin-top:5px;font-size:18px;line-height:1.4;color:var(--cinza-esc)}
 
+/* bloco de preco destacado */
+.precocard{margin:28px auto 0;max-width:440px;background:#15130F;
+  border:1px solid rgba(213,184,121,.45);border-radius:14px;padding:24px 22px 26px;
+  box-shadow:0 20px 44px rgba(0,0,0,.22)}
+.precocard .hoje{font-family:var(--head);font-weight:500;font-size:13px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--luz)}
+.precocard .num{font-family:var(--head);font-weight:600;font-size:74px;line-height:.98;color:var(--claro);margin-top:8px}
+.precocard .cond{font-family:var(--head);font-weight:400;font-size:13.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--cinza);margin-top:8px}
+
 /* garantia */
 .garantia{border:1px solid rgba(155,123,80,.4);border-radius:10px;padding:26px 22px;margin-top:8px;text-align:center}
 .garantia .selo{font-family:var(--head);font-weight:600;font-size:15px;letter-spacing:.13em;
@@ -158,14 +163,9 @@ ul.passos li::before{content:"";position:absolute;left:2px;top:22px;
 
 /* oferta */
 .oferta{text-align:center}
-.oferta .formato{font-size:21.5px;color:var(--cinza-esc);margin-top:10px}
-.preco{font-family:var(--head);font-weight:600;font-size:59px;line-height:1;margin-top:20px}
-.pagamento{font-family:var(--head);font-weight:400;font-size:14.5px;letter-spacing:.11em;
-  text-transform:uppercase;color:var(--cinza-esc);margin-top:10px}
-.carvao .pagamento,.pedra .pagamento{color:var(--cinza)}
 
 .cta{
-  display:block;width:100%;max-width:460px;margin:26px auto 0;min-height:62px;
+  display:block;width:100%;max-width:460px;margin:24px auto 0;min-height:62px;
   background:linear-gradient(180deg,#e6c98a,#c8a24f);color:#1A1813;border:0;border-radius:7px;
   font-family:var(--head);font-weight:600;font-size:19px;letter-spacing:.04em;
   text-transform:uppercase;text-align:center;text-decoration:none;
@@ -210,7 +210,7 @@ footer a{color:var(--cinza)}
 </head>
 <body>
 
-<!-- HERO (imagem + mínimo texto) -->
+<!-- HERO -->
 <header id="hero">
   <div class="bg">
     <picture>
@@ -220,10 +220,11 @@ footer a{color:var(--cinza)}
   </div>
 
   <div class="wrap">
-    <div class="marca-topo" style="max-width:116px;margin:0 0 auto"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
+    <div class="marca-topo" style="max-width:116px;margin:0 0 22px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
 
-    <p class="olho">Recomeçar com Propósito &nbsp;·&nbsp; J. C. Dias</p>
-    <h1>Por onde se recomeça<br>quando tudo desaba?</h1>
+    <span class="selo-prisao">Escrito na prisão</span>
+    <h1>Por onde se recomeça quando tudo desaba?</h1>
+    <p class="sublinha">Escrevi este livro à mão, dentro de uma cela, no ano em que perdi tudo. Ele é pra você, se a vida também te derrubou.</p>
 
     <figure class="capa" style="max-width:158px;margin:26px 0 0">
       <picture>
@@ -232,7 +233,7 @@ footer a{color:var(--cinza)}
       </picture>
     </figure>
 
-    <a href="#oferta" class="cta" data-rolar style="margin:24px 0 0">Quero recomeçar <small>Ebook · R$17 · acesso na hora</small></a>
+    <a href="#oferta" class="cta" data-rolar style="margin:24px 0 0">Quero começar <small>Ebook · R$27 · acesso na hora</small></a>
   </div>
 </header>
 
@@ -240,15 +241,15 @@ footer a{color:var(--cinza)}
 <section class="carvao">
   <div class="wrap rv">
     <p class="olho">A sua cela</p>
-    <h2>Nem toda prisão tem grades</h2>
-    <p style="margin-top:22px">Algumas prisões são de concreto. A maioria é invisível.</p>
+    <h2>Nem toda cela tem grades</h2>
+    <p style="margin-top:22px">Eu descobri isso do pior jeito possível. Mas tem prisão que ninguém enxerga:</p>
     <ul class="passos">
-      <li>uma culpa que não passa;</li>
-      <li>a vergonha de um erro que você não consegue esquecer;</li>
-      <li>um passado que insiste em puxar você para trás;</li>
-      <li>um recomeço que você adia porque não sabe por onde começar.</li>
+      <li>a culpa que aperta o peito toda vez que você deita a cabeça no travesseiro;</li>
+      <li>a vergonha de um erro que você acha que virou o seu nome;</li>
+      <li>um passado que não solta o seu pé;</li>
+      <li>um recomeço que você adia porque, no fundo, acha que não merece.</li>
     </ul>
-    <p class="frase" style="margin-top:30px">Há gente solta por fora e acorrentada por dentro.</p>
+    <p class="frase" style="margin-top:30px">Tem gente solta lá fora e presa por dentro.</p>
   </div>
 </section>
 
@@ -256,10 +257,10 @@ footer a{color:var(--cinza)}
 <section class="pedra" id="queda">
   <div class="wrap rv">
     <p class="olho">A queda</p>
-    <h2>Eu sei como é chegar ao fundo</h2>
-    <p style="margin-top:22px">Numa madrugada, seis segundos de distração bastaram. Atravessei uma linha invisível e fui lançado a uma cela. Perdi o nome, a liberdade, o chão.</p>
-    <p style="margin-top:18px">Na pior noite, quando pensei em desistir, ouvi por dentro a voz da minha filha: "Pai, não desiste. Nunca desiste."</p>
-    <p class="frase" style="margin-top:26px">Naquele instante escolhi ficar. E ali a reconstrução começou.</p>
+    <h2>Eu sei o que é perder tudo</h2>
+    <p style="margin-top:22px">Eu tinha o que chamam de vida pronta. Família, casa, uma carreira que levei mais de vinte anos pra construir. Numa madrugada, seis segundos bastaram pra tirar tudo. Perdi meu nome. Virei um número, numa cela, longe dos meus filhos.</p>
+    <p style="margin-top:18px">Na pior noite, quando pensei que não valia mais a pena continuar, ouvi por dentro a voz da minha filha: "Pai, não desiste. Nunca desiste."</p>
+    <p class="frase" style="margin-top:26px">Respondi baixinho: eu vou ficar. E foi ali, no chão daquela cela, que tudo recomeçou.</p>
   </div>
 </section>
 
@@ -267,19 +268,19 @@ footer a{color:var(--cinza)}
 <section class="papel" id="virada">
   <div class="wrap rv">
     <p class="olho">A virada</p>
-    <h2>A liberdade não começou quando a porta abriu</h2>
-    <p style="margin-top:22px">No fundo daquela cela, entendi uma chave que mudou tudo: a liberdade não começa quando a porta se abre. Ela começa quando você para de fugir de si mesmo.</p>
-    <p style="margin-top:18px">Abri a Bíblia, não por devoção, mas como quem procura um mapa no meio dos escombros. E entre versículos e lágrimas, alguma coisa acendeu.</p>
+    <h2>A liberdade não veio quando a porta abriu</h2>
+    <p style="margin-top:22px">Demorei pra entender uma coisa que virou a chave de tudo: a liberdade não começa quando a porta se abre. Ela começa quando você para de fugir de si mesmo.</p>
+    <p style="margin-top:18px">Um dia, um senhor me olhou fundo e disse: "Você está no fogo. Mas, quando passar, vai ver que ele não te queimou. Ele te forjou." Naquela cela, abri a Bíblia, não por religião, mas como quem procura um mapa no meio dos escombros. E alguma coisa acendeu.</p>
     <p class="frase" style="margin-top:26px">A dor me quebrou. A fé me reconstruiu. O propósito me trouxe de volta.</p>
   </div>
 </section>
 
-<!-- 5. O LIVRO (8 capítulos, escaneável) -->
+<!-- 5. O LIVRO -->
 <section class="carvao" id="livro">
   <div class="wrap rv">
     <p class="olho">O livro</p>
-    <h2>Uma travessia, em oito passos</h2>
-    <p style="margin-top:22px">Recomeçar com Propósito é curto, direto e feito para ser lido num fôlego. Cada capítulo é um degrau para fora do fundo:</p>
+    <h2>O que você vai encontrar aqui dentro</h2>
+    <p style="margin-top:22px">Não é teoria. É o que eu vivi, escrito capítulo por capítulo dentro daquela cela, pra você não ter que atravessar isso sozinho. É curto e direto, dá pra ler num fim de semana:</p>
 
     <div class="tools8">
       <div class="t"><span class="n">01</span><span class="nm">A vergonha que paralisa</span></div>
@@ -298,7 +299,7 @@ footer a{color:var(--cinza)}
 <section class="carvao" id="autor" style="padding-top:0">
   <div class="wrap rv">
     <p class="olho">O autor</p>
-    <h2>Quem escreveu este livro</h2>
+    <h2>Quem está falando com você</h2>
 
     <figure class="autor">
       <picture>
@@ -307,7 +308,7 @@ footer a{color:var(--cinza)}
       </picture>
     </figure>
 
-    <p style="margin-top:26px">J. C. Dias é diretor de operações, com mais de vinte anos de liderança no Brasil e no Reino Unido. Depois de um acidente, passou 11 meses e 2 semanas preso, longe da família. Foi ali, à mão, que escreveu este livro.</p>
+    <p style="margin-top:26px">Meu nome é J. C. Dias. Por muito tempo eu fui o cara que, de fora, parecia ter dado certo. Depois virei o cara que perdeu tudo e teve que reaprender a viver dentro de uma cela, uma página de cada vez. Não escrevo como quem sabe das coisas. Escrevo como quem esteve no fundo e conseguiu voltar.</p>
     <p class="frase" style="margin-top:22px">Ninguém me ensinou a recomeçar. Eu aprendi na pele, na dor e na fé.</p>
   </div>
 </section>
@@ -316,11 +317,11 @@ footer a{color:var(--cinza)}
 <section class="papel" id="prova">
   <div class="wrap rv">
     <p class="olho">Mensagens reais</p>
-    <h2>O que dizem quem já leu J. C. Dias</h2>
-    <p class="fraco" style="margin-top:14px">Estas mensagens são de leitores dos meus livros anteriores. Recomeçar com Propósito nasce da mesma história.</p>
+    <h2>O que me mandam depois de ler</h2>
+    <p class="fraco" style="margin-top:14px">São mensagens de leitores dos meus livros anteriores. Recomeçar com Propósito nasce da mesma história, da mesma cela.</p>
     <div class="depoimentos">
-      <figure><img src="../assets/depoimentos/zap-1.webp" alt="Mensagem de um leitor no WhatsApp" width="470" height="823" loading="lazy"></figure>
-      <figure><img src="../assets/depoimentos/zap-2.webp" alt="Mensagem de uma leitora no WhatsApp" width="470" height="806" loading="lazy"></figure>
+      <figure><img src="../assets/depoimentos/zap-1.webp" alt="Mensagem de um leitor no WhatsApp" width="470" height="801" loading="lazy"></figure>
+      <figure><img src="../assets/depoimentos/zap-2.webp" alt="Mensagem de uma leitora no WhatsApp" width="470" height="784" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -343,6 +344,10 @@ footer a{color:var(--cinza)}
       <details>
         <summary>Dá para ouvir em vez de ler?</summary>
         <p class="fa">Dá. No momento do pagamento você pode incluir o audiobook do livro por um valor pequeno a mais, para ouvir no carro, na caminhada ou antes de dormir.</p>
+      </details>
+      <details>
+        <summary>Foi mesmo escrito na prisão?</summary>
+        <p class="fa">Foi. Escrevi este livro à mão, dentro de uma cela, no período em que estive preso longe da minha família. Cada capítulo nasceu ali.</p>
       </details>
       <details>
         <summary>É um livro religioso?</summary>
@@ -368,13 +373,13 @@ footer a{color:var(--cinza)}
       </picture>
     </figure>
 
-    <h2 style="margin-top:30px">Comece hoje por R$17</h2>
-    <p class="fraco" style="margin-top:12px">Menos que um lanche. O primeiro passo de uma travessia:</p>
+    <h2 style="margin-top:30px">Comece hoje mesmo</h2>
+    <p class="fraco" style="margin-top:12px">Leva você da queda de volta ao propósito. É isto que chega no seu e-mail:</p>
 
     <div class="stack" style="text-align:left">
-      <div class="item"><span class="check">&#10003;</span><div><b>Recomeçar com Propósito</b><span>O livro completo, os oito capítulos, do fundo de volta ao propósito.</span></div></div>
-      <div class="item"><span class="check">&#10003;</span><div><b>Leia em qualquer aparelho</b><span>Celular, tablet, computador ou Kindle. Onde estiver.</span></div></div>
-      <div class="item"><span class="check">&#10003;</span><div><b>Acesso imediato e para sempre</b><span>Chega no seu e-mail em minutos. É seu, sem prazo para acabar.</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>Recomeçar com Propósito</b><span>O livro inteiro, os oito capítulos, escritos dentro da cela.</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>Leia onde você estiver</b><span>Celular, tablet, computador ou Kindle. Sem app complicado.</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>É seu para sempre</b><span>Chega em minutos e fica com você, sem prazo para acabar.</span></div></div>
     </div>
 
     <div class="bump">
@@ -385,10 +390,12 @@ footer a{color:var(--cinza)}
       </div>
     </div>
 
-    <p class="preco">R$17</p>
-    <p class="pagamento">Pagamento único &nbsp;·&nbsp; Acesso imediato</p>
-
-    <a href="#" class="cta" data-buy>Quero o livro agora <small>Acesso na hora, no seu celular</small></a>
+    <div class="precocard">
+      <p class="hoje">O livro completo, hoje por</p>
+      <p class="num">R$27</p>
+      <p class="cond">Pagamento único &nbsp;·&nbsp; Acesso imediato</p>
+      <a href="#" class="cta" data-buy style="margin-top:20px">Quero o livro agora <small>Acesso na hora, no seu celular</small></a>
+    </div>
     <p class="micro">Ebook digital &nbsp;·&nbsp; Pix ou cartão &nbsp;·&nbsp; Compra segura pela Hotmart</p>
 
     <div class="garantia" style="margin-top:34px">
@@ -406,7 +413,7 @@ footer a{color:var(--cinza)}
     <p style="margin-top:30px">Este livro começou na minha cela. Mas foi escrito para encontrar você.</p>
     <p class="frase" style="margin-top:22px">A missão continua em você.</p>
 
-    <a href="#" class="cta" data-buy style="margin-top:36px">Quero recomeçar hoje <small>Ebook · R$17 · acesso na hora</small></a>
+    <a href="#" class="cta" data-buy style="margin-top:36px">Quero recomeçar hoje <small>Ebook · R$27 · acesso na hora</small></a>
     <p class="micro">Pix ou cartão &nbsp;·&nbsp; 7 dias de garantia</p>
   </div>
 </section>
@@ -420,18 +427,18 @@ footer a{color:var(--cinza)}
 </footer>
 
 <div id="sticky">
-  <span class="txt">Recomeçar com Propósito<br><b>R$17</b></span>
+  <span class="txt">Recomeçar com Propósito<br><b>R$27</b></span>
   <a href="#" data-buy>Comprar</a>
 </div>
 
 <script>
 /* ---- CONFIGURAÇÃO ---- */
 var PIXEL_ID = '2122287675194601';   // dataset Funil de Vendas V1 - Brasil
-var CHECKOUT = 'https://pay.hotmart.com/P107273521S?checkoutMode=10';   // RCP tripwire. CONFIRMAR preco R$17 + order bump audiobook na Hotmart
+var CHECKOUT = 'https://pay.hotmart.com/P107273521S?checkoutMode=10';   // RCP tripwire R$27. Configurar order bump audiobook na Hotmart
 /* --------------------- */
 
 var FUNNEL = 'recomecar';
-var PRODUTO = { id:'rcp_ebook', nome:'Recomecar com Proposito', valor:17, moeda:'BRL' };
+var PRODUTO = { id:'rcp_ebook', nome:'Recomecar com Proposito', valor:27, moeda:'BRL' };
 
 (function(){
   if(!PIXEL_ID) return;
@@ -480,21 +487,25 @@ document.querySelectorAll('[data-rolar]').forEach(function(el){
   });
 });
 
-/* ---------- reveal + sticky ---------- */
+/* ---------- reveal + sticky (CTA sempre à mostra no mobile depois do herói) ---------- */
 if('IntersectionObserver' in window){
   var obs = new IntersectionObserver(function(ent){
     ent.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('vis'); obs.unobserve(en.target); } });
   },{rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
 
+  var sticky = document.getElementById('sticky');
+  new IntersectionObserver(function(e){
+    sticky.classList.toggle('on', !e[0].isIntersecting);
+  },{threshold:0}).observe(document.getElementById('hero'));
+
   var vistaOferta = false;
   new IntersectionObserver(function(e){
-    var en = e[0];
-    if(en.isIntersecting){ if(!vistaOferta){ vistaOferta = true; evento('Recomecar_Offer_View'); } return; }
-    if(vistaOferta && en.boundingClientRect.bottom < 0) document.getElementById('sticky').classList.add('on');
-  },{threshold:0}).observe(document.getElementById('oferta'));
+    if(e[0].isIntersecting && !vistaOferta){ vistaOferta = true; evento('Recomecar_Offer_View'); }
+  },{threshold:.2}).observe(document.getElementById('oferta'));
 } else {
   document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('vis'); });
+  document.getElementById('sticky').classList.add('on');
 }
 </script>
 </body>
