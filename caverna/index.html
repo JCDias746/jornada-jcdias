@@ -118,6 +118,8 @@ figure.capa img{border-radius:2px}
 .papel figure.capa{filter:drop-shadow(0 20px 34px rgba(33,31,27,.36))}
 figure.larga{margin:0 0 24px;border-radius:3px;overflow:hidden}
 figure.larga.fim{margin:30px 0 0}
+figure.autor{max-width:280px;margin:26px auto 0;border-radius:8px;overflow:hidden;border:1px solid rgba(213,184,121,.35);filter:drop-shadow(0 18px 34px rgba(0,0,0,.55))}
+figure.autor img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 
 /* a queda vira metodo */
 .viragem{display:flex;align-items:center;justify-content:center;gap:18px;
@@ -171,6 +173,19 @@ ul.passos li::before{content:"";position:absolute;left:2px;top:22px;
 .garantia{border:1px solid rgba(155,123,80,.4);border-radius:10px;padding:26px 22px;margin-top:8px;text-align:center}
 .garantia .selo{font-family:var(--head);font-weight:600;font-size:15px;letter-spacing:.13em;
   text-transform:uppercase;color:var(--luz);margin-bottom:12px}
+
+/* faq */
+.faq{margin-top:24px}
+.faq details{border-top:1px solid rgba(155,123,80,.26)}
+.faq details:last-of-type{border-bottom:1px solid rgba(155,123,80,.26)}
+.faq summary{list-style:none;cursor:pointer;padding:16px 34px 16px 0;position:relative;
+  font-family:var(--head);font-weight:500;font-size:18px;letter-spacing:.03em;text-transform:uppercase;color:var(--claro)}
+.papel .faq summary{color:var(--escuro-txt)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:12px;font-size:26px;line-height:1;color:var(--bronze);font-family:var(--head);font-weight:400}
+.faq details[open] summary::after{content:"\2212"}
+.faq details .fa{padding:0 0 18px;font-size:19px;line-height:1.5;color:var(--cinza);margin-top:0}
+.papel .faq details .fa{color:var(--cinza-esc)}
 
 /* oferta */
 .oferta{text-align:center}
@@ -260,7 +275,7 @@ footer a{color:var(--cinza)}
 
   <div class="wrap">
     <p class="olho">Memória real &nbsp;+&nbsp; método prático</p>
-    <h1>Da queda ao método:<br>como se reconstruir quando tudo desaba.</h1>
+    <h1>Você não precisa de motivação para recomeçar. Precisa de um método que funcione no fundo do poço.</h1>
 
     <p class="titulo-livro" style="margin-top:34px">A Caverna Interior</p>
     <p class="subtitulo">O método que aprendi no fundo do poço para reconstruir a mente, a alma e a vida.</p>
@@ -375,6 +390,36 @@ footer a{color:var(--cinza)}
   </div>
 </section>
 
+<!-- 8a. O QUE MUDA -->
+<section class="pedra" id="depois">
+  <div class="wrap rv">
+    <p class="olho">O que muda em você</p>
+    <h2>Depois deste livro, você começa a</h2>
+    <ul class="passos">
+      <li>ter estrutura nos dias em que a motivação simplesmente não vem;</li>
+      <li>sair do passado e do futuro e recuperar o presente, o único lugar onde dá para agir;</li>
+      <li>fazer as pazes com o que doeu, em vez de carregar isso como corrente;</li>
+      <li>reconstruir quem você é, por baixo de tudo o que caiu.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8b. PARA QUEM É -->
+<section class="papel" id="paraquem">
+  <div class="wrap rv">
+    <p class="olho">Para quem é</p>
+    <h2>Este livro fala com você se</h2>
+    <ul class="passos">
+      <li>você sente que caiu, ou que está caindo, e não sabe por onde começar a levantar;</li>
+      <li>você já tentou motivação e frase pronta, e nada segurou de pé;</li>
+      <li>você quer um método prático, não só mais uma história bonita;</li>
+      <li>você tem fé, e acredita que ninguém está perdido demais para recomeçar;</li>
+      <li>por fora está tudo em pé, mas por dentro você sabe que precisa se reconstruir.</li>
+    </ul>
+    <p class="fraco" style="margin-top:26px">Se você procura uma fórmula mágica que resolve tudo sem esforço, este livro não é para você. Ele é um mapa, e o caminho quem anda é você.</p>
+  </div>
+</section>
+
 <!-- 9. ORIGEM REAL -->
 <section class="pedra">
   <div class="wrap rv">
@@ -390,6 +435,60 @@ footer a{color:var(--cinza)}
 
     <p style="margin-top:30px">Parte do material que deu origem ao livro foi escrito dentro da prisão, à caneta, enquanto a reconstrução ainda acontecia.</p>
     <p class="frase" style="margin-top:26px">Eu não voltei à caverna para escrever este livro. Parte dele nasceu enquanto eu ainda estava lá dentro.</p>
+  </div>
+</section>
+
+<!-- 9b. O AUTOR -->
+<section class="carvao" id="autor">
+  <div class="wrap rv">
+    <p class="olho">O autor</p>
+    <h2>Quem escreveu este livro</h2>
+
+    <figure class="autor">
+      <picture>
+        <source srcset="../assets/img/autor.webp" type="image/webp">
+        <img src="../assets/img/autor.jpg" alt="J. C. Dias" width="900" height="917" loading="lazy">
+      </picture>
+    </figure>
+
+    <p style="margin-top:26px">J. C. Dias é diretor de operações, autor e estrategista. Construiu uma carreira de mais de vinte anos em posições de liderança, no Brasil e no Reino Unido, com dois diplomas de engenharia.</p>
+    <p>Depois de um acidente, passou 11 meses e 2 semanas privado da liberdade, longe da família. Foi ali, despido de tudo o que um dia o definiu, que ele começou a escrever, à mão, o método que virou este livro.</p>
+    <p class="frase" style="margin-top:26px">Ninguém me ensinou a recomeçar. Eu aprendi no fundo do poço, e foi isso que resolvi te entregar.</p>
+  </div>
+</section>
+
+<!-- 9c. FAQ -->
+<section class="pedra" id="faq">
+  <div class="wrap rv">
+    <p class="olho">Dúvidas</p>
+    <h2>Perguntas frequentes</h2>
+
+    <div class="faq">
+      <details>
+        <summary>É digital ou físico?</summary>
+        <p class="fa">É digital. Um ebook que você lê no celular, no computador, no tablet ou no Kindle. Não vai nada pelo correio.</p>
+      </details>
+      <details>
+        <summary>Como recebo depois de comprar?</summary>
+        <p class="fa">Na hora. Assim que o pagamento é confirmado, o acesso chega no seu e-mail. Em poucos minutos você já está lendo.</p>
+      </details>
+      <details>
+        <summary>É um livro religioso?</summary>
+        <p class="fa">Tem fé, mas não é um sermão. A fé é uma das oito ferramentas, ao lado de coisas práticas como rotina, disciplina e ambiente. Fala com quem tem fé e com quem só precisa de um chão para recomeçar.</p>
+      </details>
+      <details>
+        <summary>Funciona pra mim, se o meu problema é outro?</summary>
+        <p class="fa">O método nasceu de uma queda extrema, mas as ferramentas servem para qualquer caverna: um luto, um divórcio, uma demissão, uma depressão, uma fase em que tudo parece pesado demais.</p>
+      </details>
+      <details>
+        <summary>E se eu não gostar?</summary>
+        <p class="fa">Você tem 7 dias de garantia. Se o livro não falar com você, é só pedir e devolvemos 100% do valor. Sem burocracia, sem perguntas.</p>
+      </details>
+      <details>
+        <summary>O pagamento é seguro?</summary>
+        <p class="fa">Sim. A compra é processada pela Hotmart, uma das maiores plataformas do Brasil, com Pix ou cartão.</p>
+      </details>
+    </div>
   </div>
 </section>
 
