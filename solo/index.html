@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>30 Dias de Reconstrução · Percurso Solo | J. C. Dias</title>
+<meta name="description" content="Os mesmos 30 dias de reconstrução, no seu horário, sem turma. Uma aula por dia na minha voz, um exercício por dia, e no dia 30 quatro documentos escritos pela sua própria mão.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --carvao:#11110F; --pedra2:#1B1A17; --papel:#E9E2D6; --claro:#F3EFE8;
+  --cinza:#ABA39A; --cinza-esc:#6E675F; --bronze:#9B7B50; --luz:#D5B879;
+  --escuro-txt:#211F1B; --head:'Oswald',Impact,sans-serif; --corpo:'EB Garamond',Georgia,serif;
+  --pad:24px; --gap:34px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--carvao);color:var(--claro);font-family:var(--corpo);font-size:21px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:660px;margin:0 auto;padding:0 var(--pad)}
+section{padding:var(--gap) 0}
+.carvao{background:var(--carvao)}
+.pedra{background:var(--pedra2)}
+.papel{background:var(--papel);color:var(--escuro-txt)}
+.papel .fraco{color:var(--cinza-esc)}
+.fraco{color:var(--cinza)}
+.olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--luz);margin-bottom:22px}
+.papel .olho{color:var(--bronze)}
+h1{font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:clamp(34px,7.6vw,50px);line-height:1.08}
+h2{font-family:var(--head);font-weight:500;text-transform:uppercase;font-size:clamp(30px,6.6vw,38px);line-height:1.14}
+h3{font-family:var(--head);font-weight:500;font-size:17px;letter-spacing:.13em;text-transform:uppercase}
+p{margin-top:12px}
+.frase{font-family:var(--corpo);font-weight:600;font-size:clamp(25px,5.6vw,32px);line-height:1.3}
+.sublinha{font-family:var(--corpo);font-weight:500;font-size:clamp(19px,4.4vw,22px);line-height:1.42;color:var(--claro);margin-top:16px}
+
+header{position:relative;min-height:88vh;display:flex;align-items:stretch;padding:42px 0 40px;overflow:hidden;background:#0A0A09}
+header .bg{position:absolute;inset:0;z-index:0}
+header .bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+header .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,9,.44) 0%,rgba(10,10,9,.5) 28%,rgba(12,12,10,.78) 58%,rgba(17,17,15,.96) 88%,rgba(17,17,15,1) 100%)}
+header .wrap{position:relative;z-index:1;display:flex;flex-direction:column;width:100%}
+.marca-topo img{width:100%;height:auto;display:block}
+
+/* movimentos (calendário) */
+.mov{margin-top:24px}
+.mov .row{display:flex;gap:16px;padding:15px 0;border-top:1px solid rgba(155,123,80,.26)}
+.mov .row:last-child{border-bottom:1px solid rgba(155,123,80,.26)}
+.mov .lab{flex:0 0 118px}
+.mov .lab b{font-family:var(--head);font-weight:600;font-size:17px;letter-spacing:.04em;text-transform:uppercase;color:var(--luz)}
+.papel .mov .lab b{color:var(--bronze)}
+.mov .lab span{display:block;font-family:var(--head);font-weight:400;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cinza-esc);margin-top:2px}
+.mov .fer{font-size:18.5px;line-height:1.4}
+
+/* stack */
+.stack{margin-top:26px}
+.stack .item{display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(155,123,80,.26)}
+.stack .item:last-child{border-bottom:1px solid rgba(155,123,80,.26)}
+.stack .check{flex:0 0 24px;color:var(--luz);font-family:var(--head);font-weight:600;font-size:20px;line-height:1.4}
+.papel .stack .check{color:var(--bronze)}
+.stack .item b{display:block;font-family:var(--head);font-weight:500;font-size:19px;letter-spacing:.04em;text-transform:uppercase;color:var(--escuro-txt)}
+.stack .item span{display:block;margin-top:5px;font-size:19px;line-height:1.42;color:var(--cinza-esc)}
+.stack .item .tag{display:inline-block;margin-top:7px;font-family:var(--head);font-weight:500;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze)}
+
+/* nao incluido */
+.nao{margin-top:26px;border:1px solid rgba(171,163,154,.3);border-radius:12px;padding:24px 22px;background:rgba(255,255,255,.02)}
+.nao h3{color:var(--cinza)}
+.nao ul{list-style:none;margin-top:12px}
+.nao li{position:relative;padding:7px 0 7px 26px;color:var(--cinza);line-height:1.4}
+.nao li::before{content:"\00d7";position:absolute;left:2px;top:6px;color:var(--cinza-esc);font-family:var(--head);font-size:20px}
+
+/* preco card */
+.precocard{margin:28px auto 0;max-width:440px;background:#15130F;border:1px solid rgba(213,184,121,.45);border-radius:14px;padding:24px 22px 26px;box-shadow:0 20px 44px rgba(0,0,0,.22)}
+.precocard .hoje{font-family:var(--head);font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--luz)}
+.precocard .num{font-family:var(--head);font-weight:600;font-size:70px;line-height:.98;color:var(--claro);margin-top:8px}
+.precocard .cond{font-family:var(--head);font-weight:400;font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cinza);margin-top:8px}
+
+.garantia{border:1px solid rgba(155,123,80,.4);border-radius:10px;padding:26px 22px;margin-top:8px;text-align:center}
+.garantia .selo{font-family:var(--head);font-weight:600;font-size:15px;letter-spacing:.13em;text-transform:uppercase;color:var(--luz);margin-bottom:12px}
+.papel .garantia .selo{color:var(--bronze)}
+
+.faq{margin-top:24px}
+.faq details{border-top:1px solid rgba(155,123,80,.26)}
+.faq details:last-of-type{border-bottom:1px solid rgba(155,123,80,.26)}
+.faq summary{list-style:none;cursor:pointer;padding:16px 34px 16px 0;position:relative;font-family:var(--head);font-weight:500;font-size:18px;letter-spacing:.03em;text-transform:uppercase;color:var(--claro)}
+.papel .faq summary{color:var(--escuro-txt)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:12px;font-size:26px;line-height:1;color:var(--bronze);font-family:var(--head);font-weight:400}
+.faq details[open] summary::after{content:"\2212"}
+.faq details .fa{padding:0 0 18px;font-size:19px;line-height:1.5;color:var(--cinza);margin-top:0}
+.papel .faq details .fa{color:var(--cinza-esc)}
+
+.oferta{text-align:center}
+.cta{display:block;width:100%;max-width:460px;margin:24px auto 0;min-height:62px;background:linear-gradient(180deg,#e6c98a,#c8a24f);color:#1A1813;border:0;border-radius:7px;font-family:var(--head);font-weight:600;font-size:19px;letter-spacing:.04em;text-transform:uppercase;text-align:center;text-decoration:none;padding:20px 16px;cursor:pointer;transition:filter .2s ease}
+.cta:hover{filter:brightness(1.05)}
+.cta small{display:block;font-weight:400;font-size:13.5px;letter-spacing:.04em;opacity:.8;margin-top:3px}
+.micro{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:var(--cinza);margin-top:14px;text-align:center}
+.papel .micro{color:var(--cinza-esc)}
+
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(17,17,15,.97);border-top:1px solid rgba(213,184,121,.26);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px calc(11px + env(safe-area-inset-bottom));transform:translateY(115%);transition:transform .45s ease}
+#sticky.on{transform:translateY(0)}
+#sticky .txt{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:var(--claro);line-height:1.35}
+#sticky .txt b{color:var(--luz);font-weight:600}
+#sticky a{flex:0 0 auto;background:linear-gradient(180deg,#e6c98a,#c8a24f);color:#1A1813;text-decoration:none;font-family:var(--head);font-weight:600;font-size:15.5px;letter-spacing:.1em;text-transform:uppercase;padding:13px 26px;border-radius:6px}
+
+footer{padding:28px 0 106px;text-align:center;border-top:1px solid rgba(155,123,80,.18)}
+footer p{font-size:15.5px;color:var(--cinza-esc);margin-top:9px;line-height:1.55}
+footer a{color:var(--cinza)}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .75s ease,transform .75s ease}
+.rv.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+@media (min-width:760px){:root{--pad:32px;--gap:46px}body{font-size:21.5px}footer{padding-bottom:56px}#sticky{display:none}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header id="hero">
+  <div class="bg">
+    <picture>
+      <source srcset="../assets/img/dvpn-deserto.webp" type="image/webp">
+      <img src="../assets/img/dvpn-deserto.jpg" alt="" width="1024" height="683" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="wrap">
+    <div class="marca-topo" style="max-width:116px;margin:0 0 22px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
+    <p class="olho">30 Dias de Reconstrução &nbsp;·&nbsp; Percurso Solo</p>
+    <h1>Os mesmos 30 dias. No seu horário, sem turma, sem hora marcada.</h1>
+    <p class="sublinha">Uma aula curta por dia, na minha voz. Um exercício por dia, no Caderno. No dia 30, os mesmos quatro documentos, escritos pela sua própria mão.</p>
+    <a href="#oferta" class="cta" data-rolar style="margin:26px 0 0">Quero começar meu percurso <small>Percurso Solo · R$197 · acesso na hora</small></a>
+  </div>
+</header>
+
+<!-- PARA QUEM É -->
+<section class="carvao">
+  <div class="wrap rv">
+    <p class="olho">Para quem é</p>
+    <h2>Para quem quer atravessar sem plateia</h2>
+    <p style="margin-top:22px">Tem gente que quer atravessar os trinta dias, mas não consegue estar numa sexta-feira às sete da noite com a câmera aberta. Filho para dormir, turno para fechar, fuso diferente, ou simplesmente vontade de fazer isso sem ninguém olhando. Eu entendo. O Percurso Solo é para essa pessoa.</p>
+    <p class="frase" style="margin-top:24px">Não é uma versão menor. É a mesma travessia, sem a plateia.</p>
+  </div>
+</section>
+
+<!-- O QUE É -->
+<section class="pedra">
+  <div class="wrap rv">
+    <p class="olho">O que é</p>
+    <h2>O livro te deu o método. Aqui você executa</h2>
+    <p style="margin-top:22px">Se você leu A Caverna Interior, você já tem as oito ferramentas. O livro entregou o método inteiro.</p>
+    <p style="margin-top:16px">O que o livro não faz é te obrigar a usar as oito em ordem, uma por dia, com prazo, até virarem documento na sua mão. É essa a diferença. O Percurso Solo não te ensina o método de novo, ele te faz executar.</p>
+  </div>
+</section>
+
+<!-- OS 30 DIAS -->
+<section class="papel">
+  <div class="wrap rv">
+    <p class="olho">Os 30 dias</p>
+    <h2>Quatro movimentos, uma ferramenta por dia</h2>
+    <p class="fraco" style="margin-top:12px">Os quatro movimentos são o calendário. As oito ferramentas do livro são o conteúdo, uma por dia, na semana certa:</p>
+    <div class="mov">
+      <div class="row"><div class="lab"><b>Realidade</b><span>Semana 1</span></div><div class="fer">Foco no agora (a Janela) · Rendição</div></div>
+      <div class="row"><div class="lab"><b>Identidade</b><span>Semana 2</span></div><div class="fer">As três camadas da identidade · Disciplina como identidade</div></div>
+      <div class="row"><div class="lab"><b>Controle</b><span>Semana 3</span></div><div class="fer">Rotina · Gratidão (a Trinca) · Ambiente (os três círculos)</div></div>
+      <div class="row"><div class="lab"><b>Direção</b><span>Semana 4</span></div><div class="fer">Propósito · Fé (o salto) · Prosperidade com alma</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE ESTÁ INCLUÍDO -->
+<section class="carvao">
+  <div class="wrap rv">
+    <p class="olho">O que está incluído</p>
+    <h2>Tudo que você precisa para os 30 dias</h2>
+    <div class="stack">
+      <div class="item"><span class="check">&#10003;</span><div><b>Os 30 dias, um por dia</b><span>Uma aula curta, de 8 a 15 minutos, em áudio na minha voz, com o texto acompanhando. Liberação diária, na ordem dos quatro movimentos.</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>O Caderno de Reconstrução</b><span>PDF preenchível no celular e versão para imprimir. Um exercício por dia, com o espaço já pronto. Ele nasceu de um caderno de vinte e oito páginas que a minha filha me deu quando voltei, uma para cada mês que eu fiquei longe, mais quatro de bônus, como ela disse.</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>Os quatro documentos</b><span>Mapa da Realidade Atual, Declaração de Identidade, Placar de Autoconfiança e Plano de Reconstrução de 90 Dias.</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>Reinício sem custo</b><span>12 meses de acesso e o direito de voltar ao dia 1 quantas vezes precisar. Falhar não é o oposto da disciplina. Abandonar é.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE NÃO ESTÁ INCLUÍDO -->
+<section class="pedra">
+  <div class="wrap rv">
+    <p class="olho">Para deixar claro</p>
+    <h2>O que o Percurso Solo não tem</h2>
+    <div class="nao">
+      <ul>
+        <li>Sem os quatro encontros ao vivo comigo.</li>
+        <li>Sem o grupo da turma.</li>
+        <li>Sem acompanhamento direto.</li>
+      </ul>
+    </div>
+    <p style="margin-top:20px">É por isso que custa R$197 e não R$497. Se o que você quer é atravessar isso comigo na sala, o lugar é a turma.</p>
+  </div>
+</section>
+
+<!-- BÔNUS -->
+<section class="carvao">
+  <div class="wrap rv">
+    <p class="olho">Bônus</p>
+    <h2>Três apoios para os dias difíceis</h2>
+    <div class="stack">
+      <div class="item"><span class="check">&#10003;</span><div><b>O Dia Que Você Vai Falhar</b><span>Áudio de 7 minutos, na minha voz, que chega no seu dia 3. Antes da falha, não depois.</span><span class="tag">Valor R$27</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>A Conversa da Cozinha</b><span>Áudio curto e uma folha só: as três pernas da mesa, financeira, espiritual e familiar, e a pergunta de qual delas está pagando o preço das outras agora. Nasceu de uma noite de março de 2025, na minha cozinha, com uma dívida na tela e a minha esposa me dizendo: você saiu para recomeçar, não para acabar com você em formato novo.</span><span class="tag">Valor R$27</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>Crédito de Fundador</b><span>R$197 de crédito integral na próxima turma ao vivo, válido por 12 meses. Se depois você quiser fazer comigo na sala, o que você pagou aqui vale lá.</span><span class="tag">Valor R$197</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="papel">
+  <div class="wrap rv">
+    <div class="garantia">
+      <p class="selo">Garantia dos Sete Primeiros Dias</p>
+      <p style="margin-top:0">Faz os sete primeiros dias. São sete áudios curtos e sete exercícios, e nenhum leva mais de quinze minutos. Se no sétimo dia você olhar o seu Mapa da Realidade e sentir que nada se moveu aí dentro, me escreve. Devolvo cada centavo, dentro de 15 dias da compra, sem pergunta e sem constrangimento. E o Caderno fica com você de qualquer jeito.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="papel" id="oferta" style="padding-top:0">
+  <div class="wrap rv oferta">
+    <h2>Percurso Solo</h2>
+    <p class="fraco" style="margin-top:12px">A mesma travessia, no seu ritmo:</p>
+    <div class="precocard">
+      <p class="hoje">Pagamento único</p>
+      <p class="num">R$197</p>
+      <p class="cond">Acesso imediato &nbsp;·&nbsp; Liberação diária</p>
+      <a href="#" class="cta" data-buy style="margin-top:20px">Quero começar meu percurso <small>Acesso na hora, no seu celular</small></a>
+    </div>
+    <p class="micro">Digital &nbsp;·&nbsp; Pix ou cartão &nbsp;·&nbsp; Compra segura pela Hotmart</p>
+    <p class="fraco" style="margin-top:22px;font-size:17px;line-height:1.5">30 aulas em áudio R$147 · Caderno de Reconstrução R$47 · acesso e reinício por 12 meses R$47 · dois bônus R$54. Somando, R$295, sem contar o crédito de R$197. Hoje, R$197.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="pedra">
+  <div class="wrap rv">
+    <p class="olho">Dúvidas</p>
+    <h2>Perguntas frequentes</h2>
+    <div class="faq">
+      <details><summary>É digital?</summary><p class="fa">É. Tudo acontece dentro da plataforma: os áudios das aulas, o Caderno em PDF e os documentos. Você acessa do celular, do tablet ou do computador.</p></details>
+      <details><summary>Quando começa?</summary><p class="fa">Assim que você entra. As aulas são liberadas uma por dia, na ordem dos quatro movimentos, a partir da sua compra. Não é um pacote com os 30 dias soltos de uma vez, é uma travessia guiada, um dia de cada vez.</p></details>
+      <details><summary>Preciso ter lido A Caverna Interior?</summary><p class="fa">Não, mas ajuda. O Percurso Solo te faz executar as oito ferramentas do livro. Se você ainda não leu, consegue acompanhar do mesmo jeito, porque cada dia explica o que fazer.</p></details>
+      <details><summary>Tem live?</summary><p class="fa">Não. O Percurso Solo é sozinho, no seu ritmo. Se você quer os encontros ao vivo comigo e o grupo, isso é a turma, o 30 Dias de Reconstrução completo.</p></details>
+      <details><summary>Quanto tempo por dia?</summary><p class="fa">A aula tem de 8 a 15 minutos. Somando o exercício e a ação do dia, é algo entre 15 e 25 minutos. Foi feito para caber num dia real.</p></details>
+      <details><summary>Por quanto tempo tenho acesso?</summary><p class="fa">12 meses. E você pode voltar ao dia 1 quantas vezes precisar, sem custo, dentro desse período.</p></details>
+      <details><summary>Isto é terapia?</summary><p class="fa">Não. É um programa educacional de desenvolvimento pessoal, disciplina e direção. Não substitui tratamento psicológico, psiquiátrico ou médico.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FECHAMENTO -->
+<section class="carvao" style="padding-top:0">
+  <div class="wrap rv" style="text-align:center">
+    <p class="frase" style="font-size:clamp(26px,6vw,34px)">Eu atravessei sozinho porque não tinha escolha. Você tem. Mas se for para atravessar sozinho, que seja com mapa.</p>
+    <a href="#" class="cta" data-buy style="margin-top:34px">Quero começar meu percurso <small>Percurso Solo · R$197 · acesso na hora</small></a>
+    <p class="micro">Pix ou cartão &nbsp;·&nbsp; 15 dias de garantia</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>30 Dias de Reconstrução · Percurso Solo · J. C. Dias.</p>
+    <p><a href="../privacidade/">Política de Privacidade</a> &nbsp;·&nbsp; <a href="../termos/">Termos de Uso</a></p>
+    <p>Copyright &copy; 2026 &middot; J. C. Dias &middot; Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<div id="sticky">
+  <span class="txt">Percurso Solo<br><b>R$197</b></span>
+  <a href="#" data-buy>Começar</a>
+</div>
+
+<script>
+/* ---- CONFIGURAÇÃO ---- */
+var PIXEL_ID = '2122287675194601';
+var CHECKOUT = '';   // PENDENTE: link Hotmart do Percurso Solo R$197
+/* --------------------- */
+var FUNNEL = 'solo';
+var PRODUTO = { id:'solo_30dias', nome:'30 Dias de Reconstrucao - Percurso Solo', valor:197, moeda:'BRL' };
+
+(function(){
+  if(!PIXEL_ID) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID);
+  fbq('track','PageView');
+  fbq('track','ViewContent',{content_ids:[PRODUTO.id],content_name:PRODUTO.nome,value:PRODUTO.valor,currency:PRODUTO.moeda,funnel:FUNNEL,step:'solo'});
+})();
+
+function evento(nome, dados){ var carga=Object.assign({funnel:FUNNEL,step:'solo'},dados||{}); if(window.fbq) fbq('trackCustom',nome,carga); }
+function comParametros(url){ var atuais=new URLSearchParams(window.location.search); atuais.set('funnel',FUNNEL); var d=new URL(url,window.location.href); atuais.forEach(function(v,k){ if(!d.searchParams.has(k)) d.searchParams.set(k,v); }); return d.toString(); }
+function irParaCheckout(origem){
+  if(window.fbq) fbq('track','InitiateCheckout',{content_ids:[PRODUTO.id],content_name:PRODUTO.nome,value:PRODUTO.valor,currency:PRODUTO.moeda});
+  evento('Solo_CTA_Click',{cta:origem||'oferta'});
+  if(CHECKOUT){ window.location.href=comParametros(CHECKOUT); }
+  else { var alvo=document.getElementById('oferta'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'center'}); }
+}
+document.querySelectorAll('[data-buy]').forEach(function(el){
+  if(CHECKOUT){ el.setAttribute('href',CHECKOUT); }
+  el.addEventListener('click',function(e){ e.preventDefault(); irParaCheckout(el.closest('#sticky')?'sticky':'oferta'); });
+});
+document.querySelectorAll('[data-rolar]').forEach(function(el){
+  el.addEventListener('click',function(e){ e.preventDefault(); evento('Solo_CTA_Scroll'); var alvo=document.getElementById('oferta'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'center'}); });
+});
+if('IntersectionObserver' in window){
+  var obs=new IntersectionObserver(function(ent){ ent.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('vis'); obs.unobserve(en.target); } }); },{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
+  var sticky=document.getElementById('sticky');
+  new IntersectionObserver(function(e){ sticky.classList.toggle('on', !e[0].isIntersecting); },{threshold:0}).observe(document.getElementById('hero'));
+} else { document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('vis'); }); document.getElementById('sticky').classList.add('on'); }
+</script>
+</body>
+</html>
