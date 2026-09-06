@@ -3,140 +3,138 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
 <title>Compra confirmada | J. C. Dias</title>
-<meta name="robots" content="noindex, nofollow">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --fundo:#F3EFE8;
-  --tinta:#25211E;
-  --cinza:#8D857C;
-  --bronze:#9B7B50;
-  --bronze-esc:#836740;
-  --head:'Oswald',Impact,sans-serif;
-  --corpo:'Inter',system-ui,sans-serif;
+  --carvao:#11110F; --pedra2:#1B1A17; --papel:#E9E2D6; --claro:#F3EFE8;
+  --cinza:#ABA39A; --cinza-esc:#6E675F; --bronze:#9B7B50; --luz:#D5B879;
+  --escuro-txt:#211F1B; --head:'Oswald',Impact,sans-serif; --corpo:'EB Garamond',Georgia,serif;
+  --pad:24px; --gap:34px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
-body{
-  background:var(--fundo);color:var(--tinta);
-  font-family:var(--corpo);font-size:21px;line-height:1.64;
-  -webkit-font-smoothing:antialiased;
-  min-height:100dvh;display:flex;flex-direction:column;
-}
+body{background:var(--carvao);color:var(--claro);font-family:var(--corpo);font-size:21px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
-main{flex:1;max-width:640px;margin:0 auto;width:100%;padding:7vh 24px 34px}
-.marca-topo img{width:100%;height:auto;display:block}
+.wrap{max-width:660px;margin:0 auto;padding:0 var(--pad)}
+section{padding:var(--gap) 0}
+.carvao{background:var(--carvao)}
+.papel{background:var(--papel);color:var(--escuro-txt)}
+.papel .fraco{color:var(--cinza-esc)}
+.fraco{color:var(--cinza)}
+.olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--luz);margin-bottom:18px}
+.papel .olho{color:var(--bronze)}
+h1{font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:clamp(30px,7vw,44px);line-height:1.1}
+h2{font-family:var(--head);font-weight:500;text-transform:uppercase;font-size:clamp(28px,6.2vw,37px);line-height:1.14}
+h3{font-family:var(--head);font-weight:500;font-size:17px;letter-spacing:.13em;text-transform:uppercase}
+p{margin-top:12px}
+.frase{font-family:var(--corpo);font-weight:600;font-size:clamp(24px,5.4vw,31px);line-height:1.3}
 
-.olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--bronze);margin-bottom:20px}
-h1{font-family:var(--head);font-weight:600;text-transform:uppercase;
-  font-size:clamp(47px,14vw,82px);line-height:.96}
-h2{font-family:var(--head);font-weight:500;text-transform:uppercase;
-  font-size:clamp(29px,6.6vw,35px);line-height:1.18}
-p{margin-top:15px;color:var(--cinza)}
-p.forte{color:var(--tinta)}
+/* confirmacao */
+.confirm{text-align:center;padding-top:52px}
+.selo-ok{width:70px;height:70px;margin:0 auto 8px;border-radius:50%;border:2px solid var(--luz);display:flex;align-items:center;justify-content:center}
+.selo-ok svg{width:34px;height:34px;fill:none;stroke:var(--luz);stroke-width:2.4}
 
-.linha-bronze{display:block;width:52px;height:2px;background:var(--bronze);margin:38px 0}
+/* covers */
+.duo{display:flex;gap:16px;justify-content:center;align-items:flex-end;margin-top:6px}
+.duo figure{margin:0;max-width:150px;filter:drop-shadow(0 20px 38px rgba(0,0,0,.6))}
+.duo img{border-radius:2px}
 
-.retrato{max-width:150px;margin:0 0 26px;border-radius:2px;overflow:hidden}
+.stack{margin-top:24px}
+.stack .item{display:flex;gap:16px;padding:15px 0;border-top:1px solid rgba(155,123,80,.26)}
+.stack .item:last-child{border-bottom:1px solid rgba(155,123,80,.26)}
+.stack .check{flex:0 0 24px;color:var(--bronze);font-family:var(--head);font-weight:600;font-size:20px;line-height:1.4}
+.stack .item b{display:block;font-family:var(--head);font-weight:500;font-size:19px;letter-spacing:.04em;text-transform:uppercase;color:var(--escuro-txt)}
+.stack .item span{display:block;margin-top:5px;font-size:19px;line-height:1.42;color:var(--cinza-esc)}
+.stack .item .tag{display:inline-block;margin-top:7px;font-family:var(--head);font-weight:500;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze)}
 
-.perfil{font-family:var(--head);font-weight:500;font-size:clamp(21px,5vw,25px);
-  letter-spacing:.1em;color:var(--bronze);margin-top:22px}
+.preco{font-family:var(--head);font-weight:600;font-size:58px;line-height:1;margin-top:22px;text-align:center}
+.pagamento{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--cinza-esc);margin-top:8px;text-align:center}
 
-.cta{
-  display:block;width:100%;max-width:460px;margin:28px auto 0;min-height:62px;
-  background:var(--tinta);color:var(--fundo);border:0;border-radius:8px;
-  font-family:var(--head);font-weight:600;font-size:19px;letter-spacing:.04em;
-  text-transform:uppercase;text-align:center;text-decoration:none;
-  padding:20px 16px;cursor:pointer;transition:background .25s ease;
-  display:flex;align-items:center;justify-content:center;gap:11px;
-}
-.cta:active{background:#3A342F}
-.cta svg{width:19px;height:19px;flex:0 0 auto;stroke:currentColor;fill:none;stroke-width:1.6}
-.micro{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.11em;
-  text-transform:uppercase;color:var(--cinza);text-align:center;margin-top:14px}
-
-.fecho{margin-top:54px}
-.fecho p{font-family:var(--corpo);font-weight:500;font-size:clamp(21px,5vw,25px);
-  color:var(--tinta);line-height:1.4}
-.assinatura{font-family:var(--head);font-weight:400;font-size:14.5px;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--cinza);margin-top:22px}
-
-footer{padding:34px 24px calc(30px + env(safe-area-inset-bottom));text-align:center}
-footer p{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.13em;
-  text-transform:uppercase;color:#A9A199}
-
-.rv{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
-.rv.vis{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-
-@media (min-width:760px){
-  body{font-size:21.5px}
-  main{padding:13vh 32px 50px;max-width:680px}
-  .retrato{max-width:170px}
-}
-
+.cta{display:block;width:100%;max-width:460px;margin:22px auto 0;min-height:62px;background:linear-gradient(180deg,#e6c98a,#c8a24f);color:#1A1813;border:0;border-radius:7px;font-family:var(--head);font-weight:600;font-size:19px;letter-spacing:.04em;text-transform:uppercase;text-align:center;text-decoration:none;padding:20px 16px;cursor:pointer;transition:filter .2s ease}
+.cta:hover{filter:brightness(1.05)}
+.cta small{display:block;font-weight:400;font-size:13.5px;letter-spacing:.04em;opacity:.8;margin-top:3px}
+.micro{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:var(--cinza-esc);margin-top:14px;text-align:center}
+.recusar{display:block;text-align:center;margin-top:18px;font-size:16px;color:var(--cinza-esc);text-decoration:underline;text-underline-offset:3px}
+.garantia{border:1px solid rgba(155,123,80,.4);border-radius:10px;padding:22px 20px;margin-top:26px;text-align:center}
+.garantia .selo{font-family:var(--head);font-weight:600;font-size:14px;letter-spacing:.13em;text-transform:uppercase;color:var(--bronze);margin-bottom:10px}
+footer{padding:26px 0 40px;text-align:center;border-top:1px solid rgba(155,123,80,.18)}
+footer p{font-size:15px;color:var(--cinza-esc);margin-top:8px;line-height:1.55}
+footer a{color:var(--cinza)}
+@media (min-width:760px){:root{--pad:32px;--gap:46px}body{font-size:21.5px}.duo figure{max-width:180px}}
 </style>
 </head>
 <body>
 
-<main>
+<!-- CONFIRMAÇÃO -->
+<section class="carvao confirm">
+  <div class="wrap">
+    <div class="selo-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg></div>
+    <p class="olho" style="margin-bottom:12px">Compra confirmada</p>
+    <h1>O seu livro já está a caminho</h1>
+    <p style="margin-top:18px">Recomeçar com Propósito acabou de ser enviado para o seu e-mail. Em poucos minutos ele chega. Se não encontrar, dá uma olhada no spam ou nas promoções.</p>
+    <p class="frase" style="margin-top:22px;color:var(--luz)">Antes de você sair, tenho uma coisa só para quem acabou de comprar.</p>
+  </div>
+</section>
 
-  <!-- 1. CONFIRMAÇÃO -->
-  <section>
-    <div class="marca-topo" style="max-width:130px;margin:0 0 36px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
+<!-- UPSELL CAVERNA + QMPD -->
+<section class="papel" id="oferta">
+  <div class="wrap oferta">
+    <p class="olho">A continuação</p>
+    <h2>Você acabou de reencontrar o chão. A Caverna Interior é onde você reconstrói.</h2>
+    <p class="fraco" style="margin-top:12px">Recomeçar com Propósito te trouxe de volta. A Caverna Interior é o método completo: as oito ferramentas que me tiraram do fundo, uma por capítulo. E ela não vem sozinha.</p>
 
-    <p class="olho">Compra confirmada</p>
-    <h1>Obrigado.</h1>
+    <div class="duo">
+      <figure><picture><source srcset="../assets/img/capa-caverna.webp" type="image/webp"><img src="../assets/img/capa-caverna.jpg" alt="A Caverna Interior" width="620" height="930"></picture></figure>
+      <figure><picture><source srcset="../assets/img/capa-qmpd.webp" type="image/webp"><img src="../assets/img/capa-qmpd.jpg" alt="Quando Morri por Dentro" width="620" height="930"></picture></figure>
+    </div>
 
-    <p class="forte" style="margin-top:26px">Sua compra foi confirmada.</p>
-    <p>Você receberá no email utilizado na compra as informações de acesso ao conteúdo adquirido.</p>
-    <p class="forte" style="margin-top:22px">Agora, antes de ir, quero te fazer um último convite.</p>
-  </section>
+    <div class="stack" style="text-align:left">
+      <div class="item"><span class="check">&#10003;</span><div><b>A Caverna Interior</b><span>O método completo de reconstrução: as 8 ferramentas e o que fazer depois de sair.</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>Bônus: Quando Morri por Dentro</b><span>A mesma travessia contada como história, do acidente à cela e de volta.</span><span class="tag">Valor R$67 · incluído hoje</span></div></div>
+    </div>
 
-  <!-- 2. INSTAGRAM -->
-  <section class="rv">
-    <i class="linha-bronze" aria-hidden="true"></i>
+    <p class="preco">R$97</p>
+    <p class="pagamento">Somando os dois, sairia R$164. Só aqui, agora, R$97.</p>
 
-    <figure class="retrato">
-      <picture>
-        <source srcset="../assets/img/autor.webp" type="image/webp">
-        <img src="../assets/img/autor.jpg" alt="J. C. Dias" width="900" height="917" loading="lazy">
-      </picture>
-    </figure>
+    <a href="#" class="cta" data-buy>Quero adicionar ao meu pedido <small>Acesso na hora, no mesmo e-mail</small></a>
+    <p class="micro">2 ebooks digitais &nbsp;·&nbsp; Pix ou cartão &nbsp;·&nbsp; Compra segura pela Hotmart</p>
+    <a href="#nao" class="recusar" data-recusar>Agora não, quero só o meu livro</a>
 
-    <h2>Continue essa jornada comigo no Instagram.</h2>
-    <p style="margin-top:20px">É lá que eu compartilho novos textos, reflexões, bastidores dos livros e aquilo que estou construindo depois deles.</p>
+    <div class="garantia">
+      <p class="selo">Garantia Porta Aberta &nbsp;·&nbsp; 15 dias</p>
+      <p style="margin-top:0">Leia os dois. Se não falarem com você, me escreve dentro de 15 dias e eu devolvo cada centavo. Sem burocracia, sem constrangimento.</p>
+    </div>
+  </div>
+</section>
 
-    <p class="perfil" id="perfil">@INSTAGRAM_OFICIAL</p>
+<!-- RECUSA / TUDO CERTO -->
+<section class="carvao" id="nao">
+  <div class="wrap" style="text-align:center">
+    <p class="frase">Tudo certo. O seu livro está garantido no e-mail.</p>
+    <p style="margin-top:14px" class="fraco">Comece por ele hoje à noite. Quando terminar, A Caverna Interior vai estar aqui, esperando.</p>
+  </div>
+</section>
 
-    <a href="#" class="cta" id="ir-instagram" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
-      Me seguir no Instagram
-    </a>
-    <p class="micro">Abrir Instagram</p>
-  </section>
-
-  <!-- 3. FECHAMENTO -->
-  <section class="fecho rv">
-    <p>Nos encontramos por lá.</p>
-    <p class="assinatura">J. C. Dias</p>
-  </section>
-
-</main>
+<footer>
+  <div class="wrap">
+    <p><a href="https://wa.me/447564276997?text=Ol%C3%A1%2C%20comprei%20o%20Recome%C3%A7ar%20com%20Prop%C3%B3sito%20e%20preciso%20de%20ajuda">Falar no WhatsApp</a> &nbsp;·&nbsp; <a href="../privacidade/">Privacidade</a> &nbsp;·&nbsp; <a href="../termos/">Termos</a></p>
+    <p>Copyright &copy; 2026 &middot; J. C. Dias.</p>
+  </div>
+</footer>
 
 <script>
-/* ---- CONFIGURAÇÃO: só estas duas linhas mudam ---- */
-var PIXEL_ID  = '2122287675194601';    // dataset Funil de Vendas V1 - Brasil
-var INSTAGRAM = '';    // PENDENTE: perfil oficial, só o @ sem arroba. Exemplo: jcdias.autor
-/* -------------------------------------------------- */
-
-var FUNNEL = 'rcp_interativo';
+/* ---- CONFIGURAÇÃO ---- */
+var PIXEL_ID = '2122287675194601';
+var CHECKOUT = '';   // PENDENTE: link do combo Caverna + QMPD R$97 (idealmente 1-clique pos-compra na Hotmart)
+/* --------------------- */
+var FUNNEL = 'obrigado';
+var PRODUTO = { id:'caverna_qmpd', nome:'A Caverna Interior + Quando Morri por Dentro', valor:97, moeda:'BRL' };
 
 (function(){
   if(!PIXEL_ID) return;
@@ -147,39 +145,24 @@ var FUNNEL = 'rcp_interativo';
   (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', PIXEL_ID);
   fbq('track','PageView');
+  fbq('trackCustom','Obrigado_View',{funnel:FUNNEL,step:'obrigado'});
+  fbq('track','ViewContent',{content_ids:[PRODUTO.id],content_name:PRODUTO.nome,value:PRODUTO.valor,currency:PRODUTO.moeda,funnel:FUNNEL,step:'upsell_caverna'});
 })();
 
-/* nenhum Purchase é disparado aqui. O checkout já cuida disso. */
-function evento(nome){
-  var carga = {funnel:FUNNEL, step:'obrigado'};
-  if(window.fbq) fbq('trackCustom', nome, carga);
-  if(window.dataLayer) window.dataLayer.push(Object.assign({event:nome}, carga));
+function comParametros(url){ var atuais=new URLSearchParams(window.location.search); atuais.set('funnel',FUNNEL); var d=new URL(url,window.location.href); atuais.forEach(function(v,k){ if(!d.searchParams.has(k)) d.searchParams.set(k,v); }); return d.toString(); }
+function irParaCheckout(){
+  if(window.fbq) fbq('track','InitiateCheckout',{content_ids:[PRODUTO.id],content_name:PRODUTO.nome,value:PRODUTO.valor,currency:PRODUTO.moeda});
+  if(window.fbq) fbq('trackCustom','Obrigado_Upsell_Click',{funnel:FUNNEL});
+  if(CHECKOUT){ window.location.href=comParametros(CHECKOUT); }
+  else { var alvo=document.getElementById('oferta'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'center'}); }
 }
-
-evento('ThankYou_Page_View');
-
-var botao = document.getElementById('ir-instagram');
-if(INSTAGRAM){
-  var perfil = INSTAGRAM.replace('@','').trim();
-  document.getElementById('perfil').textContent = '@' + perfil;
-  botao.href = 'https://instagram.com/' + perfil;
-} else {
-  console.warn('perfil do Instagram ainda não configurado');
-}
-
-botao.addEventListener('click', function(e){
-  if(!INSTAGRAM){ e.preventDefault(); return; }
-  evento('ThankYou_Instagram_Click');
+document.querySelectorAll('[data-buy]').forEach(function(el){
+  if(CHECKOUT){ el.setAttribute('href',CHECKOUT); }
+  el.addEventListener('click',function(e){ e.preventDefault(); irParaCheckout(); });
 });
-
-if('IntersectionObserver' in window){
-  var obs = new IntersectionObserver(function(ent){
-    ent.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('vis'); obs.unobserve(en.target); } });
-  },{rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
-} else {
-  document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('vis'); });
-}
+document.querySelectorAll('[data-recusar]').forEach(function(el){
+  el.addEventListener('click',function(e){ e.preventDefault(); if(window.fbq) fbq('trackCustom','Obrigado_Upsell_Recusa',{funnel:FUNNEL}); var alvo=document.getElementById('nao'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'start'}); });
+});
 </script>
 </body>
 </html>
