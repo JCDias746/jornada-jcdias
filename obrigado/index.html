@@ -56,8 +56,12 @@ p{margin-top:12px}
 .preco{font-family:var(--head);font-weight:600;font-size:58px;line-height:1;margin-top:22px;text-align:center}
 .pagamento{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--cinza-esc);margin-top:8px;text-align:center}
 
-.cta{display:block;width:100%;max-width:460px;margin:22px auto 0;min-height:62px;background:linear-gradient(180deg,#e6c98a,#c8a24f);color:#1A1813;border:0;border-radius:7px;font-family:var(--head);font-weight:600;font-size:19px;letter-spacing:.04em;text-transform:uppercase;text-align:center;text-decoration:none;padding:20px 16px;cursor:pointer;transition:filter .2s ease}
-.cta:hover{filter:brightness(1.05)}
+.cta{position:relative;overflow:hidden;display:block;width:100%;max-width:460px;margin:22px auto 0;min-height:64px;background:linear-gradient(135deg,#FFDD8A 0%,#F3B24A 46%,#E8912B 100%);color:#231A08;border:0;border-radius:9px;font-family:var(--head);font-weight:600;font-size:19.5px;letter-spacing:.04em;text-transform:uppercase;text-align:center;text-decoration:none;padding:20px 16px;cursor:pointer;transition:filter .2s ease;box-shadow:0 10px 30px rgba(232,145,43,.5),0 0 0 1px rgba(255,225,150,.55) inset;animation:ctaPulse 2.6s ease-in-out infinite}
+.cta::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;pointer-events:none;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:ctaSheen 3.4s ease-in-out infinite}
+.cta:hover{filter:brightness(1.06)}
+@keyframes ctaPulse{0%,100%{box-shadow:0 10px 30px rgba(232,145,43,.42),0 0 0 1px rgba(255,225,150,.5) inset}50%{box-shadow:0 14px 42px rgba(240,169,60,.72),0 0 0 1px rgba(255,225,150,.65) inset}}
+@keyframes ctaSheen{0%{left:-70%}58%,100%{left:135%}}
+@media (prefers-reduced-motion:reduce){.cta{animation:none}.cta::after{display:none}}
 .cta small{display:block;font-weight:400;font-size:13.5px;letter-spacing:.04em;opacity:.8;margin-top:3px}
 .micro{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:var(--cinza-esc);margin-top:14px;text-align:center}
 .recusar{display:block;text-align:center;margin-top:18px;font-size:16px;color:var(--cinza-esc);text-decoration:underline;text-underline-offset:3px}
@@ -78,37 +82,56 @@ footer a{color:var(--cinza)}
     <p class="olho" style="margin-bottom:12px">Compra confirmada</p>
     <h1>O seu livro já está a caminho</h1>
     <p style="margin-top:18px">Recomeçar com Propósito acabou de ser enviado para o seu e-mail. Em poucos minutos ele chega. Se não encontrar, dá uma olhada no spam ou nas promoções.</p>
-    <p class="frase" style="margin-top:22px;color:var(--luz)">Antes de você sair, tenho uma coisa só para quem acabou de comprar.</p>
+    <p class="frase" style="margin-top:22px;color:var(--luz)">Mas espera. A sua jornada parou pela metade.</p>
   </div>
 </section>
 
 <!-- UPSELL CAVERNA + QMPD -->
 <section class="papel" id="oferta">
   <div class="wrap oferta">
-    <p class="olho">A continuação</p>
-    <h2>Você acabou de reencontrar o chão. A Caverna Interior é onde você reconstrói.</h2>
-    <p class="fraco" style="margin-top:12px">Recomeçar com Propósito te trouxe de volta. A Caverna Interior é o método completo: as oito ferramentas que me tiraram do fundo, uma por capítulo. E ela não vem sozinha.</p>
+    <p class="olho">Atenção</p>
+    <h2>Chão não é teto.</h2>
+    <p style="margin-top:14px">O manuscrito de R$17 que você acabou de comprar vai te dar o chão. Ele vai estancar o seu sangramento emocional e te mostrar como parar de cavar o fundo do poço. Mas chão não é teto. De que adianta saber onde você caiu se você não sabe como reconstruir as paredes da sua vida?</p>
+    <p style="margin-top:14px">O livro que você comprou cura a ferida. Os dois livros que estão nesta página exclusiva são os que constroem o império que vem depois. Esta oferta só aparece aqui, agora, nesta tela.</p>
 
     <div class="duo">
-      <figure><picture><source srcset="../assets/img/capa-caverna.webp" type="image/webp"><img src="../assets/img/capa-caverna.jpg" alt="A Caverna Interior" width="620" height="930"></picture></figure>
       <figure><picture><source srcset="../assets/img/capa-qmpd.webp" type="image/webp"><img src="../assets/img/capa-qmpd.jpg" alt="Quando Morri por Dentro" width="620" height="930"></picture></figure>
+      <figure><picture><source srcset="../assets/img/capa-caverna.webp" type="image/webp"><img src="../assets/img/capa-caverna.jpg" alt="A Caverna Interior" width="620" height="930"></picture></figure>
     </div>
 
-    <div class="stack" style="text-align:left">
-      <div class="item"><span class="check">&#10003;</span><div><b>A Caverna Interior</b><span>O método completo de reconstrução: as 8 ferramentas e o que fazer depois de sair.</span></div></div>
-      <div class="item"><span class="check">&#10003;</span><div><b>Bônus: Quando Morri por Dentro</b><span>A mesma travessia contada como história, do acidente à cela e de volta.</span><span class="tag">Valor R$67 · incluído hoje</span></div></div>
+    <div style="text-align:left;margin-top:28px;border-top:1px solid rgba(155,123,80,.28);padding-top:26px">
+      <p class="olho">Livro 1</p>
+      <h3 style="font-family:var(--head);font-weight:500;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(21px,5vw,26px);color:var(--escuro-txt)">Quando Morri por Dentro</h3>
+      <p style="margin-top:14px">Todo mundo que passa por uma grande queda (seja uma falência, um divórcio ou uma traição) vive um dia de luto silencioso. O dia em que você olha no espelho e não reconhece mais quem está ali. Eu vivi esse dia na minha primeira noite na cela.</p>
+      <p style="margin-top:12px">Neste livro, eu faço a autópsia do orgulho. Eu te mostro a dor nua e crua de ver duas décadas de reputação virarem fumaça em seis segundos.</p>
+      <p style="margin-top:12px"><b>O que você vai aprender aqui:</b> como enterrar de vez o seu "antigo eu" fraco, parar de chorar pelo que perdeu e aceitar a realidade para conseguir lutar de volta. Sem essa morte interna, não há espaço para o homem que cria novos negócios florescer.</p>
+    </div>
+
+    <div style="text-align:left;margin-top:28px;border-top:1px solid rgba(155,123,80,.28);padding-top:26px">
+      <p class="olho">Livro 2</p>
+      <h3 style="font-family:var(--head);font-weight:500;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(21px,5vw,26px);color:var(--escuro-txt)">A Caverna Interior</h3>
+      <p style="margin-top:14px">A prisão física foi a minha caverna, mas a sua mente pode ser a sua hoje. Depois que você aceita a queda, você entra no período mais perigoso: o isolamento. É aqui que a maioria das pessoas enlouquece, cai em depressão ou desiste.</p>
+      <p style="margin-top:12px">A Caverna Interior é o meu manual de estratégia avançada. Foi escrito enquanto eu estava cercado por quatro paredes de concreto cinza, desenhando os rascunhos do que viria a ser a Solta Lingerie, o ED07 e os meus próximos passos empresariais.</p>
+      <p style="margin-top:12px"><b>O que você vai aprender aqui:</b> as 8 ferramentas de engenharia mental para produzir no escuro. Como usar o tempo de crise para se tornar perigoso, focado e cirúrgico, estruturando seus próximos negócios antes mesmo de ter um centavo no bolso.</p>
+    </div>
+
+    <div style="text-align:left;margin-top:32px">
+      <h2>Duas obras históricas. Um valor insignificante.</h2>
+      <p style="margin-top:14px">Se eu fosse vender estes dois livros separadamente no mercado tradicional, com o peso da minha bagagem como Diretor Executivo e fundador de múltiplos negócios, cada um não sairia por menos de R$97.</p>
+      <p style="margin-top:12px">Mas eu não estou aqui para negociar centavos com você. Eu quero te dar o arsenal completo para você não ter desculpas para continuar fracassando.</p>
+      <p style="margin-top:12px">Apenas nesta página, você leva os dois livros digitais por apenas R$97. Isso é menos do que o preço de uma única pizza de final de semana para receber a chave mental que destranca o seu futuro.</p>
     </div>
 
     <p class="preco">R$97</p>
-    <p class="pagamento">Somando os dois, sairia R$164. Só aqui, agora, R$97.</p>
+    <p class="pagamento">Os dois livros digitais &nbsp;·&nbsp; Um clique, sem digitar o cartão de novo</p>
 
-    <a href="#" class="cta" data-buy>Quero adicionar ao meu pedido <small>Acesso na hora, no mesmo e-mail</small></a>
-    <p class="micro">2 ebooks digitais &nbsp;·&nbsp; Pix ou cartão &nbsp;·&nbsp; Compra segura pela Hotmart</p>
+    <a href="#" class="cta" data-buy>Sim, adicione Quando Morri por Dentro e A Caverna Interior ao meu pedido <small>Os dois por R$97</small></a>
+    <p class="micro">Ao fechar ou sair desta página, você nunca mais verá este combo por este preço. Se quiser adquirir depois, pagará o valor cheio.</p>
     <a href="#nao" class="recusar" data-recusar>Agora não, quero só o meu livro</a>
 
     <div class="garantia">
       <p class="selo">Garantia Porta Aberta &nbsp;·&nbsp; 15 dias</p>
-      <p style="margin-top:0">Leia os dois. Se não falarem com você, me escreve dentro de 15 dias e eu devolvo cada centavo. Sem burocracia, sem constrangimento.</p>
+      <p style="margin-top:0">Leia os dois. Se não te sacudirem, me escreve em 15 dias e eu devolvo cada centavo. O risco do dinheiro é meu. O de continuar só com o chão, sem as paredes, é seu.</p>
     </div>
   </div>
 </section>
