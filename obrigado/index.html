@@ -90,6 +90,35 @@ footer a{color:var(--cinza)}
 .seguro svg{width:14px;height:14px;fill:currentColor}
 .assinatura{font-family:var(--corpo);font-weight:600;font-size:23px;color:var(--bronze);margin-top:14px}
 @media (min-width:760px){:root{--pad:32px;--gap:46px}body{font-size:21.5px}.duo figure{max-width:180px}}
+
+/* matriz de duas ofertas */
+.matriz{display:grid;gap:16px;margin-top:26px}
+@media(min-width:620px){.matriz{grid-template-columns:1fr 1.06fr;align-items:stretch}}
+.opt{position:relative;background:#fff;border:1px solid rgba(0,0,0,.14);border-radius:14px;padding:24px 22px;display:flex;flex-direction:column}
+.opt.top{border:2px solid #0B6E52;box-shadow:0 18px 44px -22px rgba(11,110,82,.55)}
+.opt-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;background:#0B6E52;color:#fff;font-family:var(--head);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:6px 15px;border-radius:20px}
+.opt .lab{font-family:var(--head);font-weight:500;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze);margin:0}
+.opt.top .lab{color:#0B6E52}
+.opt .tit{font-family:var(--head);font-weight:600;font-size:clamp(20px,4.6vw,25px);letter-spacing:.02em;text-transform:uppercase;color:var(--escuro-txt);line-height:1.1;margin-top:6px}
+.opt .desc{font-size:16.5px;line-height:1.45;color:#3a3a3a;margin-top:12px}
+.opt-feats{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:9px}
+.opt-feats li{position:relative;padding-left:28px;font-size:16px;line-height:1.36;color:#2b2b2b}
+.opt-feats li::before{content:"";position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background:#0B6E52 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/11px no-repeat}
+.opt-feats li.fis{font-weight:600;color:#1f1f1f}
+.opt-price{margin-top:auto;padding-top:18px}
+.opt-price .v{font-family:var(--head);font-weight:600;font-size:44px;line-height:1;color:var(--escuro-txt)}
+.opt-price .cond{font-family:var(--head);font-weight:400;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--cinza-esc);margin-top:6px}
+.optbtn{position:relative;overflow:hidden;display:block;width:100%;margin-top:18px;min-height:56px;border:0;border-radius:9px;font-family:var(--head);font-weight:600;font-size:16px;letter-spacing:.03em;text-transform:uppercase;text-align:center;text-decoration:none;padding:17px 14px;cursor:pointer;line-height:1.18}
+.optbtn.cinza{background:#2A2824;color:#F3EFE8;box-shadow:0 8px 20px -10px rgba(0,0,0,.55);transition:background .2s ease}
+.optbtn.cinza:hover{background:#37342E}
+.optbtn.fogo{background:linear-gradient(135deg,#F6A83E 0%,#EC6E30 52%,#E65F2B 100%);color:#241206;box-shadow:0 12px 30px rgba(230,95,43,.5),0 0 0 1px rgba(255,225,150,.55) inset;animation:ctaPulse 2.6s ease-in-out infinite}
+.optbtn.fogo::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;pointer-events:none;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:ctaSheen 3.4s ease-in-out infinite}
+.envio{max-width:600px;margin:22px auto 0;border:1px solid rgba(0,0,0,.14);border-radius:10px;background:#EDEEF1;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}
+.envio .ico{flex:0 0 20px;color:#0B6E52;margin-top:2px}
+.envio .ico svg{width:20px;height:20px;fill:currentColor}
+.envio p{margin:0;font-size:15px;line-height:1.5;color:#3a3a3a}
+.envio b{font-family:var(--head);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:13px;color:var(--escuro-txt);display:block;margin-bottom:4px}
+@media (prefers-reduced-motion:reduce){.optbtn.fogo{animation:none}.optbtn.fogo::after{display:none}}
 </style>
 </head>
 <body>
@@ -133,17 +162,49 @@ footer a{color:var(--cinza)}
     </div>
 
     <div style="text-align:left;margin-top:32px">
-      <h2>Duas obras históricas. Um valor insignificante.</h2>
-      <p style="margin-top:14px">Se eu fosse vender estes dois livros separadamente no mercado tradicional, com o peso da minha bagagem como Diretor Executivo e fundador de múltiplos negócios, cada um não sairia por menos de R$97.</p>
-      <p style="margin-top:12px">Mas eu não estou aqui para negociar centavos com você. Eu quero te dar o arsenal completo para você não ter desculpas para continuar fracassando.</p>
-      <p style="margin-top:12px">Apenas nesta página, você leva os dois livros digitais por apenas R$97. Isso é menos do que o preço de uma única pizza de final de semana para receber a chave mental que destranca o seu futuro.</p>
+      <h2>Duas obras históricas. Escolha o seu nível de arsenal.</h2>
+      <p style="margin-top:14px">Eu não vou negociar centavos com você. Eu quero te entregar o plano operacional completo para que você não tenha desculpa para continuar no chão. Escolha como você quer receber o restante da minha história hoje.</p>
     </div>
 
-    <p class="preco"><span class="risco">R$194</span>R$97</p>
-    <p class="pagamento">Os dois livros digitais &nbsp;·&nbsp; pagamento único</p>
-    <div style="text-align:center"><span class="badge-1c"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>Compra em 1 clique</span></div>
+    <div class="matriz">
+      <div class="opt">
+        <p class="lab">Opção 1 &middot; Digital</p>
+        <p class="tit">Acesso Digital Imediato</p>
+        <p class="desc">Você recebe o acesso digital instantâneo aos dois manuscritos, direto na sua área de membros, para ler no celular, no tablet ou no computador.</p>
+        <ul class="opt-feats">
+          <li>Quando Morri por Dentro em versão digital</li>
+          <li>A Caverna Interior em versão digital</li>
+          <li>Liberado na hora, sem digitar o cartão de novo</li>
+        </ul>
+        <div class="opt-price">
+          <div class="v">R$97</div>
+          <div class="cond">Pagamento único</div>
+          <a href="#" class="optbtn cinza" data-buy>Quero apenas o Acesso Digital por R$97</a>
+        </div>
+      </div>
+      <div class="opt top">
+        <span class="opt-badge">Mais escolhido</span>
+        <p class="lab">Opção 2 &middot; A escolha dos executivos</p>
+        <p class="tit">Combo Premium &middot; Físico + Digital</p>
+        <p class="desc">Você garante o acesso digital imediato na plataforma e ainda recebe as edições impressas oficiais dos dois livros na sua casa ou no seu escritório, com frete incluso para todo o Brasil. Há uma força indescritível em segurar nas mãos as páginas que resistiram ao cárcere. Coloque estes manuais na sua cabeceira ou na sua mesa de trabalho como um monumento à sua própria reconstrução.</p>
+        <ul class="opt-feats">
+          <li>Tudo do acesso digital imediato</li>
+          <li class="fis">As duas edições impressas oficiais enviadas até você</li>
+          <li class="fis">Frete incluso para todo o Brasil</li>
+        </ul>
+        <div class="opt-price">
+          <div class="v">R$197</div>
+          <div class="cond">Ou em até 12x no cartão</div>
+          <a href="#" class="optbtn fogo" data-buy-fisico>Sim, J.C.! Quero o Combo Premium Físico + Digital por R$197</a>
+        </div>
+      </div>
+    </div>
 
-    <a href="#" class="cta" data-buy>Sim, adicione Quando Morri por Dentro e A Caverna Interior ao meu pedido <small>Os dois por R$97, sem digitar o cartão de novo</small></a>
+    <div class="envio">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9V7A5 5 0 0 0 7 7v2H5v13h14V9zM9 7a3 3 0 0 1 6 0v2H9z"/></svg></span>
+      <p><b>Compra em 1 clique segura</b>Se você escolher o Combo Premium, o seu acesso digital é liberado em segundos e a nossa distribuidora usa o endereço que você já cadastrou na compra do primeiro livro para emitir o envio dos livros físicos. Você recebe o código de rastreamento por e-mail.</p>
+    </div>
+
     <p class="seguro"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9V7A5 5 0 0 0 7 7v2H5v13h14V9zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>Compra segura pela Hotmart</p>
     <p class="micro">Ao fechar ou sair desta página, você nunca mais verá este combo por este preço. Se quiser adquirir depois, pagará o valor cheio.</p>
     <a href="#nao" class="recusar" data-recusar>Não quero as paredes, prefiro ficar apenas com o chão por enquanto.</a>
@@ -173,10 +234,12 @@ footer a{color:var(--cinza)}
 <script>
 /* ---- CONFIGURAÇÃO ---- */
 var PIXEL_ID = '2122287675194601';
-var CHECKOUT = '';   // PENDENTE: link do combo Caverna + QMPD R$97 (idealmente 1-clique pos-compra na Hotmart)
+var CHECKOUT = '';          // PENDENTE: link do combo DIGITAL R$97 (1-clique pos-compra na Hotmart)
+var CHECKOUT_FISICO = '';   // PENDENTE: link do combo FISICO + DIGITAL R$197 (1-clique pos-compra na Hotmart)
 /* --------------------- */
 var FUNNEL = 'obrigado';
 var PRODUTO = { id:'caverna_qmpd', nome:'A Caverna Interior + Quando Morri por Dentro', valor:97, moeda:'BRL' };
+var PRODUTO_FISICO = { id:'caverna_qmpd_fisico', nome:'A Caverna Interior + Quando Morri por Dentro (Fisico + Digital)', valor:197, moeda:'BRL' };
 
 (function(){
   if(!PIXEL_ID) return;
@@ -192,15 +255,19 @@ var PRODUTO = { id:'caverna_qmpd', nome:'A Caverna Interior + Quando Morri por D
 })();
 
 function comParametros(url){ var atuais=new URLSearchParams(window.location.search); atuais.set('funnel',FUNNEL); var d=new URL(url,window.location.href); atuais.forEach(function(v,k){ if(!d.searchParams.has(k)) d.searchParams.set(k,v); }); return d.toString(); }
-function irParaCheckout(){
-  if(window.fbq) fbq('track','InitiateCheckout',{content_ids:[PRODUTO.id],content_name:PRODUTO.nome,value:PRODUTO.valor,currency:PRODUTO.moeda});
-  if(window.fbq) fbq('trackCustom','Obrigado_Upsell_Click',{funnel:FUNNEL});
-  if(CHECKOUT){ window.location.href=comParametros(CHECKOUT); }
+function irPara(prod, url, ev){
+  if(window.fbq) fbq('track','InitiateCheckout',{content_ids:[prod.id],content_name:prod.nome,value:prod.valor,currency:prod.moeda});
+  if(window.fbq) fbq('trackCustom',ev,{funnel:FUNNEL});
+  if(url){ window.location.href=comParametros(url); }
   else { var alvo=document.getElementById('oferta'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'center'}); }
 }
 document.querySelectorAll('[data-buy]').forEach(function(el){
   if(CHECKOUT){ el.setAttribute('href',CHECKOUT); }
-  el.addEventListener('click',function(e){ e.preventDefault(); irParaCheckout(); });
+  el.addEventListener('click',function(e){ e.preventDefault(); irPara(PRODUTO,CHECKOUT,'Obrigado_Upsell_Digital_Click'); });
+});
+document.querySelectorAll('[data-buy-fisico]').forEach(function(el){
+  if(CHECKOUT_FISICO){ el.setAttribute('href',CHECKOUT_FISICO); }
+  el.addEventListener('click',function(e){ e.preventDefault(); irPara(PRODUTO_FISICO,CHECKOUT_FISICO,'Obrigado_Upsell_Fisico_Click'); });
 });
 document.querySelectorAll('[data-recusar]').forEach(function(el){
   el.addEventListener('click',function(e){ e.preventDefault(); if(window.fbq) fbq('trackCustom','Obrigado_Upsell_Recusa',{funnel:FUNNEL}); var alvo=document.getElementById('nao'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'start'}); });
