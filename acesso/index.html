@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Acesso liberado | J. C. Dias</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Sua compra foi confirmada. Veja como acessar os seus materiais agora.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#FFFFFF; --paper2:#F6F7F9; --ink:#161A1E; --ink2:#59616A;
+  --line:#E4E7EB; --line2:#D5DAE0; --dark:#12151A; --green:#00A859;
+  --navy:#0A2540; --navy-h:#123156; --platina:#C9CED6;
+  --head:'Oswald',Impact,sans-serif; --corpo:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--corpo);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+
+/* papel timbrado */
+.letterhead{background:var(--dark);padding:16px 0;text-align:center}
+.letterhead img{width:150px;margin:0 auto;opacity:.96}
+
+.wrap{max-width:680px;margin:0 auto;padding:0 22px}
+section{padding:40px 0}
+.hr{height:1px;background:var(--line);border:0;max-width:680px;margin:0 auto}
+
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--head);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy)}
+.eyebrow .ck{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(0,168,89,.12)}
+.eyebrow .ck svg{width:13px;height:13px}
+h1{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:clamp(30px,6.4vw,44px);line-height:1.06;letter-spacing:.005em;margin-top:18px}
+h2{font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:clamp(19px,4vw,23px);letter-spacing:.03em;line-height:1.2}
+.lead{color:var(--ink2);margin-top:18px;font-size:18.5px}
+.lead b{color:var(--ink);font-weight:600}
+.kicker{font-family:var(--head);font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+
+/* cards de ativos */
+.assets{margin-top:22px;display:grid;gap:12px}
+.asset{display:flex;align-items:center;gap:15px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 2px 10px rgba(20,25,32,.04)}
+.asset .emo{flex:0 0 auto;font-size:24px;line-height:1}
+.asset .mid{flex:1;min-width:0}
+.asset .nm{font-family:var(--head);font-weight:600;font-size:16px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink);line-height:1.2}
+.asset .st{display:flex;align-items:center;gap:7px;margin-top:5px;font-size:14px;color:var(--ink2);font-weight:600}
+.asset .st svg{width:15px;height:15px;flex:0 0 auto}
+.asset-note{margin-top:14px;font-size:15px;color:var(--ink2);line-height:1.5}
+
+/* video platina */
+.videobox{margin-top:24px}
+.frame{position:relative;border-radius:14px;padding:6px;background:linear-gradient(135deg,#EDEFF2,#C9CED6 45%,#EDEFF2);box-shadow:0 20px 50px -24px rgba(20,25,32,.4)}
+.frame .screen{position:relative;border-radius:10px;overflow:hidden;background:#0C0E12;aspect-ratio:16/9}
+.frame .screen video,.frame .screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.frame .poster{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#E7EAEE;text-align:center;padding:20px}
+.frame .poster .play{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center}
+.frame .poster .play svg{width:26px;height:26px;margin-left:4px}
+.frame .poster .cap{font-family:var(--head);font-weight:500;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#AEB4BC}
+
+/* passos */
+.steps{margin-top:22px;display:grid;gap:14px}
+.step{display:flex;gap:16px;background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.step .n{flex:0 0 auto;font-family:var(--head);font-weight:700;font-size:26px;line-height:1;color:var(--navy);width:42px}
+.step .b b{display:block;font-family:var(--head);font-weight:600;font-size:16.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink)}
+.step .b p{margin-top:6px;font-size:16px;color:var(--ink2);line-height:1.5}
+.step .b a{color:var(--navy);font-weight:600;text-decoration:none;border-bottom:1px solid var(--line2)}
+
+/* botao ouro */
+.gobox{text-align:center;padding:8px 0 4px}
+.cta{display:block;width:100%;max-width:520px;margin:26px auto 0;min-height:64px;background:var(--navy);color:#fff;border:0;border-radius:10px;font-family:var(--head);font-weight:600;font-size:18.5px;letter-spacing:.03em;text-transform:uppercase;text-align:center;text-decoration:none;padding:21px 18px;cursor:pointer;transition:background .2s ease,transform .2s ease;box-shadow:0 16px 34px -14px rgba(10,37,64,.6)}
+.cta:hover{background:var(--navy-h);transform:translateY(-1px)}
+.secure{margin-top:14px;font-size:13.5px;color:var(--ink2);letter-spacing:.02em}
+
+footer{border-top:1px solid var(--line);padding:30px 22px 40px;text-align:center;margin-top:20px}
+footer p{font-size:13.5px;color:var(--ink2);margin-top:8px;line-height:1.6}
+footer a{color:var(--ink2)}
+
+@media (min-width:760px){
+  body{font-size:19px}
+  section{padding:48px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="letterhead"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
+
+<!-- 1. VALIDAÇÃO -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#00A859" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Compra confirmada</span>
+    <h1>Você tomou a decisão correta. Agora, a sua reconstrução começou.</h1>
+    <p class="lead">A porta da cela está aberta. Os seus dados de acesso já foram processados pela Hotmart e enviados para o seu e-mail. Esqueça o que ficou para trás. O seu foco agora está no que você vai escrever a partir de hoje.</p>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- 2. ATIVOS ADQUIRIDOS -->
+<section>
+  <div class="wrap">
+    <p class="kicker">Seus ativos adquiridos</p>
+    <div class="assets" id="assets"></div>
+    <p class="asset-note">Qualquer outro item que você tenha adquirido nesta compra também já está liberado na sua área de membros da Hotmart.</p>
+  </div>
+</section>
+
+<!-- 3. VÍDEO DE BOAS-VINDAS (aparece só quando o vídeo estiver configurado) -->
+<section id="video-sec" hidden>
+  <div class="wrap">
+    <p class="kicker">Uma palavra, direto do meu escritório</p>
+    <div class="videobox">
+      <div class="frame">
+        <div class="screen" id="screen">
+          <div class="poster" id="poster">
+            <span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="cap">Boas-vindas · 90 segundos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="hr" id="video-hr" hidden>
+
+<!-- 4. TRÊS PASSOS -->
+<section>
+  <div class="wrap">
+    <p class="kicker">O que fazer nos próximos 60 segundos</p>
+    <div class="steps">
+      <div class="step">
+        <span class="n">01</span>
+        <div class="b"><b>Abra o seu e-mail</b><p>Procure uma mensagem da Hotmart com o assunto sobre o seu acesso ao produto de J. C. Dias. Se ela não estiver na Caixa de Entrada principal, verifique as abas Spam, Promoções e Social.</p></div>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <div class="b"><b>Salve o nosso suporte</b><p>Se tiver qualquer problema técnico com o seu acesso, não crie pânico. A minha equipe de operações resolve. Escreva para <a href="mailto:suporte@jcdias.com">suporte@jcdias.com</a>.</p></div>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <div class="b"><b>Acesse a área de membros</b><p>Clique no botão abaixo para ir direto à plataforma, onde as aulas, os áudios e os cadernos em PDF já estão esperando por você.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. BOTÃO -->
+<section class="gobox">
+  <div class="wrap">
+    <a href="#" class="cta" id="membros">Acessar minha área de membros agora</a>
+    <p class="secure">Acesso pela plataforma segura da Hotmart</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>30 Dias de Reconstrução · J. C. Dias</p>
+    <p>Suporte: <a href="mailto:suporte@jcdias.com">suporte@jcdias.com</a></p>
+    <p><a href="../privacidade/">Política de Privacidade</a> &nbsp;·&nbsp; <a href="../termos/">Termos de Uso</a></p>
+    <p>Copyright &copy; 2026 &middot; J. C. Dias &middot; Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!--
+  ROTEIRO SUGERIDO DO VÍDEO DE BOAS-VINDAS (90s), para o JC gravar olhando na câmera:
+  "Olá, aqui é o J. C. Dias. Quero te dar as boas-vindas pessoalmente. Se você está vendo
+  este vídeo, o seu pagamento foi aprovado e você escolheu parar de usar o passado como
+  desculpa. Eu respeito isso. Preste atenção: a Hotmart acabou de te enviar um e-mail com o
+  seu acesso. Procure agora. Se não achar na caixa de entrada, olhe no spam. Entre na
+  plataforma hoje, baixe os cadernos e se prepare. Nós começamos a execução. Não se atrase.
+  Nos vemos lá dentro."
+-->
+
+<script>
+/* ================= CONFIGURAÇÃO (JC preenche) ================= */
+var PIXEL_ID   = '2122287675194601';
+var MEMBROS_URL = 'https://sso.hotmart.com/login';  /* PENDENTE: trocar pela URL da sua área de membros / club da Hotmart */
+var VIDEO_URL   = '';   /* PENDENTE: cole aqui o link do vídeo (arquivo .mp4 ou embed do YouTube/Vimeo). Vazio = seção do vídeo fica escondida. */
+/* ============================================================= */
+
+var FUNNEL = 'jornada';
+
+/* ---- catálogo de ativos; a chave é usada no parâmetro ?p= ---- */
+var CATALOGO = {
+  ebook:    { emo:'📓', nome:'E-book Recomeçar com Propósito',                      status:'Enviado para o seu e-mail' },
+  audio:    { emo:'🎧', nome:'Audiolivro de Recomeçar com Propósito',                status:'Liberado na área de membros' },
+  combo:    { emo:'📕', nome:'A Caverna Interior + Quando Morri por Dentro',         status:'Liberado na área de membros' },
+  programa: { emo:'🚀', nome:'Programa 30 Dias de Reconstrução',                     status:'Cronograma ativado' }
+};
+
+(function(){
+  if(PIXEL_ID){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', PIXEL_ID); fbq('track','PageView');
+  }
+})();
+function evento(nome,dados){ var c=Object.assign({funnel:FUNNEL,step:'acesso'},dados||{}); if(window.fbq) fbq('trackCustom',nome,c); }
+evento('Acesso_View');
+
+var params = new URLSearchParams(location.search);
+
+/* ---- monta os cards de ativos ----
+   ?p=ebook,audio,combo,programa  define o que mostrar.
+   ?programa=turma|solo  rotula o programa.
+   ?demo=1  mostra todos (pré-visualização).
+   Sem parâmetro: mostra só o e-book (a compra de entrada garantida). */
+var pedido;
+if(params.get('demo')==='1'){ pedido = ['ebook','audio','combo','programa']; }
+else if(params.get('p')){ pedido = params.get('p').split(',').map(function(x){return x.trim();}); }
+else { pedido = ['ebook']; }
+
+var prog = (params.get('programa')||'').toLowerCase();
+var rotuloPrograma = prog==='turma' ? ' (Turma ao Vivo)' : prog==='solo' ? ' (Percurso Solo)' : '';
+
+var alvo = document.getElementById('assets');
+var CK = '<svg viewBox="0 0 24 24" fill="none" stroke="#00A859" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+pedido.forEach(function(chave){
+  var it = CATALOGO[chave]; if(!it) return;
+  var nome = it.nome + (chave==='programa' ? rotuloPrograma : '');
+  var el = document.createElement('div');
+  el.className = 'asset';
+  el.innerHTML = '<span class="emo">'+it.emo+'</span><div class="mid"><div class="nm">'+nome+'</div><div class="st">'+CK+'<span>'+it.status+'</span></div></div>';
+  alvo.appendChild(el);
+});
+
+/* ---- vídeo (só aparece com VIDEO_URL preenchido) ---- */
+if(VIDEO_URL){
+  document.getElementById('video-sec').hidden = false;
+  document.getElementById('video-hr').hidden = false;
+  var screen = document.getElementById('screen');
+  var poster = document.getElementById('poster');
+  poster.style.cursor = 'pointer';
+  poster.addEventListener('click', function(){
+    var isFile = /\.(mp4|webm|mov)(\?|$)/i.test(VIDEO_URL);
+    if(isFile){
+      var v = document.createElement('video');
+      v.src = VIDEO_URL; v.controls = true; v.autoplay = true; v.playsInline = true;
+      screen.innerHTML = ''; screen.appendChild(v);
+    } else {
+      var f = document.createElement('iframe');
+      f.src = VIDEO_URL + (VIDEO_URL.indexOf('?')>-1?'&':'?') + 'autoplay=1';
+      f.allow = 'autoplay; fullscreen; picture-in-picture'; f.allowFullscreen = true;
+      screen.innerHTML = ''; screen.appendChild(f);
+    }
+    evento('Acesso_Video_Play');
+  });
+}
+
+/* ---- botão da área de membros ---- */
+var botao = document.getElementById('membros');
+botao.setAttribute('href', MEMBROS_URL);
+botao.addEventListener('click', function(){ evento('Acesso_Membros_Click'); });
+</script>
+</body>
+</html>
