@@ -13,9 +13,9 @@
 
 <style>
 :root{
-  --carvao:#11110F; --pedra2:#1B1A17; --papel:#E9E2D6; --claro:#F3EFE8;
-  --cinza:#ABA39A; --cinza-esc:#6E675F; --bronze:#9B7B50; --luz:#D5B879;
-  --escuro-txt:#211F1B; --head:'Oswald',Impact,sans-serif; --corpo:'EB Garamond',Georgia,serif;
+  --carvao:#1E2124; --pedra2:#26292E; --papel:#23262B; --claro:#EDEFF1;
+  --cinza:#9AA1A8; --cinza-esc:#727982; --bronze:#FFCC00; --luz:#FFCC00; --steel:#4E7290;
+  --escuro-txt:#17181A; --head:'Oswald',Impact,sans-serif; --corpo:'EB Garamond',Georgia,serif;
   --pad:24px; --gap:34px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -26,7 +26,7 @@ img{max-width:100%;height:auto;display:block}
 section{padding:var(--gap) 0}
 .carvao{background:var(--carvao)}
 .pedra{background:var(--pedra2)}
-.papel{background:var(--papel);color:var(--escuro-txt);--bronze:#7A5A2E;--cinza-esc:#635C53}
+.papel{background:var(--papel);color:var(--claro)}
 .papel .fraco{color:var(--cinza-esc)}
 .fraco{color:var(--cinza)}
 .olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--luz);margin-bottom:22px}
@@ -38,7 +38,7 @@ p{margin-top:12px}
 .frase{font-family:var(--corpo);font-weight:600;font-size:clamp(25px,5.6vw,32px);line-height:1.3}
 .sublinha{font-family:var(--corpo);font-weight:500;font-size:clamp(19px,4.4vw,22px);line-height:1.42;color:var(--claro);margin-top:16px}
 
-header{position:relative;min-height:88vh;display:flex;align-items:stretch;padding:42px 0 40px;overflow:hidden;background:#0A0A09}
+header{position:relative;min-height:88vh;display:flex;align-items:stretch;padding:42px 0 40px;overflow:hidden;background:#15171A}
 header .bg{position:absolute;inset:0;z-index:0}
 header .bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
 header .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,9,.44) 0%,rgba(10,10,9,.5) 28%,rgba(12,12,10,.78) 58%,rgba(17,17,15,.96) 88%,rgba(17,17,15,1) 100%)}
@@ -47,8 +47,8 @@ header .wrap{position:relative;z-index:1;display:flex;flex-direction:column;widt
 
 /* movimentos (calendário) */
 .mov{margin-top:24px}
-.mov .row{display:flex;gap:16px;padding:15px 0;border-top:1px solid rgba(155,123,80,.26)}
-.mov .row:last-child{border-bottom:1px solid rgba(155,123,80,.26)}
+.mov .row{display:flex;gap:16px;padding:15px 0;border-top:1px solid rgba(78,114,144,.30)}
+.mov .row:last-child{border-bottom:1px solid rgba(78,114,144,.30)}
 .mov .lab{flex:0 0 118px}
 .mov .lab b{font-family:var(--head);font-weight:600;font-size:17px;letter-spacing:.04em;text-transform:uppercase;color:var(--luz)}
 .papel .mov .lab b{color:var(--bronze)}
@@ -57,12 +57,12 @@ header .wrap{position:relative;z-index:1;display:flex;flex-direction:column;widt
 
 /* stack */
 .stack{margin-top:26px}
-.stack .item{display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(155,123,80,.26)}
-.stack .item:last-child{border-bottom:1px solid rgba(155,123,80,.26)}
+.stack .item{display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(78,114,144,.30)}
+.stack .item:last-child{border-bottom:1px solid rgba(78,114,144,.30)}
 .stack .check{flex:0 0 24px;color:var(--luz);font-family:var(--head);font-weight:600;font-size:20px;line-height:1.4}
 .papel .stack .check{color:var(--bronze)}
 .stack .item b{display:block;font-family:var(--head);font-weight:500;font-size:19px;letter-spacing:.04em;text-transform:uppercase;color:var(--claro)}
-.papel .stack .item b{color:var(--escuro-txt)}
+.papel .stack .item b{color:var(--claro)}
 .stack .item span{display:block;margin-top:5px;font-size:19px;line-height:1.42;color:var(--cinza)}
 .papel .stack .item span{color:var(--cinza-esc)}
 .stack .item .tag{display:inline-block;margin-top:7px;font-family:var(--head);font-weight:500;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze)}
@@ -75,50 +75,83 @@ header .wrap{position:relative;z-index:1;display:flex;flex-direction:column;widt
 .nao li::before{content:"\00d7";position:absolute;left:2px;top:6px;color:var(--cinza-esc);font-family:var(--head);font-size:20px}
 
 /* preco card */
-.precocard{margin:28px auto 0;max-width:440px;background:#15130F;border:1px solid rgba(213,184,121,.45);border-radius:14px;padding:24px 22px 26px;box-shadow:0 20px 44px rgba(0,0,0,.22)}
+.precocard{margin:28px auto 0;max-width:440px;background:#191C20;border:1px solid rgba(255,204,0,.42);border-radius:14px;padding:24px 22px 26px;box-shadow:0 20px 44px rgba(0,0,0,.22)}
 .precocard .hoje{font-family:var(--head);font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--luz)}
 .precocard .num{font-family:var(--head);font-weight:600;font-size:70px;line-height:.98;color:var(--claro);margin-top:8px}
 .precocard .cond{font-family:var(--head);font-weight:400;font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cinza);margin-top:8px}
 
-.garantia{border:1px solid rgba(155,123,80,.4);border-radius:10px;padding:26px 22px;margin-top:8px;text-align:center}
+.garantia{border:1px solid rgba(255,204,0,.34);border-radius:10px;padding:26px 22px;margin-top:8px;text-align:center}
 .garantia .selo{font-family:var(--head);font-weight:600;font-size:15px;letter-spacing:.13em;text-transform:uppercase;color:var(--luz);margin-bottom:12px}
 .papel .garantia .selo{color:var(--bronze)}
 
 .faq{margin-top:24px}
-.faq details{border-top:1px solid rgba(155,123,80,.26)}
-.faq details:last-of-type{border-bottom:1px solid rgba(155,123,80,.26)}
+.faq details{border-top:1px solid rgba(78,114,144,.30)}
+.faq details:last-of-type{border-bottom:1px solid rgba(78,114,144,.30)}
 .faq summary{list-style:none;cursor:pointer;padding:16px 34px 16px 0;position:relative;font-family:var(--head);font-weight:500;font-size:18px;letter-spacing:.03em;text-transform:uppercase;color:var(--claro)}
-.papel .faq summary{color:var(--escuro-txt)}
+.papel .faq summary{color:var(--claro)}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"+";position:absolute;right:2px;top:12px;font-size:26px;line-height:1;color:var(--bronze);font-family:var(--head);font-weight:400}
 .faq details[open] summary::after{content:"\2212"}
 .faq details .fa{padding:0 0 18px;font-size:19px;line-height:1.5;color:var(--cinza);margin-top:0}
-.papel .faq details .fa{color:var(--cinza-esc)}
+.papel .faq details .fa{color:var(--cinza)}
 
 .oferta{text-align:center}
-.cta{position:relative;overflow:hidden;display:block;width:100%;max-width:460px;margin:24px auto 0;min-height:64px;background:linear-gradient(135deg,#FFDD8A 0%,#F3B24A 46%,#E8912B 100%);color:#231A08;border:0;border-radius:9px;font-family:var(--head);font-weight:600;font-size:19.5px;letter-spacing:.04em;text-transform:uppercase;text-align:center;text-decoration:none;padding:20px 16px;cursor:pointer;transition:filter .2s ease;box-shadow:0 10px 30px rgba(232,145,43,.5),0 0 0 1px rgba(255,225,150,.55) inset;animation:ctaPulse 2.6s ease-in-out infinite}
+.cta{position:relative;overflow:hidden;display:block;width:100%;max-width:460px;margin:24px auto 0;min-height:64px;background:linear-gradient(135deg,#FFE066 0%,#FFCC00 50%,#F2BC00 100%);color:#17181A;border:0;border-radius:9px;font-family:var(--head);font-weight:600;font-size:19.5px;letter-spacing:.04em;text-transform:uppercase;text-align:center;text-decoration:none;padding:20px 16px;cursor:pointer;transition:filter .2s ease;box-shadow:0 10px 30px rgba(255,204,0,.42),0 0 0 1px rgba(255,224,102,.6) inset;animation:ctaPulse 2.6s ease-in-out infinite}
 .cta::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;pointer-events:none;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:ctaSheen 3.4s ease-in-out infinite}
 .cta:hover{filter:brightness(1.06)}
-@keyframes ctaPulse{0%,100%{box-shadow:0 10px 30px rgba(232,145,43,.42),0 0 0 1px rgba(255,225,150,.5) inset}50%{box-shadow:0 14px 42px rgba(240,169,60,.72),0 0 0 1px rgba(255,225,150,.65) inset}}
+@keyframes ctaPulse{0%,100%{box-shadow:0 10px 30px rgba(255,204,0,.4),0 0 0 1px rgba(255,224,102,.55) inset}50%{box-shadow:0 14px 42px rgba(255,204,0,.66),0 0 0 1px rgba(255,224,102,.7) inset}}
 @keyframes ctaSheen{0%{left:-70%}58%,100%{left:135%}}
 @media (prefers-reduced-motion:reduce){.cta{animation:none}.cta::after{display:none}}
 .cta small{display:block;font-weight:400;font-size:13.5px;letter-spacing:.04em;opacity:.8;margin-top:3px}
 .micro{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:var(--cinza);margin-top:14px;text-align:center}
 .papel .micro{color:var(--cinza-esc)}
 
-#sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(17,17,15,.97);border-top:1px solid rgba(213,184,121,.26);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px calc(11px + env(safe-area-inset-bottom));transform:translateY(115%);transition:transform .45s ease}
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(17,17,15,.97);border-top:1px solid rgba(255,204,0,.26);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px calc(11px + env(safe-area-inset-bottom));transform:translateY(115%);transition:transform .45s ease}
 #sticky.on{transform:translateY(0)}
 #sticky .txt{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:var(--claro);line-height:1.35}
 #sticky .txt b{color:var(--luz);font-weight:600}
-#sticky a{flex:0 0 auto;background:linear-gradient(180deg,#e6c98a,#c8a24f);color:#1A1813;text-decoration:none;font-family:var(--head);font-weight:600;font-size:15.5px;letter-spacing:.1em;text-transform:uppercase;padding:13px 26px;border-radius:6px}
+#sticky a{flex:0 0 auto;background:linear-gradient(180deg,#FFE066,#FFCC00);color:#17181A;text-decoration:none;font-family:var(--head);font-weight:600;font-size:15.5px;letter-spacing:.1em;text-transform:uppercase;padding:13px 26px;border-radius:6px}
 
-footer{padding:28px 0 106px;text-align:center;border-top:1px solid rgba(155,123,80,.18)}
+footer{padding:28px 0 106px;text-align:center;border-top:1px solid rgba(78,114,144,.20)}
 footer p{font-size:15.5px;color:#8F887E;margin-top:9px;line-height:1.55}
 footer a{color:var(--cinza)}
 .rv{opacity:0;transform:translateY(16px);transition:opacity .75s ease,transform .75s ease}
 .rv.vis{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 @media (min-width:760px){:root{--pad:32px;--gap:46px}body{font-size:21.5px}footer{padding-bottom:56px}#sticky{display:none}}
+
+/* Stark Isolation add-ons */
+.badge-priv{display:inline-flex;align-items:center;gap:8px;font-family:var(--head);font-weight:600;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#FFCC00;border:1px solid rgba(255,204,0,.5);border-radius:6px;padding:8px 13px;margin-bottom:18px;background:rgba(255,204,0,.06)}
+.vs{display:flex;gap:12px;margin:22px 0 2px;max-width:430px}
+.vs .col{flex:1;border:1px solid rgba(78,114,144,.4);border-radius:9px;padding:12px 14px;text-align:center;background:rgba(255,255,255,.02)}
+.vs .col .t{font-family:var(--head);font-weight:500;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cinza)}
+.vs .col .p{font-family:var(--head);font-weight:600;font-size:26px;margin-top:4px;color:var(--claro)}
+.vs .col.out .p{text-decoration:line-through;text-decoration-color:rgba(255,96,86,.9);color:var(--cinza)}
+.vs .col.pick{border-color:rgba(255,204,0,.6);background:rgba(255,204,0,.07)}
+.vs .col.pick .p{color:#FFCC00}
+.util{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 4px}
+@media (max-width:520px){.util{grid-template-columns:1fr}}
+.util .u{border:1px solid rgba(78,114,144,.35);border-radius:12px;padding:16px;background:#191C20}
+.util .ut{font-family:var(--head);font-weight:500;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cinza);margin-bottom:12px}
+.nb{height:148px;border-radius:8px;background:linear-gradient(135deg,#111316,#1c2024);border:1px solid #2b3036;position:relative;box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.nb::before{content:"";position:absolute;left:16px;top:0;bottom:0;width:2px;background:repeating-linear-gradient(#3a4046 0 6px,transparent 6px 15px)}
+.nb .lab{position:absolute;left:30px;right:14px;top:50%;transform:translateY(-50%);font-family:var(--head);font-weight:600;font-size:15px;letter-spacing:.05em;text-transform:uppercase;color:#FFCC00;line-height:1.15}
+.nb .lab small{display:block;font-weight:400;font-size:10.5px;letter-spacing:.12em;color:var(--cinza);margin-top:6px}
+.ph{height:148px;border-radius:16px;background:#0E1013;border:1px solid #2b3036;position:relative;overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.ph .top{padding:14px 14px 0;font-family:var(--head);font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cinza)}
+.ph .day{padding:3px 14px;font-family:var(--head);font-weight:600;font-size:16px;color:var(--claro)}
+.ph .pbar{position:absolute;left:14px;right:14px;bottom:34px;height:4px;border-radius:3px;background:#2b3036}
+.ph .pbar::before{content:"";position:absolute;left:0;top:0;bottom:0;width:38%;border-radius:3px;background:#FFCC00}
+.ph .play{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);width:0;height:0;border-left:13px solid #FFCC00;border-top:8px solid transparent;border-bottom:8px solid transparent}
+.cache{margin-top:22px;border:1.5px dashed rgba(78,114,144,.55);border-radius:14px;padding:4px 18px 16px;background:rgba(78,114,144,.05)}
+.cache-h{font-family:var(--head);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cinza);padding:14px 2px 0}
+.cache .stack{margin-top:8px}
+.risco0{margin-top:18px;text-align:center;font-family:var(--head);font-weight:600;font-size:14.5px;letter-spacing:.05em;text-transform:uppercase;color:#FFCC00;border:1px solid rgba(255,204,0,.4);border-radius:8px;padding:13px}
+.close-blk .wrap{text-align:center}
+.close-blk .olho{color:#FFCC00}
+.covardes{max-width:520px;margin:28px auto 0;border:1px solid rgba(255,255,255,.85);border-radius:4px;padding:20px 22px;font-family:var(--head);font-weight:600;font-size:clamp(20px,4.6vw,26px);letter-spacing:.02em;text-transform:uppercase;color:#fff;line-height:1.2}
+.securebadge{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.securebadge span{font-family:var(--head);font-weight:400;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8A9198;border:1px solid rgba(255,255,255,.16);border-radius:5px;padding:7px 12px}
 </style>
 </head>
 <body>
@@ -134,9 +167,14 @@ footer a{color:var(--cinza)}
   <div class="wrap">
     <div class="marca-topo" style="max-width:116px;margin:0 0 22px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
     <p class="olho">30 Dias de Reconstrução &nbsp;·&nbsp; Percurso Solo</p>
+    <span class="badge-priv">&#128274; Percurso 100% privado</span>
     <h1>Os mesmos 30 dias de Reconstrução. No seu horário, sem plateia e sem desculpas.</h1>
     <p class="sublinha">Se você não quer abrir a sua câmera para ninguém, ótimo. Eu também atravessei o meu pior momento trancado em silêncio. Leve o método completo de execução por R$197 e faça a travessia sozinho.</p>
-    <a href="#oferta" class="cta" data-rolar style="margin:26px 0 0">Quero iniciar o Percurso Solo <small>por R$197</small></a>
+    <div class="vs">
+      <div class="col out"><div class="t">Turma ao vivo</div><div class="p">R$497</div></div>
+      <div class="col pick"><div class="t">Percurso Solo</div><div class="p">R$197</div></div>
+    </div>
+    <a href="#oferta" class="cta" data-rolar style="margin:22px 0 0">Quero iniciar o Percurso Solo <small>por R$197</small></a>
   </div>
 </header>
 
@@ -180,6 +218,10 @@ footer a{color:var(--cinza)}
   <div class="wrap rv">
     <p class="olho">O que está incluído</p>
     <h2>Tudo que você precisa para os 30 dias</h2>
+    <div class="util">
+      <div class="u"><div class="ut">O caderno</div><div class="nb"><div class="lab">Caderno de Reconstrução<small>28 páginas · um exercício por dia</small></div></div></div>
+      <div class="u"><div class="ut">A aula do dia, no seu celular</div><div class="ph"><div class="top">Dia 08 · Identidade</div><div class="day">As três camadas</div><div class="pbar"></div><div class="play"></div></div></div>
+    </div>
     <div class="stack">
       <div class="item"><span class="check">&#10003;</span><div><b>Os 30 dias, um por dia</b><span>Uma aula curta, de 8 a 15 minutos, em áudio na minha voz, com o texto acompanhando. Liberação diária, na ordem dos quatro movimentos.</span></div></div>
       <div class="item"><span class="check">&#10003;</span><div><b>O Caderno de Reconstrução</b><span>PDF preenchível no celular e versão para imprimir. Um exercício por dia, com o espaço já pronto. Ele nasceu de um caderno de vinte e oito páginas que a minha filha me deu quando voltei, uma para cada mês que eu fiquei longe, mais quatro de bônus, como ela disse.</span></div></div>
@@ -211,10 +253,14 @@ footer a{color:var(--cinza)}
     <p class="olho">Kit de contingência</p>
     <h2>Seu kit de contingência. Porque eu sei que você vai querer sabotar o processo.</h2>
     <p style="margin-top:14px">Eu não coloco bônus idiotas ou e-books genéricos nas minhas páginas para fazer volume. O que está abaixo são protocolos de áudio diretos que gravei para intervir na sua mente exatamente no momento em que a sua disciplina falhar.</p>
+    <div class="cache">
+    <div class="cache-h">Kit de contingência · 3 protocolos</div>
     <div class="stack">
       <div class="item"><span class="check">&#10003;</span><div><b>O Áudio Antifalha, enviado no dia 3</b><span>Um áudio cirúrgico de 7 minutos na minha voz que vai chegar no seu celular antes de você errar. Eu conheço a mente humana sob pressão. No terceiro dia, o entusiasmo da compra some e a preguiça assume. Eu vou quebrar esse padrão antes que você desista.</span><span class="tag">Valor R$27</span></div></div>
       <div class="item"><span class="check">&#10003;</span><div><b>A Conversa da Cozinha, auditoria de sobrecarga</b><span>O roteiro estratégico que desenhei na minha própria cozinha em março de 2025. Quando você tenta recomeçar, o erro mais comum é tentar abraçar o mundo e explodir a sua saúde ou o seu casamento. Este áudio ensina a técnica das 3 pernas da mesa (financeira, espiritual e familiar) para você descobrir qual delas está pagando a conta do seu novo projeto antes que tudo desabe de novo.</span><span class="tag">Valor R$27</span></div></div>
       <div class="item"><span class="check">&#10003;</span><div><b>O Seguro de Entrada, crédito integral de R$197</b><span>Se nos próximos 12 meses você decidir que não quer mais caminhar sozinho e preferir o peso da minha mentoria ao vivo e o grupo fechado, cada centavo que você pagou aqui é revertido em desconto na Turma de R$497. O seu risco é zero.</span><span class="tag">Valor R$197</span></div></div>
+    </div>
+    <p class="risco0">Com o crédito de R$197, o seu risco de hoje é zero.</p>
     </div>
   </div>
 </section>
@@ -263,16 +309,17 @@ footer a{color:var(--cinza)}
 </section>
 
 <!-- FECHAMENTO -->
-<section class="carvao" style="padding-top:0">
+<section class="close-blk" style="background:#000;padding-top:46px">
   <div class="wrap rv">
     <p class="olho">A verdade</p>
     <h2>A decisão não é sobre o meu curso. É sobre a sua dignidade.</h2>
     <p style="margin-top:20px">Eu já estive trancado em uma cela na Inglaterra sem poder ver os meus filhos, sem dinheiro, sem mercado e com o meu orgulho reduzido a pó. Eu não tive um mapa, eu não tive uma escolha e eu não tive um mentor. Eu precisei sangrar em cima de um caderno para desenhar o caminho de volta.</p>
     <p style="margin-top:14px">Você está aí fora, com a porta da sua cela aberta, segurando um celular com acesso à internet e hesitando em investir R$197 na metodologia de um homem que transformou o fundo do poço em um império de negócios.</p>
-    <p style="margin-top:14px">Se você quer continuar usando desculpas, fingindo que é muito ocupado ou que o momento não é certo para justificar o seu marasmo, feche esta aba agora. O Percurso Solo não aceita covardes.</p>
+    <p style="margin-top:14px">Se você quer continuar usando desculpas, fingindo que é muito ocupado ou que o momento não é certo para justificar o seu marasmo, feche esta aba agora.</p>
+    <div class="covardes">O Percurso Solo não aceita covardes.</div>
     <p class="frase" style="margin-top:22px">Mas se você se cansou de carregar o peso do passado e quer executar o plano de reconstrução escrito pela sua própria mão, o botão está logo abaixo. A escolha é sua, mas o preço de continuar no mesmo lugar é muito maior do que R$197.</p>
     <a href="#" class="cta" data-buy style="margin-top:32px">Quero começar meu Percurso Solo hoje <small>Percurso Solo · R$197 · acesso na hora</small></a>
-    <p class="micro">Pix ou cartão &nbsp;·&nbsp; 15 dias de garantia</p>
+    <div class="securebadge"><span>Pix ou cartão</span><span>Compra segura Hotmart</span><span>15 dias de garantia</span></div>
   </div>
 </section>
 
