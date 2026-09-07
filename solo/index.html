@@ -96,8 +96,12 @@ header .wrap{position:relative;z-index:1;display:flex;flex-direction:column;widt
 .papel .faq details .fa{color:var(--cinza-esc)}
 
 .oferta{text-align:center}
-.cta{display:block;width:100%;max-width:460px;margin:24px auto 0;min-height:62px;background:linear-gradient(180deg,#e6c98a,#c8a24f);color:#1A1813;border:0;border-radius:7px;font-family:var(--head);font-weight:600;font-size:19px;letter-spacing:.04em;text-transform:uppercase;text-align:center;text-decoration:none;padding:20px 16px;cursor:pointer;transition:filter .2s ease}
-.cta:hover{filter:brightness(1.05)}
+.cta{position:relative;overflow:hidden;display:block;width:100%;max-width:460px;margin:24px auto 0;min-height:64px;background:linear-gradient(135deg,#FFDD8A 0%,#F3B24A 46%,#E8912B 100%);color:#231A08;border:0;border-radius:9px;font-family:var(--head);font-weight:600;font-size:19.5px;letter-spacing:.04em;text-transform:uppercase;text-align:center;text-decoration:none;padding:20px 16px;cursor:pointer;transition:filter .2s ease;box-shadow:0 10px 30px rgba(232,145,43,.5),0 0 0 1px rgba(255,225,150,.55) inset;animation:ctaPulse 2.6s ease-in-out infinite}
+.cta::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;pointer-events:none;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:ctaSheen 3.4s ease-in-out infinite}
+.cta:hover{filter:brightness(1.06)}
+@keyframes ctaPulse{0%,100%{box-shadow:0 10px 30px rgba(232,145,43,.42),0 0 0 1px rgba(255,225,150,.5) inset}50%{box-shadow:0 14px 42px rgba(240,169,60,.72),0 0 0 1px rgba(255,225,150,.65) inset}}
+@keyframes ctaSheen{0%{left:-70%}58%,100%{left:135%}}
+@media (prefers-reduced-motion:reduce){.cta{animation:none}.cta::after{display:none}}
 .cta small{display:block;font-weight:400;font-size:13.5px;letter-spacing:.04em;opacity:.8;margin-top:3px}
 .micro{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:var(--cinza);margin-top:14px;text-align:center}
 .papel .micro{color:var(--cinza-esc)}
@@ -130,9 +134,9 @@ footer a{color:var(--cinza)}
   <div class="wrap">
     <div class="marca-topo" style="max-width:116px;margin:0 0 22px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
     <p class="olho">30 Dias de Reconstrução &nbsp;·&nbsp; Percurso Solo</p>
-    <h1>Os mesmos 30 dias. No seu horário, sem turma, sem hora marcada.</h1>
-    <p class="sublinha">Uma aula curta por dia, na minha voz. Um exercício por dia, no Caderno. No dia 30, os mesmos quatro documentos, escritos pela sua própria mão.</p>
-    <a href="#oferta" class="cta" data-rolar style="margin:26px 0 0">Quero começar meu percurso <small>Percurso Solo · R$197 · acesso na hora</small></a>
+    <h1>Os mesmos 30 dias de Reconstrução. No seu horário, sem plateia e sem desculpas.</h1>
+    <p class="sublinha">Se você não quer abrir a sua câmera para ninguém, ótimo. Eu também atravessei o meu pior momento trancado em silêncio. Leve o método completo de execução por R$197 e faça a travessia sozinho.</p>
+    <a href="#oferta" class="cta" data-rolar style="margin:26px 0 0">Quero iniciar o Percurso Solo <small>por R$197</small></a>
   </div>
 </header>
 
@@ -140,8 +144,8 @@ footer a{color:var(--cinza)}
 <section class="carvao">
   <div class="wrap rv">
     <p class="olho">Para quem é</p>
-    <h2>Para quem quer atravessar sem plateia</h2>
-    <p style="margin-top:22px">Tem gente que quer atravessar os trinta dias, mas não consegue estar numa sexta-feira às sete da noite com a câmera aberta. Filho para dormir, turno para fechar, fuso diferente, ou simplesmente vontade de fazer isso sem ninguém olhando. Eu entendo. O Percurso Solo é para essa pessoa.</p>
+    <h2>Para o lobo solitário</h2>
+    <p style="margin-top:22px">O Percurso Solo não é para quem precisa de plateia para se mexer. É para quem executa sozinho, sem câmera aberta numa sexta à noite, sem grupo para segurar a mão, sem babá. Você não precisa de ninguém olhando para fazer o que tem que ser feito.</p>
     <p class="frase" style="margin-top:24px">Não é uma versão menor. É a mesma travessia, sem a plateia.</p>
   </div>
 </section>
@@ -204,12 +208,13 @@ footer a{color:var(--cinza)}
 <!-- BÔNUS -->
 <section class="carvao">
   <div class="wrap rv">
-    <p class="olho">Bônus</p>
-    <h2>Três apoios para os dias difíceis</h2>
+    <p class="olho">Kit de contingência</p>
+    <h2>Seu kit de contingência. Porque eu sei que você vai querer sabotar o processo.</h2>
+    <p style="margin-top:14px">Eu não coloco bônus idiotas ou e-books genéricos nas minhas páginas para fazer volume. O que está abaixo são protocolos de áudio diretos que gravei para intervir na sua mente exatamente no momento em que a sua disciplina falhar.</p>
     <div class="stack">
-      <div class="item"><span class="check">&#10003;</span><div><b>O Dia Que Você Vai Falhar</b><span>Áudio de 7 minutos, na minha voz, que chega no seu dia 3. Antes da falha, não depois.</span><span class="tag">Valor R$27</span></div></div>
-      <div class="item"><span class="check">&#10003;</span><div><b>A Conversa da Cozinha</b><span>Áudio curto e uma folha só: as três pernas da mesa, financeira, espiritual e familiar, e a pergunta de qual delas está pagando o preço das outras agora. Nasceu de uma noite de março de 2025, na minha cozinha, com uma dívida na tela e a minha esposa me dizendo: você saiu para recomeçar, não para acabar com você em formato novo.</span><span class="tag">Valor R$27</span></div></div>
-      <div class="item"><span class="check">&#10003;</span><div><b>Crédito de Fundador</b><span>R$197 de crédito integral na próxima turma ao vivo, válido por 12 meses. Se depois você quiser fazer comigo na sala, o que você pagou aqui vale lá.</span><span class="tag">Valor R$197</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>O Áudio Antifalha, enviado no dia 3</b><span>Um áudio cirúrgico de 7 minutos na minha voz que vai chegar no seu celular antes de você errar. Eu conheço a mente humana sob pressão. No terceiro dia, o entusiasmo da compra some e a preguiça assume. Eu vou quebrar esse padrão antes que você desista.</span><span class="tag">Valor R$27</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>A Conversa da Cozinha, auditoria de sobrecarga</b><span>O roteiro estratégico que desenhei na minha própria cozinha em março de 2025. Quando você tenta recomeçar, o erro mais comum é tentar abraçar o mundo e explodir a sua saúde ou o seu casamento. Este áudio ensina a técnica das 3 pernas da mesa (financeira, espiritual e familiar) para você descobrir qual delas está pagando a conta do seu novo projeto antes que tudo desabe de novo.</span><span class="tag">Valor R$27</span></div></div>
+      <div class="item"><span class="check">&#10003;</span><div><b>O Seguro de Entrada, crédito integral de R$197</b><span>Se nos próximos 12 meses você decidir que não quer mais caminhar sozinho e preferir o peso da minha mentoria ao vivo e o grupo fechado, cada centavo que você pagou aqui é revertido em desconto na Turma de R$497. O seu risco é zero.</span><span class="tag">Valor R$197</span></div></div>
     </div>
   </div>
 </section>
@@ -259,9 +264,14 @@ footer a{color:var(--cinza)}
 
 <!-- FECHAMENTO -->
 <section class="carvao" style="padding-top:0">
-  <div class="wrap rv" style="text-align:center">
-    <p class="frase" style="font-size:clamp(26px,6vw,34px)">Eu atravessei sozinho porque não tinha escolha. Você tem. Mas se for para atravessar sozinho, que seja com mapa.</p>
-    <a href="#" class="cta" data-buy style="margin-top:34px">Quero começar meu percurso <small>Percurso Solo · R$197 · acesso na hora</small></a>
+  <div class="wrap rv">
+    <p class="olho">A verdade</p>
+    <h2>A decisão não é sobre o meu curso. É sobre a sua dignidade.</h2>
+    <p style="margin-top:20px">Eu já estive trancado em uma cela na Inglaterra sem poder ver os meus filhos, sem dinheiro, sem mercado e com o meu orgulho reduzido a pó. Eu não tive um mapa, eu não tive uma escolha e eu não tive um mentor. Eu precisei sangrar em cima de um caderno para desenhar o caminho de volta.</p>
+    <p style="margin-top:14px">Você está aí fora, com a porta da sua cela aberta, segurando um celular com acesso à internet e hesitando em investir R$197 na metodologia de um homem que transformou o fundo do poço em um império de negócios.</p>
+    <p style="margin-top:14px">Se você quer continuar usando desculpas, fingindo que é muito ocupado ou que o momento não é certo para justificar o seu marasmo, feche esta aba agora. O Percurso Solo não aceita covardes.</p>
+    <p class="frase" style="margin-top:22px">Mas se você se cansou de carregar o peso do passado e quer executar o plano de reconstrução escrito pela sua própria mão, o botão está logo abaixo. A escolha é sua, mas o preço de continuar no mesmo lugar é muito maior do que R$197.</p>
+    <a href="#" class="cta" data-buy style="margin-top:32px">Quero começar meu Percurso Solo hoje <small>Percurso Solo · R$197 · acesso na hora</small></a>
     <p class="micro">Pix ou cartão &nbsp;·&nbsp; 15 dias de garantia</p>
   </div>
 </section>
