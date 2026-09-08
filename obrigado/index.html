@@ -72,9 +72,11 @@ footer p{font-size:15px;color:#8F887E;margin-top:8px;line-height:1.55}
 footer a{color:var(--cinza)}
 .notice{max-width:560px;margin:0 auto;background:rgba(255,255,255,.06);border:1px solid rgba(171,163,154,.22);border-radius:8px;padding:11px 16px;font-family:var(--head);font-weight:400;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--cinza);text-align:center}
 .notice b{color:var(--luz);font-weight:600}
-.alerta{max-width:600px;margin:22px auto 0;border:1px solid rgba(214,80,58,.55);border-left:4px solid #D6503A;border-radius:10px;background:rgba(214,80,58,.09);padding:20px 22px;text-align:left}
-.alerta h2{color:#fff;font-size:clamp(26px,7vw,36px)}
-.alerta p{margin-top:8px;color:var(--claro);font-family:var(--head);font-weight:400;font-size:15px;letter-spacing:.05em;text-transform:uppercase}
+.alerta{position:relative;max-width:620px;margin:24px auto 0;border:1px solid rgba(224,85,58,.5);border-left:5px solid #E0553A;border-radius:12px;background:linear-gradient(135deg,rgba(224,85,58,.20),rgba(120,30,20,.12));padding:24px 24px 26px;text-align:left;box-shadow:0 18px 46px -22px rgba(224,85,58,.55)}
+.alerta .warn{display:inline-flex;align-items:center;gap:9px;font-family:var(--head);font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#F3A794;margin-bottom:11px}
+.alerta .warn svg{width:18px;height:18px}
+.alerta h2{color:#fff;font-size:clamp(29px,7.6vw,41px);line-height:1.04}
+.alerta p{margin-top:10px;color:#F1E9E5;font-family:var(--head);font-weight:400;font-size:15.5px;letter-spacing:.05em;text-transform:uppercase}
 .duo figure:first-child{transform:rotate(-4deg)}
 .duo figure:last-child{transform:rotate(4deg);margin-left:-20px;position:relative;z-index:2}
 .aprender{margin-top:14px;border:1px solid rgba(0,0,0,.13);border-radius:10px;padding:16px;background:#fff;display:flex;gap:13px;align-items:flex-start}
@@ -128,6 +130,7 @@ footer a{color:var(--cinza)}
   <div class="wrap">
     <p class="notice"><b>&#10003;</b>&nbsp; Acesso ao primeiro manuscrito enviado para o seu e-mail.</p>
     <div class="alerta">
+      <span class="warn"><svg viewBox="0 0 24 24" fill="none" stroke="#E0553A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h16.9a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9.5" x2="12" y2="13.5"/><line x1="12" y1="17" x2="12" y2="17"/></svg>Não pare agora</span>
       <h2>Chão não é teto.</h2>
       <p>A sua jornada parou pela metade.</p>
     </div>
@@ -157,7 +160,7 @@ footer a{color:var(--cinza)}
       <p class="olho">Livro 2</p>
       <h3 style="font-family:var(--head);font-weight:500;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(21px,5vw,26px);color:var(--escuro-txt)">A Caverna Interior</h3>
       <p style="margin-top:14px">A prisão física foi a minha caverna, mas a sua mente pode ser a sua hoje. Depois que você aceita a queda, você entra no período mais perigoso: o isolamento. É aqui que a maioria das pessoas enlouquece, cai em depressão ou desiste.</p>
-      <p style="margin-top:12px">A Caverna Interior é o meu manual de estratégia avançada. Foi escrito enquanto eu estava cercado por quatro paredes de concreto cinza, desenhando os rascunhos do que viria a ser a Solta Lingerie, o ED07 e os meus próximos passos empresariais.</p>
+      <p style="margin-top:12px">A Caverna Interior é o meu manual de estratégia avançada. Foi escrito enquanto eu estava cercado por quatro paredes de concreto frio e cinzento, desenhando os rascunhos do que viria a ser a Solta Lingerie, o ED07 e os meus próximos passos empresariais.</p>
       <div class="aprender blue"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.3"/><line x1="12" y1="1.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22.5" y2="12"/></svg></span><div><b>O que você vai aprender</b><p>As 8 ferramentas de engenharia mental para produzir no escuro. Como usar o tempo de crise para se tornar perigoso, focado e cirúrgico, estruturando seus próximos negócios antes mesmo de ter um centavo no bolso.</p></div></div>
     </div>
 
@@ -170,10 +173,10 @@ footer a{color:var(--cinza)}
       <div class="opt">
         <p class="lab">Opção 1 &middot; Digital</p>
         <p class="tit">Acesso Digital Imediato</p>
-        <p class="desc">Você recebe o acesso digital instantâneo aos dois manuscritos, direto na sua área de membros, para ler no celular, no tablet ou no computador.</p>
+        <p class="desc">Você recebe na hora as edições oficiais em ebook, com ISBN, direto na sua área de membros. Não é PDF solto. São os livros para ler no Kindle, no celular, no tablet ou no computador.</p>
         <ul class="opt-feats">
-          <li>Quando Morri por Dentro em versão digital</li>
-          <li>A Caverna Interior em versão digital</li>
+          <li>Quando Morri por Dentro, ebook oficial para Kindle</li>
+          <li>A Caverna Interior, ebook oficial para Kindle</li>
           <li>Liberado na hora, sem digitar o cartão de novo</li>
         </ul>
         <div class="opt-price">
@@ -202,7 +205,7 @@ footer a{color:var(--cinza)}
 
     <div class="envio">
       <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9V7A5 5 0 0 0 7 7v2H5v13h14V9zM9 7a3 3 0 0 1 6 0v2H9z"/></svg></span>
-      <p><b>Compra em 1 clique segura</b>Se você escolher o Combo Premium, o seu acesso digital é liberado em segundos e a nossa distribuidora usa o endereço que você já cadastrou na compra do primeiro livro para emitir o envio dos livros físicos. Você recebe o código de rastreamento por e-mail.</p>
+      <p><b>Compra em 1 clique segura</b>Se você escolher o Combo Premium, o seu acesso digital é liberado em segundos. Para os livros físicos, a nossa distribuidora usa os seus dados de compra e, se faltar confirmar o endereço de entrega, você confirma ali mesmo na tela. Você recebe o código de rastreamento por e-mail.</p>
     </div>
 
     <p class="seguro"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9V7A5 5 0 0 0 7 7v2H5v13h14V9zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>Compra segura pela Hotmart</p>
