@@ -191,7 +191,7 @@ footer a{color:var(--cinza)}
 
     <p class="seguro"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9V7A5 5 0 0 0 7 7v2H5v13h14V9zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>Compra segura pela Hotmart</p>
     <p class="micro">Ao fechar ou sair desta página, você nunca mais verá este combo por este preço. Se quiser adquirir depois, pagará o valor cheio.</p>
-    <a href="#nao" class="recusar" data-recusar>Não quero as paredes, prefiro ficar apenas com o chão por enquanto.</a>
+    <a href="../acesso/?p=ebook" class="recusar" data-recusar>Não quero as paredes, prefiro ficar apenas com o chão por enquanto.</a>
 
     <div class="garantia">
       <p class="selo">Garantia Porta Aberta &nbsp;·&nbsp; 15 dias</p>
@@ -254,7 +254,7 @@ document.querySelectorAll('[data-buy-fisico]').forEach(function(el){
   el.addEventListener('click',function(e){ e.preventDefault(); irPara(PRODUTO_FISICO,CHECKOUT_FISICO,'Obrigado_Upsell_Fisico_Click'); });
 });
 document.querySelectorAll('[data-recusar]').forEach(function(el){
-  el.addEventListener('click',function(e){ e.preventDefault(); if(window.fbq) fbq('trackCustom','Obrigado_Upsell_Recusa',{funnel:FUNNEL}); var alvo=document.getElementById('nao'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'start'}); });
+  el.addEventListener('click',function(e){ e.preventDefault(); if(window.fbq) fbq('trackCustom','Obrigado_Upsell_Recusa',{funnel:FUNNEL}); window.location.href=el.getAttribute('href'); });
 });
 </script>
 </body>
