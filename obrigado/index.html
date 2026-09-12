@@ -181,7 +181,7 @@ footer a{color:var(--cinza)}
       <div class="opt-price">
         <div class="v">R$47</div>
         <div class="cond">Pix à vista ou em até 12x no cartão</div>
-        <a href="#" class="optbtn fogo" data-buy>Sim, quero os dois livros por R$47</a>
+        <div id="hotmart-sales-funnel"></div>
       </div>
     </div>
 
@@ -192,7 +192,6 @@ footer a{color:var(--cinza)}
 
     <p class="seguro"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9V7A5 5 0 0 0 7 7v2H5v13h14V9zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>Compra segura pela Hotmart</p>
     <p class="micro">Ao fechar ou sair desta página, você nunca mais verá este combo por este preço. Se quiser adquirir depois, pagará o valor cheio.</p>
-    <a href="../solo/" class="recusar" data-recusar>Não quero o combo agora, seguir.</a>
 
     <div class="garantia">
       <p class="selo">Garantia Porta Aberta &nbsp;·&nbsp; 15 dias</p>
@@ -258,5 +257,8 @@ document.querySelectorAll('[data-recusar]').forEach(function(el){
   el.addEventListener('click',function(e){ e.preventDefault(); if(window.fbq) fbq('trackCustom','Obrigado_Upsell_Recusa',{funnel:FUNNEL}); window.location.href=el.getAttribute('href'); });
 });
 </script>
+<!-- HOTMART - Sales Funnel Widget -->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')</script>
 </body>
 </html>
