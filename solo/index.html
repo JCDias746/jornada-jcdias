@@ -315,7 +315,7 @@ footer .brandword{font-size:20px}
 <!-- VSL -->
 <section style="padding:40px 0 12px">
   <div class="wrap" style="max-width:760px">
-    <div style="position:relative;aspect-ratio:16/9;min-height:200px;background:#0d1b2a;border:1px solid var(--bege,#e5ddd0);border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 22px 55px -26px rgba(0,0,0,.55)">
+    <div style="display:none;position:relative;aspect-ratio:16/9;min-height:200px;background:#0d1b2a;border:1px solid var(--bege,#e5ddd0);border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 22px 55px -26px rgba(0,0,0,.55)">
       <!-- >>> COLE AQUI O EMBED DO VSL (iframe do YouTube/Vimeo/Hotmart, largura 100% e altura 100%). Depois pode apagar o bloco .vsl-ph abaixo. <<< -->
       <div class="vsl-ph" style="text-align:center;color:#cfd8e3;font-family:var(--sans,system-ui,sans-serif);padding:20px">
         <div style="width:66px;height:66px;margin:0 auto 12px;border-radius:50%;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
@@ -609,5 +609,20 @@ footer .brandword{font-size:20px}
 <!-- HOTMART - Sales Funnel Widget -->
 <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
 <script>checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')</script>
+<style>
+#stickycta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.97);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-top:1px solid var(--bege);box-shadow:0 -6px 24px rgba(0,0,0,.10);padding:10px 16px}
+#stickycta .sc-in{max-width:820px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px}
+#stickycta .sc-price{font-family:var(--sans);font-size:15px;color:var(--ink);white-space:nowrap}
+#stickycta .sc-price b{color:var(--blue);font-size:17px}
+#stickycta .cta{padding:14px 22px;font-size:14.5px;box-shadow:none}
+body{padding-bottom:82px}
+@media(max-width:560px){#stickycta .sc-price{font-size:12.5px}#stickycta .sc-price b{font-size:14.5px}#stickycta .cta{padding:12px 15px;font-size:12.5px}}
+</style>
+<div id="stickycta">
+  <div class="sc-in">
+    <span class="sc-price">30 Dias de Reconstrução · <b>R$147</b></span>
+    <a href="#oferta" class="cta">Quero garantir a minha vaga</a>
+  </div>
+</div>
 </body>
 </html>
