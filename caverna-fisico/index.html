@@ -59,13 +59,12 @@ footer{border-top:1px solid rgba(213,184,121,.14);padding:26px 24px 40px;text-al
   <div class="oferta" id="oferta">
     <div class="preco">R$67<small>Livro físico · frete grátis pra todo o Brasil</small></div>
     <div class="cond">Pix à vista ou em até 12x no cartão</div>
-    <a href="#" class="cta" data-buy>Sim, quero A Caverna impressa <small>Adicionar por R$67, em 1 clique</small></a>
+    <div id="hotmart-sales-funnel"></div>
     <p class="oneclick">Compra em 1 clique, sem digitar o cartão de novo.</p>
   </div>
 
   <div class="proxima">Na <b>próxima página</b>, o <b>Quando Morri por Dentro</b> impresso vem pelo <b>mesmo preço, R$67</b>. Sem surpresa, já dá pra ir completando a coleção.</div>
 
-  <a href="../morri-fisico/" class="recusar" data-recusar>Não quero o livro físico, seguir.</a>
 </div>
 
 <footer>
@@ -106,5 +105,8 @@ document.querySelectorAll('[data-recusar]').forEach(function(el){
   el.addEventListener('click',function(e){ e.preventDefault(); if(window.fbq) fbq('trackCustom','Caverna_Fisico_Recusa',{funnel:FUNNEL}); window.location.href=el.getAttribute('href'); });
 });
 </script>
+<!-- HOTMART - Sales Funnel Widget -->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')</script>
 </body>
 </html>
