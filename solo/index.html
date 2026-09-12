@@ -301,7 +301,7 @@ footer .brandword{font-size:20px}
         </div>
         <div class="pricetag"><b>Percurso Solo · R$147</b></div>
         <p class="enroll-note">O treinamento começa em 21 de setembro. Garanta a sua vaga.</p>
-        <a class="cta lg" href="https://pay.hotmart.com/R107531031F?bid=1788985181898" onclick="try{fbq('track','InitiateCheckout')}catch(e){}">Quero garantir a minha vaga no treinamento</a>
+        <a class="cta lg" href="#oferta">Quero garantir a minha vaga no treinamento</a>
         <p class="micro">15 dias de garantia · Em até 12x no cartão · Pix à vista</p>
       </div>
       <div class="photo">
@@ -606,10 +606,9 @@ footer .brandword{font-size:20px}
       <div class="val">Valor do Percurso Solo</div>
       <div class="price">R$147</div>
       <div class="parc">Em até 12x no cartão. Pix à vista.</div>
-      <a class="cta lg" href="https://pay.hotmart.com/R107531031F?bid=1788985181898" onclick="try{fbq('track','InitiateCheckout')}catch(e){}">Quero garantir a minha vaga no treinamento</a>
+      <div id="hotmart-sales-funnel"></div>
       <div class="lockline"><svg viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm3 8H9V6a3 3 0 0 1 6 0v3z"/></svg>Acesso liberado imediatamente após a confirmação do pagamento</div>
       <p class="micro" style="color:#b7b1a6;margin-top:12px">Pagamento seguro · 15 dias de garantia</p>
-      <a href="../pronto/" class="recusa-turma">Não quero agora. Já comprei o meu livro, ver como acessar.</a>
     </div>
   </div>
 </section>
@@ -634,7 +633,7 @@ footer .brandword{font-size:20px}
   <div class="wrap" style="max-width:640px;text-align:center">
     <h2 style="font-size:clamp(24px,3.8vw,34px);margin-bottom:18px">Todos começamos juntos.</h2>
     <p class="lead" style="margin-bottom:26px">O treinamento começa em <b style="color:var(--ink)">21 de setembro de 2026</b>. Ao garantir a sua vaga hoje, você entra na turma que começa nessa data e faz a travessia no seu ritmo, sem lives.</p>
-    <a class="cta lg" href="https://pay.hotmart.com/R107531031F?bid=1788985181898" onclick="try{fbq('track','InitiateCheckout')}catch(e){}">Quero garantir a minha vaga no treinamento</a>
+    <a class="cta lg" href="#oferta">Quero garantir a minha vaga no treinamento</a>
   </div>
 </section>
 
@@ -681,7 +680,7 @@ footer .brandword{font-size:20px}
     <h2>O que aconteceu já está escrito. O próximo capítulo ainda não.</h2>
     <p class="prog">30 Dias de Reconstrução · Percurso Solo</p>
     <div class="price">R$147</div>
-    <a class="cta lg" href="https://pay.hotmart.com/R107531031F?bid=1788985181898" onclick="try{fbq('track','InitiateCheckout')}catch(e){}">Quero garantir a minha vaga no treinamento</a>
+    <a class="cta lg" href="#oferta">Quero garantir a minha vaga no treinamento</a>
     <p class="micro">Comece em 21/09 · no seu ritmo · 15 dias de garantia</p>
   </div>
 </section>
@@ -694,5 +693,8 @@ footer .brandword{font-size:20px}
   </div>
 </footer>
 
+<!-- HOTMART - Sales Funnel Widget -->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')</script>
 </body>
 </html>
