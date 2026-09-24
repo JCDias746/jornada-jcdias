@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Jornada · 4 livros | J. C. Dias</title>
+<meta name="description" content="Quatro livros escritos dentro de uma cela. Não para você entender a minha história, mas para sentir a sua. Os 4 ebooks por R$127, acesso imediato.">
+<meta property="og:title" content="Quatro livros escritos dentro de uma cela.">
+<meta property="og:description" content="Não são livros de autoajuda. São quatro travessias. Você vai se reconhecer, respirar fundo e olhar a sua vida com outros olhos.">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://jornada.jcdias.com/assets/img/capa-caverna.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --carvao:#11110F; --pedra2:#1B1A17; --papel:#E9E2D6; --claro:#F3EFE8;
+  --cinza:#ABA39A; --cinza-esc:#7A736A; --bronze:#9B7B50; --luz:#D5B879;
+  --head:'Oswald',Impact,sans-serif; --corpo:'EB Garamond',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--carvao);color:var(--claro);font-family:var(--corpo);font-size:20px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:680px;margin:0 auto;padding:0 24px}
+section{padding:46px 0}
+.gold{color:var(--luz)}
+.eyebrow{font-family:var(--head);font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:12.5px;color:var(--bronze)}
+h1{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:clamp(30px,7vw,46px);line-height:1.06;letter-spacing:.005em;margin:16px 0 0}
+h2{font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:clamp(20px,4.6vw,26px);letter-spacing:.02em}
+.lead{color:var(--papel);margin-top:18px;font-size:20.5px}
+.hr{width:64px;height:2px;background:var(--luz);margin:26px auto;border:0}
+.center{text-align:center}
+
+/* capas */
+.covers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0 6px}
+.covers img{border-radius:4px;box-shadow:0 18px 40px -18px rgba(0,0,0,.8),0 2px 0 rgba(213,184,121,.12);transition:transform .3s}
+.covers img:hover{transform:translateY(-4px)}
+.titles{font-family:var(--head);font-weight:400;text-transform:uppercase;letter-spacing:.04em;font-size:12.5px;color:var(--cinza-esc);text-align:center;margin-top:14px;line-height:1.9}
+
+/* preço + cta */
+.price{font-family:var(--head);font-weight:700;font-size:clamp(46px,12vw,68px);color:var(--claro);line-height:1}
+.price small{display:block;font-family:var(--corpo);font-weight:400;font-size:16px;color:var(--cinza);letter-spacing:0;text-transform:none;margin-top:6px}
+.cta{display:block;width:100%;max-width:460px;margin:24px auto 0;background:linear-gradient(180deg,#E7C883,#C79A4E);color:#1a1710;text-decoration:none;text-align:center;font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:19px;padding:19px 22px;border-radius:12px;box-shadow:0 16px 34px -14px rgba(213,184,121,.5);border:1px solid #e9d6a6}
+.cta small{display:block;font-family:var(--corpo);font-weight:400;text-transform:none;letter-spacing:0;font-size:14.5px;color:#4a3d22;margin-top:4px}
+.cta:active{transform:translateY(1px)}
+
+/* sentir */
+.feel{display:flex;gap:16px;align-items:center;padding:16px 0;border-top:1px solid rgba(213,184,121,.14)}
+.feel:first-of-type{border-top:0}
+.feel img{width:62px;flex:0 0 62px;border-radius:3px;box-shadow:0 8px 20px -10px #000}
+.feel p{font-size:19.5px;color:var(--claro)}
+
+/* autor */
+.autor{background:var(--pedra2);border-radius:16px;padding:30px 26px;text-align:center}
+.autor .q{font-size:21px;font-style:italic;color:var(--papel)}
+.autor .n{font-family:var(--head);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--luz);margin-top:16px}
+
+.bump{border:1px dashed rgba(213,184,121,.4);border-radius:12px;padding:16px 18px;margin-top:22px;font-size:17px;color:var(--papel)}
+.bump b{color:var(--luz)}
+.guarantee{font-size:16px;color:var(--cinza);margin-top:20px;text-align:center}
+footer{border-top:1px solid rgba(255,255,255,.06);padding:30px 24px 60px;text-align:center;color:var(--cinza-esc);font-size:13.5px}
+footer a{color:var(--cinza)}
+
+/* sticky */
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(17,17,15,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(213,184,121,.25);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .35s}
+#sticky.on{transform:translateY(0)}
+#sticky .s-l{font-family:var(--head);text-transform:uppercase;letter-spacing:.02em;font-size:13px;color:var(--papel);line-height:1.2}
+#sticky .s-l b{color:var(--luz);font-size:19px}
+#sticky a{background:linear-gradient(180deg,#E7C883,#C79A4E);color:#1a1710;text-decoration:none;font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:14px;padding:12px 18px;border-radius:10px;white-space:nowrap}
+@media (max-width:560px){ .titles{display:none} .feel img{width:52px;flex-basis:52px} }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="center" style="padding-top:52px">
+  <div class="wrap">
+    <span class="eyebrow">J. C. Dias · A Jornada</span>
+    <h1>Quatro livros escritos<br>dentro de uma <span class="gold">cela</span>.</h1>
+    <p class="lead">Não para você entender a minha história. Para você sentir a sua.</p>
+    <p class="lead" style="color:var(--cinza);font-size:18.5px">Não são livros de autoajuda. São quatro travessias. Você vai se reconhecer, respirar fundo, e chegar na última página olhando pra sua própria vida com outros olhos.</p>
+
+    <div class="covers">
+      <picture><source srcset="../assets/img/capa-rcp.webp" type="image/webp"><img src="../assets/img/capa-rcp.jpg" alt="Recomeçar com Propósito" width="300" height="450" loading="eager"></picture>
+      <picture><source srcset="../assets/img/capa-qmpd.webp" type="image/webp"><img src="../assets/img/capa-qmpd.jpg" alt="Quando Morri por Dentro" width="300" height="450" loading="eager"></picture>
+      <picture><source srcset="../assets/img/capa-dvpn.webp" type="image/webp"><img src="../assets/img/capa-dvpn.jpg" alt="De Volta Para o Nada" width="300" height="450" loading="eager"></picture>
+      <picture><source srcset="../assets/img/capa-caverna.webp" type="image/webp"><img src="../assets/img/capa-caverna.jpg" alt="A Caverna Interior" width="300" height="450" loading="eager"></picture>
+    </div>
+    <p class="titles">Recomeçar com Propósito &middot; Quando Morri por Dentro &middot; De Volta Para o Nada &middot; A Caverna Interior</p>
+
+    <div style="margin-top:30px">
+      <div class="price">R$127<small>Os 4 ebooks &middot; acesso imediato no seu celular</small></div>
+      <a href="#" class="cta" data-buy>Quero começar a travessia <small>Os 4 livros por R$127</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE VOCÊ VAI SENTIR -->
+<section style="background:var(--pedra2)">
+  <div class="wrap">
+    <h2 class="center">O que você vai sentir<br>ao ler</h2>
+    <hr class="hr">
+    <div class="feel">
+      <picture><source srcset="../assets/img/capa-rcp.webp" type="image/webp"><img src="../assets/img/capa-rcp.jpg" alt=""></picture>
+      <p>Você vai se reconhecer numa vergonha que achava que era só sua, e vai descobrir que ela não é o fim.</p>
+    </div>
+    <div class="feel">
+      <picture><source srcset="../assets/img/capa-qmpd.webp" type="image/webp"><img src="../assets/img/capa-qmpd.jpg" alt=""></picture>
+      <p>Você vai descer até o fundo junto comigo, e sentir na pele que dá pra renascer de lá.</p>
+    </div>
+    <div class="feel">
+      <picture><source srcset="../assets/img/capa-dvpn.webp" type="image/webp"><img src="../assets/img/capa-dvpn.jpg" alt=""></picture>
+      <p>Você vai olhar pra alguém que o mundo esqueceu e enxergar um ser humano inteiro. E talvez se enxergar também.</p>
+    </div>
+    <div class="feel">
+      <picture><source srcset="../assets/img/capa-caverna.webp" type="image/webp"><img src="../assets/img/capa-caverna.jpg" alt=""></picture>
+      <p>E vai receber, passo a passo, as ferramentas pra atravessar a sua própria caverna e voltar inteiro, não quebrado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUEM ESCREVEU -->
+<section>
+  <div class="wrap">
+    <div class="autor">
+      <p class="q">"Escrevi estes quatro livros dentro de uma prisão no Reino Unido, no pior momento da minha vida. Não pra contar o que me aconteceu, mas pra que você não atravesse o seu escuro sozinho."</p>
+      <p class="n">J. C. Dias</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section id="oferta" class="center" style="background:var(--pedra2)">
+  <div class="wrap">
+    <span class="eyebrow">A coleção completa</span>
+    <div class="price" style="margin-top:14px">R$127<small>Os 4 livros digitais &middot; acesso na hora</small></div>
+    <a href="#" class="cta" data-buy>Quero os 4 livros <small>Acesso imediato, no seu celular</small></a>
+    <div class="bump">Quer sentir o peso deles na mão? No checkout você pode adicionar as <b>edições físicas por R$74 cada</b>, entregues na sua casa.</div>
+    <p class="guarantee">Garantia de 7 dias. Leia. Se não tocar você, devolvo cada centavo, sem pergunta.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>J. C. Dias &middot; A Jornada &middot; Compra processada com segurança pela Hotmart.</p>
+    <p style="margin-top:8px"><a href="../privacidade/">Política de Privacidade</a> &nbsp;·&nbsp; <a href="../termos/">Termos de Uso</a></p>
+  </div>
+</footer>
+
+<!-- STICKY -->
+<div id="sticky">
+  <div class="s-l">Os 4 livros<br><b>R$127</b></div>
+  <a href="#" data-buy>Quero agora</a>
+</div>
+
+<script>
+/* ---- CONFIGURAÇÃO ---- */
+var PIXEL_ID = '2122287675194601';   // dataset Funil de Vendas V1 - Brasil
+var CHECKOUT = '';   // >>> COLE AQUI O LINK DO CHECKOUT HOTMART da oferta "4 livros R$127" (order bump: fisico R$74 cada). Enquanto vazio, o botao rola ate a oferta.
+/* --------------------- */
+
+var FUNNEL = 'a-jornada';
+var PRODUTO = { id:'jornada_4livros', nome:'A Jornada - 4 livros digitais', valor:127, moeda:'BRL' };
+
+(function(){
+  if(!PIXEL_ID) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID);
+  fbq('track','PageView');
+  fbq('track','ViewContent',{content_ids:[PRODUTO.id],content_name:PRODUTO.nome,
+    value:PRODUTO.valor,currency:PRODUTO.moeda,funnel:FUNNEL,step:'sales'});
+})();
+
+function evento(nome, dados){
+  var carga = Object.assign({funnel:FUNNEL, step:'sales'}, dados||{});
+  if(window.fbq) fbq('trackCustom', nome, carga);
+}
+function comParametros(url){
+  var atuais = new URLSearchParams(window.location.search);
+  atuais.set('funnel', FUNNEL);
+  var d = new URL(url, window.location.href);
+  atuais.forEach(function(v,k){ if(!d.searchParams.has(k)) d.searchParams.set(k,v); });
+  return d.toString();
+}
+function irParaCheckout(origem){
+  if(window.fbq) fbq('track','InitiateCheckout',{content_ids:[PRODUTO.id],content_name:PRODUTO.nome,
+    value:PRODUTO.valor,currency:PRODUTO.moeda});
+  evento('Jornada_CTA_Click',{cta:origem||'oferta'});
+  if(CHECKOUT){ window.location.href = comParametros(CHECKOUT); }
+  else { var alvo=document.getElementById('oferta'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'center'}); }
+}
+document.querySelectorAll('[data-buy]').forEach(function(el){
+  if(CHECKOUT){ el.setAttribute('href', CHECKOUT); }
+  el.addEventListener('click', function(e){ e.preventDefault(); irParaCheckout(el.closest('#sticky')?'sticky':'oferta'); });
+});
+
+/* sticky aparece depois de rolar um pouco, some no rodape da oferta */
+var sticky=document.getElementById('sticky');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY||document.documentElement.scrollTop;
+  if(y>560){ sticky.classList.add('on'); } else { sticky.classList.remove('on'); }
+},{passive:true});
+</script>
+</body>
+</html>
