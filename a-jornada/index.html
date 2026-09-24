@@ -58,9 +58,17 @@ h2{font-family:var(--serif);font-weight:600;font-size:clamp(24px,4.6vw,32px);lin
 .feel img{width:64px;flex:0 0 64px;border-radius:4px;box-shadow:0 10px 22px -12px rgba(38,39,43,.5)}
 .feel p{font-size:19px;color:var(--ink)}
 
-.autor{background:var(--white);border:1px solid var(--bege);border-radius:18px;padding:32px 28px;text-align:center;box-shadow:0 24px 50px -34px rgba(38,39,43,.4)}
-.autor .q{font-family:var(--serif);font-size:clamp(20px,3vw,25px);font-style:italic;color:var(--ink);line-height:1.4}
-.autor .n{font-family:var(--sans);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--blue);margin-top:18px}
+.autor{background:var(--white);border:1px solid var(--bege);border-radius:18px;padding:36px 30px;text-align:center;box-shadow:0 24px 50px -34px rgba(38,39,43,.4)}
+.autor .foto{width:132px;height:132px;border-radius:50%;object-fit:cover;margin:0 auto 22px;border:4px solid #fff;box-shadow:0 14px 30px -14px rgba(38,58,153,.5),0 0 0 1px var(--bege)}
+.autor .q{font-family:var(--serif);font-size:clamp(19px,2.7vw,23px);color:var(--ink);line-height:1.45}
+.autor .b{font-size:16.5px;color:var(--ink2);margin-top:16px}
+.autor .n{font-family:var(--sans);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--blue);margin-top:20px}
+
+.fisico{background:var(--white);border:1px solid var(--bege);border-radius:16px;padding:24px 24px;margin-top:26px;text-align:left;display:flex;gap:16px;align-items:flex-start;box-shadow:0 18px 40px -30px rgba(38,39,43,.4)}
+.fisico .selo{flex:0 0 auto;background:var(--blue);color:#fff;font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding:8px 12px;border-radius:9px;line-height:1.2;text-align:center}
+.fisico p{font-size:16.5px;color:var(--ink);line-height:1.5}
+.fisico b{color:var(--blue)}
+.fisico .fg{color:var(--gold);font-weight:700}
 
 .oferta{background:var(--bg2);border-top:1px solid var(--bege);border-bottom:1px solid var(--bege)}
 .bump{border:1.5px dashed var(--gold);background:#fff;border-radius:12px;padding:16px 18px;margin-top:22px;font-size:16.5px;color:var(--ink)}
@@ -130,7 +138,9 @@ footer a{color:var(--ink2)}
 <section style="padding-top:8px">
   <div class="wrap">
     <div class="autor">
-      <p class="q">"Escrevi estes quatro livros dentro de uma prisão no Reino Unido, no pior momento da minha vida. Não pra contar o que me aconteceu, mas pra que você não atravesse o seu escuro sozinho."</p>
+      <picture><source srcset="../assets/img/autor.webp" type="image/webp"><img class="foto" src="../assets/img/autor.jpg" alt="J. C. Dias" width="264" height="264" loading="lazy"></picture>
+      <p class="q">"Escrevi estes quatro livros dentro de uma prisão no Reino Unido, no pior momento da minha vida. Longe de tudo que eu amava, sem saber se ainda existia um recomeço pra mim."</p>
+      <p class="b">O que nasceu ali não foi um livro de autoajuda. Foi o meu caminho de volta pra dentro de mim. Hoje eu entrego esse caminho pra você, pra que você não precise atravessar o seu escuro sozinho.</p>
       <p class="n">J. C. Dias</p>
     </div>
   </div>
@@ -142,7 +152,10 @@ footer a{color:var(--ink2)}
     <span class="eyebrow">A coleção completa</span>
     <div class="price" style="margin-top:14px">R$127<small>Os 4 livros digitais &middot; acesso na hora</small></div>
     <a href="#" class="cta" data-buy>Quero os 4 livros <small>Acesso imediato, no seu celular</small></a>
-    <div class="bump">Quer sentir o peso deles na mão? No checkout você pode adicionar as <b>edições físicas por R$74 cada</b>, entregues na sua casa.</div>
+    <div class="fisico">
+      <span class="selo">Prefere<br>na mão?</span>
+      <p>Na próxima tela do checkout você pode adicionar as <b>edições físicas por R$74 cada</b>, com <span class="fg">frete grátis para todo o Brasil</span>. Você leva os quatro digitais na hora e recebe os livros impressos na sua casa. Não precisa comprar em outro lugar.</p>
+    </div>
     <p class="guarantee">Garantia de 7 dias. Leia. Se não tocar você, devolvo cada centavo, sem pergunta.</p>
   </div>
 </section>
