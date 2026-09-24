@@ -12,75 +12,80 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --carvao:#11110F; --pedra2:#1B1A17; --papel:#E9E2D6; --claro:#F3EFE8;
-  --cinza:#ABA39A; --cinza-esc:#7A736A; --bronze:#9B7B50; --luz:#D5B879;
-  --head:'Oswald',Impact,sans-serif; --corpo:'EB Garamond',Georgia,serif;
+  --bg:#F4EFE6; --bg2:#FBF7F0; --bege:#E7DECD; --white:#FFFFFF;
+  --ink:#26272B; --ink2:#6D6559;
+  --blue:#263A99; --blue-h:#31479F; --sky:#7FA6DF;
+  --gold:#B98B3E; --sun:#E9C877;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
-body{background:var(--carvao);color:var(--claro);font-family:var(--corpo);font-size:20px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
-.wrap{max-width:680px;margin:0 auto;padding:0 24px}
-section{padding:46px 0}
-.gold{color:var(--luz)}
-.eyebrow{font-family:var(--head);font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:12.5px;color:var(--bronze)}
-h1{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:clamp(30px,7vw,46px);line-height:1.06;letter-spacing:.005em;margin:16px 0 0}
-h2{font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:clamp(20px,4.6vw,26px);letter-spacing:.02em}
-.lead{color:var(--papel);margin-top:18px;font-size:20.5px}
-.hr{width:64px;height:2px;background:var(--luz);margin:26px auto;border:0}
+.wrap{max-width:700px;margin:0 auto;padding:0 24px}
+section{padding:48px 0}
 .center{text-align:center}
+.eyebrow{font-family:var(--sans);font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:12px;color:var(--blue)}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(30px,6.6vw,50px);line-height:1.08;margin:16px 0 0;color:var(--ink)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(24px,4.6vw,32px);line-height:1.15;color:var(--ink)}
+.blue{color:var(--blue)}
+.lead{color:var(--ink2);margin-top:18px;font-size:clamp(18px,2.5vw,21px)}
+.small{color:var(--ink2);font-size:17px}
+.hr{width:60px;height:2px;background:var(--gold);margin:22px auto;border:0}
 
-/* capas */
+/* hero luminoso */
+.hero{position:relative;padding:56px 0 20px;overflow:hidden}
+.hero::before{content:'';position:absolute;left:50%;top:-140px;transform:translateX(-50%);width:760px;height:500px;background:radial-gradient(ellipse at center,rgba(233,200,119,.55),rgba(233,200,119,0) 66%);pointer-events:none;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+
 .covers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0 6px}
-.covers img{border-radius:4px;box-shadow:0 18px 40px -18px rgba(0,0,0,.8),0 2px 0 rgba(213,184,121,.12);transition:transform .3s}
-.covers img:hover{transform:translateY(-4px)}
-.titles{font-family:var(--head);font-weight:400;text-transform:uppercase;letter-spacing:.04em;font-size:12.5px;color:var(--cinza-esc);text-align:center;margin-top:14px;line-height:1.9}
+.covers img{border-radius:5px;box-shadow:0 20px 40px -20px rgba(38,39,43,.55),0 2px 6px rgba(38,39,43,.12)}
+.titles{font-family:var(--sans);text-transform:uppercase;letter-spacing:.05em;font-size:12px;color:var(--ink2);text-align:center;margin-top:14px;line-height:1.9}
 
-/* preço + cta */
-.price{font-family:var(--head);font-weight:700;font-size:clamp(46px,12vw,68px);color:var(--claro);line-height:1}
-.price small{display:block;font-family:var(--corpo);font-weight:400;font-size:16px;color:var(--cinza);letter-spacing:0;text-transform:none;margin-top:6px}
-.cta{display:block;width:100%;max-width:460px;margin:24px auto 0;background:linear-gradient(180deg,#E7C883,#C79A4E);color:#1a1710;text-decoration:none;text-align:center;font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:19px;padding:19px 22px;border-radius:12px;box-shadow:0 16px 34px -14px rgba(213,184,121,.5);border:1px solid #e9d6a6}
-.cta small{display:block;font-family:var(--corpo);font-weight:400;text-transform:none;letter-spacing:0;font-size:14.5px;color:#4a3d22;margin-top:4px}
-.cta:active{transform:translateY(1px)}
+.price{font-family:var(--serif);font-weight:700;font-size:clamp(48px,12vw,66px);color:var(--ink);line-height:1}
+.price small{display:block;font-family:var(--sans);font-weight:500;font-size:15.5px;color:var(--ink2);margin-top:8px}
+.cta{display:block;width:100%;max-width:470px;margin:24px auto 0;background:var(--blue);color:#fff;text-decoration:none;text-align:center;font-family:var(--sans);font-weight:700;letter-spacing:.01em;font-size:19px;padding:19px 22px;border-radius:14px;box-shadow:0 16px 30px -14px rgba(38,58,153,.55);transition:transform .2s,background .2s}
+.cta:hover{background:var(--blue-h);transform:translateY(-2px)}
+.cta small{display:block;font-weight:400;font-size:14px;color:#cdd7f2;margin-top:4px}
+.cta:active{transform:translateY(0)}
 
 /* sentir */
-.feel{display:flex;gap:16px;align-items:center;padding:16px 0;border-top:1px solid rgba(213,184,121,.14)}
+.feel{display:flex;gap:18px;align-items:center;padding:18px 0;border-top:1px solid var(--bege)}
 .feel:first-of-type{border-top:0}
-.feel img{width:62px;flex:0 0 62px;border-radius:3px;box-shadow:0 8px 20px -10px #000}
-.feel p{font-size:19.5px;color:var(--claro)}
+.feel img{width:64px;flex:0 0 64px;border-radius:4px;box-shadow:0 10px 22px -12px rgba(38,39,43,.5)}
+.feel p{font-size:19px;color:var(--ink)}
 
-/* autor */
-.autor{background:var(--pedra2);border-radius:16px;padding:30px 26px;text-align:center}
-.autor .q{font-size:21px;font-style:italic;color:var(--papel)}
-.autor .n{font-family:var(--head);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--luz);margin-top:16px}
+.autor{background:var(--white);border:1px solid var(--bege);border-radius:18px;padding:32px 28px;text-align:center;box-shadow:0 24px 50px -34px rgba(38,39,43,.4)}
+.autor .q{font-family:var(--serif);font-size:clamp(20px,3vw,25px);font-style:italic;color:var(--ink);line-height:1.4}
+.autor .n{font-family:var(--sans);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--blue);margin-top:18px}
 
-.bump{border:1px dashed rgba(213,184,121,.4);border-radius:12px;padding:16px 18px;margin-top:22px;font-size:17px;color:var(--papel)}
-.bump b{color:var(--luz)}
-.guarantee{font-size:16px;color:var(--cinza);margin-top:20px;text-align:center}
-footer{border-top:1px solid rgba(255,255,255,.06);padding:30px 24px 60px;text-align:center;color:var(--cinza-esc);font-size:13.5px}
-footer a{color:var(--cinza)}
+.oferta{background:var(--bg2);border-top:1px solid var(--bege);border-bottom:1px solid var(--bege)}
+.bump{border:1.5px dashed var(--gold);background:#fff;border-radius:12px;padding:16px 18px;margin-top:22px;font-size:16.5px;color:var(--ink)}
+.bump b{color:var(--blue)}
+.guarantee{font-size:15.5px;color:var(--ink2);margin-top:20px}
+footer{padding:30px 24px 60px;text-align:center;color:var(--ink2);font-size:13.5px}
+footer a{color:var(--ink2)}
 
-/* sticky */
-#sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(17,17,15,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(213,184,121,.25);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .35s}
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(251,247,240,.96);backdrop-filter:blur(8px);border-top:1px solid var(--bege);box-shadow:0 -8px 24px -16px rgba(38,39,43,.3);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(115%);transition:transform .35s}
 #sticky.on{transform:translateY(0)}
-#sticky .s-l{font-family:var(--head);text-transform:uppercase;letter-spacing:.02em;font-size:13px;color:var(--papel);line-height:1.2}
-#sticky .s-l b{color:var(--luz);font-size:19px}
-#sticky a{background:linear-gradient(180deg,#E7C883,#C79A4E);color:#1a1710;text-decoration:none;font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:14px;padding:12px 18px;border-radius:10px;white-space:nowrap}
-@media (max-width:560px){ .titles{display:none} .feel img{width:52px;flex-basis:52px} }
+#sticky .s-l{font-family:var(--sans);font-weight:600;text-transform:uppercase;letter-spacing:.02em;font-size:12.5px;color:var(--ink2);line-height:1.2}
+#sticky .s-l b{display:block;font-family:var(--serif);color:var(--ink);font-size:22px;letter-spacing:0}
+#sticky a{background:var(--blue);color:#fff;text-decoration:none;font-family:var(--sans);font-weight:700;font-size:14px;padding:13px 20px;border-radius:11px;white-space:nowrap}
+@media (max-width:560px){ .titles{display:none} .feel img{width:54px;flex-basis:54px} }
 </style>
 </head>
 <body>
 
 <!-- HERO -->
-<section class="center" style="padding-top:52px">
+<section class="hero center">
   <div class="wrap">
     <span class="eyebrow">J. C. Dias · A Jornada</span>
-    <h1>Quatro livros escritos<br>dentro de uma <span class="gold">cela</span>.</h1>
+    <h1>Quatro livros escritos<br>dentro de uma <span class="blue">cela</span>.</h1>
     <p class="lead">Não para você entender a minha história. Para você sentir a sua.</p>
-    <p class="lead" style="color:var(--cinza);font-size:18.5px">Não são livros de autoajuda. São quatro travessias. Você vai se reconhecer, respirar fundo, e chegar na última página olhando pra sua própria vida com outros olhos.</p>
+    <p class="small" style="margin-top:14px;max-width:52ch;margin-left:auto;margin-right:auto">Não são livros de autoajuda. São quatro travessias. Você vai se reconhecer, respirar fundo, e chegar na última página olhando pra sua própria vida com outros olhos.</p>
 
     <div class="covers">
       <picture><source srcset="../assets/img/capa-rcp.webp" type="image/webp"><img src="../assets/img/capa-rcp.jpg" alt="Recomeçar com Propósito" width="300" height="450" loading="eager"></picture>
@@ -98,9 +103,9 @@ footer a{color:var(--cinza)}
 </section>
 
 <!-- O QUE VOCÊ VAI SENTIR -->
-<section style="background:var(--pedra2)">
+<section>
   <div class="wrap">
-    <h2 class="center">O que você vai sentir<br>ao ler</h2>
+    <h2 class="center">O que você vai sentir ao ler</h2>
     <hr class="hr">
     <div class="feel">
       <picture><source srcset="../assets/img/capa-rcp.webp" type="image/webp"><img src="../assets/img/capa-rcp.jpg" alt=""></picture>
@@ -122,7 +127,7 @@ footer a{color:var(--cinza)}
 </section>
 
 <!-- QUEM ESCREVEU -->
-<section>
+<section style="padding-top:8px">
   <div class="wrap">
     <div class="autor">
       <p class="q">"Escrevi estes quatro livros dentro de uma prisão no Reino Unido, no pior momento da minha vida. Não pra contar o que me aconteceu, mas pra que você não atravesse o seu escuro sozinho."</p>
@@ -132,7 +137,7 @@ footer a{color:var(--cinza)}
 </section>
 
 <!-- OFERTA -->
-<section id="oferta" class="center" style="background:var(--pedra2)">
+<section id="oferta" class="oferta center">
   <div class="wrap">
     <span class="eyebrow">A coleção completa</span>
     <div class="price" style="margin-top:14px">R$127<small>Os 4 livros digitais &middot; acesso na hora</small></div>
@@ -151,7 +156,7 @@ footer a{color:var(--cinza)}
 
 <!-- STICKY -->
 <div id="sticky">
-  <div class="s-l">Os 4 livros<br><b>R$127</b></div>
+  <div class="s-l">Os 4 livros<b>R$127</b></div>
   <a href="#" data-buy>Quero agora</a>
 </div>
 
@@ -199,8 +204,6 @@ document.querySelectorAll('[data-buy]').forEach(function(el){
   if(CHECKOUT){ el.setAttribute('href', CHECKOUT); }
   el.addEventListener('click', function(e){ e.preventDefault(); irParaCheckout(el.closest('#sticky')?'sticky':'oferta'); });
 });
-
-/* sticky aparece depois de rolar um pouco, some no rodape da oferta */
 var sticky=document.getElementById('sticky');
 window.addEventListener('scroll',function(){
   var y=window.scrollY||document.documentElement.scrollTop;
