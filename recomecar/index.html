@@ -1,589 +1,304 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Recomeçar com Propósito | J. C. Dias</title>
-<meta name="description" content="Um livro escrito à mão dentro de uma prisão, por quem perdeu tudo e voltou. Para quem precisa recomeçar. Ebook por R$27, acesso imediato.">
-<meta property="og:title" content="Este livro foi escrito na prisão. Fala com quem precisa recomeçar.">
-<meta property="og:description" content="Perdi tudo numa madrugada e reconstruí a vida do fundo de uma cela. Escrevi este livro para você não atravessar isso sozinho.">
-<meta property="og:type" content="book">
-<meta property="og:image" content="https://jornada.jcdias.com/assets/img/capa-rcp.jpg">
-
+<title>Recomeçar com Propósito · Protocolo de 7 Dias | J. C. Dias</title>
+<meta name="description" content="Um protocolo prático de 7 dias para sair da paralisia e voltar a ter direção. Você não precisa reconstruir a vida inteira agora, precisa saber qual é o próximo passo.">
+<meta property="og:title" content="7 dias para sair da paralisia e começar a reconstrução.">
+<meta property="og:description" content="Não é autoajuda pra te consolar. É um protocolo prático: uma etapa por dia, para transformar culpa, medo e confusão em clareza e um primeiro plano de ação.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jornada.jcdias.com/assets/img/mockup-rcp.jpg">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2122287675194601');fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'Recomecar Protocolo 7 Dias',value:67,currency:'BRL'});
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --carvao:#11110F;
-  --pedra:#34322E;
-  --pedra2:#1B1A17;
-  --papel:#E9E2D6;
-  --claro:#F3EFE8;
-  --cinza:#ABA39A;
-  --cinza-esc:#6E675F;
-  --bronze:#9B7B50;
-  --luz:#D5B879;
-  --escuro-txt:#211F1B;
-  --head:'Oswald',Impact,sans-serif;
-  --corpo:'EB Garamond',Georgia,serif;
-  --pad:24px;
-  --gap:34px;
+  --bg:#F0EBE5; --bg2:#F8F3EA; --bege:#E6DFCE; --white:#FFFFFF;
+  --ink:#2A2829; --ink2:#6A6156;
+  --blue:#263A99; --blue-h:#33489F; --sky:#8DA2DB;
+  --dark:#171613; --dark2:#211F1B;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-body{
-  background:var(--carvao);color:var(--claro);
-  font-family:var(--corpo);font-size:21px;line-height:1.5;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
-}
-img{max-width:100%;height:auto;display:block}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+.narrow{max-width:620px}
+section{padding:76px 0}
+h1,h2{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em;color:var(--ink)}
+h1{font-size:clamp(31px,6vw,50px)}
+h2{font-size:clamp(26px,4.4vw,38px)}
+.eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:600;color:var(--blue)}
+p.lead{font-size:clamp(17px,2.4vw,20px);color:var(--ink2)}
+.blue{color:var(--blue)}
+.center{text-align:center}
+.mt{margin-top:18px}
 
-.wrap{max-width:660px;margin:0 auto;padding:0 var(--pad)}
-section{padding:var(--gap) 0}
-.carvao{background:var(--carvao)}
-.pedra{background:var(--pedra2)}
-.papel{background:var(--papel);color:var(--escuro-txt);--bronze:#7A5A2E;--cinza-esc:#635C53}
-.papel .fraco{color:var(--cinza-esc)}
-.fraco{color:var(--cinza)}
+/* CTA */
+.cta{display:inline-flex;flex-direction:column;align-items:center;gap:2px;font-family:var(--sans);font-weight:700;letter-spacing:.01em;font-size:17px;color:#fff;background:var(--blue);padding:19px 40px;border-radius:12px;box-shadow:0 16px 32px -14px rgba(38,58,153,.6);transition:background .2s,transform .18s;text-align:center}
+.cta:hover{background:var(--blue-h);transform:translateY(-2px)}
+.cta small{font-weight:400;font-size:13px;color:#cdd7f2}
+.cta.block{display:flex;width:100%;max-width:460px}
 
-/* tipografia */
-.olho{font-family:var(--head);font-weight:500;font-size:14.5px;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--luz);margin-bottom:22px}
-.papel .olho{color:var(--bronze)}
-h1{font-family:var(--head);font-weight:600;text-transform:uppercase;
-  font-size:clamp(36px,8.2vw,52px);line-height:1.08}
-h2{font-family:var(--head);font-weight:500;text-transform:uppercase;
-  font-size:clamp(31px,7vw,39px);line-height:1.14}
-h3{font-family:var(--head);font-weight:500;font-size:17px;letter-spacing:.13em;
-  text-transform:uppercase}
-p{margin-top:12px}
-.titulo-livro{font-family:var(--head);font-weight:600;text-transform:uppercase;
-  font-size:clamp(30px,7.4vw,45px);line-height:1.02;letter-spacing:.01em;color:var(--luz)}
-.frase{font-family:var(--corpo);font-weight:600;
-  font-size:clamp(26px,6vw,33px);line-height:1.3}
-.luzt{color:var(--luz)}
-
-/* selo escrito na prisao */
-.selo-prisao{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;
-  font-family:var(--head);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;
-  color:#F2C14E;background:#0A0A09;border:1px solid rgba(242,193,78,.4);border-radius:6px;padding:7px 13px;margin-bottom:20px}
-.selo-prisao::before{content:"";width:7px;height:7px;border-radius:50%;background:#F2C14E}
-.selo-prisao b{font-weight:400;letter-spacing:.1em;color:rgba(242,193,78,.72);padding-left:9px;margin-left:2px;border-left:1px solid rgba(242,193,78,.3)}
-.sublinha{font-family:var(--corpo);font-weight:500;font-size:clamp(19px,4.4vw,22px);
-  line-height:1.42;color:var(--claro);margin-top:16px}
+/* dark sections */
+.dark{background:var(--dark);color:#EDE7DC}
+.dark h2{color:#fff}
+.dark .eyebrow{color:var(--sky)}
+.dark p.lead{color:#C4BDB0}
 
 /* hero */
-header{position:relative;min-height:92vh;display:flex;align-items:stretch;
-  padding:42px 0 40px;overflow:hidden;background:#0A0A09}
-header .bg{position:absolute;inset:0;z-index:0}
-header .bg img{width:100%;height:100%;object-fit:cover;object-position:center 32%}
-header .bg::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(10,10,9,.42) 0%,rgba(10,10,9,.5) 28%,rgba(12,12,10,.78) 58%,rgba(17,17,15,.96) 88%,rgba(17,17,15,1) 100%)}
-header .wrap{position:relative;z-index:1;display:flex;flex-direction:column;width:100%}
-.marca-topo img{width:100%;height:auto;display:block}
+.hero{padding:46px 0 30px;text-align:center}
+.hero .logo{height:44px;width:auto;margin:0 auto 26px}
+.hero h1{margin:16px auto 0;max-width:16ch}
+.hero .sub{font-size:clamp(17px,2.4vw,20px);color:var(--ink2);max-width:52ch;margin:20px auto 0}
+.price{font-family:var(--serif);font-weight:700;font-size:clamp(15px,2.4vw,18px);color:var(--ink);margin-top:12px}
+.price b{font-size:clamp(30px,7vw,40px);display:block;line-height:1}
+.micro{font-size:14px;color:var(--ink2);margin-top:14px;letter-spacing:.01em}
+.hero .mock{max-width:300px;margin:34px auto 0;filter:drop-shadow(0 30px 50px rgba(20,12,4,.35))}
 
-/* capa e figuras */
-figure.capa{max-width:184px;margin:26px auto 0;filter:drop-shadow(0 32px 55px rgba(0,0,0,.85))}
-figure.capa img{border-radius:2px}
-figure.mockup{margin:24px auto 0;max-width:300px;border-radius:12px;overflow:hidden;filter:drop-shadow(0 30px 55px rgba(0,0,0,.7))}
-figure.mockup img{width:100%;display:block;border-radius:12px}
-figure.autor{max-width:280px;margin:26px auto 0;border-radius:8px;overflow:hidden;border:1px solid rgba(213,184,121,.35);filter:drop-shadow(0 18px 34px rgba(0,0,0,.55))}
-figure.autor img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+/* identificação */
+.ident p{font-size:18.5px;color:var(--ink);margin-top:16px;max-width:56ch}
+.ident .turn{font-family:var(--serif);font-size:clamp(21px,3.2vw,27px);color:var(--blue);margin-top:30px;line-height:1.3;max-width:30ch}
 
-/* grade dos capítulos (só nomes, escaneável) */
-.tools8{margin-top:22px;display:grid;grid-template-columns:1fr;gap:0}
-.tools8 .t{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid rgba(155,123,80,.26)}
-.tools8 .t:last-child{border-bottom:1px solid rgba(155,123,80,.26)}
-.tools8 .t .n{font-family:var(--head);font-weight:600;font-size:30px;line-height:.9;color:var(--bronze);opacity:.4;flex:0 0 46px}
-.tools8 .t .nm{font-family:var(--head);font-weight:500;font-size:17px;letter-spacing:.02em;text-transform:uppercase;color:var(--luz);line-height:1.15}
-.papel .tools8 .t .nm{color:var(--bronze)}
+/* autoridade */
+.autor-foto{width:100%;border-radius:16px;box-shadow:0 30px 60px -34px rgba(0,0,0,.7);aspect-ratio:3/2;object-fit:cover;margin-bottom:32px}
+.dark .story p{color:#C4BDB0;font-size:17.5px;margin-top:16px;max-width:56ch}
+.dark .story .big{font-family:var(--serif);color:#fff;font-size:clamp(22px,3.4vw,30px);line-height:1.25;margin-bottom:8px}
 
-/* lista */
-ul.passos{list-style:none;margin-top:26px}
-ul.passos li{position:relative;padding:9px 0 9px 26px;line-height:1.36}
-ul.passos li+li{border-top:1px solid rgba(155,123,80,.2)}
-ul.passos li::before{content:"";position:absolute;left:2px;top:22px;
-  width:7px;height:7px;border-radius:50%;background:var(--luz)}
+/* cards do que recebe */
+.cards{display:grid;grid-template-columns:1fr;gap:20px;margin-top:40px}
+.rcard{background:var(--white);border:1px solid var(--bege);border-radius:16px;overflow:hidden;box-shadow:0 24px 50px -38px rgba(20,12,4,.5);display:grid;grid-template-columns:120px 1fr;align-items:center}
+.rcard .im{height:100%;min-height:150px;background:var(--bg2)}
+.rcard .im img{width:100%;height:100%;object-fit:cover}
+.rcard .tx{padding:22px 24px}
+.rcard .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700;color:var(--blue)}
+.rcard h3{font-family:var(--serif);font-weight:600;font-size:22px;margin:5px 0 8px;color:var(--ink)}
+.rcard p{font-size:15.5px;color:var(--ink2)}
 
-/* stack de oferta */
-.stack{margin-top:26px}
-.stack .item{display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(155,123,80,.26)}
-.stack .item:last-child{border-bottom:1px solid rgba(155,123,80,.26)}
-.stack .check{flex:0 0 24px;color:var(--luz);font-family:var(--head);font-weight:600;font-size:20px;line-height:1.4}
-.papel .stack .check{color:var(--bronze)}
-.stack .item b{display:block;font-family:var(--head);font-weight:500;font-size:19px;
-  letter-spacing:.04em;text-transform:uppercase;color:var(--escuro-txt)}
-.stack .item span{display:block;margin-top:5px;font-size:19px;line-height:1.4;color:var(--cinza-esc)}
+/* 7 dias */
+.days{margin-top:44px;border-top:1px solid rgba(255,255,255,.12)}
+.day{display:flex;gap:20px;align-items:baseline;padding:17px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.day .n{font-family:var(--serif);font-size:26px;color:var(--sky);flex:0 0 54px;line-height:1}
+.day .t{font-family:var(--serif);font-size:clamp(18px,2.8vw,22px);color:#fff;font-weight:600}
+.day .t span{display:block;font-family:var(--sans);font-weight:400;font-size:14px;color:#B7B0A4;margin-top:3px;letter-spacing:0}
+.dayclose{font-family:var(--serif);font-size:clamp(19px,3vw,25px);color:#fff;margin-top:34px;line-height:1.3;max-width:30ch}
 
-/* bump */
-.bump{margin-top:22px;border:1px dashed rgba(155,123,80,.5);border-radius:10px;
-  padding:18px 20px;text-align:left;display:flex;gap:14px;align-items:flex-start}
-.bump .mais{font-family:var(--head);font-weight:600;font-size:24px;color:var(--bronze);line-height:1}
-.bump b{display:block;font-family:var(--head);font-weight:500;font-size:17px;letter-spacing:.04em;
-  text-transform:uppercase;color:var(--escuro-txt)}
-.bump span{display:block;margin-top:5px;font-size:18px;line-height:1.4;color:var(--cinza-esc)}
+/* frase impacto */
+.impact{text-align:center}
+.impact p{font-family:var(--serif);font-weight:600;font-size:clamp(26px,5vw,44px);line-height:1.16;color:#fff;max-width:20ch;margin:0 auto}
+.impact .s{color:var(--sky)}
 
-/* bloco de preco destacado */
-.precocard{margin:28px auto 0;max-width:440px;background:#15130F;
-  border:1px solid rgba(213,184,121,.45);border-radius:14px;padding:24px 22px 26px;
-  box-shadow:0 20px 44px rgba(0,0,0,.22)}
-.precocard .hoje{font-family:var(--head);font-weight:500;font-size:13px;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--luz)}
-.precocard .num{font-family:var(--head);font-weight:600;font-size:74px;line-height:.98;color:var(--claro);margin-top:8px}
-.precocard .cond{font-family:var(--head);font-weight:400;font-size:13.5px;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--cinza);margin-top:8px}
-
-/* garantia */
-.garantia{border:1px solid rgba(155,123,80,.4);border-radius:10px;padding:26px 22px;margin-top:8px;text-align:center}
-.garantia .selo{font-family:var(--head);font-weight:600;font-size:15px;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--luz);margin-bottom:12px}
-.papel .garantia .selo{color:var(--bronze)}
-
-/* faq */
-.faq{margin-top:24px}
-.faq details{border-top:1px solid rgba(155,123,80,.26)}
-.faq details:last-of-type{border-bottom:1px solid rgba(155,123,80,.26)}
-.faq summary{list-style:none;cursor:pointer;padding:16px 34px 16px 0;position:relative;
-  font-family:var(--head);font-weight:500;font-size:18px;letter-spacing:.03em;text-transform:uppercase;color:var(--claro)}
-.papel .faq summary{color:var(--escuro-txt)}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:2px;top:12px;font-size:26px;line-height:1;color:var(--bronze);font-family:var(--head);font-weight:400}
-.faq details[open] summary::after{content:"\2212"}
-.faq details .fa{padding:0 0 18px;font-size:19px;line-height:1.5;color:var(--cinza);margin-top:0}
-.papel .faq details .fa{color:var(--cinza-esc)}
-
-/* depoimentos */
-.depoimentos{margin-top:26px;display:flex;flex-direction:column;gap:16px;align-items:center}
-.depoimentos figure{width:100%;max-width:340px;border:1px solid rgba(155,123,80,.32);border-radius:12px;overflow:hidden;background:#000;filter:drop-shadow(0 14px 30px rgba(33,31,27,.14))}
-.depoimentos img{width:100%;display:block}
-.zap{display:inline-flex;align-items:center;gap:9px;margin-top:22px;
-  font-family:var(--head);font-weight:500;font-size:15px;letter-spacing:.05em;text-transform:uppercase;
-  color:var(--luz);text-decoration:none;border:1px solid rgba(213,184,121,.45);border-radius:24px;padding:11px 20px}
-.papel .zap{color:var(--bronze);border-color:rgba(155,123,80,.5)}
-.zap svg{width:18px;height:18px;fill:currentColor}
+/* para quem é */
+.checks{list-style:none;max-width:560px;margin:32px auto 0;display:flex;flex-direction:column;gap:13px}
+.checks li{display:flex;gap:14px;align-items:flex-start;font-size:17.5px;color:var(--ink)}
+.checks li::before{content:'';flex:0 0 22px;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--blue);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat}
 
 /* oferta */
-.oferta{text-align:center}
+.oferta{background:var(--dark);color:#EDE7DC;text-align:center}
+.oferta .box{background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:40px 30px;max-width:540px;margin:36px auto 0}
+.oferta .inc{list-style:none;text-align:left;max-width:360px;margin:0 auto 24px;display:flex;flex-direction:column;gap:12px}
+.oferta .inc li{display:flex;gap:12px;font-size:16px;color:#EDE7DC}
+.oferta .inc li b{color:#fff;font-weight:600}
+.oferta .inc li::before{content:'';flex:0 0 20px;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--sky);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat}
+.oferta .pz{font-family:var(--serif);font-weight:700;font-size:54px;color:#fff;line-height:1}
+.oferta .pz small{display:block;font-family:var(--sans);font-weight:500;font-size:14px;color:#B7B0A4;margin-top:8px}
+.bumpcue{font-size:14.5px;color:#B7B0A4;max-width:400px;margin:22px auto 0;line-height:1.5}
+.bumpcue b{color:#EDE7DC}
+.guar{font-size:15px;color:#B7B0A4;margin-top:20px}
 
-.cta{
-  position:relative;overflow:hidden;
-  display:block;width:100%;max-width:460px;margin:24px auto 0;min-height:64px;
-  background:linear-gradient(135deg,#F6A83E 0%,#EC6E30 52%,#E65F2B 100%);color:#241206;border:0;border-radius:9px;
-  font-family:var(--head);font-weight:600;font-size:19.5px;letter-spacing:.04em;
-  text-transform:uppercase;text-align:center;text-decoration:none;
-  padding:20px 16px;cursor:pointer;transition:filter .2s ease;
-  box-shadow:0 10px 30px rgba(230,95,43,.5),0 0 0 1px rgba(255,225,150,.55) inset;
-  animation:ctaPulse 2.6s ease-in-out infinite}
-.cta::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;pointer-events:none;
-  background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);
-  animation:ctaSheen 3.4s ease-in-out infinite}
-.cta:hover{filter:brightness(1.06)}
-@keyframes ctaPulse{0%,100%{box-shadow:0 10px 30px rgba(230,95,43,.42),0 0 0 1px rgba(255,225,150,.5) inset}50%{box-shadow:0 14px 42px rgba(230,95,43,.7),0 0 0 1px rgba(255,225,150,.65) inset}}
-@keyframes ctaSheen{0%{left:-70%}58%,100%{left:135%}}
-@media (prefers-reduced-motion:reduce){.cta{animation:none}.cta::after{display:none}}
-.cta small{display:block;font-weight:400;font-size:13.5px;letter-spacing:.04em;opacity:.8;margin-top:3px}
-.bumpcue{max-width:440px;margin:14px auto 0;font-family:var(--corpo);font-size:15px;line-height:1.5;color:var(--cinza);text-align:center}
-.bumpcue b{color:var(--luz);font-weight:600}
-.papel .bumpcue{color:var(--cinza-esc)}
-.papel .bumpcue b{color:var(--bronze)}
-.micro{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.03em;
-  text-transform:uppercase;color:var(--cinza);margin-top:14px;text-align:center}
-.papel .micro{color:var(--cinza-esc)}
+footer{padding:34px 24px 90px;text-align:center;color:var(--ink2);font-size:13px}
+footer a{color:var(--ink2)}
 
 /* sticky */
-#sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;
-  background:rgba(17,17,15,.97);border-top:1px solid rgba(213,184,121,.26);
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  padding:11px 16px calc(11px + env(safe-area-inset-bottom));
-  transform:translateY(115%);transition:transform .45s ease}
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(23,22,19,.96);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.12);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(120%);transition:transform .35s}
 #sticky.on{transform:translateY(0)}
-#sticky .txt{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.05em;
-  text-transform:uppercase;color:var(--claro);line-height:1.35}
-#sticky .txt b{color:var(--luz);font-weight:600}
-#sticky a{flex:0 0 auto;background:linear-gradient(135deg,#F6A83E,#EC6E30 50%,#E65F2B);color:#241206;text-decoration:none;
-  font-family:var(--head);font-weight:600;font-size:15.5px;letter-spacing:.1em;
-  text-transform:uppercase;padding:13px 26px;border-radius:6px;box-shadow:0 4px 16px rgba(230,95,43,.55)}
-.wa-float{position:fixed;right:16px;bottom:calc(82px + env(safe-area-inset-bottom));z-index:70;
-  width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 20px rgba(37,211,102,.55);text-decoration:none}
-.wa-float svg{width:30px;height:30px;fill:#fff}
-@media (min-width:760px){.wa-float{display:none}}
-
-footer{padding:28px 0 106px;text-align:center;border-top:1px solid rgba(155,123,80,.18)}
-footer p{font-size:15.5px;color:#8F887E;margin-top:9px;line-height:1.55}
-footer a{color:var(--cinza)}
-
-.rv{opacity:0;transform:translateY(16px);transition:opacity .75s ease,transform .75s ease}
-.rv.vis{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-
-.precohero{font-family:var(--head);font-weight:600;font-size:clamp(50px,15vw,78px);line-height:.88;color:var(--luz);margin-top:22px}
-.precohero .sub{display:block;font-family:var(--head);font-weight:400;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cinza);margin-top:8px}
-.biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
-.biz-card{background:rgba(255,255,255,.045);border:1px solid rgba(155,123,80,.3);border-radius:12px;padding:15px 15px}
-.biz-card b{display:block;font-family:var(--head);font-weight:600;font-size:14.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--luz);line-height:1.12}
-.biz-card span{display:block;margin-top:6px;font-size:15px;line-height:1.34;color:var(--cinza)}
-.cela-box{display:flex;gap:13px;align-items:flex-start;margin-top:13px;padding:15px 17px;border:1px solid rgba(171,163,154,.22);border-left:3px solid #C24B3A;border-radius:8px;background:rgba(194,75,58,.05)}
-.cela-box .ic{flex:0 0 auto;color:#D9694F;font-family:var(--head);font-weight:700;font-size:16px;line-height:1.45}
-.cela-box p{margin:0;line-height:1.4;font-size:18.5px}
-.tools8 .t.hl{border:1px solid rgba(213,184,121,.55);border-radius:9px;padding:14px 15px;background:rgba(213,184,121,.05);margin:2px 0}
-.tools8 .t .note{display:block;margin-top:7px;font-family:var(--corpo);font-weight:400;font-size:14.5px;letter-spacing:0;text-transform:none;color:var(--cinza);line-height:1.35}
-figure.retrato{max-width:150px;margin:0 auto 6px;border-radius:10px;overflow:hidden;border:1px solid rgba(155,123,80,.4);filter:drop-shadow(0 16px 30px rgba(0,0,0,.5))}
-figure.retrato img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
-.pquote{border-left:3px solid var(--luz);padding:2px 0 2px 18px;margin:22px 0 6px;text-align:left}
-.pquote .mk{font-family:var(--head);font-weight:600;color:var(--luz);font-size:34px;line-height:.5}
-.pquote .tx{font-family:var(--corpo);font-weight:600;font-size:clamp(23px,5.6vw,30px);line-height:1.2;color:var(--escuro-txt)}
-.decreto{display:flex;gap:14px;padding:15px 0;border-top:1px solid rgba(155,123,80,.26);text-align:left}
-.decreto:last-of-type{border-bottom:1px solid rgba(155,123,80,.26)}
-.decreto .nn{font-family:var(--head);font-weight:600;font-size:26px;line-height:.9;color:var(--bronze);opacity:.55;flex:0 0 34px}
-.decreto b{display:block;font-family:var(--head);font-weight:600;font-size:16px;letter-spacing:.05em;text-transform:uppercase;color:var(--escuro-txt)}
-.decreto span{display:block;margin-top:4px;font-size:18px;line-height:1.4;color:var(--cinza-esc)}
-.doc-garantia{border:1px solid rgba(213,184,121,.5);border-radius:12px;padding:28px 22px;margin-top:8px;text-align:center;background:linear-gradient(180deg,rgba(213,184,121,.07),rgba(213,184,121,0))}
-.doc-garantia .tt{font-family:var(--head);font-weight:600;font-size:clamp(18px,4.8vw,23px);letter-spacing:.04em;text-transform:uppercase;color:var(--bronze);line-height:1.15}
-.doc-garantia .dias{display:inline-block;margin:12px 0 6px;font-family:var(--head);font-weight:500;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze);border:1px solid rgba(122,90,46,.55);border-radius:20px;padding:5px 14px}
-
-@media (min-width:760px){
-  :root{--pad:32px;--gap:46px}
-  body{font-size:21.5px}
-  figure.capa{max-width:250px}
-  .tools8{grid-template-columns:1fr 1fr;gap:0 26px}
-  footer{padding-bottom:56px}
-  #sticky{display:none}
-}
+#sticky .l{font-family:var(--sans);color:#B7B0A4;font-size:12px;text-transform:uppercase;letter-spacing:.04em;line-height:1.2}
+#sticky .l b{display:block;font-family:var(--serif);color:#fff;font-size:20px;letter-spacing:0}
+#sticky a{background:var(--blue);color:#fff;font-family:var(--sans);font-weight:700;font-size:14px;padding:13px 20px;border-radius:10px;white-space:nowrap}
+@media (max-width:560px){ .rcard{grid-template-columns:92px 1fr} .day .n{flex-basis:40px;font-size:22px} }
 </style>
 </head>
 <body>
 
 <!-- HERO -->
-<header id="hero">
-  <div class="bg">
-    <picture>
-      <source srcset="../assets/img/qmpd-luz.webp" type="image/webp">
-      <img src="../assets/img/qmpd-luz.jpg" alt="" width="1080" height="785" fetchpriority="high">
-    </picture>
-  </div>
-
+<header class="hero">
   <div class="wrap">
-    <div class="marca-topo" style="max-width:116px;margin:0 0 22px"><picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture></div>
-
-    <span class="selo-prisao">Escrito na prisão <b>A7937FC</b></span>
-    <h1>Na quinta-feira, eu era diretor executivo. Na sexta, um número numa cela.</h1>
-    <p class="sublinha">Cheguei na Inglaterra imigrante, sem trabalho. Subi do zero até diretor executivo, caí numa cela e me reconstruí de novo.</p>
-    <p class="sublinha">Isto não é autoajuda pra te consolar. É o método que me manteve inteiro quando perdi tudo.</p>
-
-    <figure class="mockup" style="max-width:290px;margin:22px 0 0">
-      <picture>
-        <source srcset="../assets/img/mockup-rcp.webp" type="image/webp">
-        <img src="../assets/img/mockup-rcp.jpg" alt="Recomeçar com Propósito, ebook de J. C. Dias, no Kindle e no celular" width="1040" height="1299" fetchpriority="high">
-      </picture>
-    </figure>
-
-    <p class="precohero">R$27<span class="sub">Ebook &middot; acesso imediato</span></p>
-
-    <a href="#" class="cta" data-buy style="margin:20px 0 0">Quero o livro <small>Acesso imediato por apenas R$27</small></a>
-    <p class="bumpcue">O ebook custa R$27. O <b>audiobook</b> e a <b>edição impressa</b> são opcionais e aparecem separadamente no checkout, antes de você pagar. É só marcar se quiser.</p>
+    <picture><source srcset="../assets/img/logo-jcdias.webp" type="image/webp"><img class="logo" src="../assets/img/logo-jcdias.png" alt="J. C. Dias" width="480" height="110"></picture>
+    <span class="eyebrow">Protocolo de Recomeço em 7 Dias</span>
+    <h1>Você não precisa reconstruir sua vida inteira agora. Precisa saber qual é o próximo passo.</h1>
+    <p class="sub">Em 7 dias, você identifica o que está te mantendo preso, reorganiza a mente e monta um plano claro para começar de novo. Uma etapa por dia.</p>
+    <a href="#oferta" class="cta block" data-buy style="margin:26px auto 0">Quero começar meu recomeço <small>Acesso imediato · uma etapa por dia</small></a>
+    <p class="price"><b>R$67</b>Acesso imediato, hoje mesmo</p>
+    <p class="micro">Comece hoje. Uma etapa por dia, no seu ritmo.</p>
+    <figure class="mock"><picture><source srcset="../assets/img/mockup-rcp.webp" type="image/webp"><img src="../assets/img/mockup-rcp.jpg" alt="Recomeçar com Propósito, no celular e no Kindle" width="1040" height="1299" fetchpriority="high"></picture></figure>
   </div>
 </header>
 
-<!-- 2. A QUEDA -->
-<section class="carvao" id="queda">
-  <div class="wrap rv">
-    <p class="olho">A queda</p>
-    <h2>A queda não avisa. Ela derruba.</h2>
-    <p style="margin-top:22px">Eu cheguei na Inglaterra como imigrante. Sem trabalho, sem contatos, longe de casa, recomeçando a vida numa língua que não era a minha. Do zero, fui construindo passo a passo, até chegar a diretor executivo, liderando operações na Europa.</p>
-    <p style="margin-top:18px">E então veio a queda. Numa quinta-feira eu tinha as reuniões de alta cúpula e o respeito do mercado, uma carreira que levei mais de vinte anos pra construir. Na sexta-feira, eu era só um número, o A7937FC, numa cela de cinco metros quadrados, longe dos meus filhos. Foram 11 meses e 2 semanas de frente pra uma parede de concreto cinza.</p>
-    <p style="margin-top:18px">Na pior noite, ouvi por dentro a voz da minha filha: "Dad, I love you. Don't give up." Pai, eu te amo. Não desiste. Ali eu parei de me lamentar e comecei a desenhar a saída.</p>
-    <p class="frase" style="margin-top:26px">Recusei o papel de vítima. E comecei tudo de novo, do zero.</p>
-    <p style="margin-top:18px">Não voltei a ser quem era. Eu me multipliquei. Depois da cela, eu não só voltei a ser diretor executivo, como ainda comecei quatro negócios do zero:</p>
-    <div class="biz-grid">
-      <div class="biz-card"><b>Um e-commerce</b><span>Uma loja online no Reino Unido, que toco ao lado da minha esposa.</span></div>
-      <div class="biz-card"><b>Um projeto esportivo</b><span>Criado para bancar o sonho do meu filho, com produtos próprios.</span></div>
-      <div class="biz-card"><b>Uma marca de roupas</b><span>Peças com os desenhos da minha filha e frases de fé.</span></div>
-      <div class="biz-card"><b>J. C. Dias</b><span>Meus livros, meus treinamentos e a minha mentoria.</span></div>
-    </div>
-    <p class="frase" style="margin-top:26px">Quatro negócios construídos do zero depois da cela. A prova de que dá pra reconstruir a vida fora das grades.</p>
+<!-- IDENTIFICAÇÃO -->
+<section class="ident" style="background:var(--bg2)">
+  <div class="wrap narrow">
+    <h2>Talvez sua vida continue funcionando por fora.</h2>
+    <p>Você trabalha. Resolve problemas. Cumpre responsabilidades. Mas alguma coisa dentro de você mudou.</p>
+    <p>Talvez tenha sido uma separação, uma perda, uma decisão errada, uma crise no trabalho, ou simplesmente a sensação de que você se perdeu de si mesmo.</p>
+    <p>Você sabe que precisa recomeçar. O problema é que não sabe por onde.</p>
+    <p class="turn">É exatamente para esse momento que este protocolo foi criado.</p>
   </div>
 </section>
 
-<!-- 3. A SUA CELA -->
-<section class="pedra" id="cela">
-  <div class="wrap rv">
-    <p class="olho">A sua cela</p>
-    <h2>A pior prisão que eu já vi está aqui fora</h2>
-    <p style="margin-top:22px">Eu conheci homens perigosos atrás das grades. Mas a cela mais difícil de sair é a que não tem grade nenhuma:</p>
-    <div style="margin-top:24px">
-      <div class="cela-box"><span class="ic">&#9632;</span><p>A culpa por um erro que você repassa na cabeça toda noite.</p></div>
-      <div class="cela-box"><span class="ic">&#9632;</span><p>A vergonha de não estar entregando o que prometeu pra sua família.</p></div>
-      <div class="cela-box"><span class="ic">&#9632;</span><p>A procrastinação, onde você finge esperar o "momento certo" enquanto a vida passa.</p></div>
-    </div>
-    <p class="frase" style="margin-top:30px">A diferença entre a minha cela e a sua é simples: a sua porta está destrancada. Falta dar o primeiro passo pra fora.</p>
+<!-- AUTORIDADE -->
+<section class="dark">
+  <div class="wrap narrow story">
+    <picture><source srcset="../assets/img/desk-1.webp" type="image/webp"><img class="autor-foto" src="../assets/img/desk-1.jpg" alt="J. C. Dias" width="1440" height="960" loading="lazy"></picture>
+    <span class="eyebrow">Quem está falando com você</span>
+    <h2 style="margin-top:12px">Eu também precisei descobrir como começar de novo.</h2>
+    <p class="big" style="margin-top:22px">Na quinta-feira, eu era diretor executivo. Na sexta, era um número dentro de uma cela.</p>
+    <p>Quando tudo que definia quem eu era desapareceu, eu precisei aprender a reconstruir primeiro a mente, depois a direção, e só então a vida.</p>
+    <p>Foi desse processo que nasceu Recomeçar com Propósito. Hoje eu transformei essa experiência num protocolo simples, para ajudar você a encontrar o seu próprio primeiro passo.</p>
   </div>
 </section>
 
-<!-- 4. A VIRADA (fé, honesta) -->
-<section class="papel" id="virada">
-  <div class="wrap rv">
-    <p class="olho">A virada</p>
-    <h2>A liberdade não veio quando a porta abriu</h2>
-    <p style="margin-top:22px">Demorei pra entender uma coisa que virou a chave de tudo: a liberdade não começa quando a porta se abre. Ela começa quando você para de fugir de si mesmo.</p>
-    <p style="margin-top:18px">Um dia, um senhor me olhou fundo e disse: "Você está no fogo. Mas, quando passar, vai ver que ele não te queimou. Ele te forjou." Naquela cela, abri a Bíblia, não por religião, mas como quem procura um mapa no meio dos escombros. E alguma coisa acendeu.</p>
-    <p class="frase" style="margin-top:26px">A dor me quebrou. A fé me reconstruiu. O propósito me trouxe de volta.</p>
-  </div>
-</section>
-
-<!-- 5. O LIVRO -->
-<section class="carvao" id="livro">
-  <div class="wrap rv">
-    <p class="olho">O manuscrito</p>
-    <h2>Isto não é um ebook. É o meu protocolo de sobrevivência.</h2>
-    <p style="margin-top:22px">O mercado está cheio de mentor que nunca perdeu um centavo querendo te ensinar resiliência. Eu não tenho paciência pra teoria. Isto não foi escrito num escritório com ar-condicionado. Foi digitado das notas que eu salvei de um caderno que resistiu ao cárcere. Dividi o caos em oito ferramentas, uma por capítulo:</p>
-
-    <div class="tools8">
-      <div class="t"><span class="n">01</span><span class="nm">A vergonha que paralisa</span></div>
-      <div class="t"><span class="n">02</span><span class="nm">O peso do passado</span></div>
-      <div class="t"><span class="n">03</span><span class="nm">Reconstruir de dentro pra fora</span></div>
-      <div class="t"><span class="n">04</span><span class="nm">A dor que ensina</span></div>
-      <div class="t"><span class="n">05</span><span class="nm">O propósito não nasce no topo</span></div>
-      <div class="t"><span class="n">06</span><span class="nm">Ninguém te ensina a recomeçar</span></div>
-      <div class="t"><span class="n">07</span><span class="nm">Liberdade é um estilo de vida</span></div>
-      <div class="t"><span class="n">08</span><span class="nm">A missão começa agora</span></div>
+<!-- O QUE RECEBE -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">O que você recebe</span>
+      <h2 class="mt" style="max-width:22ch;margin-left:auto;margin-right:auto">Você não recebe algo para ler. Recebe um processo para executar.</h2>
     </div>
-  </div>
-</section>
-
-<!-- 6. O AUTOR -->
-<section class="carvao" id="autor" style="padding-top:0">
-  <div class="wrap rv">
-    <p class="olho">O autor</p>
-    <h2>Quem está falando com você</h2>
-
-    <figure class="autor" style="max-width:520px">
-      <picture>
-        <source srcset="../assets/img/desk-1.webp" type="image/webp">
-        <img src="../assets/img/desk-1.jpg" alt="J. C. Dias" width="1440" height="960" loading="lazy" style="aspect-ratio:3/2;object-fit:cover">
-      </picture>
-    </figure>
-
-    <p style="margin-top:26px">Meu nome é J. C. Dias. Por muito tempo eu fui o cara que, de fora, parecia ter dado certo. Depois virei o cara que perdeu tudo e teve que reaprender a viver dentro de uma cela, uma página de cada vez. Não escrevo como quem sabe das coisas. Escrevo como quem esteve no fundo e conseguiu voltar.</p>
-    <p class="frase" style="margin-top:22px">Ninguém me ensinou a recomeçar. Eu aprendi na pele, na dor e na fé.</p>
-  </div>
-</section>
-
-<!-- 7. PROVA SOCIAL -->
-<section class="papel" id="prova">
-  <div class="wrap rv">
-    <p class="olho">Mensagens reais</p>
-    <h2>O que me mandam depois de ler</h2>
-    <p class="fraco" style="margin-top:14px">São mensagens de leitores dos meus livros anteriores. Recomeçar com Propósito nasce da mesma história, da mesma cela.</p>
-    <div class="depoimentos">
-      <figure><img src="../assets/depoimentos/zap-1.webp" alt="Mensagem de um leitor no WhatsApp" width="470" height="801" loading="lazy"></figure>
-      <figure><img src="../assets/depoimentos/zap-2.webp" alt="Mensagem de uma leitora no WhatsApp" width="470" height="784" loading="lazy"></figure>
-    </div>
-  </div>
-</section>
-
-<!-- 8. FAQ -->
-<section class="pedra" id="faq">
-  <div class="wrap rv">
-    <p class="olho">Dúvidas</p>
-    <h2>Perguntas frequentes</h2>
-
-    <div class="faq">
-      <details>
-        <summary>É digital ou físico?</summary>
-        <p class="fa">É digital. Um ebook que você lê no celular, no computador, no tablet ou no Kindle. Não vai nada pelo correio.</p>
-      </details>
-      <details>
-        <summary>Como recebo depois de comprar?</summary>
-        <p class="fa">Na hora. Assim que o pagamento é confirmado, o acesso chega no seu e-mail. Em poucos minutos você já está lendo.</p>
-      </details>
-      <details>
-        <summary>Dá para ouvir em vez de ler?</summary>
-        <p class="fa">Dá. No momento do pagamento você pode incluir o audiobook do livro por um valor pequeno a mais, para ouvir no carro, na caminhada ou antes de dormir.</p>
-      </details>
-      <details>
-        <summary>Foi mesmo escrito na prisão?</summary>
-        <p class="fa">Foi. Escrevi este livro à mão, dentro de uma cela, no período em que estive preso longe da minha família. Cada capítulo nasceu ali.</p>
-      </details>
-      <details>
-        <summary>É um livro religioso?</summary>
-        <p class="fa">Tem fé, mas não é um sermão. A fé é parte da minha história real. O livro fala com quem tem fé e com quem só precisa de um chão para recomeçar.</p>
-      </details>
-      <details>
-        <summary>E se eu não gostar?</summary>
-        <p class="fa">Você tem 15 dias. Se o livro não falar com você, me escreve e eu devolvo cada centavo. Sem burocracia, sem pergunta e sem constrangimento.</p>
-      </details>
-    </div>
-
-  </div>
-</section>
-
-<!-- 9. A OFERTA -->
-<section class="papel" id="oferta">
-  <div class="wrap rv oferta">
-    <figure class="mockup" style="margin-top:0;max-width:420px">
-      <picture>
-        <source srcset="../assets/img/mockup-rcp.webp" type="image/webp">
-        <img src="../assets/img/mockup-rcp.jpg" alt="Recomeçar com Propósito, ebook de J. C. Dias, no Kindle e no celular" width="1040" height="1299" loading="lazy">
-      </picture>
-    </figure>
-
-    <h2 style="margin-top:30px">Por que eu cobro só R$27 por isto</h2>
-    <p style="margin-top:14px;text-align:left">Vou ser direto: eu construí negócios do zero depois da cela. Eu não estou aqui pelos seus 27 reais.</p>
-
-    <figure class="retrato" style="margin-top:22px"><picture><source srcset="../assets/img/autor.webp" type="image/webp"><img src="../assets/img/autor.jpg" alt="J. C. Dias" width="900" height="917" loading="lazy"></picture></figure>
-    <div class="pquote"><span class="mk">&ldquo;</span><p class="tx">Eu não preciso dos seus 27 reais.</p></div>
-
-    <p style="margin-top:18px;text-align:left">Coloquei esse preço por dois motivos:</p>
-    <div style="margin-top:14px">
-      <div class="decreto"><span class="nn">1</span><div><b>Acesso</b><span>A R$27, o livro chega em quem realmente precisa começar, sem a barreira do preço. É o valor de um café com pão de queijo investido na sua própria virada.</span></div></div>
-      <div class="decreto"><span class="nn">2</span><div><b>Distribuição</b><span>Eu quero este método na mão de quem está quebrado na mesa da cozinha hoje à noite. Tirei qualquer desculpa financeira da sua frente.</span></div></div>
-    </div>
-
-    <p class="frase" style="margin-top:26px;text-align:left;font-size:clamp(22px,5vw,28px)">Feche esta aba e siga sozinho no tentativa e erro. Ou pague o preço de uma barra de chocolate e pegue o plano de quem transformou o chão de uma cela em negócios que funcionam.</p>
-
-    <p class="fraco" style="margin-top:26px;text-align:left">É isto que chega no seu e-mail:</p>
-
-    <div class="stack" style="text-align:left">
-      <div class="item"><span class="check">&#10003;</span><div><b>Recomeçar com Propósito</b><span>O livro inteiro, os oito capítulos, escritos dentro da cela.</span></div></div>
-      <div class="item"><span class="check">&#10003;</span><div><b>Leia onde você estiver</b><span>Celular, tablet, computador ou Kindle. Sem app complicado.</span></div></div>
-      <div class="item"><span class="check">&#10003;</span><div><b>É seu para sempre</b><span>Chega em minutos e fica com você, sem prazo para acabar.</span></div></div>
-    </div>
-
-    <div class="bump">
-      <span class="mais">+</span>
-      <div>
-        <b>Leve também o físico e o audiobook</b>
-        <span>No próprio checkout, antes de pagar, você marca com um clique o livro físico pra sua coleção e o audiobook pra ouvir no caminho. Ler, ouvir e ter na estante, do seu jeito.</span>
+    <div class="cards">
+      <div class="rcard">
+        <div class="im"><picture><source srcset="../assets/img/capa-rcp.webp" type="image/webp"><img src="../assets/img/capa-rcp.jpg" alt="Livro Recomeçar com Propósito"></picture></div>
+        <div class="tx"><span class="k">O livro</span><h3>Recomeçar com Propósito</h3><p>A base do processo. Uma travessia real sobre queda, culpa, identidade, disciplina e propósito.</p></div>
+      </div>
+      <div class="rcard">
+        <div class="im"><picture><source srcset="../assets/img/obj-documento.webp" type="image/webp"><img src="../assets/img/obj-documento.jpg" alt="Caderno do Recomeço"></picture></div>
+        <div class="tx"><span class="k">A implementação</span><h3>Caderno do Recomeço · 7 Dias</h3><p>Um exercício por dia. Você nomeia o que te prende, redefine a direção e começa a agir.</p></div>
+      </div>
+      <div class="rcard">
+        <div class="im"><picture><source srcset="../assets/img/obj-bussola.webp" type="image/webp"><img src="../assets/img/obj-bussola.jpg" alt="Mapa do Próximo Capítulo"></picture></div>
+        <div class="tx"><span class="k">A direção</span><h3>Mapa do Próximo Capítulo</h3><p>No fim dos 7 dias, você organiza em uma página só: onde está, o que deixa para trás, quem escolhe se tornar e a sua primeira ação.</p></div>
       </div>
     </div>
-
-    <div class="precocard">
-      <p class="hoje">O livro completo</p>
-      <p class="num">R$27</p>
-      <p class="cond">Pagamento único &nbsp;·&nbsp; Acesso imediato</p>
-      <a href="#" class="cta" data-buy style="margin-top:20px">Quero o livro agora <small>Acesso na hora, no seu celular</small></a>
-    </div>
-    <p class="micro">Ebook digital &nbsp;·&nbsp; Pix ou cartão &nbsp;·&nbsp; Compra segura pela Hotmart</p>
-
-    <div class="doc-garantia" style="margin-top:34px">
-      <p class="tt">A garantia é minha.<br>O compromisso é seu.</p>
-      <span class="dias">Garantia Porta Aberta &middot; 15 dias</span>
-      <p style="margin-top:8px">Eu confio tanto no que escrevi que assumo todo o risco. Leia as primeiras páginas hoje. Se for mais do mesmo, ou se a minha história não sacudir a sua inércia, me manda um e-mail e eu devolvo os R$27 na hora, sem pergunta. O risco do dinheiro é 100% meu. O risco de continuar exatamente onde você está é 100% seu.</p>
-    </div>
-
-    <div style="border-top:1px solid rgba(155,123,80,.28);margin-top:38px;padding-top:32px;text-align:left">
-      <h3 style="color:var(--bronze);letter-spacing:.1em">E depois deste livro?</h3>
-      <p style="margin-top:14px">Este livro te devolve o chão. Mas chão não é casa. Quando você parar de cair, vai bater a mesma pergunta que bateu em mim na cela: e agora, como é que eu reconstruo? Foi para responder isso que eu escrevi A Caverna Interior, as oito ferramentas que me tiraram do escuro, uma por capítulo. Ele te espera quando você terminar este.</p>
-    </div>
   </div>
 </section>
 
-<!-- 10. FECHAMENTO -->
-<section class="carvao" style="padding-top:0">
-  <div class="wrap rv" style="text-align:center">
-    <p class="titulo-livro" style="font-size:clamp(32px,9vw,56px);line-height:1.04">A sua queda não é o fim.<br>Pode ser o seu recomeço.</p>
+<!-- OS 7 DIAS -->
+<section class="dark">
+  <div class="wrap narrow">
+    <span class="eyebrow">O percurso</span>
+    <h2 class="mt" style="color:#fff">Sete dias. Um passo de cada vez.</h2>
+    <div class="days">
+      <div class="day"><span class="n">01</span><span class="t">Nomeie a sua cela<span>Enxergar o que está te prendendo.</span></span></div>
+      <div class="day"><span class="n">02</span><span class="t">Você errou. Você não é o erro.<span>Separar identidade de acontecimento.</span></span></div>
+      <div class="day"><span class="n">03</span><span class="t">Pare de morar no passado<span>Aceitar não é aprovar. É parar de negociar.</span></span></div>
+      <div class="day"><span class="n">04</span><span class="t">Retome o comando<span>Controlar o que ainda está nas suas mãos.</span></span></div>
+      <div class="day"><span class="n">05</span><span class="t">Troque "por quê?" por "para quê?"<span>Transformar a dor em direção.</span></span></div>
+      <div class="day"><span class="n">06</span><span class="t">Decida o que não vai com você<span>Todo recomeço exige uma renúncia.</span></span></div>
+      <div class="day"><span class="n">07</span><span class="t">O primeiro plano de recomeço<span>O próximo trecho, não a estrada inteira.</span></span></div>
+    </div>
+    <p class="dayclose">Ao final, você não precisa ter todas as respostas. Precisa ter direção.</p>
+  </div>
+</section>
 
-    <p style="margin-top:30px">Este livro começou na minha cela. Mas foi escrito para encontrar você.</p>
-    <p class="frase" style="margin-top:22px">A missão continua em você.</p>
+<!-- FRASE DE IMPACTO -->
+<section class="dark impact" style="background:var(--dark2);padding:96px 0">
+  <div class="wrap">
+    <p>Você não reconstrói a vida em 7 dias. <span class="s">Mas em 7 dias você pode parar de andar em círculos e começar a reconstrução.</span></p>
+  </div>
+</section>
 
-    <a href="#" class="cta" data-buy style="margin-top:36px">Quero recomeçar hoje <small>Ebook · R$27 · acesso na hora</small></a>
-    <p class="bumpcue">Garanta o ebook agora. No próprio checkout, antes de pagar, você ainda escolhe o <b>livro físico</b> pra sua coleção e o <b>audiobook</b> pra ouvir no caminho. É só marcar.</p>
-    <p class="micro">Pix ou cartão &nbsp;·&nbsp; 15 dias de garantia</p>
+<!-- PARA QUEM É -->
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">Para quem é</span>
+    <h2 class="mt">Este protocolo é para você se...</h2>
+    <ul class="checks">
+      <li>passou por uma queda pessoal ou profissional;</li>
+      <li>perdeu a confiança ou a direção;</li>
+      <li>carrega culpa, vergonha ou arrependimento;</li>
+      <li>sente que está vivendo no automático;</li>
+      <li>sabe que precisa mudar, mas não sabe por onde começar;</li>
+      <li>está pronto para dar um primeiro passo.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="oferta" id="oferta">
+  <div class="wrap">
+    <span class="eyebrow">Comece pelos próximos 7 dias</span>
+    <h2 class="mt" style="color:#fff">Tudo o que você precisa para dar o primeiro passo.</h2>
+    <div class="box">
+      <ul class="inc">
+        <li><b>Recomeçar com Propósito</b> · o livro, a base do processo</li>
+        <li><b>Caderno do Recomeço · 7 Dias</b> · a implementação guiada</li>
+        <li><b>Mapa do Próximo Capítulo</b> · a sua direção em uma página</li>
+      </ul>
+      <div class="pz">R$67<small>Pagamento único · acesso imediato</small></div>
+      <a href="#" class="cta block" data-buy style="margin:24px auto 0">Quero começar agora <small>Acesso na hora, no seu celular</small></a>
+      <p class="bumpcue">No checkout, se quiser, você pode acelerar com os <b>Áudios de Reconstrução</b> e o <b>Diário de 30 Dias</b>. São opcionais e aparecem antes de você pagar.</p>
+      <p class="guar">Garantia de 7 dias. Comece o protocolo. Se não te der direção, devolvo cada centavo.</p>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p>Histórias sobre reconstrução, esperança e propósito.</p>
-    <p style="margin-top:6px"><a href="../privacidade/">Política de Privacidade</a> &middot; <a href="../termos/">Termos de Uso</a></p>
-    <p>Copyright &copy; 2026 &middot; J. C. Dias &middot; Todos os direitos reservados.</p>
+    <p>J. C. Dias · Recomeçar com Propósito · Compra processada com segurança pela Hotmart.</p>
+    <p style="margin-top:8px"><a href="../termos/">Termos</a> &nbsp;·&nbsp; <a href="../privacidade/">Privacidade</a></p>
   </div>
 </footer>
 
 <div id="sticky">
-  <span class="txt">Recomeçar com Propósito<br><b>R$27</b></span>
-  <a href="#" data-buy>Comprar</a>
+  <div class="l">Protocolo de 7 Dias<b>R$67</b></div>
+  <a href="#" data-buy>Quero começar</a>
 </div>
 
 <script>
 /* ---- CONFIGURAÇÃO ---- */
-var PIXEL_ID = '2122287675194601';   // dataset Funil de Vendas V1 - Brasil
-var CHECKOUT = 'https://pay.hotmart.com/C107529752Q?checkoutMode=10';   // RCP ebook R$27 (bumps: audiolivro R$19, impresso R$47)
+var PIXEL_ID = '2122287675194601';
+var CHECKOUT = 'https://pay.hotmart.com/C107529752Q?checkoutMode=10';   // PENDENTE JC: atualizar esta oferta no Hotmart para R$67 e subir Caderno 7 Dias + Mapa. Bumps: Audios R$27, Diario 30 Dias R$37.
 /* --------------------- */
-
 var FUNNEL = 'recomecar';
-var PRODUTO = { id:'rcp_ebook', nome:'Recomecar com Proposito', valor:27, moeda:'BRL' };
+var PRODUTO = { id:'rcp_protocolo7', nome:'Recomecar com Proposito - Protocolo 7 Dias', valor:67, moeda:'BRL' };
 
 (function(){
   if(!PIXEL_ID) return;
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', PIXEL_ID);
-  fbq('track','PageView');
-  fbq('track','ViewContent',{content_ids:[PRODUTO.id],content_name:PRODUTO.nome,
-    value:PRODUTO.valor,currency:PRODUTO.moeda,funnel:FUNNEL,step:'recomecar'});
+  fbq('trackCustom','Recomecar_View',{funnel:FUNNEL});
 })();
-
-function evento(nome, dados){
-  var carga = Object.assign({funnel:FUNNEL, step:'recomecar'}, dados||{});
-  if(window.fbq) fbq('trackCustom', nome, carga);
-}
 function comParametros(url){
-  var atuais = new URLSearchParams(window.location.search);
-  atuais.set('funnel', FUNNEL);
-  var d = new URL(url, window.location.href);
+  var atuais=new URLSearchParams(window.location.search);atuais.set('funnel',FUNNEL);
+  var d=new URL(url,window.location.href);
   atuais.forEach(function(v,k){ if(!d.searchParams.has(k)) d.searchParams.set(k,v); });
   return d.toString();
 }
-
-/* ---------- botões de compra ----------
-   [data-buy]  = vai direto para o checkout (dispara InitiateCheckout)
-   [data-rolar]= rola até a oferta                                        */
 function irParaCheckout(origem){
-  if(window.fbq) fbq('track','InitiateCheckout',{content_ids:[PRODUTO.id],content_name:PRODUTO.nome,
-    value:PRODUTO.valor,currency:PRODUTO.moeda});
-  evento('Recomecar_CTA_Click',{cta:origem||'oferta'});
-  if(CHECKOUT){ window.location.href = comParametros(CHECKOUT); }
-  else { var alvo=document.getElementById('oferta'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'center'}); }
+  if(window.fbq) fbq('track','InitiateCheckout',{content_name:PRODUTO.nome,value:PRODUTO.valor,currency:PRODUTO.moeda});
+  if(window.fbq) fbq('trackCustom','Recomecar_CTA',{cta:origem||'oferta'});
+  if(CHECKOUT){ window.location.href=comParametros(CHECKOUT); }
+  else { var a=document.getElementById('oferta'); if(a) a.scrollIntoView({behavior:'smooth',block:'start'}); }
 }
 document.querySelectorAll('[data-buy]').forEach(function(el){
-  if(CHECKOUT){ el.setAttribute('href', CHECKOUT); }
-  el.addEventListener('click', function(e){ e.preventDefault(); irParaCheckout(el.closest('#sticky')?'sticky':'oferta'); });
+  if(CHECKOUT){ el.setAttribute('href',CHECKOUT); }
+  el.addEventListener('click',function(e){ e.preventDefault(); irParaCheckout(el.closest('#sticky')?'sticky':(el.closest('.hero')?'hero':'oferta')); });
 });
-document.querySelectorAll('[data-rolar]').forEach(function(el){
-  el.addEventListener('click', function(e){
-    e.preventDefault();
-    evento('Recomecar_CTA_Scroll');
-    var alvo=document.getElementById('oferta'); if(alvo) alvo.scrollIntoView({behavior:'smooth',block:'center'});
-  });
-});
-
-/* ---------- reveal + sticky (CTA sempre à mostra no mobile depois do herói) ---------- */
-if('IntersectionObserver' in window){
-  var obs = new IntersectionObserver(function(ent){
-    ent.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('vis'); obs.unobserve(en.target); } });
-  },{rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
-
-  var sticky = document.getElementById('sticky');
-  new IntersectionObserver(function(e){
-    sticky.classList.toggle('on', !e[0].isIntersecting);
-  },{threshold:0}).observe(document.getElementById('hero'));
-
-  var vistaOferta = false;
-  new IntersectionObserver(function(e){
-    if(e[0].isIntersecting && !vistaOferta){ vistaOferta = true; evento('Recomecar_Offer_View'); }
-  },{threshold:.2}).observe(document.getElementById('oferta'));
-} else {
-  document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('vis'); });
-  document.getElementById('sticky').classList.add('on');
-}
+var st=document.getElementById('sticky');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY||document.documentElement.scrollTop;
+  if(y>620){ st.classList.add('on'); } else { st.classList.remove('on'); }
+},{passive:true});
 </script>
 </body>
 </html>
