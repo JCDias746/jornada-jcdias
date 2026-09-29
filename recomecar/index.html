@@ -71,7 +71,10 @@ p.lead{font-size:clamp(17px,2.4vw,20px);color:var(--ink2)}
 
 /* identificação */
 .ident p{font-size:18.5px;color:var(--ink);margin-top:16px;max-width:56ch}
-.ident .turn{font-family:var(--serif);font-size:clamp(21px,3.2vw,27px);color:var(--blue);margin-top:30px;line-height:1.3;max-width:30ch}
+.ident .turn{font-family:var(--serif);font-size:clamp(21px,3.2vw,27px);color:var(--blue);margin-top:30px;line-height:1.3;max-width:46ch}
+.ident .nots{margin:28px 0 6px;border-left:3px solid var(--blue);padding-left:22px}
+.ident .nots p{font-family:var(--serif);font-weight:600;font-size:clamp(19px,3.2vw,26px);color:var(--ink);line-height:1.28;margin:14px 0;max-width:100%}
+.ident .hard{font-family:var(--sans);font-weight:700;font-size:19px;color:var(--ink);margin-top:22px}
 
 /* autoridade */
 .autor-foto{width:100%;border-radius:16px;box-shadow:0 30px 60px -34px rgba(0,0,0,.7);aspect-ratio:3/2;object-fit:cover;margin-bottom:32px}
@@ -150,11 +153,25 @@ footer a{color:var(--ink2)}
 <!-- IDENTIFICAÇÃO -->
 <section class="ident" style="background:var(--bg2)">
   <div class="wrap narrow">
-    <h2>Talvez sua vida continue funcionando por fora.</h2>
-    <p>Você trabalha. Resolve problemas. Cumpre responsabilidades. Mas alguma coisa dentro de você mudou.</p>
-    <p>Talvez tenha sido uma separação, uma perda, uma decisão errada, uma crise no trabalho, ou simplesmente a sensação de que você se perdeu de si mesmo.</p>
-    <p>Você sabe que precisa recomeçar. O problema é que não sabe por onde.</p>
-    <p class="turn">É exatamente para esse momento que este protocolo foi criado.</p>
+    <span class="eyebrow">A verdade que ninguém te diz</span>
+    <h2 class="mt">Você não reconstrói a vida lá fora com a mente quebrada por dentro.</h2>
+    <p>Você perdeu o emprego. Passou por um divórcio. Viu a empresa quebrar. E agora tenta consertar tudo isso por fora, correndo atrás de dinheiro, de um novo amor, de uma nova vaga.</p>
+    <p class="hard">Preciso ser honesto com você: não funciona nessa ordem.</p>
+    <div class="nots">
+      <p>Você não vai ganhar dinheiro com a mente no chão.</p>
+      <p>Você não vai restaurar um casamento estando quebrado por dentro.</p>
+      <p>Você não vai conquistar o emprego dos seus sonhos com a cabeça de derrotado.</p>
+    </div>
+    <p class="turn">Eu não vim te ensinar a ganhar dinheiro. Vim te ajudar a colocar a sua mente no lugar, para você voltar a construir o que perdeu. Primeiro a mente. Depois a direção. Só então a vida lá fora.</p>
+    <p style="font-family:var(--sans);text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;font-weight:700;color:var(--ink2);margin-top:44px">Este protocolo é para você se</p>
+    <ul class="checks" style="margin-top:18px">
+      <li>passou por uma queda pessoal ou profissional;</li>
+      <li>perdeu a confiança ou a direção;</li>
+      <li>carrega culpa, vergonha ou arrependimento;</li>
+      <li>sente que está vivendo no automático;</li>
+      <li>sabe que precisa mudar, mas não sabe por onde começar;</li>
+      <li>está pronto para dar o primeiro passo.</li>
+    </ul>
   </div>
 </section>
 
@@ -216,22 +233,6 @@ footer a{color:var(--ink2)}
 <section class="dark impact" style="background:var(--dark2);padding:96px 0">
   <div class="wrap">
     <p>Você não reconstrói a vida em 7 dias. <span class="s">Mas em 7 dias você pode parar de andar em círculos e começar a reconstrução.</span></p>
-  </div>
-</section>
-
-<!-- PARA QUEM É -->
-<section>
-  <div class="wrap center">
-    <span class="eyebrow">Para quem é</span>
-    <h2 class="mt">Este protocolo é para você se...</h2>
-    <ul class="checks">
-      <li>passou por uma queda pessoal ou profissional;</li>
-      <li>perdeu a confiança ou a direção;</li>
-      <li>carrega culpa, vergonha ou arrependimento;</li>
-      <li>sente que está vivendo no automático;</li>
-      <li>sabe que precisa mudar, mas não sabe por onde começar;</li>
-      <li>está pronto para dar um primeiro passo.</li>
-    </ul>
   </div>
 </section>
 
