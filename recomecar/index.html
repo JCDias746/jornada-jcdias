@@ -8,7 +8,7 @@
 <meta property="og:title" content="O tempo que você perdeu não volta. Os próximos 7 dias podem mudar tudo.">
 <meta property="og:description" content="O que eu levei 11 meses e 2 semanas dentro de uma cela para entender, você aplica nos seus próximos 7 dias. Um protocolo prático, uma etapa por dia.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://jornada.jcdias.com/assets/img/capa-rcp.jpg">
+<meta property="og:image" content="https://jornada.jcdias.com/assets/img/palco-2.jpg">
 <!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -24,129 +24,134 @@ fbq('track','ViewContent',{content_name:'O Manual da Reconstrucao',value:47,curr
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0B0A07; --bg2:#12100A; --panel:#17130C; --panel2:#1E1810;
-  --gold:#E4B24C; --gold-l:#F3D88E; --gold-d:#B8872E;
-  --cream:#F3ECDD; --muted:#B4A88F; --muted2:#8C8167;
-  --line:rgba(228,178,76,.26);
+  --bg:#F4EFE7; --bg2:#FBF7EF; --white:#FFFFFF; --bege:#E7DFCF;
+  --ink:#241F1A; --ink2:#5F564B;
+  --gold:#E4B24C; --gold-l:#F3D88E; --gold-d:#A9792A;
+  --blue:#263A99; --blue-h:#33489F;
+  --dark:#0B0A07;
   --serif:'Playfair Display',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--cream);font-family:var(--sans);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.64;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit}
 .wrap{max-width:780px;margin:0 auto;padding:0 22px}
 .narrow{max-width:640px}
-section{padding:72px 0}
-h1,h2{font-family:var(--serif);font-weight:800;line-height:1.08;letter-spacing:-.01em;color:#fff;text-transform:uppercase}
-h1{font-size:clamp(33px,7.4vw,60px)}
-h2{font-size:clamp(27px,5.2vw,44px)}
-.gold{color:var(--gold)}
-.eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.24em;font-size:12px;font-weight:700;color:var(--gold)}
-p.lead{font-size:clamp(17px,2.4vw,20px);color:var(--muted)}
+section{padding:66px 0}
+h1,h2{font-family:var(--serif);line-height:1.12;letter-spacing:-.01em}
+h1{font-weight:800;font-size:clamp(33px,7.4vw,60px);text-transform:uppercase;color:#fff}
+h2{font-weight:700;font-size:clamp(26px,4.6vw,40px);color:var(--ink)}
+.eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:700;color:var(--gold-d)}
+p.lead{font-size:clamp(17px,2.4vw,20px);color:var(--ink2)}
+.goldtx{color:var(--gold-d)}
 .center{text-align:center}
 .mt{margin-top:16px}
-.divider{width:110px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:22px auto}
+.divider{width:110px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-d),transparent);margin:22px auto}
 
 /* feature chips */
 .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:26px 0}
-.chip{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:12px;padding:11px 16px;background:rgba(255,255,255,.015);font-size:13.5px;font-weight:600;color:var(--cream);letter-spacing:.02em}
-.chip svg{width:17px;height:17px;stroke:var(--gold);fill:none;stroke-width:1.7}
+.chip{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--bege);border-radius:12px;padding:11px 16px;background:var(--white);font-size:13.5px;font-weight:600;color:var(--ink);letter-spacing:.02em}
+.chip svg{width:17px;height:17px;stroke:var(--gold-d);fill:none;stroke-width:1.7}
+/* chips no hero (escuro) */
+.hero .chip{border-color:rgba(228,178,76,.3);background:rgba(255,255,255,.02);color:#F3ECDD}
+.hero .chip svg{stroke:var(--gold)}
 
 /* price */
-.pricetag{font-family:var(--serif);font-weight:800;line-height:1;display:inline-flex;align-items:baseline;gap:4px}
-.pricetag .cur{color:var(--gold);font-size:.5em}
-.pricetag .val{color:#fff;font-size:1em;letter-spacing:-.02em}
+.pricetag{font-family:var(--serif);font-weight:800;line-height:1;display:inline-flex;align-items:baseline;gap:4px;justify-content:center}
+.pricetag .cur{color:var(--gold-d);font-size:.5em}
+.pricetag .val{font-size:1em;letter-spacing:-.02em;color:var(--ink)}
+.hero .pricetag .cur{color:var(--gold)}
+.hero .pricetag .val{color:#fff}
 .price-hero{font-size:clamp(52px,13vw,76px);margin:6px 0 2px}
-.price-sub{font-size:13px;color:var(--muted2);letter-spacing:.05em;text-transform:uppercase}
+.price-sub{font-size:13px;color:var(--ink2);letter-spacing:.05em;text-transform:uppercase}
+.hero .price-sub{color:#B4A88F}
 
 /* CTA gold */
-.cta{display:inline-flex;flex-direction:column;align-items:center;gap:2px;font-family:var(--sans);font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:17px;color:#2A1C05;background:linear-gradient(180deg,var(--gold-l),var(--gold) 55%,var(--gold-d));padding:18px 38px;border-radius:13px;box-shadow:0 0 0 1px rgba(243,216,142,.5),0 18px 40px -14px rgba(228,178,76,.6);transition:transform .18s,box-shadow .2s;text-align:center}
-.cta:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(243,216,142,.7),0 24px 50px -14px rgba(228,178,76,.8)}
+.cta{display:inline-flex;flex-direction:column;align-items:center;gap:2px;font-family:var(--sans);font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:17px;color:#2A1C05;background:linear-gradient(180deg,var(--gold-l),var(--gold) 55%,var(--gold-d));padding:18px 38px;border-radius:13px;box-shadow:0 0 0 1px rgba(169,121,42,.35),0 16px 34px -14px rgba(169,121,42,.55);transition:transform .18s,box-shadow .2s;text-align:center}
+.cta:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(169,121,42,.5),0 22px 44px -14px rgba(169,121,42,.7)}
 .cta small{font-weight:500;font-size:12.5px;color:#5A3D0C;letter-spacing:.02em;text-transform:none}
 .cta.block{display:flex;width:100%;max-width:440px}
-.cta .arw{font-weight:800}
 
-/* hero */
-.hero{position:relative;text-align:center;overflow:hidden}
+/* ===== HERO (escuro) ===== */
+.hero{position:relative;text-align:center;overflow:hidden;background:var(--dark);color:#F3ECDD}
 .toplogo{padding:20px 0 16px;text-align:center}
 .toplogo img{height:38px;width:auto;margin:0 auto;opacity:.96}
 .herobanner{position:relative;height:clamp(350px,60vh,540px)}
 .herobanner img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
 .herobanner::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,7,.15) 0%,rgba(11,10,7,.05) 32%,rgba(11,10,7,.72) 82%,#0B0A07 100%)}
-.herohead{position:relative;z-index:2;margin-top:-56px}
-.herohead h1{margin:14px auto 0;max-width:15ch}
-.herohead .sub{font-size:clamp(16.5px,2.3vw,19px);color:var(--muted);max-width:50ch;margin:18px auto 0}
-.hero .book{max-width:200px;margin:28px auto 0;border-radius:6px;box-shadow:0 24px 50px -16px rgba(0,0,0,.85),0 0 50px -12px rgba(228,178,76,.25)}
+.hero .herohead{position:relative;z-index:2;margin-top:-56px;padding-bottom:40px}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{margin:14px auto 0;max-width:15ch}
+.hero .sub{font-size:clamp(16.5px,2.3vw,19px);color:#C8BDA8;max-width:50ch;margin:18px auto 0}
 
-/* blocos de texto */
-.tx p{font-size:18px;color:var(--muted);margin-top:16px;max-width:56ch}
-.tx .hard{font-family:var(--sans);font-weight:700;font-size:19px;color:var(--cream);margin-top:22px}
-.nots{margin:26px 0 6px;border-left:2px solid var(--gold);padding-left:22px}
-.nots p{font-family:var(--serif);font-weight:700;font-size:clamp(19px,3.2vw,25px);color:#fff;line-height:1.28;margin:14px 0;max-width:100%;text-transform:none}
-.turn{font-family:var(--serif);font-size:clamp(20px,3.2vw,26px);color:var(--gold-l);margin-top:28px;line-height:1.32;max-width:46ch;text-transform:none;font-weight:600}
+/* ===== CORPO (claro) ===== */
+.tx p{font-size:18px;color:var(--ink2);margin-top:16px;max-width:56ch}
+.tx .hard{font-family:var(--sans);font-weight:700;font-size:19px;color:var(--ink);margin-top:22px}
+.nots{margin:26px 0 6px;border-left:3px solid var(--gold-d);padding-left:22px}
+.nots p{font-family:var(--serif);font-weight:700;font-size:clamp(19px,3.2vw,25px);color:var(--ink);line-height:1.3;margin:14px 0;max-width:100%}
+.turn{font-family:var(--serif);font-size:clamp(20px,3.2vw,26px);color:var(--blue);margin-top:28px;line-height:1.32;max-width:46ch;font-weight:600}
 
 /* checks */
 .checks{list-style:none;max-width:560px;margin:30px auto 0;display:flex;flex-direction:column;gap:15px;text-align:left}
-.checks li{display:flex;gap:14px;align-items:flex-start;font-size:17.5px;color:var(--cream)}
-.checks li::before{content:'';flex:0 0 23px;width:23px;height:23px;margin-top:2px;border-radius:50%;background:var(--gold);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat}
+.checks li{display:flex;gap:14px;align-items:flex-start;font-size:17.5px;color:var(--ink)}
+.checks li::before{content:'';flex:0 0 23px;width:23px;height:23px;margin-top:2px;border-radius:50%;background:var(--blue);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat}
 
 /* autoridade */
-.autor-foto{width:100%;border-radius:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.9);aspect-ratio:3/2;object-fit:cover;margin-bottom:30px;border:1px solid var(--line)}
-.story .big{font-family:var(--serif);color:#fff;font-size:clamp(22px,3.6vw,30px);line-height:1.25;margin:22px 0 2px;text-transform:none;font-weight:700}
-.story p{color:var(--muted);font-size:17.5px;margin-top:16px;max-width:56ch}
+.autor-foto{width:100%;border-radius:14px;box-shadow:0 26px 54px -30px rgba(0,0,0,.55);aspect-ratio:3/2;object-fit:cover;margin-bottom:30px;border:1px solid var(--bege)}
+.story .big{font-family:var(--serif);color:var(--ink);font-size:clamp(22px,3.6vw,30px);line-height:1.26;margin:22px 0 2px;font-weight:700}
+.story p{color:var(--ink2);font-size:17.5px;margin-top:16px;max-width:56ch}
 
 /* cards */
 .cards{display:grid;grid-template-columns:1fr;gap:16px;margin-top:38px}
-.rcard{background:var(--panel);border:1px solid var(--line);border-radius:15px;overflow:hidden;display:grid;grid-template-columns:116px 1fr;align-items:center}
-.rcard .im{height:100%;min-height:148px;background:#0d0b07}
+.rcard{background:var(--white);border:1px solid var(--bege);border-radius:15px;overflow:hidden;box-shadow:0 20px 44px -34px rgba(20,12,4,.4);display:grid;grid-template-columns:116px 1fr;align-items:center}
+.rcard .im{height:100%;min-height:148px;background:var(--bg2)}
 .rcard .im img{width:100%;height:100%;object-fit:cover}
 .rcard .tx2{padding:20px 22px}
-.rcard .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700;color:var(--gold)}
-.rcard h3{font-family:var(--serif);font-weight:700;font-size:21px;margin:5px 0 8px;color:#fff;text-transform:none}
-.rcard p{font-size:15px;color:var(--muted)}
+.rcard .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700;color:var(--gold-d)}
+.rcard h3{font-family:var(--serif);font-weight:700;font-size:21px;margin:5px 0 8px;color:var(--ink)}
+.rcard p{font-size:15px;color:var(--ink2)}
 
 /* 7 dias */
-.days{margin-top:40px;border-top:1px solid var(--line)}
-.day{display:flex;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line)}
-.day .n{font-family:var(--serif);font-weight:700;font-size:26px;color:var(--gold);flex:0 0 50px;line-height:1}
-.day .t{font-family:var(--serif);font-size:clamp(18px,2.8vw,22px);color:#fff;font-weight:600;text-transform:none}
-.day .t span{display:block;font-family:var(--sans);font-weight:400;font-size:14px;color:var(--muted);margin-top:3px;letter-spacing:0}
-.dayclose{font-family:var(--serif);font-size:clamp(19px,3vw,25px);color:#fff;margin-top:32px;line-height:1.3;max-width:34ch;text-transform:none}
+.days{margin-top:40px;border-top:1px solid var(--bege)}
+.day{display:flex;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--bege)}
+.day .n{font-family:var(--serif);font-weight:700;font-size:26px;color:var(--gold-d);flex:0 0 50px;line-height:1}
+.day .t{font-family:var(--serif);font-size:clamp(18px,2.8vw,22px);color:var(--ink);font-weight:600}
+.day .t span{display:block;font-family:var(--sans);font-weight:400;font-size:14px;color:var(--ink2);margin-top:3px;letter-spacing:0}
+.dayclose{font-family:var(--serif);font-size:clamp(19px,3vw,25px);color:var(--blue);margin-top:32px;line-height:1.3;max-width:36ch;font-weight:600}
 
 /* oferta */
-.oferta{text-align:center;background:linear-gradient(180deg,var(--bg),var(--bg2))}
-.obox{background:var(--panel2);border:1px solid var(--line);border-radius:20px;padding:40px 28px;max-width:540px;margin:34px auto 0;box-shadow:0 0 70px -20px rgba(228,178,76,.2)}
-.obox .inc{list-style:none;text-align:left;max-width:380px;margin:0 auto 24px;display:flex;flex-direction:column;gap:12px}
-.obox .inc li{display:flex;gap:12px;font-size:16px;color:var(--cream)}
-.obox .inc li b{color:#fff;font-weight:600}
-.obox .inc li::before{content:'';flex:0 0 20px;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--gold);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat}
-.guar{font-size:14.5px;color:var(--muted);margin-top:20px;max-width:380px;margin-left:auto;margin-right:auto}
+.oferta{text-align:center;background:var(--bg2)}
+.obox{background:var(--white);border:1px solid var(--bege);border-radius:20px;padding:40px 28px;max-width:540px;margin:30px auto 0;box-shadow:0 30px 70px -40px rgba(20,12,4,.45)}
+.obox .inc{list-style:none;text-align:left;max-width:380px;margin:0 auto 22px;display:flex;flex-direction:column;gap:12px}
+.obox .inc li{display:flex;gap:12px;font-size:16px;color:var(--ink)}
+.obox .inc li b{color:var(--ink);font-weight:700}
+.obox .inc li::before{content:'';flex:0 0 20px;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--gold-d);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/13px no-repeat}
+.guar{font-size:14.5px;color:var(--ink2);margin-top:20px;max-width:380px;margin-left:auto;margin-right:auto}
 
-footer{padding:32px 22px 96px;text-align:center;color:var(--muted2);font-size:13px}
-footer a{color:var(--muted)}
+footer{padding:32px 22px 96px;text-align:center;color:var(--ink2);font-size:13px;background:var(--bg2)}
+footer a{color:var(--ink2)}
 
 /* sticky */
-#sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(11,10,7,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(120%);transition:transform .35s}
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--bege);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(120%);transition:transform .35s;box-shadow:0 -8px 24px -16px rgba(0,0,0,.3)}
 #sticky.on{transform:translateY(0)}
-#sticky .l{font-family:var(--sans);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em;line-height:1.2}
-#sticky .l b{font-family:var(--serif);color:#fff;font-size:18px;letter-spacing:0;margin-left:4px}
-#sticky .l b .cur{color:var(--gold);font-size:.7em}
+#sticky .l{font-family:var(--sans);color:var(--ink2);font-size:11px;text-transform:uppercase;letter-spacing:.04em;line-height:1.2}
+#sticky .l b{font-family:var(--serif);color:var(--ink);font-size:18px;letter-spacing:0;margin-left:4px}
+#sticky .l b .cur{color:var(--gold-d);font-size:.7em}
 #sticky a{background:linear-gradient(180deg,var(--gold-l),var(--gold) 55%,var(--gold-d));color:#2A1C05;font-family:var(--sans);font-weight:800;font-size:13.5px;text-transform:uppercase;letter-spacing:.03em;padding:13px 20px;border-radius:10px;white-space:nowrap}
 @media (max-width:560px){ .rcard{grid-template-columns:96px 1fr} .day .n{flex-basis:40px;font-size:22px} }
 </style>
 </head>
 <body>
 
-<!-- HERO -->
+<!-- HERO (escuro, continuação dos criativos) -->
 <header class="hero">
   <div class="toplogo"><picture><source srcset="../assets/img/logo-jcdias-creme.webp" type="image/webp"><img src="../assets/img/logo-jcdias-creme.png" alt="J. C. Dias" width="480" height="110"></picture></div>
   <div class="herobanner"><picture><source srcset="../assets/img/palco-2.webp" type="image/webp"><img src="../assets/img/palco-2.jpg" alt="J. C. Dias no palco" width="1440" height="960" fetchpriority="high"></picture></div>
   <div class="wrap herohead">
     <span class="eyebrow">O Manual da Reconstrução</span>
-    <h1>Quanto tempo você já perdeu vivendo uma vida que <span class="gold">não é a sua?</span></h1>
+    <h1>Quanto tempo você já perdeu vivendo uma vida que <span style="color:var(--gold)">não é a sua?</span></h1>
     <p class="sub">O tempo que passou não volta. Mas os próximos 7 dias podem mudar a direção de todos os outros. Um protocolo prático, uma etapa por dia.</p>
-    <figure><picture><source srcset="../assets/img/capa-rcp.webp" type="image/webp"><img class="book" src="../assets/img/capa-rcp.jpg" alt="Recomeçar com Propósito, de J. C. Dias" width="800" height="1000"></picture></figure>
     <div class="chips">
       <span class="chip"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>7 dias</span>
       <span class="chip"><svg viewBox="0 0 24 24"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg>50 páginas</span>
@@ -162,7 +167,7 @@ footer a{color:var(--muted)}
 <section class="tx" style="background:var(--bg2)">
   <div class="wrap narrow">
     <span class="eyebrow">A conta que ninguém faz</span>
-    <h2 class="mt">O tempo é a única coisa que <span class="gold">você não recupera.</span></h2>
+    <h2 class="mt">O tempo é a única coisa que <span class="goldtx">você não recupera.</span></h2>
     <p>Pensa em quanto tempo já foi. Meses, talvez anos, acordando sem vontade, vivendo no automático, adiando a sua vida pra semana que vem. A semana que vem virou mês. O mês virou ano.</p>
     <p class="hard">E aqui está a verdade dura: cada dia parado é um dia que não volta.</p>
     <div class="nots">
@@ -175,10 +180,10 @@ footer a{color:var(--muted)}
 </section>
 
 <!-- O QUE MELHORA -->
-<section class="center">
+<section class="center" style="background:var(--white)">
   <div class="wrap narrow">
     <span class="eyebrow">O que muda em 7 dias</span>
-    <h2 class="mt">Em uma semana, <span class="gold">você sai do lugar.</span></h2>
+    <h2 class="mt">Em uma semana, <span class="goldtx">você sai do lugar.</span></h2>
     <div class="divider"></div>
     <p class="lead" style="max-width:48ch;margin:0 auto">Você não vai reconstruir a vida inteira em 7 dias. Vai parar de andar em círculos e recuperar o que mais importa: a direção e o controle do seu tempo.</p>
     <ul class="checks">
@@ -197,7 +202,7 @@ footer a{color:var(--muted)}
   <div class="wrap narrow">
     <picture><source srcset="../assets/img/desk-1.webp" type="image/webp"><img class="autor-foto" src="../assets/img/desk-1.jpg" alt="J. C. Dias" width="1440" height="960" loading="lazy"></picture>
     <span class="eyebrow">Quem está falando com você</span>
-    <h2 class="mt">Eu aprendi isso em 11 meses e 2 semanas <span class="gold">dentro de uma cela.</span></h2>
+    <h2 class="mt">Eu aprendi isso em 11 meses e 2 semanas <span class="goldtx">dentro de uma cela.</span></h2>
     <p class="big">Lá dentro, o tempo era tudo que eu tinha. E tudo que eu via escorrer.</p>
     <p>Perdi o emprego, o nome, a rotina, tudo que dizia quem eu era. No começo, gastei meus dias me lamentando. Até entender uma coisa que mudou tudo: tempo perdido lamentando é tempo perdido duas vezes.</p>
     <p>Foi ali que aprendi a reconstruir primeiro a direção, depois a vida lá fora. Juntei esse processo num protocolo simples. O que eu levei onze meses pra entender, você pode aplicar nos seus próximos 7 dias.</p>
@@ -205,7 +210,7 @@ footer a{color:var(--muted)}
 </section>
 
 <!-- OS 7 DIAS -->
-<section>
+<section style="background:var(--white)">
   <div class="wrap narrow">
     <span class="eyebrow">O percurso</span>
     <h2 class="mt">Sete dias. Um passo de cada vez.</h2>
@@ -250,10 +255,10 @@ footer a{color:var(--muted)}
 <section class="oferta" id="oferta">
   <div class="wrap">
     <span class="eyebrow">Comece pelos próximos 7 dias</span>
-    <h2 class="mt">Não deixe passar mais um dia <span class="gold">no automático.</span></h2>
+    <h2 class="mt">Não deixe passar mais um dia <span class="goldtx">no automático.</span></h2>
     <div class="obox">
-      <p style="font-family:var(--serif);font-weight:700;font-size:24px;color:#fff">O Manual da Reconstrução</p>
-      <p style="font-size:14px;color:var(--muted);margin:4px 0 20px">Tudo em um só acesso:</p>
+      <p style="font-family:var(--serif);font-weight:700;font-size:24px;color:var(--ink)">O Manual da Reconstrução</p>
+      <p style="font-size:14px;color:var(--ink2);margin:4px 0 20px">Tudo em um só acesso:</p>
       <ul class="inc">
         <li><b>Recomeçar com Propósito</b> · o livro, a base do processo</li>
         <li><b>Caderno do Recomeço · 7 Dias</b> · a implementação guiada</li>
