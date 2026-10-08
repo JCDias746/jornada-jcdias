@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>De Volta para o Nada | J. C. Dias</title>
+<meta name="description" content="Baseado em fatos reais. A jornada de Ashir, um menino que perdeu tudo e atravessou o mundo em busca de dignidade. Uma história para ver quem o mundo escolheu não ver.">
+<meta property="og:title" content="De Volta para o Nada">
+<meta property="og:description" content="Por trás de cada rótulo, há um nome, um rosto, uma história. A jornada real de Ashir, do Sudão às cadeias do Reino Unido.">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://jornada.jcdias.com/assets/img/capa-dvpn.jpg">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2122287675194601');fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'De Volta para o Nada',value:67,currency:'BRL'});
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F2E8; --bg2:#FCF8F0; --white:#FFFFFF; --line:rgba(43,38,34,.12);
+  --ink:#2B2621; --ink2:#6B6357; --ink3:#9A9184;
+  --terra:#B65A2E; --cta:#C14329; --cta-h:#A8381F;
+  --dark:#0C0B0E;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+.narrow{max-width:660px}
+section{padding:70px 0}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(27px,4.8vw,44px);line-height:1.12;color:var(--ink);letter-spacing:-.01em}
+.kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.24em;font-size:11.5px;font-weight:700;color:var(--terra)}
+.center{text-align:center}
+.terra{color:var(--terra)}
+
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:17px;letter-spacing:.01em;color:#fff;background:var(--cta);padding:18px 34px;border-radius:10px;transition:transform .16s,background .2s;box-shadow:0 16px 36px -14px rgba(193,67,41,.6)}
+.cta:hover{background:var(--cta-h);transform:translateY(-2px)}
+.cta svg{width:17px;height:17px;fill:#fff}
+.cta.block{display:flex;width:100%;max-width:420px}
+
+/* ===== HERO cinematográfico ===== */
+.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;overflow:hidden;background:var(--dark);color:#F3F0E9}
+.hero .bg{position:absolute;inset:0;z-index:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero .bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,11,14,.35) 0%,rgba(12,11,14,.12) 30%,rgba(12,11,14,.66) 72%,#0C0B0E 100%)}
+.hero .top{position:relative;z-index:2;padding:22px 24px;text-align:center}
+.hero .top img{height:34px;width:auto;margin:0 auto;opacity:.95}
+.hero .inner{position:relative;z-index:2;margin-top:auto;padding:0 24px 52px;max-width:820px;margin-left:auto;margin-right:auto;width:100%;text-align:center}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:center;align-items:center;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#DDD5C7;margin-bottom:18px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.hero .meta i{width:4px;height:4px;border-radius:50%;background:var(--terra);display:inline-block}
+.hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(44px,11vw,92px);line-height:.98;letter-spacing:-.015em;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.7)}
+.hero .tag{font-family:var(--serif);font-weight:500;font-size:clamp(19px,3.4vw,27px);color:#F3F0E9;margin:18px auto 0;max-width:24ch;line-height:1.3;text-shadow:0 1px 16px rgba(0,0,0,.6)}
+.hero .tag b{color:#F0A56B;font-weight:600}
+.hero .buy{display:flex;flex-wrap:wrap;gap:16px 22px;align-items:center;justify-content:center;margin-top:30px}
+.hero .price{font-family:var(--serif);font-weight:700;font-size:40px;color:#fff;line-height:1;display:inline-flex;align-items:baseline;gap:3px}
+.hero .price .c{font-size:.55em;color:#F0A56B}
+.hero .fmt{font-size:13px;color:#C3BBAD;letter-spacing:.03em;margin-top:18px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+
+/* ===== corpo claro ===== */
+.sinopse p{font-size:clamp(18px,2.6vw,21px);color:var(--ink2);line-height:1.72;margin-top:18px;max-width:58ch}
+.sinopse .big{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);color:var(--ink);line-height:1.3;margin-top:0;font-weight:600}
+
+.cenas{list-style:none;max-width:620px;margin:28px auto 0;display:flex;flex-direction:column;gap:0}
+.cenas li{padding:20px 0;border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:baseline}
+.cenas li:first-child{border-top:1px solid var(--line)}
+.cenas .nn{font-family:var(--serif);font-size:15px;color:var(--terra);flex:0 0 34px;letter-spacing:.1em}
+.cenas .tt{font-family:var(--serif);font-size:clamp(18px,3vw,23px);font-weight:600;color:var(--ink);line-height:1.32}
+.cenas .tt span{display:block;font-family:var(--sans);font-weight:600;font-size:12.5px;color:var(--terra);margin-top:6px;letter-spacing:.1em;text-transform:uppercase}
+
+.real{background:var(--bg2);text-align:center}
+.real .capa{max-width:230px;margin:0 auto 28px;border-radius:7px;box-shadow:0 30px 60px -28px rgba(20,12,4,.6)}
+.real p{color:var(--ink2);font-size:17.5px;margin:16px auto 0;max-width:52ch}
+
+.autor .autor-foto{width:100%;border-radius:12px;box-shadow:0 26px 54px -32px rgba(20,12,4,.5);aspect-ratio:16/10;object-fit:cover;object-position:50% 18%;margin-bottom:28px;border:1px solid var(--line)}
+.autor p{color:var(--ink2);font-size:17.5px;margin-top:16px;max-width:56ch}
+
+.pull{background:var(--bg2);text-align:center}
+.pull p{font-family:var(--serif);font-weight:600;font-size:clamp(23px,4.2vw,34px);line-height:1.28;color:var(--ink);max-width:22ch;margin:0 auto}
+.pull p span{color:var(--terra)}
+
+.oferta{background:var(--bg);text-align:center}
+.obox{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:42px 28px;max-width:540px;margin:0 auto;box-shadow:0 36px 80px -46px rgba(20,12,4,.5)}
+.obox .capa{max-width:150px;margin:0 auto 22px;border-radius:5px;box-shadow:0 20px 44px -18px rgba(20,12,4,.55)}
+.obox h3{font-family:var(--serif);font-weight:700;font-size:25px;color:var(--ink)}
+.obox .fmt{font-size:13.5px;color:var(--ink2);margin:8px 0 22px;line-height:1.5}
+.obox .price{font-family:var(--serif);font-weight:700;font-size:58px;color:var(--ink);line-height:1;display:inline-flex;align-items:baseline;gap:4px}
+.obox .price .c{font-size:.5em;color:var(--terra)}
+.obox .sub{font-size:12.5px;color:var(--ink3);letter-spacing:.05em;text-transform:uppercase;margin-top:8px}
+.guar{font-size:14px;color:var(--ink2);margin-top:20px;max-width:380px;margin-left:auto;margin-right:auto}
+
+footer{padding:34px 24px 100px;text-align:center;color:var(--ink3);font-size:13px;background:var(--bg)}
+footer a{color:var(--ink2)}
+
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(252,248,240,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:11px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(120%);transition:transform .35s;box-shadow:0 -8px 24px -16px rgba(0,0,0,.25)}
+#sticky.on{transform:translateY(0)}
+#sticky .l{font-family:var(--sans);color:var(--ink2);font-size:11px;text-transform:uppercase;letter-spacing:.05em;line-height:1.2}
+#sticky .l b{font-family:var(--serif);color:var(--ink);font-size:18px;letter-spacing:0;margin-left:2px}
+#sticky .l b .c{color:var(--terra);font-size:.7em}
+#sticky a{background:var(--cta);color:#fff;font-family:var(--sans);font-weight:700;font-size:14px;padding:12px 20px;border-radius:8px;white-space:nowrap}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="bg"><picture><source srcset="../assets/img/dvpn-deserto.webp" type="image/webp"><img src="../assets/img/dvpn-deserto.jpg" alt="Um jovem no deserto, o lenço vermelho ao vento, olhando o horizonte" width="1440" height="700" fetchpriority="high"></picture></div>
+  <div class="top"><picture><source srcset="../assets/img/logo-jcdias-creme.webp" type="image/webp"><img src="../assets/img/logo-jcdias-creme.png" alt="J. C. Dias" width="480" height="110"></picture></div>
+  <div class="inner">
+    <div class="meta"><span>Baseado em fatos reais</span><i></i><span>A jornada de Ashir</span><i></i><span>J. C. Dias</span></div>
+    <h1>De Volta para o Nada</h1>
+    <p class="tag">Por trás de cada rótulo, há um nome. <b>Um rosto. Uma história.</b></p>
+    <div class="buy">
+      <a href="#oferta" class="cta" data-buy><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Começar a leitura</a>
+      <span class="price"><span class="c">R$</span>67</span>
+    </div>
+    <p class="fmt">12x de R$6,93 · ou R$67 à vista · PDF e EPUB · Kindle, celular, tablet ou computador</p>
+  </div>
+</header>
+
+<!-- SINOPSE -->
+<section class="sinopse">
+  <div class="wrap narrow">
+    <span class="kick">O que você vai sentir</span>
+    <p class="big" style="margin-top:16px">A gente aprendeu a usar uma palavra pra não precisar olhar o rosto: refugiado. Por trás dela, havia um menino chamado Ashir.</p>
+    <p>Ele tinha uma mãe que cantava, um pai de poucas palavras e uma irmãzinha de dois anos que subia no seu colo e dizia: "eu sou o seu chapéu". Tinha uma escola que amava e um sonho de ser médico.</p>
+    <p>Numa única manhã, perdeu tudo. E começou a caminhar, de volta pra lugar nenhum, carregando só um lenço vermelho e a esperança teimosa de que, em algum lugar, alguém o deixaria viver com dignidade.</p>
+    <p>Esta é a história real que o autor ouviu, sentado na frente dele, dentro de uma prisão. Você vai se indignar. Vai chorar. E não vai mais conseguir olhar pra um rótulo sem enxergar o nome, o rosto e a história por trás dele.</p>
+  </div>
+</section>
+
+<!-- CENAS -->
+<section class="sinopse" style="background:var(--bg2)">
+  <div class="wrap narrow">
+    <span class="kick">A jornada</span>
+    <h2 style="margin-top:14px">Uma travessia que parece impossível de sobreviver.</h2>
+    <ul class="cenas" style="margin-top:24px">
+      <li><span class="nn">01</span><span class="tt">Uma manhã como todas as outras. E então, o céu se quebrou.<span>A aldeia</span></span></li>
+      <li><span class="nn">02</span><span class="tt">Um lenço vermelho que a mãe costurou. A única cor que sobrou.<span>O que restou</span></span></li>
+      <li><span class="nn">03</span><span class="tt">Um deserto que observa. Estranhos que partilham o último pão.<span>A travessia</span></span></li>
+      <li><span class="nn">04</span><span class="tt">Um campo onde ninguém tem nome. Apenas número.<span>Os nomes esquecidos</span></span></li>
+      <li><span class="nn">05</span><span class="tt">Uma bússola que não aponta pra casa, mas pra uma promessa.<span>A esperança</span></span></li>
+      <li><span class="nn">06</span><span class="tt">Do outro lado do mundo, não a liberdade. Mais correntes.<span>O nada</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="pull">
+  <div class="wrap">
+    <p>Não porque ele mereça pena. <span>Mas porque todos nós merecemos ser vistos.</span></p>
+  </div>
+</section>
+
+<!-- BASEADO EM FATOS REAIS -->
+<section class="real">
+  <div class="wrap narrow">
+    <picture><source srcset="../assets/img/capa-dvpn.webp" type="image/webp"><img class="capa" src="../assets/img/capa-dvpn.jpg" alt="De Volta para o Nada, de J. C. Dias" width="620" height="930" loading="lazy"></picture>
+    <span class="kick">A verdade por trás da história</span>
+    <h2 style="margin-top:14px">O autor conheceu o Ashir. E prometeu não esquecer.</h2>
+    <p>Os dois cumpriam pena numa prisão no Reino Unido, vindos de lados opostos do mundo. Noite após noite, Ashir contou a sua história, devagar, memória por memória. O autor escreveu porque podia. Ashir não podia.</p>
+    <p>Ashir não é o nome verdadeiro. Mas a história é real, e reflete a de milhares que cruzam desertos e fronteiras não pra tirar vantagem, mas pra sobreviver. As manchetes arrancam a humanidade deles. Este livro é a tentativa de devolvê-la.</p>
+  </div>
+</section>
+
+<!-- AUTOR -->
+<section class="autor">
+  <div class="wrap narrow">
+    <picture><source srcset="../assets/img/palco-2.webp" type="image/webp"><img class="autor-foto" src="../assets/img/palco-2.jpg" alt="J. C. Dias" width="1440" height="960" loading="lazy"></picture>
+    <span class="kick">Quem escreveu</span>
+    <h2 style="margin-top:12px">J. C. Dias</h2>
+    <p>Engenheiro, executivo, escritor. J. C. Dias conheceu Ashir do jeito mais improvável: os dois cumprindo pena, vindos de mundos opostos. Noite após noite, ouviu a história dele. E fez uma promessa simples: que ela não seria esquecida.</p>
+    <p>De Volta para o Nada é essa promessa. O livro que ele escreveu para dizer a um homem que o mundo escolheu não ver: eu te vejo, eu me lembro, você não foi esquecido.</p>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="oferta" id="oferta">
+  <div class="wrap">
+    <span class="kick">Comece a leitura agora</span>
+    <h2 style="margin:14px 0 30px">Dê a esta história o que o mundo negou a ele: ser vista.</h2>
+    <div class="obox">
+      <picture><source srcset="../assets/img/capa-dvpn.webp" type="image/webp"><img class="capa" src="../assets/img/capa-dvpn.jpg" alt="De Volta para o Nada" width="620" height="930"></picture>
+      <h3>De Volta para o Nada</h3>
+      <p class="fmt">Ebook completo em PDF e EPUB<br>Leia no Kindle, celular, tablet ou computador · acesso imediato</p>
+      <div class="price"><span class="c">R$</span>67</div>
+      <p class="sub">à vista, ou 12x de R$6,93 · acesso imediato</p>
+      <a href="#" class="cta block" data-buy style="margin:24px auto 0"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Quero conhecer o Ashir</a>
+      <p class="guar">Garantia de 7 dias. Comece a ler. Se não tocar o seu coração, devolvo cada centavo.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>J. C. Dias · De Volta para o Nada · Compra processada com segurança pela Hotmart.</p>
+    <p style="margin-top:8px"><a href="../termos/">Termos</a> &nbsp;·&nbsp; <a href="../privacidade/">Privacidade</a></p>
+  </div>
+</footer>
+
+<div id="sticky">
+  <div class="l">De Volta para o Nada<b><span class="c">R$</span>67</b></div>
+  <a href="#" data-buy>Quero ler</a>
+</div>
+
+<script>
+/* ---- CONFIGURAÇÃO ---- */
+var PIXEL_ID = '2122287675194601';
+var CHECKOUT = '';   // <<< COLAR AQUI o link Hotmart do De Volta para o Nada digital R$67. Enquanto vazio, os botoes rolam ate a oferta.
+/* --------------------- */
+var FUNNEL = 'dvpn';
+var PRODUTO = { id:'de_volta_para_o_nada', nome:'De Volta para o Nada', valor:67, moeda:'BRL' };
+
+(function(){ if(!PIXEL_ID) return; fbq('trackCustom','DVPN_View',{funnel:FUNNEL}); })();
+function comParametros(url){
+  var atuais=new URLSearchParams(window.location.search);atuais.set('funnel',FUNNEL);
+  var d=new URL(url,window.location.href);
+  atuais.forEach(function(v,k){ if(!d.searchParams.has(k)) d.searchParams.set(k,v); });
+  return d.toString();
+}
+function irParaCheckout(origem){
+  if(window.fbq) fbq('track','InitiateCheckout',{content_name:PRODUTO.nome,value:PRODUTO.valor,currency:PRODUTO.moeda});
+  if(window.fbq) fbq('trackCustom','DVPN_CTA',{cta:origem||'oferta'});
+  if(CHECKOUT){ window.location.href=comParametros(CHECKOUT); }
+  else { var a=document.getElementById('oferta'); if(a) a.scrollIntoView({behavior:'smooth',block:'start'}); }
+}
+document.querySelectorAll('[data-buy]').forEach(function(el){
+  if(CHECKOUT){ el.setAttribute('href',CHECKOUT); }
+  el.addEventListener('click',function(e){ e.preventDefault(); irParaCheckout(el.closest('#sticky')?'sticky':(el.closest('.hero')?'hero':'oferta')); });
+});
+var st=document.getElementById('sticky');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY||document.documentElement.scrollTop;
+  if(y>680){ st.classList.add('on'); } else { st.classList.remove('on'); }
+},{passive:true});
+</script>
+</body>
+</html>
